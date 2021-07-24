@@ -14,6 +14,7 @@ use App\Http\Controllers\UserRegistercontroller;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,5 +27,5 @@ require __DIR__.'/auth.php';
 
 // User routes
 Route::get('/userRegister',[UserRegistercontroller::class,'index'])
-->middleware('guest')
+->middleware('guest',)
 ->name('user.register');
