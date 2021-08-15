@@ -1,7 +1,9 @@
 <?php
 
+
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserRegistercontroller;
+use App\Http\Controllers\UserRegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,13 +21,25 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware('auth','verified')->name('dashboard');
+
 
 require __DIR__.'/auth.php';
 
-// User routes
-Route::get('/userRegister',[UserRegistercontroller::class,'index'])
-->middleware('guest',)
-->name('user.register');
+require __DIR__.'/admin.php';
+
+require __DIR__.'/user.php';
+
+// api routes
+Route::get('/authname',function(){
+    $user = Auth::user()->name;
+    $User = ucfirst($user);
+    return $User;
+});
+
+
+//test route
+
+Route::get('/test',function(){
+    return view('test');
+});
+

@@ -17,8 +17,19 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body>
-        <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
+        <div class="container-fluid vh-100 ">
+            <div class="h-25 w-100">
+            </div>
+                    <div class="row justify-content-center mb-3">
+                        <div class="col-xl-4 col-md-4 text-center">
+                            <img src="{{asset('img/logo.svg')}}" alt="">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-4 col-lg-5 col-md-5 col-sm-8 text-center bg-light py-5 px-5 rounded shadow-lg">
+                            @yield('content')
+                        </div>
+                    </div>
         </div>
     </body>
 </html>

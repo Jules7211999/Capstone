@@ -1,65 +1,65 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo  />
-            </a>
-        </x-slot>
+@extends('layouts.guest')
+  
+    @section('content')
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
+       <div>
+        @if ($errors->any())
+            <div>
+                 @foreach ($errors->all() as $error)
+                     <p class="error-text">{{$error}}</p>
+                @endforeach
+            </div>
+         @endif    
+        
         <form method="POST" action="{{ route('register') }}">
             @csrf
 
             <!-- Name -->
-            <div>
-                <x-label for="name" :value="__('Name')" />
+            <div class="text-left text-dark">
+                <label class="font-weight-bold" for="name">Name</label>
 
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+                <input id="name" class="form-control-lg w-100 border border-secondary bg-light" type="text" name="name" :value="old('name')" required autofocus />
             </div>
 
             <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email')" />
+            <div class="text-left text-dark mt-1">
+               <label class="font-weight-bold" for="emai">Email</label>
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
+                <input id="email" class="form-control-lg w-100 border border-secondary bg-light" type="email" name="email" :value="old('email')" required />
             </div>
 
             <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+            <div class="text-left text-dark mt-1">
+               <label class="font-weight-bold" for="password">Password</label>
 
-                <x-input id="password" class="block mt-1 w-full"
+                <input id="password" class="form-control-lg w-100 border border-secondary bg-light"
                                 type="password"
                                 name="password"
                                 required autocomplete="new-password" />
             </div>
 
             <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+            <div class="text-left text-dark mt-1">
+                <label class="font-weight-bold" for="password_confirmation">Confirm Password</label>
 
-                <x-input id="password_confirmation" class="block mt-1 w-full"
+                <input id="password_confirmation" class="form-control-lg w-100 border border-secondary bg-light"
                                 type="password"
                                 name="password_confirmation" required />
             </div>
 
             <!-- role -->
             <div class=" invisible" >
-                <x-input type="text" name="role" value="Admin" required />
+                <input type="text" name="role" value="Admin" required />
             </div>
 
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+            <div class="text-right">
+                <a class="text-dark font-weight-light mr-3" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
 
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
+                <button class="font-weight-bold rounded py-1 text-dark px-5 btn-custom border-0" type="submit">Register</button>
             </div>
         </form>
-    </x-auth-card>
-</x-guest-layout>
+
+    @endsection
