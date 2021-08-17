@@ -24,7 +24,7 @@ Vue.component('admin-container-component',require('./components/admin/MainContai
 Vue.component('user-component',require('./components/admin/User.vue').default);
 Vue.component('messages-component',require('./components/admin/Messages.vue').default);
 Vue.component('track-location-component', require('./components/user/TrackLocation.vue').default);
-Vue.component('location-component',require('./components/admin/Location.vue').default);
+Vue.component('mapbox-component',require('./components/admin/Mapbox.vue').default);
 
 
 Vue.component('main-container-component',require('./components/user/MainContainer.vue').default);

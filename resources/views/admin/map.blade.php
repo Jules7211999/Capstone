@@ -2,5 +2,5 @@
 
 
 @section('content')
-    <location-component/>
+<mapbox-component/>
 @endsection

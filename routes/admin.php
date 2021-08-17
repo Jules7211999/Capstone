@@ -14,8 +14,8 @@ Route::get('/messages',function(){
     return view('admin.messages');
 })->middleware('auth','verified')->name('messages');
 
-Route::get('/location',function(){
-    return view('admin.location');
+Route::get('/map',function(){
+    return view('admin.map');
 });
 
 

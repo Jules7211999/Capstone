@@ -1,19 +1,31 @@
 <template>
+
   <MglMap 
   :accessToken="accessToken" 
   :mapStyle="mapStyle" 
   :zoom ="zoom"
   :center="center"
-   />
+  >
+      <MglMarker :coordinates="[122.8500,10.2667]">
+      <MglPopup>
+        <VCard>
+          <div>Hello, I'm popup!</div>
+        </VCard>
+      </MglPopup>
+    </MglMarker>
+  </MglMap>
+  
 </template>
 
 <script>
 import Mapbox from "mapbox-gl";
-import { MglMap } from "vue-mapbox";
+import { MglMap,MglPopup, MglMarker  } from "vue-mapbox";
 
 export default {
   components: {
-    MglMap
+    MglMap,
+    MglMarker,
+    MglPopup
   },
   data() {
     return {

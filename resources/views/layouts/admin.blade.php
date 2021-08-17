@@ -10,7 +10,7 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body >
-        <div id="app" class="w-100 vh-100 m-0 p-0">
+        <div id="app" class="w-100 vh-100">
           <admin-container-component>
               @yield('content')
           </admin-container-component>
