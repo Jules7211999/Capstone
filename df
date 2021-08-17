@@ -1,0 +1,84 @@
+[33mcommit aaaecef2825a5418bf01676819e0faaab1cb4693[m[33m ([m[1;36mHEAD -> [m[1;32mmapbox[m[33m)[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Tue Aug 17 14:24:05 2021 +0800
+
+    success vue mapbox
+
+[33mcommit 1ae6b0a154a03f6594ca806fdef352983e8032bd[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Tue Aug 17 14:01:31 2021 +0800
+
+    added dependencies
+
+[33mcommit 23937a523e936dd5d8ce9e1d996e16700b9a730b[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Tue Aug 17 14:00:03 2021 +0800
+
+    hello
+
+[33mcommit 831a4ed2ff7015984af94eb2effd288ac8a8bf40[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Tue Aug 17 13:59:30 2021 +0800
+
+    'hello'
+
+[33mcommit f09469afeefa4c3f01ac6861a4de095c2c4baf3e[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Tue Aug 17 13:58:37 2021 +0800
+
+    'mapbox'
+
+[33mcommit 9345371348229d13d6865f0be68615a1114e5d56[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Sun Aug 15 19:51:19 2021 +0800
+
+    change sidebar layout
+
+[33mcommit ded8819dd88234d14366799aa1707a5aeead95ed[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Wed Jul 28 14:21:01 2021 +0800
+
+    removed tailwind files
+
+[33mcommit 0257a17ce59571bb914c43d6438bf308b2ebb790[m
+Merge: 7f0b94c 4ea44de
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Wed Jul 28 13:21:53 2021 +0800
+
+    Merge branch 'master' of https://github.com/Jules7211999/Capstone
+
+[33mcommit 7f0b94c713b440ce6645a092d4b270f30f9176f1[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Wed Jul 28 13:21:33 2021 +0800
+
+    after git reset --hard
+
+[33mcommit 4ea44de9fb6e830df432944674888d4bd0ddf54a[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Wed Jul 28 09:50:55 2021 +0800
+
+    asdfasd
+
+[33mcommit fc214d1e6ee819d76e7362d4524a98f65a71b69f[m[33m ([m[1;31mmaster/master[m[33m)[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Sun Jul 25 20:28:42 2021 +0800
+
+    'success'
+
+[33mcommit d47ec9ac8ebd7d5871b44a6cef7cabc0a4167f40[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Sat Jul 24 20:35:52 2021 +0800
+
+    success custom email reset password
+
+[33mcommit 32b73ca64065904dff95665ad552d1837462dd72[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Sat Jul 24 09:35:20 2021 +0800
+
+    Mail trap setup finished
+
+[33mcommit d66ae9254425af3c4f6b38857b602ed73348abe8[m
+Author: Jules Leomel <julesparcon1999@gmail.com>
+Date:   Sat Jul 24 09:15:50 2021 +0800
+
+    first commit
