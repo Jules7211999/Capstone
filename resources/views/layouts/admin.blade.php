@@ -11,17 +11,9 @@
     </head>
     <body >
         <div id="app" class="w-100 vh-100 m-0 p-0">
-           <div class=" row w-100 m-0 position-absolute">
-             <topbar-component/>
-           </div>
-           <div class="row w-100 h-100 mt-5 pt-5 position-fixed">
-               <div class="col-xl-2">
-                   <sidebar-component/>  
-               </div>                    
-              <div class="col-xl-10">
-                    @yield('content')                  
-              </div>
-           </div>
+          <admin-container-component>
+              @yield('content')
+          </admin-container-component>
         </div>
     </body>
 </html>

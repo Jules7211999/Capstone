@@ -1,12 +1,12 @@
 <template>
-        <div class="w-75 h-100 ml-5 pl-4">
-            <div>
-                <div class="position-relative toggle-position ">
-                        <img src="/img/x.svg" alt="" class="btn-toggle" v-if="shownav==true" @click="shownav = !shownav">
-                        <img src="/img/next.svg" alt="" class="btn-toggle" v-if="shownav==false"  @click="shownav = !shownav">
-                </div>
-            </div>
-                    <div class="font-weight-bold mt-5 border-right ml-4" :class="{'w-25':shownav == false }">
+        <div class=" ml-5 pl-4 border-right" :class="{'col-1':shownav == false,'col-2':shownav == true}">    
+                    
+                        <img src="/img/x.svg" alt="" class="nav-open" v-if="shownav==true" @click="shownav = !shownav">
+                        <img src="/img/next.svg" alt="" class="nav-close" v-if="shownav==false"  @click="shownav = !shownav">
+                         
+                        
+                   
+                    <div class="font-weight-bold mt-5 ml-4">
                         <div class="mb-5 link">
                             <a href="/dashboard" class="text-secondary">
                                 <img src="/img/dashboard.svg" alt="" class ="icon mr-3">
@@ -69,14 +69,15 @@ export default {
 </script>
 
 <style scoped>
-    /* span:hover{
-        text-decoration: underline;
-       
-        transition: 0.2s ease;
-    } */
-    .toggle-position{
-        left: 90%;
+    .nav-open,.nav-close{
+        width: 2rem;
     }
+    .nav-open{
+        left: 100%;
+    }
+    .nav-close{
+        left: 95%;
+    }   
     .btn-toggle{
         width: 10%;
         min-width: 2rem;

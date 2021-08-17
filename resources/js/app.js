@@ -20,9 +20,7 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 
-Vue.component('topbar-component', require('./components/admin/TopBar.vue').default);
-Vue.component('sidebar-component', require('./components/admin/SideBar.vue').default);
-Vue.component('dashboard-component',require('./components/admin/Dashboard.vue').default);
+Vue.component('admin-container-component',require('./components/admin/MainContainer.vue').default);
 Vue.component('user-component',require('./components/admin/User.vue').default);
 Vue.component('messages-component',require('./components/admin/Messages.vue').default);
 Vue.component('track-location-component', require('./components/user/TrackLocation.vue').default);
