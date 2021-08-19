@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Coordinates extends Model
 {
+    use HasFactory;
 
     protected $fillable = [
         
@@ -14,6 +15,8 @@ class Coordinates extends Model
         'longitude',
         'user_id'
     ];
-
-    use HasFactory;
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+    
 }

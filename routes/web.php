@@ -4,6 +4,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserRegisterController;
+use App\Models\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +41,7 @@ Route::get('/authname',function(){
 //test route
 
 Route::get('/test',function(){
-    return view('test');
+    $user = User::with('coordinates')->where('role','=','User')->get();
+    return view('test')->with('user',$user);
 });
 

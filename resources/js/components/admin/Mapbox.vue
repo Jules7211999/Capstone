@@ -6,6 +6,7 @@
   :zoom ="zoom"
   :center="center"
   >
+ 
       <MglMarker :coordinates="[122.8500,10.2667]">
       <MglPopup>
         <VCard>
@@ -13,6 +14,7 @@
         </VCard>
       </MglPopup>
     </MglMarker>
+  
   </MglMap>
   
 </template>

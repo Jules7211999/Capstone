@@ -57,5 +57,7 @@ class User extends Authenticatable implements MustVerifyEmail
         $this->notify(new CustomResetPasswordNotification($token));
     }
 
-
+    public function coordinates(){
+        return $this->hasMany(Coordinates::class);
+    }
 }
