@@ -1,14 +1,14 @@
 <template>
-    <div>
-        <sidebar/>
+    <div class="w-100 h-100">
+        <slot></slot>
     </div>
 </template>
 
 <script>
-import sidebar from './Sidebar.vue';
+
 
 export default {
-components:{sidebar}
+
 }
 </script>
 

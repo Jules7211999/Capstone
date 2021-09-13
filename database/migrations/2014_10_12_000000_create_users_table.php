@@ -22,6 +22,12 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->string('role');
+            $table->string('profile_image')->default('profile-user.svg');
+            $table->bigInteger('phone_number')->nullable();
+            $table->string('address')->nullable();
+            $table->string('gender')->nullable();
+            $table->date('birthdate')->nullable();
+
         });
     }
 

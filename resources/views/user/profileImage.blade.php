@@ -1,5 +1,5 @@
 @extends('layouts.user')
 
 @section('content')
-    <profile-component/>
+    <profile-image-component/>
 @endsection

@@ -34,21 +34,11 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-       return $this->reroute();
+        return redirect(reroute());
       
     }
 
-    public function reroute(){
-        
-        if(Role() == "Admin"){
-            return redirect(RouteServiceProvider::HOME);
-        }
-        else if(Role() == "User"){
-            return redirect(RouteServiceProvider::USER);
-        }else{
-            dd("error");
-        }    
-    }
+   
     
    
   

@@ -1,14 +1,14 @@
 <?php
 
+use App\Http\Controllers\Admin\User;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\GetUser;
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
 })->middleware('auth','verified')->name('dashboard');
 
-Route::get('/user',function(){
-    return view('admin.user');
-})->middleware('auth','verified')->name('user');
+
 
 Route::get('/messages',function(){
     return view('admin.messages');
@@ -18,5 +18,10 @@ Route::get('/map',function(){
     return view('admin.map');
 });
 
+Route::resource('user',User::class);
+
+//api routes
+
+Route::get('/getUser',[GetUser::class,'index']);
 
 ?>

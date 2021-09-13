@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="csrf-token" content="{{csrf_token()}}">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,9 +10,10 @@
 </head>
 <body>
     <track-location-component/>
-    <div id="app">
+    <div id="app" class="w-100 vh-100">
         <main-container-component/>
-        @yield('content')
+            @yield('content')
+        </main-container-component>
     </div>
     <script src="{{asset('js/app.js')}}"></script>
 </body>

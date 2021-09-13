@@ -1,10 +1,11 @@
 <?php
 
 
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserRegisterController;
-use App\Models\User;
+use App\Http\Controllers\GetUserProfile;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -37,11 +38,11 @@ Route::get('/authname',function(){
     return $User;
 });
 
+Route::get('/getUserProfile',[GetUserProfile::class,'index']);
 
 //test route
 
-Route::get('/test',function(){
-    $user = User::with('coordinates')->where('role','=','User')->get();
-    return view('test')->with('user',$user);
+Route::post('/test',function(){
+    return "hello";
 });
 

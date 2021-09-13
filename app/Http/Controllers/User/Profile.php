@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class UserProfileController extends Controller
+class Profile extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class UserProfileController extends Controller
      */
     public function index()
     {
-        return view('user.profile');
+        return view('user.Profile');
     }
 
     /**
@@ -24,7 +25,7 @@ class UserProfileController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -69,9 +70,14 @@ class UserProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         User::find($id)->update([
+            'name' => $request->name,
+            'birthdate' => $request->birthdate,
+            'address' => $request->address,
+            'gender' => $request->gender,
+            'phone_number' => $request->phone_number,
+        ]);
     }
-
     /**
      * Remove the specified resource from storage.
      *
