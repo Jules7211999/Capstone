@@ -3,6 +3,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\GetUser;
+use App\Http\Controllers\Admin\UserProfile;
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');

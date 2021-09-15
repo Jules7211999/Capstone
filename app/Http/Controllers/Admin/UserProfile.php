@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class UserProfile extends Controller
 {
@@ -46,7 +47,13 @@ class UserProfile extends Controller
      */
     public function show($id)
     {
-        //
+        
+        $model = User::find($id);
+
+        $data = $model->toJson();
+
+        return view("admin.userShow") -> with('data', $data);
+    
     }
 
     /**
