@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\Admin\User;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\GetUser;
 
@@ -18,7 +18,7 @@ Route::get('/map',function(){
     return view('admin.map');
 });
 
-Route::resource('user',User::class);
+Route::resource('user',UserProfile::class);
 
 //api routes
 
