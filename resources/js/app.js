@@ -25,7 +25,7 @@ Vue.component('messages-component',require('./components/admin/Messages.vue').de
 Vue.component('mapbox-component',require('./components/admin/Mapbox.vue').default);
 Vue.component('user-component',require('./components/admin/User.vue').default);
 Vue.component('dashboard-component',require('./components/admin/Dashboard.vue').default);
-
+Vue.component('user-show-component',require('./components/admin/UserShow.vue').default);
 
 Vue.component('main-container-component',require('./components/user/MainContainer.vue').default);
 Vue.component('track-location-component', require('./components/user/TrackLocation.vue').default);
