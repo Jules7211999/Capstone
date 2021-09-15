@@ -6,9 +6,9 @@
           <img src="/img/logo.svg" alt="" class="w-25 rounded-circle"><span class="ml-3">{{name.data}}</span>
         </a>
       <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item" href="#">Profile</a>
-        <a class="dropdown-item" href="#">Settings</a>
-        <a class="dropdown-item" href="/logout">Logout</a>
+        <a class="dropdown-item font-weight-bold" href="#">Profile</a>
+        <a class="dropdown-item font-weight-bold" href="#">Settings</a>
+        <a class="dropdown-item font-weight-bold" href="/logout">Logout</a>
       </div>
   </div>
 </nav>

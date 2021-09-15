@@ -67,13 +67,14 @@ export default {
 
 <style scoped>
     .nav-open,.nav-close{
+        position: relative;
         width: 2rem;
     }
     .nav-open{
-        left: 100%;
+        left: 90%;
     }
     .nav-close{
-        left: 95%;
+        left: 80%;
     }   
     .btn-toggle{
         width: 10%;
