@@ -1936,9 +1936,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    getLocation: function getLocation() {
+      var _this = this;
+
+      axios.get('/GetLocation').then(function (data) {
+        return _this.datum = data;
+      })["catch"](function (error) {
+        return console.log(error.response.data);
+      });
+    }
+  },
+  mounted: function mounted() {
+    this.getLocation();
+  },
   components: {
     MglMap: vue_mapbox__WEBPACK_IMPORTED_MODULE_1__.MglMap,
     MglMarker: vue_mapbox__WEBPACK_IMPORTED_MODULE_1__.MglMarker,
@@ -1951,7 +1973,8 @@ __webpack_require__.r(__webpack_exports__);
       mapStyle: "mapbox://styles/mapbox/streets-v11",
       // your map style
       center: [122.8500, 10.2667],
-      zoom: 8
+      zoom: 8,
+      datum: {}
     };
   },
   created: function created() {
@@ -40629,21 +40652,27 @@ var render = function() {
         center: _vm.center
       }
     },
-    [
-      _c(
-        "MglMarker",
-        { attrs: { coordinates: [122.85, 10.2667] } },
+    _vm._l(_vm.datum.data, function(d) {
+      return _c(
+        "div",
         [
           _c(
-            "MglPopup",
-            [_c("VCard", [_c("div", [_vm._v("Hello, I'm popup!")])])],
+            "MglMarker",
+            { attrs: { coordinates: [d.longitude, d.latitude] } },
+            [
+              _c(
+                "MglPopup",
+                [_c("VCard", [_c("div", [_vm._v("Hello, I'm popup!")])])],
+                1
+              )
+            ],
             1
           )
         ],
         1
       )
-    ],
-    1
+    }),
+    0
   )
 }
 var staticRenderFns = []

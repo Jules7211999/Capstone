@@ -1,4 +1,12 @@
 <template>
+<!-- <div>
+<div v-for="d in datum.data">
+  {{d.longitude}}
+  {{d.latitude}}
+</div>
+
+</div> -->
+
 
   <MglMap 
   :accessToken="accessToken" 
@@ -6,15 +14,15 @@
   :zoom ="zoom"
   :center="center"
   >
- 
-      <MglMarker :coordinates="[122.8500,10.2667]">
+ <div v-for="d in datum.data">
+      <MglMarker :coordinates="[d.longitude,d.latitude]">
       <MglPopup>
         <VCard>
           <div>Hello, I'm popup!</div>
         </VCard>
       </MglPopup>
     </MglMarker>
-  
+</div>
   </MglMap>
   
 </template>
@@ -24,6 +32,16 @@ import Mapbox from "mapbox-gl";
 import { MglMap,MglPopup, MglMarker  } from "vue-mapbox";
 
 export default {
+  methods:{
+    getLocation(){
+      axios.get('/GetLocation')
+      .then(data => this.datum = data)
+      .catch(error => console.log(error.response.data))
+    }
+  },
+  mounted(){
+    this.getLocation();
+  },
   components: {
     MglMap,
     MglMarker,
@@ -35,9 +53,9 @@ export default {
       mapStyle: "mapbox://styles/mapbox/streets-v11", // your map style
       center: [122.8500,10.2667 ],
       zoom: 8,
+      datum: {}
     };
   },
-
   created() {
     // We need to set mapbox-gl library here in order to use it in template
     this.mapbox = Mapbox;

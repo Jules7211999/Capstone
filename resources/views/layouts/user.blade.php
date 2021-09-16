@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
-    <track-location-component/>
+    
     <div id="app" class="w-100 vh-100">
+    <track-location-component/>
         <main-container-component/>
             @yield('content')
         </main-container-component>

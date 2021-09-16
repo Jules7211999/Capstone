@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Http\Controllers\Admin\GetLocation;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\GetUser;
 use App\Http\Controllers\Admin\UserProfile;
@@ -25,4 +25,5 @@ Route::resource('user',UserProfile::class);
 
 Route::get('/getUser',[GetUser::class,'index']);
 
+Route::get('/GetLocation',[GetLocation::class,'index']);
 ?>
