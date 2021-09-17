@@ -1,13 +1,13 @@
 <template>
-    <div >
+    <div>
         <topbar/>
-        <div class="row w-100 vh-100">
-        <sidebar/>
-        <div class="col">
-                <slot></slot>      
-        </div>   
+        <div class="row w-100 h-100 m-0 p-0">
+            <sidebar/>
+                 <div class="col">
+                    <slot></slot>      
+                </div>   
 
-    </div>
+        </div>
     </div>
 </template>
 

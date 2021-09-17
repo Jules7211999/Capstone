@@ -1,17 +1,82 @@
 <template>
-<div class="w-100 h-100">
-    <div class>
-         <img :src="'/img/'+profile.profile_image" alt="" class="w-25">
+<div class="w-100 h-100 pl-5">
+    <div class="row align-items-start">
+        <div class="col-3">
+            <img :src="'/img/'+profile.profile_image" class="w-75 rounded-center">
+        </div>
+        <div class="col-9 align-self-center">
+            <div><span><h1>{{profile.name}}</h1></span></div>
+            <div><span class="text-muted">{{profile.phone_number}}</span></div>
+        </div>
+    </div>
+    <div class="row mt-5 border-top pt-3">
+        <div class="col ">
+            <div>
+                <div>
+                    <img src="/img/Address.svg" alt="" class="logo">
+                    <label class="text-muted">Address</label>
+                </div>
+                
+                <div>
+                    <span  class="text-muted">{{profile.address}}</span>
+                </div>
+                
+            </div>
+           <div>
+               <div>
+                   <img src="/img/Birthday.svg" alt="" class="logo">
+                <label class="text-muted" >Birthdate</label>
+               </div>
+                <div>
+                    <span  class="text-muted">{{profile.birthdate}}</span>
+                </div>
+           </div>
+           <div>
+               <div>
+                   <img src="/img/Gender.svg" alt="" class="logo">
+                   <label class="text-muted">Gender</label>
+               </div>
+                <div>  
+                    <span  class="text-muted">{{profile.gender}}</span>
+                </div>
+                
+           </div>
+           
+        </div>
+        <div class="col">
+            <div>
+                <div>
+                    <img src="/img/EmailVerified.svg" alt="" class="logo">
+                    <label class="text-muted">Date Email Verified</label>
+                </div>
+                <div>
+                    <span  class="text-muted">{{profile.email_verified_at}}</span>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <img src="/img/Email.svg" alt="" class="logo">
+                    <label class="text-muted">Email</label>
+                </div>
+                <div>
+                    <span  class="text-muted">{{profile.email}}</span>
+                </div>
+                 
+            </div>
+            <div>
+                <div>
+                    <img src="/img/DateCreated.svg" alt="" class="logo">
+                    <label class="text-muted">Date Profile Created</label>
+                </div>
+                <div>
+                     <span  class="text-muted">{{profile.created_at}}</span>
+                </div>
+            </div>
+        </div>
+        
+       
     </div>
    
-    <span>{{profile.name}}</span>
-    <span>{{profile.address}}</span>
-    <span>{{profile.phone_number}}</span>
-    <span>{{profile.birthdate}}</span>
-    <span>{{profile.gender}}</span>
-    <span>{{profile.email_verified_at}}</span>
-    <span>{{profile.email}}</span>
-    <span>{{profile.created_at}}</span>
 </div>
     
 </template>
@@ -31,7 +96,22 @@ export default {
 </script>
 
 <style scoped>
+.logo{
+    width: 2rem;
+    margin-right: rem;
+    margin-bottom: 1rem;
+}
 span{
+    font-weight: bold;
+    font-size: 1rem;
+}
+label{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+h1{
+    font-size: 2rem;
     font-weight: bold;
 }
 </style>

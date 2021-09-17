@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\GetLocation;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\GetUser;
+use App\Http\Controllers\Admin\Post;
 use App\Http\Controllers\Admin\UserProfile;
 
 Route::get('/dashboard', function () {
@@ -20,6 +21,7 @@ Route::get('/map',function(){
 });
 
 Route::resource('user',UserProfile::class);
+Route::resource('post',Post::class);
 
 //api routes
 

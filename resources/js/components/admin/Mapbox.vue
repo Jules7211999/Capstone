@@ -1,18 +1,11 @@
 <template>
-<!-- <div>
-<div v-for="d in datum.data">
-  {{d.longitude}}
-  {{d.latitude}}
-</div>
-
-</div> -->
-
-
+<div id="map">
   <MglMap 
   :accessToken="accessToken" 
   :mapStyle="mapStyle" 
   :zoom ="zoom"
   :center="center"
+  :container="map"
   >
  <div v-for="d in datum.data">
       <MglMarker :coordinates="[d.longitude,d.latitude]">
@@ -24,6 +17,9 @@
     </MglMarker>
 </div>
   </MglMap>
+</div>
+
+
   
 </template>
 
@@ -62,3 +58,11 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  #map{
+    position:absolute;
+    width: 100%;
+    height: 80%;
+    }
+</style>
