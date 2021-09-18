@@ -1,9 +1,11 @@
 <?php
 
-use App\Http\Controllers\Admin\GetLocation;
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\GetPost;
 use App\Http\Controllers\Admin\GetUser;
-use App\Http\Controllers\Admin\Post;
+use App\Http\Controllers\Admin\AdminPost;
+use App\Http\Controllers\Admin\GetLocation;
 use App\Http\Controllers\Admin\UserProfile;
 
 Route::get('/dashboard', function () {
@@ -21,11 +23,11 @@ Route::get('/map',function(){
 });
 
 Route::resource('user',UserProfile::class);
-Route::resource('post',Post::class);
+Route::resource('post',AdminPost::class);
 
 //api routes
 
 Route::get('/getUser',[GetUser::class,'index']);
-
+Route::get('/getpost',[GetPost::class,'index']);
 Route::get('/GetLocation',[GetLocation::class,'index']);
 ?>

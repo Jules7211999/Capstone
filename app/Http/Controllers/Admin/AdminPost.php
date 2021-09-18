@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class Post extends Controller
+class AdminPost extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -35,7 +36,13 @@ class Post extends Controller
      */
     public function store(Request $request)
     {
-        //
+      return Post::create([
+          "subject" => $request->subject,
+          "body" => $request->body,
+          "user_id" => auth()->user()->id
+        ]);
+
+      
     }
 
     /**

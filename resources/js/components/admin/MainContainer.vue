@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="w-100 main m-0 p-0">
         <topbar/>
         <div class="row w-100 h-100 m-0 p-0">
             <sidebar/>
@@ -20,5 +20,7 @@ export default {
 </script>
 
 <style scoped>
-
+.main{
+    height: 85%;
+}
 </style>
