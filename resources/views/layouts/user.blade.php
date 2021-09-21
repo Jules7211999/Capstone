@@ -11,10 +11,9 @@
 <body>
     
     <div id="app" class="w-100 vh-100">
-    <track-location-component/>
-        <main-container-component/>
+       <main-container-component>
             @yield('content')
-        </main-container-component>
+       </main-container-component>
     </div>
     <script src="{{asset('js/app.js')}}"></script>
 </body>

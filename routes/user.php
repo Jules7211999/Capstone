@@ -1,8 +1,8 @@
 <?php
 
-use App\Http\Controllers\User\Profile;
-use App\Http\Controllers\User\ProfileImage;
+use App\Http\Controllers\User\Sos;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\Profile;
 use App\Http\Controllers\User\TrackLocationController;
 
 
@@ -14,7 +14,7 @@ Route::get('/home',function(){
     return view("user.home");
 })->middleware('auth','verified');
 
-
+Route::get('/sos',[Sos::class,'index']);
 Route::post('/track',[TrackLocationController::class,'store']);
 
 Route::resource('profile',Profile::class);

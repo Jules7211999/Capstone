@@ -1,8 +1,5 @@
 <template>
-<div>
-    
-</div>
-   
+
 </template>
 
 <script>
@@ -17,7 +14,7 @@ export default {
                  axios.post('/track',{
                        lat: position.coords.latitude,
                        long: position.coords.longitude
-                   }).catch(err => console.log(err));
+                   }).catch(err => console.log(err.response.data));
         },
         error(){
             console.log("error");

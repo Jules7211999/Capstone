@@ -29,9 +29,9 @@ Vue.component('user-show-component',require('./components/admin/UserShow.vue').d
 Vue.component('post-component',require('./components/admin/Post.vue').default);
 
 Vue.component('main-container-component',require('./components/user/MainContainer.vue').default);
-Vue.component('track-location-component', require('./components/user/TrackLocation.vue').default);
 Vue.component('profile-component',require('./components/user/Profile.vue').default);
 Vue.component('edit-profile-component',require('./components/user/EditProfile.vue').default);
+Vue.component('sos-component',require('./components/user/Sos.vue').default);
 
 
 /**
