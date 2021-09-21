@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSOSTable extends Migration
+class CreateEmergencyCallsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,13 @@ class CreateSOSTable extends Migration
      */
     public function up()
     {
-        Schema::create('s_o_s', function (Blueprint $table) {
+        Schema::create('emergency_calls', function (Blueprint $table) {
             $table->id();
-            $table->
             $table->timestamps();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('latitude');
             $table->string('longitude');
-            $table->string('message')->nullable();
+            $table->string('message');
         });
     }
 
@@ -31,6 +30,6 @@ class CreateSOSTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('s_o_s');
+        Schema::dropIfExists('emergency_calls');
     }
 }

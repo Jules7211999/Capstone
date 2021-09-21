@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\User;
 
-use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class Sos extends Controller
 {
@@ -11,7 +12,9 @@ class Sos extends Controller
        return view("user.sos");
     }
 
-    public function sos(){
-        return "hello";
+    public function sos(Request $request){
+       
+
+        ]);
     }
 }

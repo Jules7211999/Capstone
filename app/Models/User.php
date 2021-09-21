@@ -66,8 +66,8 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Coordinates::class);
     }
 
-    public function Sos(){
-        return $this->hasMany(SOS::class);
+    public function emergencyCall(){
+        return $this->hasMany(EmergencyCall::class);
     }
 
     public function Messages(){
