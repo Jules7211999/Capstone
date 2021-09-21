@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="w-100 h-100">
        <form @submit.prevent="sendSOS()">
            <button type="submit">Emergency Signal</button>
        </form>
@@ -10,7 +10,11 @@
 export default {
     methods:{
         sendSOS(){
-            
+            console.log(
+                axios.post('/sos')
+                .then(data => console.log(data))
+                .catch(error => console.log(error.response.data))
+            )
         }
     }
 }

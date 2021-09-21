@@ -15,7 +15,9 @@ Route::get('/home',function(){
 })->middleware('auth','verified');
 
 Route::get('/sos',[Sos::class,'index']);
+Route::post('/sos',[Sos::class,'sos']);
 Route::post('/track',[TrackLocationController::class,'store']);
+
 
 Route::resource('profile',Profile::class);
 

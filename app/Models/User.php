@@ -65,4 +65,12 @@ class User extends Authenticatable implements MustVerifyEmail
     public function coordinates(){
         return $this->hasMany(Coordinates::class);
     }
+
+    public function Sos(){
+        return $this->hasMany(SOS::class);
+    }
+
+    public function Messages(){
+        return $this->hasMany(Message::class);
+    }
 }

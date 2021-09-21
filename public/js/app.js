@@ -2827,7 +2827,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   methods: {
-    sendSOS: function sendSOS() {}
+    sendSOS: function sendSOS() {
+      console.log(axios.post('/sos').then(function (data) {
+        return console.log(data);
+      })["catch"](function (error) {
+        return console.log(error.response.data);
+      }));
+    }
   }
 });
 
@@ -43648,7 +43654,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "w-100 h-100" }, [
     _c(
       "form",
       {
