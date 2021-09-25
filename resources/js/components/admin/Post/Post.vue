@@ -1,7 +1,10 @@
 <template>
     <div class="row w-100 h-100">
-      <addpost/>
-      {{post}}
+        <addpost  @submitModal="refresh()"/>
+      <div class="mt-5">
+        {{post}}
+      </div>
+         
     </div>
     
 </template>
@@ -10,6 +13,11 @@
 <script>
 import addpost from './AddPost.vue';
 export default {
+  methods:{
+    refresh(){
+      location.reload();
+    }
+  },
 components:{addpost},
 mounted(){
   axios.get('/getpost')
@@ -17,7 +25,8 @@ mounted(){
 },
 data(){
   return{
-    post:{}
+    post:{},
+    show: null
   }
 }
 

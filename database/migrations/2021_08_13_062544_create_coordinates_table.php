@@ -20,6 +20,9 @@ class CreateCoordinatesTable extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('latitude');
             $table->string('longitude');
+            $table->dateTimeTz('datetimezone');
+            $table->string('month_name');
+            $table->string('day_of_week');
         });
     }
 

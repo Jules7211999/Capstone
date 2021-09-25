@@ -35,12 +35,14 @@
                                 </span>
                             </a>
                         </div>
-                        <div class=" mb-5"> 
-                            <img src="/img/SOS.svg" alt="" class ="icon mr-3"> 
-                                <span v-if="shownav">
-                                    SOS
-                                </span>
-                        </div>
+                        <a href="/emergency" class="text-secondary">
+                            <div class=" mb-5"> 
+                                <img src="/img/SOS.svg" alt="" class ="icon mr-3"> 
+                                    <span v-if="shownav">
+                                        SOS
+                                    </span>
+                            </div>
+                        </a>
                         <a href="/post" class="text-secondary">
                             <div class=" mb-5">
                                 <img src="/img/Post.svg" alt="" class ="icon mr-3">

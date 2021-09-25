@@ -1,15 +1,13 @@
 <template>
-    <div class="w-100 h-100">
+    <div class="w-100 h-100 main-wrapper" >
         <button @click="show = !show">
             Add post
         </button>
-        <div v-if="show" class="w-50 h-75 border border-secondary rounded Modal">
+    <div v-if="show" class="w-50 h-75  border border-secondary rounded Modal">
         <div class="w-100 text-right mt-2 pr-3">
             <img src="/img/close.svg" alt="" class="close-modal" @click="show = !show">
         </div>
-            
-      {{error}}
-        <div class="w-100 pl-5 ">
+        <div class="w-100 pl-5">
             <form @submit.prevent="send()">
                 <div>
                     <label for="subject" class="font-weight-bold text-secondary">Subject:</label>
@@ -28,8 +26,7 @@
                 </div>
             </form>
         </div>
-           
-        </div>
+    </div>
       
     </div>    
 </template>
@@ -52,13 +49,18 @@ methods:{
         body:this.body})
         .then(data => console.log(data))
         .catch(error => console.log(error.response.data))
+        this.$emit('submitModal');
     }
 }
 }
 </script>
 
 <style scoped>
+.main-wrapper{
+    position: absolute;
+}
 .Modal{
+    background: #ffffff;
     position: absolute;
     top: 50%;
     left: 50%;

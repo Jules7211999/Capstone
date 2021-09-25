@@ -15,7 +15,7 @@
 import topbar from './TopBar.vue';
 import sidebar from './SideBar.vue';
 export default {
-    components:{topbar,sidebar}
+    components:{topbar,sidebar,}
 }
 </script>
 

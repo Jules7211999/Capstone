@@ -5,6 +5,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GetUserProfile;
+use App\Models\Coordinates;
 
 
 /*
@@ -42,7 +43,8 @@ Route::get('/getUserProfile',[GetUserProfile::class,'index']);
 
 //test route
 
-Route::post('/test',function(){
-    return "hello";
+Route::get('/test',function(){
+  
+    
 });
 

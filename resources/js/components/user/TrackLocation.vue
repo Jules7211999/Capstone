@@ -14,7 +14,7 @@ export default {
                  axios.post('/track',{
                        lat: position.coords.latitude,
                        long: position.coords.longitude
-                   }).catch(err => console.log(err.response.data));
+                   }).catch(err => console.log(err.response.data.message));
         },
         error(){
             console.log("error");

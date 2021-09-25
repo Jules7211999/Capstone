@@ -1,35 +1,40 @@
 <template>
-    <div class="w-75 vh-100 sidebar d-flex">
+    <div class="w-75 h-100 sidebar d-flex">
          <div class="w-25 pr-3 close">
-            <img src="/img/Close.svg" alt="" class="w-50" @click="closeModal()">
+            <img src="/img/Close.svg" alt="" class="w-25" @click="closeModal()">
         </div>
         <div >
             <ul class="pt-5">
                 <li>
                      <img :src="'/img/'+userData.profile_image" alt="" class="w-25">
                 </li>
-                <li>
+                <li class="mt-3">
                     <span class="font-weight-bold name text-secondary">{{userData.name}}</span>
                 </li>
                 <li>
                      <span class="email text-secondary">{{userData.email}}</span>
                 </li>
             </ul>
-            <ul class="mt-5"> 
-                <li class="text-secondary mt-2">
-                    Profile
-                </li>
-                <li class="text-secondary mt-2">
+            <ul class="pt-5"> 
+                <a href="/profile">
+                    <li class="text-secondary pt-2">
+                        Profile
+                    </li>
+                </a>
+                    
+                <li class="text-secondary pt-2">
                     Announcement
                 </li>
-                <li class="text-secondary mt-2">
+                <li class="text-secondary pt-2">
                     Distress Signal
                 </li>
             </ul>
             <ul class="logout">
-                <li class="text-secondary font-weight-bold">
-                    Log Out
-                </li>
+                <a href="/logout">
+                    <li class="text-secondary font-weight-bold">
+                        Log Out
+                    </li>
+                </a>
             </ul>
         </div>
     </div>

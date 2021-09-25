@@ -8,13 +8,27 @@
 
 <script>
 export default {
+    data(){
+        return {
+
+        }
+    },
     methods:{
         sendSOS(){
-            console.log(
-                axios.post('/sos')
+           navigator.geolocation.getCurrentPosition(
+            function success(position){
+                axios.post('/sos',{
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude,
+                })
                 .then(data => console.log(data))
-                .catch(error => console.log(error.response.data))
-            )
+                .catch(error => console.log(error.response.data.message))
+           },
+           function error(){
+               console.log("error");
+           }
+           );
+
         }
     }
 }

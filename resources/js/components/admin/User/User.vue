@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex w-100 h-100">
      <div v-for="u in user.data" class="m-2 ">
-         <a :href="'/user/'+u.id">
+         <a :href="'/user/'+u.id" class="text-secondary">
         <div class="m-2 p-2 shadow-sm border-light user-container">
             <div class ="text-center mt-3">
                 <img :src="'/img/'+ u.profile_image" alt="" class="w-50">
@@ -40,4 +40,5 @@ span{
     font-size: 1.5rem;
     word-wrap: break-word;
 }
+
 </style>

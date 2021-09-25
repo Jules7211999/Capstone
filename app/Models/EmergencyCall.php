@@ -14,6 +14,10 @@ class EmergencyCall extends Model
         'latitude',
         'longitude',
         'message',
+        'img',
+        'datetimezone',
+        'month_name',
+        'day_of_week',
     ];
 
     public function user(){

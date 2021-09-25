@@ -21,16 +21,18 @@ window.Vue = require('vue').default;
 
 
 Vue.component('admin-container-component',require('./components/admin/MainContainer.vue').default);
-Vue.component('messages-component',require('./components/admin/Messages.vue').default);
+Vue.component('messages-component',require('./components/admin/Message/Messages.vue').default);
 Vue.component('mapbox-component',require('./components/admin/Mapbox.vue').default);
-Vue.component('user-component',require('./components/admin/User.vue').default);
+Vue.component('user-component',require('./components/admin/User/User.vue').default);
 Vue.component('dashboard-component',require('./components/admin/Dashboard.vue').default);
-Vue.component('user-show-component',require('./components/admin/UserShow.vue').default);
-Vue.component('post-component',require('./components/admin/Post.vue').default);
+Vue.component('user-show-component',require('./components/admin/User/UserShow.vue').default);
+Vue.component('post-component',require('./components/admin/Post/Post.vue').default);
+Vue.component('admin-sos-component',require('./components/admin/Sos/Sos.vue').default);
+Vue.component('sos-show-component',require('./components/admin/Sos/SosShow.vue').default);
 
 Vue.component('main-container-component',require('./components/user/MainContainer.vue').default);
-Vue.component('profile-component',require('./components/user/Profile.vue').default);
-Vue.component('edit-profile-component',require('./components/user/EditProfile.vue').default);
+Vue.component('profile-component',require('./components/user/Profile/Profile.vue').default);
+Vue.component('edit-profile-component',require('./components/user/Profile/EditProfile.vue').default);
 Vue.component('sos-component',require('./components/user/Sos.vue').default);
 
 

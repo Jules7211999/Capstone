@@ -3,16 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\Coordinates;
-
+use App\Models\EmergencyCall;
 use Illuminate\Http\Request;
 
-class GetLocation extends Controller
+class GetSos extends Controller
 {
     public function index(){
-        
-        
-        return Coordinates::with("user")->get();
-            
+        $user = EmergencyCall::with('user')->get();
+        return $user;    
     }
+    
 }

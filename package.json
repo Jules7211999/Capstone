@@ -28,7 +28,9 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "laravel-echo": "^1.11.2",
         "mapbox-gl": "^0.53.1",
+        "pusher-js": "^7.0.3",
         "vue-mapbox": "^0.4.1"
     }
 }

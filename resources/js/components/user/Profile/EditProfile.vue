@@ -1,5 +1,6 @@
 <template>
 <div class="d-flex  align-items-center w-100 h-100">
+    <tracklocation/>
     <div class="ml-3 w-100">
         <form @submit.prevent="submit()">
             <div class="row w-100">
@@ -58,7 +59,9 @@
 </template>
 
 <script>
+import tracklocation from '../TrackLocation.vue';
 export default {
+    components:{tracklocation},
     data(){
         return{
             userData: {},

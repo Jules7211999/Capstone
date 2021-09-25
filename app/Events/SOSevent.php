@@ -10,9 +10,11 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class SOSevent
+class SOSevent implements ShouldBroadcast
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
+    
+   
 
     /**
      * Create a new event instance.
@@ -21,7 +23,7 @@ class SOSevent
      */
     public function __construct()
     {
-        //
+        
     }
 
     /**
@@ -31,6 +33,6 @@ class SOSevent
      */
     public function broadcastOn()
     {
-        return new PrivateChannel('channel-name');
+        return new Channel('SOS.notification');
     }
 }

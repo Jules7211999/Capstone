@@ -13,7 +13,10 @@ class Coordinates extends Model
         
         'latitude',
         'longitude',
-        'user_id'
+        'user_id',
+        'datetimezone',
+        'month_name',
+        'day_of_week'
     ];
     public function user(){
         return $this->belongsTo(User::class);

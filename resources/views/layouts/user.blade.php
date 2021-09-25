@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <div id="app" class="w-100 vh-100">
+    <div id="app" class="w-100 vh-100 m-0 p-0">
        <main-container-component>
             @yield('content')
        </main-container-component>

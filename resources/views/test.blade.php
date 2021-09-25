@@ -7,13 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-  
-   
-    @foreach($user as $u)
-        @foreach($u->coordinates as $u)
-        {{$u}}
-        @endforeach
-    @endforeach
-   
+  {{$user}}
 </body>
 </html>
