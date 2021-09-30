@@ -1,14 +1,11 @@
 <template>
-
+<div>
+<slot></slot>
+</div>
 </template>
 
 <script>
 export default {
-    data(){
-        return{
-           
-        }
-    },
     methods:{
         success(position){
                  axios.post('/track',{
@@ -17,11 +14,11 @@ export default {
                    }).catch(err => console.log(err.response.data.message));
         },
         error(){
-            console.log("error");
+            window.location.href="/geoerror";
         }
     },
     mounted(){
-                 navigator.geolocation.watchPosition(this.success, this.error);
+             navigator.geolocation.watchPosition(this.success, this.error);
     }
 }
 </script>

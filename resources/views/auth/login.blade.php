@@ -1,7 +1,9 @@
 @extends('layouts.guest')
   
     @section('content')
-    
+
+    <x-auth-session-status class="mb-4" :status="session('status')" />
+
        <div>
         @if ($errors->any())
             <div>
@@ -46,7 +48,7 @@
                             Forgot your password?
                         </a>
                     @endif
-                    <button class="font-weight-bold rounded py-1 text-dark px-5 btn-custom border-0" type="submit">
+                    <button class="btn-primary font-weight-bold rounded py-1 text-dark px-5 btn-custom border-0" type="submit">
                         LOGIN
                     </button>
                 </div>

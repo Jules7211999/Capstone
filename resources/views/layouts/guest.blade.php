@@ -17,7 +17,7 @@
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body>
-        <div class="container-fluid vh-100 ">
+        <div id="app" class="container-fluid vh-100 ">
             <div class="h-25 w-100">
             </div>
                     <div class="row justify-content-center mb-3">
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-xl-4 col-lg-5 col-md-5 col-sm-8 text-center bg-light py-5 px-5 rounded shadow-lg">
+                        <div class="col-xl-4 col-lg-5 col-md-5 col-sm-8 text-center bg-light py-5 px-5 rounded ">
                             @yield('content')
                         </div>
                     </div>

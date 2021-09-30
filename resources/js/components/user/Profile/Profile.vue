@@ -1,6 +1,5 @@
 <template>
     <div class="w-100 h-100 pt-5 container">
-        <tracklocation/>
        <div class="row w-100 h-25 m-0 p-0 d-flex justify-content-center">
            <profileimage :profileImg="userData.profile_image" />
        </div>
@@ -69,10 +68,9 @@
 </template>
 
 <script>
-import tracklocation from '../TrackLocation.vue';
 import profileimage from '../Profile/ProfileImage.vue'
 export default {
-    components:{profileimage,tracklocation},
+    components:{profileimage},
     data(){
         return{
             userData: {}

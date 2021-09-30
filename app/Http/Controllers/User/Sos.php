@@ -22,9 +22,10 @@ class Sos extends Controller
             "user_id" =>  auth()->user()->id,
             'datetimezone' => $dtm,
             'month_name' => $dtm -> monthName,
-            'day_of_week' => $dtm -> shortLocaleDayOfWeek
+            'day_of_week' => $dtm -> shortLocaleDayOfWeek,
         ]);
         
         event(new SOSevent());
-    }
+    
+ }
 }

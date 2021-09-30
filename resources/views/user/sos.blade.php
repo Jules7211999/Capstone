@@ -1,5 +1,5 @@
-@extends('layouts.user')
+@extends('layouts.sos')
 
 @section('content')
-   <sos-component/>
+<sos-component/>
 @endsection
