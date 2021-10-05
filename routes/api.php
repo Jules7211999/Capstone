@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\User\Sos;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/test',function(){
+    return "hello";
+});
+
+Route::post('/sos',[Sos::class,'sos']);
 
 

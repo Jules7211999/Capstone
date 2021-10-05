@@ -12,7 +12,7 @@ class Sos extends Controller
 {
     public function index(){
        return view("user.sos");
-    }
+}
 
     public function sos(Request $request){
         $dtm = Carbon::now(); 
