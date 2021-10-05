@@ -12,7 +12,7 @@ Route::get('/userRegister',function(){
 
 Route::get('/home',function(){
     return view("user.home");
-})->middleware('auth','verified');
+})->middleware('auth',);
 
 Route::get('/sos',[Sos::class,'index']);
 Route::post('/track',[TrackLocationController::class,'store']);

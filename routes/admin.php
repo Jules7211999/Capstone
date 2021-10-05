@@ -13,13 +13,13 @@ use App\Http\Controllers\Admin\UserProfile;
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
-})->middleware('auth','verified')->name('dashboard');
+})->middleware('auth',)->name('dashboard');
 
 
 
 Route::get('/messages',function(){
     return view('admin.messages');
-})->middleware('auth','verified')->name('messages');
+})->middleware('auth',)->name('messages');
 
 Route::get('/map',function(){
     return view('admin.map');
