@@ -5,7 +5,7 @@
                     <div class="font-weight-bold mt-5 ml-4">
                         <div class="mb-5">
                             <a href="/dashboard" class="text-secondary">
-                                <img src="/img/Dashboard.svg" alt="" class ="icon mr-3">
+                                <img src="/img/Dashboard.svg" alt="" class ="icon pr-3">
                                     <span v-if="shownav">
                                         Dashboard
                                     </span>
@@ -13,7 +13,7 @@
                         </div>
                         <div class=" mb-5">
                             <a href="/messages" class="text-secondary">
-                            <img src="/img/Messages.svg" alt="" class ="icon mr-3">
+                            <img src="/img/Messages.svg" alt="" class ="icon pr-3">
                                 <span v-if="shownav">
                                     Messages
                                 </span>     
@@ -21,7 +21,7 @@
                         </div>
                         <div class=" mb-5">
                             <a href="/user" class="text-secondary">
-                                <img src="/img/Users.svg" alt="" class ="icon mr-3">
+                                <img src="/img/Users.svg" alt="" class ="icon pr-3">
                                     <span v-if="shownav">
                                         Users
                                     </span>
@@ -29,7 +29,7 @@
                         </div>
                         <div class=" mb-5">
                             <a href="/map" class="text-secondary">
-                            <img src="/img/Map.svg" alt="" class ="icon mr-3">
+                            <img src="/img/Map.svg" alt="" class ="icon pr-3">
                                 <span v-if="shownav">
                                     Map
                                 </span>
@@ -37,7 +37,7 @@
                         </div>
                         <a href="/emergency" class="text-secondary">
                             <div class=" mb-5"> 
-                                <img src="/img/SOS.svg" alt="" class ="icon mr-3"> 
+                                <img src="/img/SOS.svg" alt="" class ="icon pr-3"> 
                                     <span v-if="shownav">
                                         SOS
                                     </span>
@@ -45,7 +45,7 @@
                         </a>
                         <a href="/post" class="text-secondary">
                             <div class=" mb-5">
-                                <img src="/img/Post.svg" alt="" class ="icon mr-3">
+                                <img src="/img/Post.svg" alt="" class ="icon pr-3">
                                     <span v-if="shownav">
                                         Post
                                     </span>
