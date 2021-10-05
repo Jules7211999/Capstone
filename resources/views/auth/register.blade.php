@@ -18,14 +18,14 @@
             <div class="text-left text-dark">
                 <label class="font-weight-bold" for="name">Name</label>
 
-                <input id="name" class="form-control-lg w-100 border border-secondary bg-light" type="text" name="name" :value="old('name')" required autofocus />
+                <input id="name" class="form-control-lg w-100 border border-secondary bg-light" type="text" name="name" value="{{old('name')}}" required autofocus />
             </div>
 
             <!-- Email Address -->
             <div class="text-left text-dark mt-1">
                <label class="font-weight-bold" for="emai">Email</label>
 
-                <input id="email" class="form-control-lg w-100 border border-secondary bg-light" type="email" name="email" :value="old('email')" required />
+                <input id="email" class="form-control-lg w-100 border border-secondary bg-light" type="email" name="email" value="{{old('email')}}" required />
             </div>
 
             <!-- Password -->
