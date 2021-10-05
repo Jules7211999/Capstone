@@ -14,7 +14,7 @@
          @endif
 
         <div class="form-wrapper-auth">
-            <form method="POST" action="{{ route('login') }}">
+            <form method="POST" action="/login">
                 @csrf
                 <!-- Email Address -->
                 <div class="text-left text-dark ">
