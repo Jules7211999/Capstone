@@ -2,5 +2,5 @@
 
 
 @section('content')
-    <user-component/>
+    <user-component/>  
 @endsection

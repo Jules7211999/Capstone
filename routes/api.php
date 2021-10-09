@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\User\Sos;
 use Illuminate\Support\Facades\Route;

@@ -46,25 +46,6 @@
         <div class="col">
             <div>
                 <div>
-                    <img src="/img/EmailVerified.svg" alt="" class="logo">
-                    <label class="text-muted">Date Email Verified</label>
-                </div>
-                <div>
-                    <span  class="text-muted">{{profile.email_verified_at}}</span>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img src="/img/Email.svg" alt="" class="logo">
-                    <label class="text-muted">Email</label>
-                </div>
-                <div>
-                    <span  class="text-muted">{{profile.email}}</span>
-                </div>
-                 
-            </div>
-            <div>
-                <div>
                     <img src="/img/DateCreated.svg" alt="" class="logo">
                     <label class="text-muted">Date Profile Created</label>
                 </div>

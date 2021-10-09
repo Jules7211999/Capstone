@@ -2434,6 +2434,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2462,25 +2466,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -7746,7 +7731,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.user-container[data-v-663901d4]{\r\n    width: 250px;\r\n    height: 300px;\r\n    border-radius: 1.5rem;\n}\nspan[data-v-663901d4]{\r\n    font-size: 1.5rem;\r\n    word-wrap: break-word;\n}\r\n\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.user-container[data-v-663901d4]{\r\n    width: 250px;\r\n    height: 300px;\r\n    border-radius: 1.5rem;\n}\nspan[data-v-663901d4]{\r\n    font-size: 1.5rem;\r\n    word-wrap: break-word;\n}\n.modal[data-v-663901d4]{\r\n    top: 50%;\r\n    right: 50%;\r\n    background-color: aqua;\r\n    z-index: 12;\n}\n.adduser[data-v-663901d4]{\r\n    width: 2rem;\n}\n.adduser[data-v-663901d4]:hover{\r\n    width: 3rem;\r\n    transition: 0.5s ease-out;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -49064,7 +49049,7 @@ var render = function() {
             { staticClass: "text-secondary", attrs: { href: "/dashboard" } },
             [
               _c("img", {
-                staticClass: "icon mr-3",
+                staticClass: "icon pr-3",
                 attrs: { src: "/img/Dashboard.svg", alt: "" }
               }),
               _vm._v(" "),
@@ -49085,7 +49070,7 @@ var render = function() {
             { staticClass: "text-secondary", attrs: { href: "/messages" } },
             [
               _c("img", {
-                staticClass: "icon mr-3",
+                staticClass: "icon pr-3",
                 attrs: { src: "/img/Messages.svg", alt: "" }
               }),
               _vm._v(" "),
@@ -49103,7 +49088,7 @@ var render = function() {
         _c("div", { staticClass: " mb-5" }, [
           _c("a", { staticClass: "text-secondary", attrs: { href: "/user" } }, [
             _c("img", {
-              staticClass: "icon mr-3",
+              staticClass: "icon pr-3",
               attrs: { src: "/img/Users.svg", alt: "" }
             }),
             _vm._v(" "),
@@ -49120,7 +49105,7 @@ var render = function() {
         _c("div", { staticClass: " mb-5" }, [
           _c("a", { staticClass: "text-secondary", attrs: { href: "/map" } }, [
             _c("img", {
-              staticClass: "icon mr-3",
+              staticClass: "icon pr-3",
               attrs: { src: "/img/Map.svg", alt: "" }
             }),
             _vm._v(" "),
@@ -49140,7 +49125,7 @@ var render = function() {
           [
             _c("div", { staticClass: " mb-5" }, [
               _c("img", {
-                staticClass: "icon mr-3",
+                staticClass: "icon pr-3",
                 attrs: { src: "/img/SOS.svg", alt: "" }
               }),
               _vm._v(" "),
@@ -49158,7 +49143,7 @@ var render = function() {
         _c("a", { staticClass: "text-secondary", attrs: { href: "/post" } }, [
           _c("div", { staticClass: " mb-5" }, [
             _c("img", {
-              staticClass: "icon mr-3",
+              staticClass: "icon pr-3",
               attrs: { src: "/img/Post.svg", alt: "" }
             }),
             _vm._v(" "),
@@ -49384,39 +49369,64 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "d-flex w-100 h-100" },
-    _vm._l(_vm.user.data, function(u) {
-      return _c("div", { staticClass: "m-2 " }, [
-        _c(
-          "a",
-          { staticClass: "text-secondary", attrs: { href: "/user/" + u.id } },
-          [
-            _c(
-              "div",
-              { staticClass: "m-2 p-2 shadow-sm border-light user-container" },
-              [
-                _c("div", { staticClass: "text-center mt-3" }, [
-                  _c("img", {
-                    staticClass: "w-50",
-                    attrs: { src: "/img/" + u.profile_image, alt: "" }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "font-weight-bold mt-5 pt-3" }, [
-                    _c("span", [_vm._v(_vm._s(u.name))])
+  return _c("div", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "d-flex flex-wrap w-100 h-100" },
+      _vm._l(_vm.user.data, function(u) {
+        return _c("div", { staticClass: "m-2 d-flex flex-wrap" }, [
+          _c(
+            "a",
+            { staticClass: "text-secondary", attrs: { href: "/user/" + u.id } },
+            [
+              _c(
+                "div",
+                {
+                  staticClass: "m-2 p-2 shadow-sm border-light user-container"
+                },
+                [
+                  _c("div", { staticClass: "text-center mt-3" }, [
+                    _c("img", {
+                      staticClass: "w-50",
+                      attrs: { src: "/img/" + u.profile_image, alt: "" }
+                    }),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "font-weight-bold mt-5 pt-3" }, [
+                      _c("span", [_vm._v(_vm._s(u.name))])
+                    ])
                   ])
-                ])
-              ]
-            )
-          ]
-        )
-      ])
-    }),
-    0
-  )
+                ]
+              )
+            ]
+          )
+        ])
+      }),
+      0
+    )
+  ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "w-100 pl-3" }, [
+      _c("a", { attrs: { href: "/user/create" } }, [
+        _c("div", [
+          _c("img", {
+            staticClass: "adduser",
+            attrs: { src: "/img/add-user.png", alt: "" }
+          }),
+          _c("label", { staticClass: "font-weight-bold text-secondary" }, [
+            _vm._v("Add User")
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -49498,26 +49508,6 @@ var render = function() {
           _vm._v(" "),
           _c("div", [
             _c("span", { staticClass: "text-muted" }, [
-              _vm._v(_vm._s(_vm.profile.email_verified_at))
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _vm._m(4),
-          _vm._v(" "),
-          _c("div", [
-            _c("span", { staticClass: "text-muted" }, [
-              _vm._v(_vm._s(_vm.profile.email))
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _vm._m(5),
-          _vm._v(" "),
-          _c("div", [
-            _c("span", { staticClass: "text-muted" }, [
               _vm._v(_vm._s(_vm.profile.created_at))
             ])
           ])
@@ -49564,34 +49554,6 @@ var staticRenderFns = [
       }),
       _vm._v(" "),
       _c("label", { staticClass: "text-muted" }, [_vm._v("Gender")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("img", {
-        staticClass: "logo",
-        attrs: { src: "/img/EmailVerified.svg", alt: "" }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "text-muted" }, [
-        _vm._v("Date Email Verified")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("img", {
-        staticClass: "logo",
-        attrs: { src: "/img/Email.svg", alt: "" }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "text-muted" }, [_vm._v("Email")])
     ])
   },
   function() {

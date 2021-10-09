@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class UserProfile extends Controller
 {
@@ -25,7 +26,7 @@ class UserProfile extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.addUser');
     }
 
     /**
@@ -36,7 +37,10 @@ class UserProfile extends Controller
      */
     public function store(Request $request)
     {
-        //
+       
+        
+
+       
     }
 
     /**
