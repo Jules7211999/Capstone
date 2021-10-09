@@ -23,13 +23,15 @@
                         </button>
                     </form>
                     
-                    <form method="POST" action="{{ route('logout') }}">
+                  
                         @csrf
                         
-                        <button type="submit" class="border-0 text-dark bg-light m-1">
-                            <u>Logout</u>
-                        </button>
-                    </form>
+                        <a href="/logout">
+                            <button type="submit" class="border-0 text-dark bg-light m-1">
+                                <u>Logout</u>
+                            </button>
+                        </a>
+                   
                 </div>
         </div>
 @endsection
