@@ -2,10 +2,11 @@
 
 
 use App\Models\User;
+use App\Models\Coordinates;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GetUserProfile;
-use App\Models\Coordinates;
 
 
 /*
@@ -43,8 +44,9 @@ Route::get('/getUserProfile',[GetUserProfile::class,'index']);
 
 //test route
 
-Route::get('/test',function(){
+Route::post('/test',function(Request $request){
   
+    return "request Received";
     
 });
 
