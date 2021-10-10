@@ -44,9 +44,6 @@ Route::get('/getUserProfile',[GetUserProfile::class,'index']);
 
 //test route
 
-Route::post('/test',function(Request $request){
-  
-    return "request Received";
-    
+Route::get('/test',function(){
+    return "hello";
 });
-

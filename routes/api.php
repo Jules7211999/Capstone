@@ -20,10 +20,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/test',function(){
-    return "hello";
-});
+
 
 Route::post('/sos',[Sos::class,'sos']);
+
+Route::post('/test',function(Request $request){
+  
+    return "request Received";
+    
+});
 
 
