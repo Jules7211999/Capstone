@@ -26,7 +26,9 @@ Route::post('/sos',[Sos::class,'sos']);
 
 Route::post('/test',function(Request $request){
   
-    return "request Received";
+    return response()->json([
+        "success" => "true"
+    ]);
     
 });
 
