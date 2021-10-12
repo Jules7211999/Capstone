@@ -24,9 +24,9 @@ class AuthenticateMobileApp extends Controller
 
         return response()->json([
             "message" => "true",
-            "id" => $User->id,
-            "name" => "username",
-            "username" => "name"
+            "id" => $User[0]->id,
+            "name" => $User[0]->name,
+            "username" => $User[0]->username
         ]);
        }   
     }

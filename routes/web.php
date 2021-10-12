@@ -1,6 +1,7 @@
 <?php
 
 
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GetUserProfile;
@@ -42,5 +43,6 @@ Route::get('/getUserProfile',[GetUserProfile::class,'index']);
 //test route
 
 Route::get('/test',function(){
-    return "hello";
+    $User = User::where('username','julesleomel')->get();
+    return $User[0]->id;
 });
