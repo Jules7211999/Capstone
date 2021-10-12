@@ -18,17 +18,18 @@ class UserCreateController extends Controller
             'gender' => 'required',
             'birthdate' => 'required',
             'password' => 'required|confirmed|min:8',
+            'username' => 'required|unique:App\Models\User,username',
         ]);
 
          User::create([
             'name' => $request->name,
-            'phone' => $request->phone_number,
+            // 'phone' => $request->phone_number,
             'password' => Hash::make($request->password),
             'role' => "User",
-            'email' => $request->name."N/A",
-            'address'=> $request->address,
-            'gender' => $request->gender,
-            'date' => $request-> birthdate
+            // 'address'=> $request->address,
+            // 'gender' => $request->gender,
+            // 'date' => $request-> birthdate,
+            'username' => $request->username
         ]);
 
         return redirect()->back()->with('message','User Registered');

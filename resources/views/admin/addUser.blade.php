@@ -21,6 +21,15 @@
                     <div class="pt-2">{{$message}}</div>
                 @enderror
                 <div>
+                    <label class="font-weight-bold" for="name">Username</label>
+                </div>
+                <div>
+                    <input  type="text" id="name" class="form-control-lg w-50 border border-secondary bg-transparent"  name="username" required autofocus />
+                </div>
+                @error('username')
+                    <div class="pt-2">{{$message}}</div>
+                @enderror
+                <div>
                     <label class="font-weight-bold" for="password">Password</label>
                 </div>
                 <div>
