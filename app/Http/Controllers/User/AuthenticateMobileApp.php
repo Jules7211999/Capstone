@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -19,8 +20,13 @@ class AuthenticateMobileApp extends Controller
        $credentials = $request->only('username', 'password');
 
        if (Auth::attempt($credentials)) {
+           $User = User::where('username',$request->username)->get();
+
         return response()->json([
-            "message" => "true"
+            "message" => "true",
+            "id" => $User->id,
+            "name" => $User->name,
+            "username" => $User->username
         ]);
        }   
     }
