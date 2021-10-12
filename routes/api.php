@@ -4,6 +4,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\User\Sos;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\User\AuthenticateMobileApp;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+Route::post('/authenticate',[AuthenticateMobileApp::class,'index']);
 
 Route::post('/sos',[Sos::class,'sos']);
 

@@ -1,9 +1,6 @@
 <?php
 
 
-use App\Models\User;
-use App\Models\Coordinates;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GetUserProfile;

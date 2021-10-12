@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\User\AuthenticateMobileApp;
-use Illuminate\Http\Request;
+
+
 use App\Http\Controllers\User\Sos;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\Profile;
@@ -27,4 +27,4 @@ Route::resource('profile',Profile::class);
 
 
 
-Route::post('/authenticate',[AuthenticateMobileApp::class,'index']);
+
