@@ -14,7 +14,7 @@ use App\Http\Controllers\Admin\UserProfile;
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
-})->middleware('auth','verified',)->name('dashboard');
+})->middleware('auth',)->name('dashboard');
 
 
 
