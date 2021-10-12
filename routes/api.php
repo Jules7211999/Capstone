@@ -27,8 +27,10 @@ Route::post('/sos',[Sos::class,'sos']);
 
 Route::post('/test',function(Request $request){
   
+    $user  = $request->username;
+
 return response()->json([
-        "success" => "true"
+        "success" => $user
     ]);
     
 });
