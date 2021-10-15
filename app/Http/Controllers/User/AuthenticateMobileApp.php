@@ -13,11 +13,15 @@ class AuthenticateMobileApp extends Controller
     public function index(Request $request){
 
         $auth = User::where('username',$request->username)->get();
-    
+        
+        if($auth[0]->password == $request->password){
+            return response()->json([
+                "message" => $auth[0]->password . $auth[0]->username,
+                
+            ]);
+        }
        
-        return response()->json([
-            "message" => $auth[0]->password
-        ]);
+       
 
 
 
