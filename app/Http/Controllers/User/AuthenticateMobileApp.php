@@ -16,29 +16,16 @@ class AuthenticateMobileApp extends Controller
         
         if($auth[0]->password == $request->password){
             return response()->json([
-                "message" => $auth[0]->password . $auth[0]->username,
+                "message" => "true",
+                "username" => $auth[0]->username,
+                "name" => $auth[0]->name,
+                "id" => $auth[0]->id
                 
             ]);
-        }
-       
-       
-
-
-
-
-    //    if (Auth::attempt($credentials)) {
-    //     $User = User::where('username',$request->username)->get();
-
-    //     return response()->json([
-    //         "message" => "true",
-    //         "id" => $User[0]->id,
-    //         "name" => $User[0]->name,
-    //         "username" => $User[0]->username
-    //     ]);
-    //    }else{
-    //        return response()->json([
-    //         "message" => "false"
-    //        ]);
-    //    }   
+        }else{
+            return response()->json([
+                "message" => "false"
+            ]);
+        } 
     }
 }
