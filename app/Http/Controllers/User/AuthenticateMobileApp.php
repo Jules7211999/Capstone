@@ -22,7 +22,7 @@ class AuthenticateMobileApp extends Controller
                 "id" => $auth[0]->id
                 
             ]);
-        }else{
+        }else if(!$auth[0]->password == $request->password){
             return response()->json([
                 "message" => "false"
             ]);
