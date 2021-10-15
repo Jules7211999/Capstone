@@ -16,7 +16,7 @@ class AuthenticateMobileApp extends Controller
     
        
         return response()->json([
-            "message" => $auth->password
+            "message" => $auth[0]->password
         ]);
 
 
