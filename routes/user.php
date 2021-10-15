@@ -17,7 +17,7 @@ Route::get('/home',function(){
 })->middleware('auth',);
 
 Route::get('/sos',[Sos::class,'index']);
-Route::post('/track',[TrackLocationController::class,'store']);
+
 Route::get('geoerror',function(){
     return view("user.geoError");
 });

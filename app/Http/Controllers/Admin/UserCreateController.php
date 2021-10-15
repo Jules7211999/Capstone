@@ -23,12 +23,13 @@ class UserCreateController extends Controller
 
          User::create([
             'name' => $request->name,
-            // 'phone' => $request->phone_number,
-            'password' => Hash::make($request->password),
+            'phone' => $request->phone_number,
+            // 'password' => Hash::make($request->password),
+            'password' => $request->password,
             'role' => "User",
-            // 'address'=> $request->address,
-            // 'gender' => $request->gender,
-            // 'date' => $request-> birthdate,
+            'address'=> $request->address,
+            'gender' => $request->gender,
+            'date' => $request-> birthdate,
             'username' => $request->username
         ]);
 

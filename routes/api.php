@@ -1,10 +1,10 @@
 <?php
 
-use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\User\Sos;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\AuthenticateMobileApp;
+use App\Http\Controllers\User\TrackLocationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('/authenticate',[AuthenticateMobileApp::class,'index']);
-
+Route::post('/track',[TrackLocationController::class,'store']);
 Route::post('/sos',[Sos::class,'sos']);
 
 Route::post('/test',function(Request $request){

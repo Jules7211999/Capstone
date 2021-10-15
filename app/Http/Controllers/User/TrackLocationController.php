@@ -14,7 +14,7 @@ class TrackLocationController extends Controller
         Coordinates::create([
             'latitude' => $request->lat,
             'longitude' => $request->long,
-            'user_id' => auth()->user()->id,
+            'user_id' => $request -> user,
             'datetimezone' => $dtm,
             'month_name' => $dtm -> monthName,
             'day_of_week' => $dtm -> shortLocaleDayOfWeek

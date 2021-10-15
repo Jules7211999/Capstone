@@ -19,7 +19,7 @@ class Sos extends Controller
         EmergencyCall::create([
             "latitude" => $request->latitude,
             "longitude" => $request->longitude,
-            "user_id" =>  auth()->user()->id,
+            "user_id" =>  $request->user,
             'datetimezone' => $dtm,
             'month_name' => $dtm -> monthName,
             'day_of_week' => $dtm -> shortLocaleDayOfWeek,
