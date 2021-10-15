@@ -12,16 +12,15 @@ class AuthenticateMobileApp extends Controller
 {
     public function index(Request $request){
 
+        $auth = User::where('username',$request->username)->get();
+    
 
-       if (Auth::attempt(['username' => $request->username, 'password' => $request->password])) {
         return response()->json([
-            "message" => "true"
+            "message" => $request->username
         ]);
-    }else{
-        return response()->json([
-            "message" => "falsed"
-        ]);
-    }
+
+
+
 
     //    if (Auth::attempt($credentials)) {
     //     $User = User::where('username',$request->username)->get();
