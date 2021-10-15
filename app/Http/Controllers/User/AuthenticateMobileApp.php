@@ -13,7 +13,7 @@ class AuthenticateMobileApp extends Controller
     public function index(Request $request){
 
        $request-> validate([
-            'username' => '|required',
+            'username' => 'required',
             'password' => 'required'
        ]);
 
