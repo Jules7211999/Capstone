@@ -19,7 +19,7 @@ class AuthenticateMobileApp extends Controller
         ]);
     }else{
         return response()->json([
-            "message" => "false"
+            "message" => "falsed"
         ]);
     }
 
