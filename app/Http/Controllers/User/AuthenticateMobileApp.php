@@ -14,9 +14,9 @@ class AuthenticateMobileApp extends Controller
 
         $auth = User::where('username',$request->username)->get();
     
-
+       
         return response()->json([
-            "message" => $request->username
+            "message" => $auth->password
         ]);
 
 
