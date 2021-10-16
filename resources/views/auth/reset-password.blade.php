@@ -19,7 +19,7 @@
             <!-- Email Address -->
             <div>
                 <label for="email">Email</label>
-                <input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus />
+                <input id="email" class="block mt-1 w-full" type="email" name="email" value="{{$request->email}}" required autofocus />
             </div>
 
             <!-- Password -->
