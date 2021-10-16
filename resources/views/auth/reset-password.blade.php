@@ -17,20 +17,20 @@
             <input type="hidden" name="token" value="{{ $request->route('token') }}">
 
             <!-- Email Address -->
-            <div>
-                <label for="email">Email</label>
+            <div class="text-left text-dark">
+                <label class="font-weight-bold" for="email">Email</label>
                 <input id="email" class="form-control-lg w-100 border border-secondary bg-light" type="email" name="email" value="{{$request->email}}" required autofocus />
             </div>
 
             <!-- Password -->
-            <div class="mt-4">
-               <label for="password">Password</label>
+            <div class="text-left text-dark">
+               <label class="font-weight-bold" for="password">Password</label>
                 <input id="password" class="form-control-lg w-100 border border-secondary bg-light" type="password" name="password" required />
             </div>
 
             <!-- Confirm Password -->
-            <div class="mt-4">
-                <label for="password_confirmation">Confirm Password</label>
+            <div class="text-left text-dark">
+                <label class="font-weight-bold" for="password_confirmation">Confirm Password</label>
 
                 <input id="password_confirmation" class="form-control-lg w-100 border border-secondary bg-light"
                                     type="password"
