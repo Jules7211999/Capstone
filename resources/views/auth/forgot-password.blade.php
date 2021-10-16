@@ -28,7 +28,7 @@
             <div>
                 <label for="email" class="text-dark font-weight-bold">Email</label>
 
-                <input id="email" class="form-control-lg w-100 border border-dark bg-light" type="email" name="email" :value="old('email')" required autofocus />
+                <input id="email" class="form-control-lg w-100 border border-dark bg-light" type="email" name="email" required autofocus />
             </div>
 
             <div>
