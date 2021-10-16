@@ -1,13 +1,14 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo />
-            </a>
-        </x-slot>
+@extends('layouts.guest')
+  
+    @section('content')
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+    @if ($errors->any())
+            <div>
+                 @foreach ($errors->all() as $error)
+                     <p class="error-text">{{$error}}</p>
+                @endforeach
+            </div>
+         @endif    
 
         <form method="POST" action="{{ route('password.update') }}">
             @csrf
@@ -44,5 +45,4 @@
                 </x-button>
             </div>
         </form>
-    </x-auth-card>
-</x-guest-layout>
+@endsection
