@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <body>
- <h1>hello</h1>
+ <form action="/track" method="post">
+  <input type="text" name="latitude">
+  <input type="text" name="longitude" id="">
+  <input type="text" name="user">
+</form>
 </body>
 </html>
