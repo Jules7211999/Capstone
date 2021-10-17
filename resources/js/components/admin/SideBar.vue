@@ -5,7 +5,7 @@
                     <div class="font-weight-bold mt-5 ml-4">
                         <div class="mb-5">
                             <a href="/dashboard" class="text-secondary">
-                                <img src="/img/Dashboard.svg" alt="" class ="icon pr-3">
+                                <img src="/img/Dash.svg" alt="" class ="icon pr-3">
                                     <span v-if="shownav">
                                         Dashboard
                                     </span>
