@@ -7,7 +7,7 @@
                             <a href="/dashboard" class="text-secondary">
                                 <img src="/img/Dash.svg" alt="" class ="icon pr-3">
                                     <span v-if="shownav">
-                                        Dashboards
+                                        Dashboard
                                     </span>
                             </a>
                         </div>
