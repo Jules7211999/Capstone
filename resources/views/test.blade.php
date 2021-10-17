@@ -8,8 +8,8 @@
 </head>
 <body>
  <form action="api/track" method="post">
-  <input type="text" name="latitude" placeholder="lat">
-  <input type="text" name="longitude" id="" placeholder="long">
+  <input type="text" name="lat" placeholder="lat">
+  <input type="text" name="long" id="" placeholder="long">
   <input type="text" name="user" placeholder="id">
   <input type="submit" name="" id="" value="submit">
 </form>
