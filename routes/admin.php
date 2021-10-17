@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\GetLocation;
 use App\Http\Controllers\Admin\GetSos;
 use App\Http\Controllers\Admin\UserCreateController;
 use App\Http\Controllers\Admin\UserProfile;
-
+use App\Http\Controllers\User\TrackLocationController;
 
 Route::get('/dashboard', function () {
     return view('admin.dashboard');
@@ -35,5 +35,6 @@ Route::get('/getSos',[GetSos::class,'index']);
 Route::get('/getUser',[GetUser::class,'index']);
 Route::get('/getpost',[GetPost::class,'index']);
 Route::get('/GetLocation',[GetLocation::class,'index']);
+
 
 ?>
