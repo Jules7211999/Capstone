@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
- <form action="/track" method="post">
+ <form action="api/track" method="post">
   <input type="text" name="latitude" placeholder="lat">
   <input type="text" name="longitude" id="" placeholder="long">
   <input type="text" name="user" placeholder="id">
