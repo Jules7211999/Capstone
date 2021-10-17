@@ -30,11 +30,6 @@ Vue.component('post-component',require('./components/admin/Post/Post.vue').defau
 Vue.component('admin-sos-component',require('./components/admin/Sos/Sos.vue').default);
 Vue.component('sos-show-component',require('./components/admin/Sos/SosShow.vue').default);
 
-Vue.component('track-location',require('./components/user/TrackLocation.vue').default);
-Vue.component('main-container-component',require('./components/user/MainContainer.vue').default);
-Vue.component('profile-component',require('./components/user/Profile/Profile.vue').default);
-Vue.component('edit-profile-component',require('./components/user/Profile/EditProfile.vue').default);
-Vue.component('sos-component',require('./components/user/Sos.vue').default);
 
 
 /**
