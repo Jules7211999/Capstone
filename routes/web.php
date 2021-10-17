@@ -43,6 +43,5 @@ Route::get('/getUserProfile',[GetUserProfile::class,'index']);
 //test route
 
 Route::get('/test',function(){
-    $User = User::where('username','julesleomel')->get();
-    return $User[0]->id;
+   return view("test");
 });
