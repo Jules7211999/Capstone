@@ -8,9 +8,10 @@
 </head>
 <body>
  <form action="/track" method="post">
-  <input type="text" name="latitude">
-  <input type="text" name="longitude" id="">
-  <input type="text" name="user">
+  <input type="text" name="latitude" placeholder="lat">
+  <input type="text" name="longitude" id="" placeholder="long">
+  <input type="text" name="user" placeholder="id">
+  <input type="submit" name="" id="" value="submit">
 </form>
 </body>
 </html>
