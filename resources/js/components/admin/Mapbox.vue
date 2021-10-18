@@ -7,7 +7,7 @@
   :zoom ="zoom"
   :center="center"
   >
- <div v-for="d in datum.data">
+ <div v-for="d in datum.data" :key="d.id">
       <MglMarker :coordinates="[d.longitude,d.latitude]" >
       <MglPopup>
           <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
@@ -24,7 +24,7 @@
       </MglPopup>
     </MglMarker>
 </div>
-<div v-for="d in sosData.data">
+<div v-for="d in sosData.data" :key= "d.id">
       <MglMarker :coordinates="[d.longitude,d.latitude]" :color="markerColor">
       <MglPopup>
           <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
@@ -35,7 +35,7 @@
               <div class="d-flex"><span class="pr-2">Date and Time:</span>{{d.datetimezone}}</div>
               <div class="d-flex"><span class="pr-2">Month:</span>{{d.month_name}}</div>
               <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.day_of_week}}</div>
-              <a :href="'/user/'+d.user_id"><div class="d-flex w-100 pt-2 justify-content-center">View Profile</div></a>
+              <a :href="'/emergency/'+d.id"><div class="d-flex w-100 pt-2 justify-content-center">Details</div></a>
             </div>
           </div>
       </MglPopup>
