@@ -47785,7 +47785,7 @@ var render = function() {
             [
               _c("img", {
                 staticClass: "icon pr-3",
-                attrs: { src: "/img/Message.svg", alt: "" }
+                attrs: { src: "/img/Messages.svg", alt: "" }
               }),
               _vm._v(" "),
               _vm.shownav
