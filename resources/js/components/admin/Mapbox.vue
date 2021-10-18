@@ -43,8 +43,6 @@
 </div> 
    </MglMap>
 </div>
-
-
   
 </template>
 
