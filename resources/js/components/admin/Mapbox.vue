@@ -6,12 +6,10 @@
   :mapStyle="mapStyle" 
   :zoom ="zoom"
   :center="center"
-
   >
  <div v-for="d in datum.data">
-      <MglMarker :coordinates="[d.longitude,d.latitude]">
+      <MglMarker :coordinates="[d.longitude,d.latitude]" >
       <MglPopup>
-        <VCard>
           <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
             <div>
               <div class="d-flex"><span class="pr-2">Name:</span>{{d.user.name}}</div>
@@ -23,11 +21,27 @@
               <a :href="'/user/'+d.user_id"><div class="d-flex w-100 pt-2 justify-content-center">View Profile</div></a>
             </div>
           </div>
-        </VCard>
       </MglPopup>
     </MglMarker>
 </div>
-  </MglMap>
+<div v-for="d in sosData.data">
+      <MglMarker :coordinates="[d.longitude,d.latitude]" :color="markerColor">
+      <MglPopup>
+          <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
+            <div>
+              <div class="d-flex"><span class="pr-2">Name:</span>{{d.user.name}}</div>
+              <div class="d-flex"><span class="pr-2">Latitude:</span>{{d.latitude}}</div>
+              <div class="d-flex"><span class="pr-2">Longitude:</span>{{d.longitude}}</div>
+              <div class="d-flex"><span class="pr-2">Date and Time:</span>{{d.datetimezone}}</div>
+              <div class="d-flex"><span class="pr-2">Month:</span>{{d.month_name}}</div>
+              <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.day_of_week}}</div>
+              <a :href="'/user/'+d.user_id"><div class="d-flex w-100 pt-2 justify-content-center">View Profile</div></a>
+            </div>
+          </div>
+      </MglPopup>
+    </MglMarker>
+</div> 
+   </MglMap>
 </div>
 
 
@@ -47,10 +61,16 @@ export default {
     },
     viewProfile(id){
       console.log(id);
+    },
+    getSos(){
+        axios.get('/getSos')
+        .then(data => this.sosData= data)
+        .catch(error => console.log(error.response.data.message));
     }
   },
   mounted(){
     this.getLocation();
+    this.getSos();
   },
   components: {
     MglMap,
@@ -63,7 +83,9 @@ export default {
       mapStyle: "mapbox://styles/mapbox/streets-v11", // your map style
       center: [122.8500,10.2667 ],
       zoom: 8,
-      datum: {}
+      datum: {},
+      sosData: {},
+      markerColor :"red",
     };
   },
   created() {
