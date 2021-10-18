@@ -12,7 +12,7 @@
                             </a>
                         </div>
                         <div class=" mb-5">
-                            <a href="/messages" class="text-secondary">
+                            <a href="/messagess" class="text-secondary">
                             <img src="/img/Messages.svg" alt="" class ="icon pr-3">
                                 <span v-if="shownav">
                                     Messages

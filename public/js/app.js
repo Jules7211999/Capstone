@@ -1963,8 +1963,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -47783,7 +47781,7 @@ var render = function() {
         _c("div", { staticClass: " mb-5" }, [
           _c(
             "a",
-            { staticClass: "text-secondary", attrs: { href: "/messages" } },
+            { staticClass: "text-secondary", attrs: { href: "/messagess" } },
             [
               _c("img", {
                 staticClass: "icon pr-3",
