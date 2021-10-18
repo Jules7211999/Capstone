@@ -47781,11 +47781,11 @@ var render = function() {
         _c("div", { staticClass: " mb-5" }, [
           _c(
             "a",
-            { staticClass: "text-secondary", attrs: { href: "/messagess" } },
+            { staticClass: "text-secondary", attrs: { href: "/messages" } },
             [
               _c("img", {
                 staticClass: "icon pr-3",
-                attrs: { src: "/img/Messages.svg", alt: "" }
+                attrs: { src: "/img/Message.svg", alt: "" }
               }),
               _vm._v(" "),
               _vm.shownav
