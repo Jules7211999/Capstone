@@ -2355,6 +2355,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -47977,8 +47978,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function () {}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "w-100 h-100" },
+    _vm._l(_vm.data, function(d) {
+      return _c("div", { staticClass: "d-flex justify-content-center w-100" }, [
+        _c("a", { attrs: { href: "/emergency/" + d.id } }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "p-4 row w-75 d-flex justify-content-between font-weight-bold text-secondary border border-secondary m-3 rounded"
+            },
+            [
+              _c("div", [_vm._v(_vm._s(d.user.name))]),
+              _vm._v(" "),
+              _c("div", [_vm._v(_vm._s(d.datetimezone))])
+            ]
+          )
+        ])
+      ])
+    }),
+    0
+  )
+}
 var staticRenderFns = []
+render._withStripped = true
 
 
 

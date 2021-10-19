@@ -6,8 +6,9 @@
                     <div >{{d.user.name}}</div>
                     <div>{{d.datetimezone}}</div>
             </div>
-        </div>
-    </a>
+        </a>
+    </div>
+    
 </div>
     
 </template>
