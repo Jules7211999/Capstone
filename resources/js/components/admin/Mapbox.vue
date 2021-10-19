@@ -107,7 +107,10 @@ export default {
     };
   },
   created() {
-    // We need to set mapbox-gl library here in order to use it in template
+    Echo.channel('SOS.notification')
+    .listen('SOSevent', (e) => {
+        this.getSos();
+    });
     this.mapbox = Mapbox;
   }
 };

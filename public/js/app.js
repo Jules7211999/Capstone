@@ -2040,7 +2040,11 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     };
   }
 }, "created", function created() {
-  // We need to set mapbox-gl library here in order to use it in template
+  var _this5 = this;
+
+  Echo.channel('SOS.notification').listen('SOSevent', function (e) {
+    _this5.getSos();
+  });
   this.mapbox = (mapbox_gl__WEBPACK_IMPORTED_MODULE_0___default());
 }));
 
