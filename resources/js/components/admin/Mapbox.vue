@@ -1,50 +1,54 @@
 <template>
 <div class="w-100 h-100 shadow-lg" >
- <div class="w-100 search">
-    <form @submit.prevent="search()">
-        <input type="text" v-model="query">
-   </form>
+ <div class="w-100">
+   <select class="form-control form-control-lg" v-model="mapshow">
+  <option>Location</option>
+  <option>SOS</option>
+</select>
  </div>
   <MglMap 
   :accessToken="accessToken" 
   :mapStyle="mapStyle" 
   :zoom ="zoom"
   :center="center"
-  
   >
- <div v-for="d in datum.data" :key="d.id">
-      <MglMarker :coordinates="[d.longitude,d.latitude]" >
-      <MglPopup>
-          <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
-            <div>
-              <div class="d-flex"><span class="pr-2">Name:</span>{{d.user.name}}</div>
-              <div class="d-flex"><span class="pr-2">Latitude:</span>{{d.latitude}}</div>
-              <div class="d-flex"><span class="pr-2">Longitude:</span>{{d.longitude}}</div>
-              <div class="d-flex"><span class="pr-2">Date and Time:</span>{{d.datetimezone}}</div>
-              <div class="d-flex"><span class="pr-2">Month:</span>{{d.month_name}}</div>
-              <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.day_of_week}}</div>
-              <a :href="'/user/'+d.user_id"><div class="d-flex w-100 pt-2 justify-content-center">View Profile</div></a>
+ <div v-for="d in datum.data"  >
+   <div v-if="mapshow == 'Location'">
+    <MglMarker :coordinates="[d.longitude,d.latitude]" >
+        <MglPopup>
+            <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
+              <div>
+                <div class="d-flex"><span class="pr-2">Name:</span>{{d.user.name}}</div>
+                <div class="d-flex"><span class="pr-2">Latitude:</span>{{d.latitude}}</div>
+                <div class="d-flex"><span class="pr-2">Longitude:</span>{{d.longitude}}</div>
+                <div class="d-flex"><span class="pr-2">Date and Time:</span>{{d.datetimezone}}</div>
+                <div class="d-flex"><span class="pr-2">Month:</span>{{d.month_name}}</div>
+                <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.day_of_week}}</div>
+                <a :href="'/user/'+d.user_id"><div class="d-flex w-100 pt-2 justify-content-center">View Profile</div></a>
+              </div>
             </div>
-          </div>
-      </MglPopup>
-    </MglMarker>
+        </MglPopup>
+      </MglMarker>
+   </div>
 </div>
 <div v-for="d in sosData.data">
-      <MglMarker :coordinates="[d.longitude,d.latitude]" :color="markerColor">
-      <MglPopup>
-          <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
-            <div>
-              <div class="d-flex"><span class="pr-2">Name:</span>{{d.user.name}}</div>
-              <div class="d-flex"><span class="pr-2">Latitude:</span>{{d.latitude}}</div>
-              <div class="d-flex"><span class="pr-2">Longitude:</span>{{d.longitude}}</div>
-              <div class="d-flex"><span class="pr-2">Date and Time:</span>{{d.datetimezone}}</div>
-              <div class="d-flex"><span class="pr-2">Month:</span>{{d.month_name}}</div>
-              <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.day_of_week}}</div>
-              <a :href="'/emergency/'+d.id"><div class="d-flex w-100 pt-2 justify-content-center">Details</div></a>
+      <div v-if="mapshow == 'SOS'">
+        <MglMarker :coordinates="[d.longitude,d.latitude]" :color="markerColor">
+        <MglPopup>
+            <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
+              <div>
+                <div class="d-flex"><span class="pr-2">Name:</span>{{d.user.name}}</div>
+                <div class="d-flex"><span class="pr-2">Latitude:</span>{{d.latitude}}</div>
+                <div class="d-flex"><span class="pr-2">Longitude:</span>{{d.longitude}}</div>
+                <div class="d-flex"><span class="pr-2">Date and Time:</span>{{d.datetimezone}}</div>
+                <div class="d-flex"><span class="pr-2">Month:</span>{{d.month_name}}</div>
+                <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.day_of_week}}</div>
+                <a :href="'/emergency/'+d.id"><div class="d-flex w-100 pt-2 justify-content-center">Details</div></a>
+              </div>
             </div>
-          </div>
-      </MglPopup>
-    </MglMarker>
+        </MglPopup>
+            </MglMarker>
+      </div>
 </div> 
    </MglMap>
 </div> 
@@ -103,7 +107,8 @@ export default {
       datum: {},
       sosData: {},
       markerColor :"red",
-      query: ''
+      query: '',
+      mapshow: ''
     };
   },
   created() {
