@@ -8,9 +8,11 @@ use App\Http\Controllers\Admin\AdminPost;
 use App\Http\Controllers\Admin\EmergencySignal;
 use App\Http\Controllers\Admin\GetLocation;
 use App\Http\Controllers\Admin\GetSos;
+use App\Http\Controllers\Admin\SearchUserLocationController;
 use App\Http\Controllers\Admin\UserCreateController;
 use App\Http\Controllers\Admin\UserProfile;
 use App\Http\Controllers\Admin\UserSearchController;
+use App\Http\Controllers\User\Sos;
 use App\Http\Controllers\User\TrackLocationController;
 
 Route::get('/dashboard', function () {
@@ -36,7 +38,9 @@ Route::post('/userSearch',[UserSearchController::class,'index']);
 Route::get('/getSos',[GetSos::class,'index']);
 Route::get('/getUser',[GetUser::class,'index']);
 Route::get('/getpost',[GetPost::class,'index']);
-Route::get('/GetLocation',[GetLocation::class,'index']);
+Route::get('/getLocation',[GetLocation::class,'index']);
+Route::post('/searchUserLocation',[SearchUserLocationController::class,'index']);
+Route::post('/sos',[Sos::class,'sos']);
 
 
 ?>

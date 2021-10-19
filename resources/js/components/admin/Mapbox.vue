@@ -1,11 +1,16 @@
 <template>
-<div  class="w-100 h-100 shadow-lg">
- 
+<div class="w-100 h-100 shadow-lg" >
+ <div class="w-100 search">
+    <form @submit.prevent="search()">
+        <input type="text" v-model="query">
+   </form>
+ </div>
   <MglMap 
   :accessToken="accessToken" 
   :mapStyle="mapStyle" 
   :zoom ="zoom"
   :center="center"
+  
   >
  <div v-for="d in datum.data" :key="d.id">
       <MglMarker :coordinates="[d.longitude,d.latitude]" >
@@ -42,7 +47,7 @@
     </MglMarker>
 </div> 
    </MglMap>
-</div>
+</div> 
   
 </template>
 
@@ -53,7 +58,7 @@ import { MglMap,MglPopup, MglMarker  } from "vue-mapbox";
 export default {
   methods:{
     getLocation(){
-      axios.get('/GetLocation')
+      axios.get('/getLocation')
       .then(data => this.datum = data)
       .catch(error => console.log(error.response.data))
     },
@@ -64,7 +69,14 @@ export default {
         axios.get('/getSos')
         .then(data => this.sosData= data)
         .catch(error => console.log(error.response.data.message));
-    }
+    },
+    search(){
+            axios.post('/searchUserLocation',{
+                search : this.query,
+            })
+            .then(data => this.datum = data)
+            .catch(error =>console.log(error.errors.message))
+        }
   },
   mounted(){
     this.getLocation();
@@ -84,6 +96,7 @@ export default {
       datum: {},
       sosData: {},
       markerColor :"red",
+      query: ''
     };
   },
   created() {
@@ -95,4 +108,9 @@ export default {
 
 <style scoped>
 
+.mapboxgl-canvas{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
 </style>
