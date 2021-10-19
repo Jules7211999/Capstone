@@ -2366,10 +2366,8 @@ __webpack_require__.r(__webpack_exports__);
     this.getSos();
   },
   created: function created() {
-    var _this2 = this;
-
     Echo.channel('SOS.notification').listen('SOSevent', function (e) {
-      _this2.getSos();
+      alert('event'); // this.getSos();
     });
   }
 });

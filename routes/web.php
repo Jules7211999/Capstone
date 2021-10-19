@@ -2,6 +2,7 @@
 
 
 use App\Models\User;
+use App\Events\SOSevent;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GetUserProfile;
@@ -43,5 +44,5 @@ Route::get('/getUserProfile',[GetUserProfile::class,'index']);
 //test route
 
 Route::get('/test',function(){
-   return view("test");
+    event(new SOSevent());
 });
