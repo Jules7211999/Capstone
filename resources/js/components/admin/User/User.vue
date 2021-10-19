@@ -1,7 +1,18 @@
 <template>
 <div>
-    <div class="w-100 pl-3">
-      <a href="/user/create"><div><img src="/img/add-user.png" alt="" class="adduser"><label class="font-weight-bold text-secondary">Add User</label></div></a>
+    <div class="w-100 p-5 d-flex justify-content-between">
+            <a href="/user/create">
+                <div>
+                    <img src="/img/add-user.png" alt="" class="adduser">
+                    <label class="font-weight-bold text-secondary"></label>
+                </div>
+            </a>
+            <div class="w-50 text-right pr-5">
+                <form @submit.prevent="search()">
+                    <input type="text" v-model="query" placeholder="Search" class="border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary pr-5">
+                </form>  
+                
+            </div>
     </div>
     <div class="d-flex flex-wrap w-100 h-100">
         <div v-for="u in user.data" class="m-2 d-flex flex-wrap">
@@ -10,7 +21,7 @@
                     <div class ="text-center mt-3">
                             <img :src="'/img/'+ u.profile_image" alt="" class="w-50">
                         <div class="font-weight-bold mt-5 pt-3">
-                            <span>{{u.name}}</span>
+                            <label>{{u.name}}</label>
                         </div>
                     </div>    
                 </div>
@@ -25,20 +36,37 @@ export default {
     data(){
         return{
             user:{},
+            query:''
         }
     },
     mounted(){
         axios.get('/getUser').then(data => this.user = data);
-       
+    },
+    methods:{
+        search(){
+            axios.post('/userSearch',{
+                search : this.query,
+            })
+            .then(data => this.user = data)
+            .catch(error =>console.log(error.errors.message))
+        }
     }
 }
 </script>
 
 <style scoped>
 .user-container{
-    width: 250px;
-    height: 300px;
+    width: 150px;
+    height: 200px;
     border-radius: 1.5rem;
+    padding: 5rem;
+}
+.user-container:hover{
+     width: 200px;
+    height: 250px;
+    border-radius: 1.5rem;
+    padding: 3rem;
+    transition: ease-in-out 0.2s;
 }
 span{
     font-size: 1.5rem;
@@ -56,5 +84,14 @@ span{
 .adduser:hover{
     width: 3rem;
     transition: 0.5s ease-out;
+}
+input:focus{
+    outline: none;  
+    width: 60%;
+    transition: ease-out 0.5s;
+}
+input{
+    background: transparent;
+    width: 50%;
 }
 </style>

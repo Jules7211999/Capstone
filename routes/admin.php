@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\GetLocation;
 use App\Http\Controllers\Admin\GetSos;
 use App\Http\Controllers\Admin\UserCreateController;
 use App\Http\Controllers\Admin\UserProfile;
+use App\Http\Controllers\Admin\UserSearchController;
 use App\Http\Controllers\User\TrackLocationController;
 
 Route::get('/dashboard', function () {
@@ -29,6 +30,7 @@ Route::resource('user',UserProfile::class);
 Route::resource('post',AdminPost::class);
 Route::resource('emergency',EmergencySignal::class);
 Route::post('/userCreate',[UserCreateController::class,'index']);
+Route::post('/userSearch',[UserSearchController::class,'index']);
 
 //api routes
 Route::get('/getSos',[GetSos::class,'index']);

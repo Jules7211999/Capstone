@@ -2464,10 +2464,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      user: {}
+      user: {},
+      query: ''
     };
   },
   mounted: function mounted() {
@@ -2476,6 +2488,19 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/getUser').then(function (data) {
       return _this.user = data;
     });
+  },
+  methods: {
+    search: function search() {
+      var _this2 = this;
+
+      axios.post('/userSearch', {
+        search: this.query
+      }).then(function (data) {
+        return _this2.user = data;
+      })["catch"](function (error) {
+        return console.log(error.errors.message);
+      });
+    }
   }
 });
 
@@ -7263,7 +7288,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.user-container[data-v-663901d4]{\r\n    width: 250px;\r\n    height: 300px;\r\n    border-radius: 1.5rem;\n}\nspan[data-v-663901d4]{\r\n    font-size: 1.5rem;\r\n    word-wrap: break-word;\n}\n.modal[data-v-663901d4]{\r\n    top: 50%;\r\n    right: 50%;\r\n    background-color: aqua;\r\n    z-index: 12;\n}\n.adduser[data-v-663901d4]{\r\n    width: 2rem;\n}\n.adduser[data-v-663901d4]:hover{\r\n    width: 3rem;\r\n    transition: 0.5s ease-out;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.user-container[data-v-663901d4]{\r\n    width: 150px;\r\n    height: 200px;\r\n    border-radius: 1.5rem;\r\n    padding: 5rem;\n}\n.user-container[data-v-663901d4]:hover{\r\n     width: 200px;\r\n    height: 250px;\r\n    border-radius: 1.5rem;\r\n    padding: 3rem;\r\n    transition: ease-in-out 0.2s;\n}\nspan[data-v-663901d4]{\r\n    font-size: 1.5rem;\r\n    word-wrap: break-word;\n}\n.modal[data-v-663901d4]{\r\n    top: 50%;\r\n    right: 50%;\r\n    background-color: aqua;\r\n    z-index: 12;\n}\n.adduser[data-v-663901d4]{\r\n    width: 2rem;\n}\n.adduser[data-v-663901d4]:hover{\r\n    width: 3rem;\r\n    transition: 0.5s ease-out;\n}\ninput[data-v-663901d4]:focus{\r\n    outline: none;  \r\n    width: 60%;\r\n    transition: ease-out 0.5s;\n}\ninput[data-v-663901d4]{\r\n    background: transparent;\r\n    width: 50%;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -48023,7 +48048,47 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _vm._m(0),
+    _c("div", { staticClass: "w-100 p-5 d-flex justify-content-between" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "w-50 text-right pr-5" }, [
+        _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.search()
+              }
+            }
+          },
+          [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.query,
+                  expression: "query"
+                }
+              ],
+              staticClass:
+                "border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary pr-5",
+              attrs: { type: "text", placeholder: "Search" },
+              domProps: { value: _vm.query },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.query = $event.target.value
+                }
+              }
+            })
+          ]
+        )
+      ])
+    ]),
     _vm._v(" "),
     _c(
       "div",
@@ -48047,7 +48112,7 @@ var render = function() {
                     }),
                     _vm._v(" "),
                     _c("div", { staticClass: "font-weight-bold mt-5 pt-3" }, [
-                      _c("span", [_vm._v(_vm._s(u.name))])
+                      _c("label", [_vm._v(_vm._s(u.name))])
                     ])
                   ])
                 ]
@@ -48065,17 +48130,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-100 pl-3" }, [
-      _c("a", { attrs: { href: "/user/create" } }, [
-        _c("div", [
-          _c("img", {
-            staticClass: "adduser",
-            attrs: { src: "/img/add-user.png", alt: "" }
-          }),
-          _c("label", { staticClass: "font-weight-bold text-secondary" }, [
-            _vm._v("Add User")
-          ])
-        ])
+    return _c("a", { attrs: { href: "/user/create" } }, [
+      _c("div", [
+        _c("img", {
+          staticClass: "adduser",
+          attrs: { src: "/img/add-user.png", alt: "" }
+        }),
+        _vm._v(" "),
+        _c("label", { staticClass: "font-weight-bold text-secondary" })
       ])
     ])
   }
