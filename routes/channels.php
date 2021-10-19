@@ -16,3 +16,4 @@ use Illuminate\Support\Facades\Broadcast;
 Broadcast::channel('SOS.notification', function () {
     return true;
 });
+
