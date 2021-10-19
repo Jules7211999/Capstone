@@ -2461,17 +2461,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var vue_mapbox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-mapbox */ "./node_modules/vue-mapbox/src/main.js");
 //
 //
 //
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  components: {
+    MglMap: vue_mapbox__WEBPACK_IMPORTED_MODULE_0__.MglMap,
+    MglMarker: vue_mapbox__WEBPACK_IMPORTED_MODULE_0__.MglMarker
+  },
   props: ['data'],
   data: function data() {
     return {
-      emergencyData: this.data
+      eData: this.data,
+      accessToken: "pk.eyJ1IjoianVsZXNsZW9tZWwiLCJhIjoiY2tzZmFiNDE1MThkNDJvb2RwaWZ0cDdlYSJ9.XsG9J74iDhCOOTW7pjk-Yw",
+      // your access token. Needed if you using Mapbox maps
+      mapStyle: "mapbox://styles/mapbox/streets-v11",
+      // your map style
+      center: [122.8500, 10.2667],
+      markerColor: "red",
+      zoom: 8
     };
   }
 });
@@ -48222,12 +48243,34 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm._v("\n    " + _vm._s(_vm.emergencyData) + "\n    "),
-    _c("a", { attrs: { href: "/user/" + _vm.emergencyData.user.id } }, [
-      _vm._v("View Profile")
-    ])
-  ])
+  return _c(
+    "div",
+    { staticClass: "w-100 h-50" },
+    [
+      _c(
+        "MglMap",
+        {
+          attrs: {
+            accessToken: _vm.accessToken,
+            mapStyle: _vm.mapStyle,
+            zoom: _vm.zoom,
+            center: _vm.center
+          }
+        },
+        [
+          _c("MglMarker", {
+            attrs: { coordinates: [_vm.eData.longitude, _vm.eData.latitude] }
+          })
+        ],
+        1
+      ),
+      _vm._v("\n    " + _vm._s(_vm.eData) + "\n    "),
+      _c("a", { attrs: { href: "/user/" + _vm.eData.user.id } }, [
+        _vm._v("View Profile")
+      ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

@@ -23,11 +23,13 @@ Route::get('/dashboard', function () {
 Route::get('/map',function(){
     return view('admin.map');
 });
+
 Route::resource('user',UserProfile::class);
 Route::resource('emergency',EmergencySignal::class);
 Route::post('/userCreate',[UserCreateController::class,'index']);
 Route::post('/userSearch',[UserSearchController::class,'index']);
 Route::get('/profile',[ProfileController::class,'index']);
+
 //api routes
 Route::get('/getSos',[GetSos::class,'index']);
 Route::get('/getUser',[GetUser::class,'index']);
