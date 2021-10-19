@@ -32,8 +32,7 @@ mounted(){
 created(){
     Echo.channel('SOS.notification')
     .listen('SOSevent', (e) => {
-        alert('event');
-        // this.getSos();
+        this.getSos();
     });
 }    
 }
