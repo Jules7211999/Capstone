@@ -2437,13 +2437,7 @@ __webpack_require__.r(__webpack_exports__);
       name: ""
     };
   },
-  mounted: function mounted() {
-    var _this = this;
-
-    axios.get('/authname').then(function (data) {
-      return _this.name = data;
-    });
-  }
+  mounted: function mounted() {}
 });
 
 /***/ }),

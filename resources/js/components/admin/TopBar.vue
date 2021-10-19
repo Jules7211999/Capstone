@@ -23,8 +23,7 @@ export default {
   },
     mounted(){
         
-        axios.get('/authname')
-        .then(data => this.name = data);
+      
     }
 }
 </script>
