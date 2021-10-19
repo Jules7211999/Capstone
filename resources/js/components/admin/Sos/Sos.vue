@@ -24,16 +24,18 @@ methods:{
         axios.get('/getSos')
         .then(data => this.data = data.data)
         .catch(error => console.log(error.response.data.message));
+        
     },
 },
 mounted(){
     this.getSos();
+    
 },
 created(){
     Echo.channel('SOS.notification')
     .listen('SOSevent', (e) => {
         alert('event');
-        // this.getSos();
+        this.getSos();
     });
 }    
 }

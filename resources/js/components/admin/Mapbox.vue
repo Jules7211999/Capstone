@@ -29,7 +29,7 @@
       </MglPopup>
     </MglMarker>
 </div>
-<div v-for="d in sosData.data" :key= "d.id">
+<div v-for="d in sosData.data">
       <MglMarker :coordinates="[d.longitude,d.latitude]" :color="markerColor">
       <MglPopup>
           <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
@@ -82,6 +82,13 @@ export default {
     this.getLocation();
     this.getSos();
   },
+  created(){
+    Echo.channel('SOS.notification')
+    .listen('SOSevent', (e) => {
+        alert('event');
+        this.getSos();
+    });
+},    
   components: {
     MglMap,
     MglMarker,

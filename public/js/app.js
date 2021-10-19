@@ -1915,6 +1915,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var mapbox_gl__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! mapbox-gl */ "./node_modules/mapbox-gl/dist/mapbox-gl.js");
 /* harmony import */ var mapbox_gl__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(mapbox_gl__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vue_mapbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-mapbox */ "./node_modules/vue-mapbox/src/main.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -1970,7 +1972,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_defineProperty({
   methods: {
     getLocation: function getLocation() {
       var _this = this;
@@ -2009,6 +2011,15 @@ __webpack_require__.r(__webpack_exports__);
     this.getLocation();
     this.getSos();
   },
+  created: function created() {
+    var _this4 = this;
+
+    Echo.channel('SOS.notification').listen('SOSevent', function (e) {
+      alert('event');
+
+      _this4.getSos();
+    });
+  },
   components: {
     MglMap: vue_mapbox__WEBPACK_IMPORTED_MODULE_1__.MglMap,
     MglMarker: vue_mapbox__WEBPACK_IMPORTED_MODULE_1__.MglMarker,
@@ -2027,12 +2038,11 @@ __webpack_require__.r(__webpack_exports__);
       markerColor: "red",
       query: ''
     };
-  },
-  created: function created() {
-    // We need to set mapbox-gl library here in order to use it in template
-    this.mapbox = (mapbox_gl__WEBPACK_IMPORTED_MODULE_0___default());
   }
-});
+}, "created", function created() {
+  // We need to set mapbox-gl library here in order to use it in template
+  this.mapbox = (mapbox_gl__WEBPACK_IMPORTED_MODULE_0___default());
+}));
 
 /***/ }),
 
@@ -2366,8 +2376,12 @@ __webpack_require__.r(__webpack_exports__);
     this.getSos();
   },
   created: function created() {
+    var _this2 = this;
+
     Echo.channel('SOS.notification').listen('SOSevent', function (e) {
-      alert('event'); // this.getSos();
+      alert('event');
+
+      _this2.getSos();
     });
   }
 });
@@ -47273,7 +47287,6 @@ var render = function() {
           _vm._l(_vm.sosData.data, function(d) {
             return _c(
               "div",
-              { key: d.id },
               [
                 _c(
                   "MglMarker",
