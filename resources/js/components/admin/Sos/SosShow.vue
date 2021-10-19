@@ -6,7 +6,7 @@
             :zoom ="zoom"
             :center="center"
         >
-        <MglMarker :coordinates="[eData.longitude,eData.latitude]" />
+        <MglMarker :coordinates="[eData.longitude,eData.latitude]" :color ="markerColor"/>
         </MglMap>
         {{eData}}
         <a :href="'/user/'+eData.user.id">View Profile</a>
@@ -25,7 +25,7 @@ export default {
         mapStyle: "mapbox://styles/mapbox/streets-v11", // your map style
         center: [122.8500,10.2667 ],
         markerColor :"red",
-        zoom: 8,
+        zoom: 7,
         }
     }
 }

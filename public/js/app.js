@@ -2492,7 +2492,7 @@ __webpack_require__.r(__webpack_exports__);
       // your map style
       center: [122.8500, 10.2667],
       markerColor: "red",
-      zoom: 8
+      zoom: 7
     };
   }
 });
@@ -48259,7 +48259,10 @@ var render = function() {
         },
         [
           _c("MglMarker", {
-            attrs: { coordinates: [_vm.eData.longitude, _vm.eData.latitude] }
+            attrs: {
+              coordinates: [_vm.eData.longitude, _vm.eData.latitude],
+              color: _vm.markerColor
+            }
           })
         ],
         1
