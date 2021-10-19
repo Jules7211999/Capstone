@@ -29,6 +29,7 @@ Vue.component('user-show-component',require('./components/admin/User/UserShow.vu
 Vue.component('post-component',require('./components/admin/Post/Post.vue').default);
 Vue.component('admin-sos-component',require('./components/admin/Sos/Sos.vue').default);
 Vue.component('sos-show-component',require('./components/admin/Sos/SosShow.vue').default);
+Vue.component('profile-component',require('./components/admin/Profile/Profile.vue').default);
 
 
 

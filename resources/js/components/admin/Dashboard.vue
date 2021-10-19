@@ -1,12 +1,35 @@
 <template>
-    <div class="w-100 h-75 rounded mt-4 border border-secondary p-5 d-flex justify-content-center">
-       
-           <div class="w-25 h-50 border-secondary mr-3 r">
-           </div>
-           <div class="w-25 h-50 border-secondary r">
-           </div>
+    <div class="w-100 h-100 rounded ml-3 mt-4">
+       <div class="w-100 h-25 d-flex row">
+        <div class=" col-3 font-weight-bold text-secondary d-flex align-items-center justify-content-center">
+            <div class="text-center ">
+                <h4 class="font-weight-bold">Registered User</h4>
+                <h2 class="font-weight-bold">3</h2>
+            </div>
+        </div>
+        <div class=" col-3 font-weight-bold text-secondary  d-flex align-items-center justify-content-center">
+            <div class="text-center ">
+                <h4 class="font-weight-bold">Location Received</h4>
+                <h2 class="font-weight-bold">4</h2>
+            </div>
+        </div>
+        <div class=" col-3 ont-weight-bold text-secondary  d-flex align-items-center justify-content-center">
+            <div class="text-center ">
+                <h4 class="font-weight-bold">Email Verified</h4>
+                <h2 class="font-weight-bold">4</h2>
+            </div>
+        </div>
+         <div class=" col-3 ont-weight-bold text-secondary  d-flex align-items-center justify-content-center">
+            <div class="text-center ">
+                <h4 class="font-weight-bold">SOS Received</h4>
+                <h2 class="font-weight-bold">4</h2>
+            </div>
+        </div>
        </div>
-    
+       <div class="row w-100 h-50">
+
+       </div>
+    </div>
 </template>
 
 <script>
@@ -18,8 +41,6 @@ export default {
 </script>
 
 <style scoped>
-  
-   .r{
-       background-color: blue;
-   }
+
+
 </style>

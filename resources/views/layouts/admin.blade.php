@@ -11,7 +11,7 @@
     </head>
     <body >
         <div id="app" class="w-100 vh-100">
-          <admin-container-component>
+          <admin-container-component authname="user">
               @yield('content')
           </admin-container-component>
         </div>
