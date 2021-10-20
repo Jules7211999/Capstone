@@ -16,7 +16,7 @@ class UserProfile extends Controller
      */
     public function index()
     {
-        return view('admin.user');
+        return view('Superuser.user');
     }
 
     /**
@@ -26,7 +26,7 @@ class UserProfile extends Controller
      */
     public function create()
     {
-        return view('admin.addUser');
+        return view('Superuser.addUser');
     }
 
     /**
@@ -56,7 +56,7 @@ class UserProfile extends Controller
 
         $data = $model->toJson();
 
-        return view("admin.userShow") -> with('data', $data);
+        return view("Superuser.userShow") -> with('data', $data);
     
     }
 

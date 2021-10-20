@@ -49,7 +49,7 @@
 
             <!-- role -->
             <div class=" invisible" >
-                <input type="text" name="role" value="Admin" required />
+                <input type="text" name="role" value="SuperUser" required />
             </div>
 
 

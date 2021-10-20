@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Post;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class AdminPost extends Controller
+class AdminProfile extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class AdminPost extends Controller
      */
     public function index()
     {
-        return view('Superuser.post');
+        return view('Superuser.admin');
     }
 
     /**
@@ -25,7 +24,7 @@ class AdminPost extends Controller
      */
     public function create()
     {
-        //
+        return view('Superuser.addAdmin');
     }
 
     /**
@@ -36,13 +35,7 @@ class AdminPost extends Controller
      */
     public function store(Request $request)
     {
-      return Post::create([
-          "subject" => $request->subject,
-          "body" => $request->body,
-          "user_id" => auth()->user()->id
-        ]);
-
-      
+        //
     }
 
     /**

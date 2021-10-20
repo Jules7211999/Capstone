@@ -30,6 +30,7 @@ Vue.component('post-component',require('./components/admin/Post/Post.vue').defau
 Vue.component('admin-sos-component',require('./components/admin/Sos/Sos.vue').default);
 Vue.component('sos-show-component',require('./components/admin/Sos/SosShow.vue').default);
 Vue.component('profile-component',require('./components/admin/Profile/Profile.vue').default);
+Vue.component('admin-component',require('./components/admin/admin/Admin.vue').default);
 
 
 

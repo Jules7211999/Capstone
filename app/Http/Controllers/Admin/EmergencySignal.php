@@ -15,7 +15,7 @@ class EmergencySignal extends Controller
      */
     public function index()
     {
-        return view('admin.sos');
+        return view('Superuser.sos');
     }
 
     /**
@@ -50,7 +50,7 @@ class EmergencySignal extends Controller
         $emergency = EmergencyCall::with('user')->find($id);
         
         
-        return view('admin.sosShow',['data' => $emergency]);
+        return view('Superuser.sosShow',['data' => $emergency]);
     }
  
     /**

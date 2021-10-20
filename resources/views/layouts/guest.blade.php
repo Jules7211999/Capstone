@@ -16,13 +16,18 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
+    <style>
+             #logo{
+            width: 4rem;
+        }
+        </style>
     <body>
         <div id="app" class="container-fluid vh-100 ">
             <div class="h-25 w-100">
             </div>
                     <div class="row justify-content-center mb-3">
                         <div class="col-xl-4 col-md-4 text-center">
-                            <img src="{{asset('img/logo.svg')}}" alt="">
+                            <img id="logo" src="{{asset('img/logo.png')}}" alt="">
                         </div>
                     </div>
                     <div class="row justify-content-center">
@@ -31,5 +36,7 @@
                         </div>
                     </div>
         </div>
+
+        
     </body>
 </html>

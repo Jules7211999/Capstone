@@ -23,6 +23,7 @@ class Sos extends Controller
             'datetimezone' => $dtm,
             'month_name' => $dtm -> monthName,
             'day_of_week' => $dtm -> shortLocaleDayOfWeek,
+            'status' => "waiting"
         ]);
         
         event(new SOSevent());

@@ -20,6 +20,14 @@
                             </a>
                         </div>
                         <div class=" mb-5">
+                            <a href="/admin" class="text-secondary">
+                                <img src="/img/Admin.png" alt="" class ="icon pr-3">
+                                    <span v-if="shownav">
+                                        Admin
+                                    </span>
+                            </a>
+                        </div>
+                        <div class=" mb-5">
                             <a href="/map" class="text-secondary">
                             <img src="/img/Map.svg" alt="" class ="icon pr-3">
                                 <span v-if="shownav">
