@@ -36,25 +36,25 @@
       </MglMarker>
    </div>
 </div>
-<!-- <div v-for="d in sosData.data">
+<div v-for="d in sosData.data">
       <div v-if="mapshow == 'SOS'">
-        <MglMarker :coordinates="[d.longitude,d.latitude]" :color="markerColor">
+        <MglMarker :coordinates="[d.emergency_call[0].longitude,d.emergency_call[0].latitude]" :color="markerColor">
         <MglPopup>
             <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
               <div>
-                <div class="d-flex"><span class="pr-2">Name:</span>{{d.user.name}}</div>
-                <div class="d-flex"><span class="pr-2">Latitude:</span>{{d.latitude}}</div>
-                <div class="d-flex"><span class="pr-2">Longitude:</span>{{d.longitude}}</div>
-                <div class="d-flex"><span class="pr-2">Date and Time:</span>{{d.datetimezone}}</div>
-                <div class="d-flex"><span class="pr-2">Month:</span>{{d.month_name}}</div>
-                <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.day_of_week}}</div>
-                <a :href="'/emergency/'+d.id"><div class="d-flex w-100 pt-2 justify-content-center">Details</div></a>
+                <div class="d-flex"><span class="pr-2">Name:</span>{{d.name}}</div>
+                <div class="d-flex"><span class="pr-2">Latitude:</span>{{d.emergency_call[0].latitude}}</div>
+                <div class="d-flex"><span class="pr-2">Longitude:</span>{{d.emergency_call[0].longitude}}</div>
+                <div class="d-flex"><span class="pr-2">Date and Time:</span>{{d.emergency_call[0].datetimezone}}</div>
+                <div class="d-flex"><span class="pr-2">Month:</span>{{d.emergency_call[0].month_name}}</div>
+                <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.emergency_call[0].day_of_week}}</div>
+                <a :href="'/emergency/'+d.emergency_call[0].id"><div class="d-flex w-100 pt-2 justify-content-center">Details</div></a>
               </div>
             </div>
         </MglPopup>
             </MglMarker>
       </div>
-</div>  -->
+</div> 
    </MglMap>  
 </div> 
   

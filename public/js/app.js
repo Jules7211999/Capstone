@@ -2504,6 +2504,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -2521,7 +2528,7 @@ __webpack_require__.r(__webpack_exports__);
       // your map style
       center: [122.8500, 10.2667],
       markerColor: "red",
-      zoom: 11
+      zoom: 12
     };
   }
 });
@@ -48893,102 +48900,216 @@ var render = function() {
             center: _vm.center
           }
         },
-        _vm._l(_vm.datum.data, function(d) {
-          return _c("div", [
-            _vm.mapshow == "Location"
-              ? _c(
-                  "div",
-                  [
-                    _c(
-                      "MglMarker",
-                      {
-                        attrs: {
-                          coordinates: [
-                            d.coordinates[0].longitude,
-                            d.coordinates[0].latitude
-                          ]
-                        }
-                      },
-                      [
-                        _c("MglPopup", [
-                          _c(
-                            "div",
-                            {
-                              staticClass:
-                                "font-weight-bold p-3 d-flex justify-content-center align-items-center"
-                            },
-                            [
-                              _c("div", [
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Name:")
-                                  ]),
-                                  _vm._v(_vm._s(d.name))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Latitude:")
-                                  ]),
-                                  _vm._v(_vm._s(d.coordinates[0].latitude))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Longitude:")
-                                  ]),
-                                  _vm._v(_vm._s(d.coordinates[0].longitude))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Date and Time:")
-                                  ]),
-                                  _vm._v(_vm._s(d.coordinates[0].datetimezone))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Month:")
-                                  ]),
-                                  _vm._v(_vm._s(d.coordinates[0].month_name))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Day of the Week:")
-                                  ]),
-                                  _vm._v(_vm._s(d.coordinates[0].day_of_week))
-                                ]),
-                                _vm._v(" "),
-                                _c(
-                                  "a",
-                                  { attrs: { href: "/user/" + d.user_id } },
-                                  [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "d-flex w-100 pt-2 justify-content-center"
-                                      },
-                                      [_vm._v("View Profile")]
-                                    )
-                                  ]
-                                )
-                              ])
+        [
+          _vm._l(_vm.datum.data, function(d) {
+            return _c("div", [
+              _vm.mapshow == "Location"
+                ? _c(
+                    "div",
+                    [
+                      _c(
+                        "MglMarker",
+                        {
+                          attrs: {
+                            coordinates: [
+                              d.coordinates[0].longitude,
+                              d.coordinates[0].latitude
                             ]
-                          )
-                        ])
-                      ],
-                      1
-                    )
-                  ],
-                  1
-                )
-              : _vm._e()
-          ])
-        }),
-        0
+                          }
+                        },
+                        [
+                          _c("MglPopup", [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "font-weight-bold p-3 d-flex justify-content-center align-items-center"
+                              },
+                              [
+                                _c("div", [
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Name:")
+                                    ]),
+                                    _vm._v(_vm._s(d.name))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Latitude:")
+                                    ]),
+                                    _vm._v(_vm._s(d.coordinates[0].latitude))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Longitude:")
+                                    ]),
+                                    _vm._v(_vm._s(d.coordinates[0].longitude))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Date and Time:")
+                                    ]),
+                                    _vm._v(
+                                      _vm._s(d.coordinates[0].datetimezone)
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Month:")
+                                    ]),
+                                    _vm._v(_vm._s(d.coordinates[0].month_name))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Day of the Week:")
+                                    ]),
+                                    _vm._v(_vm._s(d.coordinates[0].day_of_week))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    { attrs: { href: "/user/" + d.user_id } },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "d-flex w-100 pt-2 justify-content-center"
+                                        },
+                                        [_vm._v("View Profile")]
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ]
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                : _vm._e()
+            ])
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.sosData.data, function(d) {
+            return _c("div", [
+              _vm.mapshow == "SOS"
+                ? _c(
+                    "div",
+                    [
+                      _c(
+                        "MglMarker",
+                        {
+                          attrs: {
+                            coordinates: [
+                              d.emergency_call[0].longitude,
+                              d.emergency_call[0].latitude
+                            ],
+                            color: _vm.markerColor
+                          }
+                        },
+                        [
+                          _c("MglPopup", [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "font-weight-bold p-3 d-flex justify-content-center align-items-center"
+                              },
+                              [
+                                _c("div", [
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Name:")
+                                    ]),
+                                    _vm._v(_vm._s(d.name))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Latitude:")
+                                    ]),
+                                    _vm._v(_vm._s(d.emergency_call[0].latitude))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Longitude:")
+                                    ]),
+                                    _vm._v(
+                                      _vm._s(d.emergency_call[0].longitude)
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Date and Time:")
+                                    ]),
+                                    _vm._v(
+                                      _vm._s(d.emergency_call[0].datetimezone)
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Month:")
+                                    ]),
+                                    _vm._v(
+                                      _vm._s(d.emergency_call[0].month_name)
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Day of the Week:")
+                                    ]),
+                                    _vm._v(
+                                      _vm._s(d.emergency_call[0].day_of_week)
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "a",
+                                    {
+                                      attrs: {
+                                        href:
+                                          "/emergency/" + d.emergency_call[0].id
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "d-flex w-100 pt-2 justify-content-center"
+                                        },
+                                        [_vm._v("Details")]
+                                      )
+                                    ]
+                                  )
+                                ])
+                              ]
+                            )
+                          ])
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                : _vm._e()
+            ])
+          })
+        ],
+        2
       )
     ],
     1
@@ -49697,7 +49818,10 @@ var render = function() {
       return _c("div", { staticClass: "d-flex justify-content-center w-100" }, [
         _c(
           "a",
-          { staticClass: "w-100", attrs: { href: "/emergency/" + d.id } },
+          {
+            staticClass: "w-100",
+            attrs: { href: "/emergency/" + d.emergency_call[0].id }
+          },
           [
             _c(
               "div",
@@ -49706,9 +49830,9 @@ var render = function() {
                   "p-4 row w-75 d-flex justify-content-between font-weight-bold text-secondary shadow  border ml-4"
               },
               [
-                _c("div", [_vm._v(_vm._s(d.user.name))]),
+                _c("div", [_vm._v(_vm._s(d.name))]),
                 _vm._v(" "),
-                _c("div", [_vm._v(_vm._s(d.datetimezone))])
+                _c("div", [_vm._v(_vm._s(d.emergency_call[0].datetimezone))])
               ]
             )
           ]
@@ -49743,7 +49867,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "w-100 h-100" },
+    { staticClass: "w-100 h-50" },
     [
       _c(
         "MglMap",
@@ -49835,7 +49959,27 @@ var render = function() {
           )
         ],
         1
-      )
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "container" }, [
+        _c(
+          "div",
+          { staticClass: "d-flex w-100 text-secondary font-weight-bold" },
+          [
+            _c("div", { staticClass: "ml-3" }, [
+              _vm._v(_vm._s(_vm.eData.user.name))
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "ml-3" }, [
+              _vm._v(_vm._s(_vm.eData.user.gender))
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "ml-3" }, [
+              _vm._v(_vm._s(_vm.eData.user.barangay))
+            ])
+          ]
+        )
+      ])
     ],
     1
   )

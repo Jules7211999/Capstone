@@ -1,5 +1,5 @@
 <template>
-    <div class="w-100 h-100">
+    <div class="w-100 h-50">
         <MglMap 
             :accessToken="accessToken" 
             :mapStyle="mapStyle" 
@@ -22,6 +22,13 @@
                 </MglPopup>
             </MglMarker>
         </MglMap>
+        <div class="container">
+            <div class="d-flex w-100 text-secondary font-weight-bold">
+                <div class="ml-3">{{eData.user.name}}</div>
+                <div class="ml-3">{{eData.user.gender}}</div>
+                <div class="ml-3">{{eData.user.barangay}}</div>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -37,7 +44,7 @@ export default {
         mapStyle: "mapbox://styles/mapbox/streets-v11", // your map style
         center: [122.8500,10.2667 ],
         markerColor :"red",
-        zoom: 11,
+        zoom: 12,
         }
     }
 }

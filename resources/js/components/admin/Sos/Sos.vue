@@ -1,10 +1,10 @@
 <template>
 <div class="w-100 h-100">
     <div v-for="d in data" class="d-flex justify-content-center w-100">
-        <a :href="'/emergency/'+d.id" class="w-100">
+        <a :href="'/emergency/'+d.emergency_call[0].id" class="w-100">
             <div class="p-4 row w-75 d-flex justify-content-between font-weight-bold text-secondary shadow  border ml-4">
-                    <div >{{d.user.name}}</div>
-                    <div>{{d.datetimezone}}</div>
+                    <div >{{d.name}}</div>
+                    <div>{{d.emergency_call[0].datetimezone}}</div>
             </div>
         </a>
     </div>

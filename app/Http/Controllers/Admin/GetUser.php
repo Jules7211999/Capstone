@@ -10,6 +10,10 @@ class GetUser extends Controller
 {
     public function index(){
         
-        return User::where('role','=','User')->get();
+        if(auth()->user()->role == "SuperUser"){
+            return User::where('role','=','User')->get();
+        }else{
+            return User::where('role','=','User')->where('barangay','=',auth()->user()->barangay)->get();
+        }
     }
 }

@@ -19,6 +19,7 @@
                         <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline font-weight-bold  text-secondary">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}" class="font-weight-bold  text-secondary">Log in</a>
+                        <a href="" class="font-weight-bold  text-secondary ml-4">|</a>
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}" class="ml-4 font-weight-bold text-secondary">Register</a>
                         @endif
@@ -28,19 +29,43 @@
             </div>
         </div>
     </nav>
-    <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-        </p>
+   <div class="w-100  wrapper border d-flex align-items-center justify-content-center">
+    <img src="{{asset('img/fishingboat.png')}}" class="w-25 h-25" alt="">
+    <div>
+            <h1 class="ml-5 pb-3 font-weight-bold text-secondary">“Great fish do not swim<br> in shallow waters.”</h1>
+            <div class="text-center">
+            <button class="btn-signup pl-5 pr-5 rounded font-weight-bold text-secondary">Sign Up</button>
+            </div>
+            
     </div>
+    
+   </div>
+   <div class="footer">
+
+   </div>
 
        <style>
         #logo{
             width: 2rem;
+        }
+        .wrapper{
+            height: 95vh;
+        }
+        .footer{
+            height: 30vh;
+            background:#6c757d;
+        }
+        .btn-signup{
+            background: transparent;
+            border: 2px #6c757d solid;
+            
+        }
+        .btn-signup:hover{
+            border: 1px #000 solid;
+            color: #000;
+            font-weight: 400;
+            padding: 0.5rem 1rem ;
+            transition: 0.2s;
         }
        </style>
     </body>

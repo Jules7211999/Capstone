@@ -20,6 +20,8 @@ class EmergencyCall extends Model
         'datetimezone',
         'month_name',
         'day_of_week',
+        'type',
+        'status'
     ];
 
     public function user(){
