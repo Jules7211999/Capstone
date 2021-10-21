@@ -11,7 +11,7 @@
     </head>
     <body >
         <div id="app" class="w-100 vh-100">
-          <admin-container-component authname="user">
+          <admin-container-component role="{{auth()->user()->role}}" authname="{{auth()->user()->name}}">
               @yield('content')
           </admin-container-component>
         </div>

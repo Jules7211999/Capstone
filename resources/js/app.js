@@ -32,7 +32,9 @@ Vue.component('sos-show-component',require('./components/admin/Sos/SosShow.vue')
 Vue.component('profile-component',require('./components/admin/Profile/Profile.vue').default);
 Vue.component('admin-component',require('./components/admin/admin/Admin.vue').default);
 
+//component only
 
+Vue.component('dropdown-barangay-component',require('./components/Dropdown(Barangay).vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

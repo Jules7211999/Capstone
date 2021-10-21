@@ -1916,7 +1916,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['authname'],
+  props: ['authname', 'role'],
   components: {
     topbar: _TopBar_vue__WEBPACK_IMPORTED_MODULE_0__.default,
     sidebar: _SideBar_vue__WEBPACK_IMPORTED_MODULE_1__.default
@@ -2395,10 +2395,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['role'],
   data: function data() {
     return {
-      shownav: true
+      shownav: true,
+      authrole: this.role
     };
   },
   mounted: function mounted() {}
@@ -2829,7 +2832,9 @@ Vue.component('post-component', __webpack_require__(/*! ./components/admin/Post/
 Vue.component('admin-sos-component', __webpack_require__(/*! ./components/admin/Sos/Sos.vue */ "./resources/js/components/admin/Sos/Sos.vue").default);
 Vue.component('sos-show-component', __webpack_require__(/*! ./components/admin/Sos/SosShow.vue */ "./resources/js/components/admin/Sos/SosShow.vue").default);
 Vue.component('profile-component', __webpack_require__(/*! ./components/admin/Profile/Profile.vue */ "./resources/js/components/admin/Profile/Profile.vue").default);
-Vue.component('admin-component', __webpack_require__(/*! ./components/admin/admin/Admin.vue */ "./resources/js/components/admin/admin/Admin.vue").default);
+Vue.component('admin-component', __webpack_require__(/*! ./components/admin/admin/Admin.vue */ "./resources/js/components/admin/admin/Admin.vue").default); //component only
+
+Vue.component('dropdown-barangay-component', __webpack_require__(/*! ./components/Dropdown(Barangay).vue */ "./resources/js/components/Dropdown(Barangay).vue").default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -45970,6 +45975,43 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Dropdown(Barangay).vue":
+/*!********************************************************!*\
+  !*** ./resources/js/components/Dropdown(Barangay).vue ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Dropdown_Barangay_vue_vue_type_template_id_4871e45e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Dropdown(Barangay).vue?vue&type=template&id=4871e45e& */ "./resources/js/components/Dropdown(Barangay).vue?vue&type=template&id=4871e45e&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__.default)(
+  script,
+  _Dropdown_Barangay_vue_vue_type_template_id_4871e45e___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Dropdown_Barangay_vue_vue_type_template_id_4871e45e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Dropdown(Barangay).vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/components/admin/Dashboard.vue":
 /*!*****************************************************!*\
   !*** ./resources/js/components/admin/Dashboard.vue ***!
@@ -47027,6 +47069,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Dropdown(Barangay).vue?vue&type=template&id=4871e45e&":
+/*!***************************************************************************************!*\
+  !*** ./resources/js/components/Dropdown(Barangay).vue?vue&type=template&id=4871e45e& ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dropdown_Barangay_vue_vue_type_template_id_4871e45e___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dropdown_Barangay_vue_vue_type_template_id_4871e45e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Dropdown_Barangay_vue_vue_type_template_id_4871e45e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Dropdown(Barangay).vue?vue&type=template&id=4871e45e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Dropdown(Barangay).vue?vue&type=template&id=4871e45e&");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/admin/Dashboard.vue?vue&type=template&id=12658639&scoped=true&":
 /*!************************************************************************************************!*\
   !*** ./resources/js/components/admin/Dashboard.vue?vue&type=template&id=12658639&scoped=true& ***!
@@ -47374,6 +47433,1248 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Dropdown(Barangay).vue?vue&type=template&id=4871e45e&":
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Dropdown(Barangay).vue?vue&type=template&id=4871e45e& ***!
+  \******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "select",
+      {
+        staticClass:
+          "form-control-lg w-50 border border-secondary bg-transparent",
+        attrs: { name: "barangay" }
+      },
+      [
+        _c("option", [_vm._v("Alianza, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Abuanan, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Atipuluan, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bacong-Montilla, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bagroy, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Balingasag, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Binubuhan, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Busay, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Calumangan, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Caridad, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Dulao, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Ilijan, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Jorge L. Araneta, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Lag-asan, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Ma-ao Barrio, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mailum, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Malingin, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Napoles, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pacol, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Poblacion, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Sagasa, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Sampinit, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tabunan, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Taloc, Bago")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Amontay, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bagroy, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bi-ao, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Canmoros, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Enclaro, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Marina, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Paglaum, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Payao, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Progreso, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Jose, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Juan, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Pedro, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Teodoro, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Vicente, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Santo Rosario, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Santol, Binalbagan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Andres Bonifacio, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Banquerohan, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 1 Poblacion, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 2 Poblacion, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 3 Poblacion, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 4 Poblacion, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 5 Poblacion, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 6 Poblacion, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Burgos, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cabahug, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cadiz Viejo, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Caduha-an, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Celestino Villacin, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Daga, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Jerusalem, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Luna, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mabini, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Magsaysay, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Sicaba, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tiglawigan, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tinampa-an, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("V. F. Gustilo, Cadiz")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Agpangi, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Ani-e, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bagacay, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bantayanon, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Buenavista, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cabungahan, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Calampisawan, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cambayobo, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Castellano, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cruz, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Dolis, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Hilub-ang, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Hinab-ongan, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Ilaya, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Laga-an, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Lalong, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Lemery, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Lipat-on, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Lo-ok, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Ma-aslob, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Macasilao, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mahilum, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Malanog, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Malatas, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Marcelo, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Menchaca, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mina-utok, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Minapasuk, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Paghumayan, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pantao, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Patun-an, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pinocutan, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Refugio, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Benito, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Isidro, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Suba, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Telim, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tigbao, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tigbon, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Winaswasan, Calatrava")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Agboy, Candoni")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Banga, Candoni")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cabia-an, Candoni")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Caningay, Candoni")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Gatuslao, Candoni")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Haba, Candoni")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Payauan, Candoni")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Poblacion East, Candoni")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Poblacion West, Candoni")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Abaca, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Baclao, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Basak, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bulata, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Caliling, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Camalanda-an, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Camindangan, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Elihan, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Guiljungan, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Inayawan, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Isio, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Linaon, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Lumbia, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mambugsay, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Man-Uling, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Masaling, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Molobolo, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Poblacion, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Sura, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Talacdan, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tambad, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tiling, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tomina, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tuyom, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Yao-yao, Cauayan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Alacaygan, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Alicante, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Batea, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Canlusong, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Consing, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cudangdang, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Damgo, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Gahit, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Latasan, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Madalag, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Manta-angan, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Nanca, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pasil, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Poblacion I, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Poblacion II, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Poblacion III, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Isidro, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Jose, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Santo Niño, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tabigue, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tanza, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tomongtong, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tuburan, Enrique B. Magalona")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Alimango, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Balintawak, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Binaguiohan, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Buenavista, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cervantes, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Dian-ay, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Hacienda Fe, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Japitan, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Jonobjonob, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Langub, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Libertad, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mabini, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Magsaysay, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Malasibog, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Old Poblacion, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Paitan, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pinapugasan, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Rizal, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tamlang, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Udtongan, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Washington, Escalante")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Aguisan, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay I, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay II, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay III, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay IV, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Buenavista, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cabadiangan, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cabanbanan, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Carabalan, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Caradio-an, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Libacao, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mahalang, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mambagaton, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Nabali-an, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Antonio, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Sara-et, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Su-ay, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Talaban, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("To-oy, Himamaylan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Anahaw, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Aranda, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Baga-as, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay I, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay II, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay III, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay IV, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bato, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Calapi, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Camalobalo, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Camba-og, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cambugsa, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Candumarao, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Gargato, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Himaya, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Miranda, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Nanunga, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Narauis, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Palayog, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Paticui, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pilar, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Quiwi, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tagda, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tuguis, Hinigaran")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Alim, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Asia, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bacuyangan, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay I, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay II, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bulwangan, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Culipapa, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Damutan, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Daug, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Po-ok, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Rafael, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Sangke, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Talacagay, Hinoba-an")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Andulauan, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Balicotoc, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay I, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay II, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bocana, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Calubang, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Canlamay, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Consuelo, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Dancalan, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Delicioso, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Galicia, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Manalad, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pinggot, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tabu, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Vista Alegre, Ilog")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Amin, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Banogbanog, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 1, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 2, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 3, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 4, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 5, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 6, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 7, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 8, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 9, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bulad, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bungahin, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cabcab, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Camangcamang, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Camp Clark, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cansalongon, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Guintubhan, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Libas, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Limalima, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Makilignit, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mansablay, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Maytubig, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Panaquiao, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Riverside, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Rumirang, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Agustin, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Sebucawan, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Sikatuna, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tinongan, Isabela")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bantayan, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 1, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 2, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 3, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 4, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 5, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 6, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 7, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 8, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 9, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Binicuil, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Camansi, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Camingawan, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Camugao, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Carol-an, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Daan Banua, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Hilamonan, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Inapoy, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Linao, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Locotan, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Magballo, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Oringao, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Orong, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pinaguinpinan, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Salong, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tabugon, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tagoc, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tagukon, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Talubangi, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tampalon, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tan-awan, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tapi, Kabankalan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Ara-al, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Ayungon, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Balabag, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay I, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay II, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay III, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Batuan, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cubay, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Haguimit, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("La Granja, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Nagasi, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Roberto S. Benedicto, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Miguel, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Yubo, La Carlota")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Biaknabato, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cabacungan, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cabagnaan, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Camandag, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Lalagsan, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Manghanoy, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mansalanao, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Masulog, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Nato, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Puso, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Robles, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Sag-ang, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Talaptap, La Castellana")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay I, Manapla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay I-A, Manapla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay I-B, Manapla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay II, Manapla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay II-A, Manapla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Chambery, Manapla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Punta Mesa, Manapla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Punta Salong, Manapla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Purisima, Manapla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Pablo, Manapla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Santa Teresa, Manapla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tortosa, Manapla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 1, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 2, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 3, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 4, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 5, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 6, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 7, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Crossing Magallon, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Guinpana-an, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Inolingan, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Macagahay, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Magallon Cadre, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Montilla, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Odiong, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Quintin Remo, Moises Padilla")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Abo-abo, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Alegria, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Amayco, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Blumentritt, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Buenavista, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Caliban, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Canlandog, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cansilayan, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Damsite, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Iglau-an, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Lopez Jaena, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Minoyan, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pandanon, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Salvacion, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Miguel, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Santa Cruz, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Santa Rosa, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Talotog, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone I, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone II, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone III, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone IV, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone V, Murcia")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Antipolo, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay I, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay II, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay III, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Buenavista Gibong, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Buenavista Rizal, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Burgos, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cambarus, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Canroma, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Don Salvador Benedicto, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("General Malvar, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Gomez, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("M. H. del Pilar, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mabini, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Miranda, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pandan, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Recreo, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Isidro, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Juan, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zamora, Pontevedra")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay Zone 1, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay Zone 1-A, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay Zone 2, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay Zone 3, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay Zone 4, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay Zone 4-A, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay Zone 5, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay Zone 6, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay Zone 7, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Canjusa, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Crossing Pulupandan, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Culo, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mabini, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pag-ayon, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Palaka Norte, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Palaka Sur, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Patic, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tapong, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Ubay, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Utod, Pulupandan")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Andres Bonifacio, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bato, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Baviera, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bulanon, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Campo Himoga-an, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Campo Santiago, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Colonia Divina, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Fabrica, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("General Luna, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Himoga-an Baybay, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Lopez Jaena, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Makiling, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Malubon, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Molocaboc, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Old Sagay, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Paraiso, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Plaridel, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Poblacion I, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Poblacion II, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Puey, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Rafaela Barrera, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Rizal, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Taba-ao, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tadlong, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Vito, Sagay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bago, Salvador Benedicto")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bagong Silang, Salvador Benedicto")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bunga, Salvador Benedicto")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Igmaya-an, Salvador Benedicto")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Kumaliskis, Salvador Benedicto")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pandanon, Salvador Benedicto")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pinowayan, Salvador Benedicto")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bagonbon, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay I, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay II, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay III, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay IV, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay V, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay VI, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Buluangan, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Codcod, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Ermita, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Guadalupe, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Nataban, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Palampas, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Prosperidad, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Punao, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Quezon, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Rizal, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Juan, San Carlos")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bagonawa, San Enrique")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Baliwagan, San Enrique")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Batuan, San Enrique")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Guintorilan, San Enrique")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Nayon, San Enrique")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Poblacion, San Enrique")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Sibucao, San Enrique")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tabao Baybay, San Enrique")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tabao Rizal, San Enrique")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tibsoc, San Enrique")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bagtic, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Balaring, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay I, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay II, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay III, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay IV, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay V, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay VI Poblacion, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Eustaquio Lopez, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Guimbala-on, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Guinhalaran, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Kapitan Ramon, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Lantad, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mambulac, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Patag, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Rizal, Silay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 1, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 2, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 3, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 4, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay 5, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cabadiangan, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Camindangan, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Canturay, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cartagena, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cayhagan, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Gil Montilla, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mambaroto, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Manlucahoc, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Maricalum, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Nabulao, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Nauhang, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Jose, Sipalay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bubog, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Cabatangan, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Concepcion, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Dos Hermanas, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Efigenio Lizares, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Katilingban, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Matab-ang, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Fernando, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 1, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 10, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 11, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 12, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 12-A, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 14, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 14-A, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 14-B, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 15, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 16, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 2, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 3, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 4, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 4-A, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 5, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 6, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 7, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 8, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Zone 9, Talisay")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bandila, Toboso")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bug-ang, Toboso")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("General Luna, Toboso")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Magticol, Toboso")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Poblacion, Toboso")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Salamanca, Toboso")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Isidro, Toboso")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("San Jose, Toboso")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tabun-ac, Toboso")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Alijis, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Ayungon, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bagumbayan, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Batuan, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Bayabas, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Central Tabao, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Doldol, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Guintorilan, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Lacaron, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Mabini, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Pacol, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Palaka, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Paloma, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Poblacion, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Sagua Banua, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Tabao Proper, Valladolid")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay I, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay II, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay III, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay IV, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay IX, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay V, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay VI, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay VI-A, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay VII, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay VIII, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay X, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XI, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XII, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XIII, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XIV, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XIX, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XIX-A, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XV, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XV-A, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XVI, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XVI-A, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XVII, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XVIII, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XVIII-A, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XX, Victorias")]),
+        _vm._v(" "),
+        _c("option", [_vm._v("Barangay XXI, Victoria")])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Dashboard.vue?vue&type=template&id=12658639&scoped=true&":
 /*!***************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/Dashboard.vue?vue&type=template&id=12658639&scoped=true& ***!
@@ -47504,7 +48805,7 @@ var render = function() {
         "div",
         { staticClass: "row w-100 h-100 m-0 p-0" },
         [
-          _c("sidebar"),
+          _c("sidebar", { attrs: { role: _vm.role } }),
           _vm._v(" "),
           _c("div", { staticClass: "col" }, [_vm._t("default")], 2)
         ],
@@ -47592,191 +48893,102 @@ var render = function() {
             center: _vm.center
           }
         },
-        [
-          _vm._l(_vm.datum.data, function(d) {
-            return _c("div", [
-              _vm.mapshow == "Location"
-                ? _c(
-                    "div",
-                    [
-                      _c(
-                        "MglMarker",
-                        { attrs: { coordinates: [d.longitude, d.latitude] } },
-                        [
-                          _c("MglPopup", [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "font-weight-bold p-3 d-flex justify-content-center align-items-center"
-                              },
-                              [
-                                _c("div", [
-                                  _c("div", { staticClass: "d-flex" }, [
-                                    _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Name:")
-                                    ]),
-                                    _vm._v(_vm._s(d.user.name))
+        _vm._l(_vm.datum.data, function(d) {
+          return _c("div", [
+            _vm.mapshow == "Location"
+              ? _c(
+                  "div",
+                  [
+                    _c(
+                      "MglMarker",
+                      {
+                        attrs: {
+                          coordinates: [
+                            d.coordinates[0].longitude,
+                            d.coordinates[0].latitude
+                          ]
+                        }
+                      },
+                      [
+                        _c("MglPopup", [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "font-weight-bold p-3 d-flex justify-content-center align-items-center"
+                            },
+                            [
+                              _c("div", [
+                                _c("div", { staticClass: "d-flex" }, [
+                                  _c("span", { staticClass: "pr-2" }, [
+                                    _vm._v("Name:")
                                   ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "d-flex" }, [
-                                    _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Latitude:")
-                                    ]),
-                                    _vm._v(_vm._s(d.latitude))
+                                  _vm._v(_vm._s(d.name))
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "d-flex" }, [
+                                  _c("span", { staticClass: "pr-2" }, [
+                                    _vm._v("Latitude:")
                                   ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "d-flex" }, [
-                                    _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Longitude:")
-                                    ]),
-                                    _vm._v(_vm._s(d.longitude))
+                                  _vm._v(_vm._s(d.coordinates[0].latitude))
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "d-flex" }, [
+                                  _c("span", { staticClass: "pr-2" }, [
+                                    _vm._v("Longitude:")
                                   ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "d-flex" }, [
-                                    _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Date and Time:")
-                                    ]),
-                                    _vm._v(_vm._s(d.datetimezone))
+                                  _vm._v(_vm._s(d.coordinates[0].longitude))
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "d-flex" }, [
+                                  _c("span", { staticClass: "pr-2" }, [
+                                    _vm._v("Date and Time:")
                                   ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "d-flex" }, [
-                                    _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Month:")
-                                    ]),
-                                    _vm._v(_vm._s(d.month_name))
+                                  _vm._v(_vm._s(d.coordinates[0].datetimezone))
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "d-flex" }, [
+                                  _c("span", { staticClass: "pr-2" }, [
+                                    _vm._v("Month:")
                                   ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "d-flex" }, [
-                                    _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Day of the Week:")
-                                    ]),
-                                    _vm._v(_vm._s(d.day_of_week))
+                                  _vm._v(_vm._s(d.coordinates[0].month_name))
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "d-flex" }, [
+                                  _c("span", { staticClass: "pr-2" }, [
+                                    _vm._v("Day of the Week:")
                                   ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    { attrs: { href: "/user/" + d.user_id } },
-                                    [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "d-flex w-100 pt-2 justify-content-center"
-                                        },
-                                        [_vm._v("View Profile")]
-                                      )
-                                    ]
-                                  )
-                                ])
-                              ]
-                            )
-                          ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                : _vm._e()
-            ])
-          }),
-          _vm._v(" "),
-          _vm._l(_vm.sosData.data, function(d) {
-            return _c("div", [
-              _vm.mapshow == "SOS"
-                ? _c(
-                    "div",
-                    [
-                      _c(
-                        "MglMarker",
-                        {
-                          attrs: {
-                            coordinates: [d.longitude, d.latitude],
-                            color: _vm.markerColor
-                          }
-                        },
-                        [
-                          _c("MglPopup", [
-                            _c(
-                              "div",
-                              {
-                                staticClass:
-                                  "font-weight-bold p-3 d-flex justify-content-center align-items-center"
-                              },
-                              [
-                                _c("div", [
-                                  _c("div", { staticClass: "d-flex" }, [
-                                    _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Name:")
-                                    ]),
-                                    _vm._v(_vm._s(d.user.name))
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "d-flex" }, [
-                                    _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Latitude:")
-                                    ]),
-                                    _vm._v(_vm._s(d.latitude))
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "d-flex" }, [
-                                    _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Longitude:")
-                                    ]),
-                                    _vm._v(_vm._s(d.longitude))
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "d-flex" }, [
-                                    _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Date and Time:")
-                                    ]),
-                                    _vm._v(_vm._s(d.datetimezone))
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "d-flex" }, [
-                                    _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Month:")
-                                    ]),
-                                    _vm._v(_vm._s(d.month_name))
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "d-flex" }, [
-                                    _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Day of the Week:")
-                                    ]),
-                                    _vm._v(_vm._s(d.day_of_week))
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "a",
-                                    { attrs: { href: "/emergency/" + d.id } },
-                                    [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "d-flex w-100 pt-2 justify-content-center"
-                                        },
-                                        [_vm._v("Details")]
-                                      )
-                                    ]
-                                  )
-                                ])
-                              ]
-                            )
-                          ])
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                : _vm._e()
-            ])
-          })
-        ],
-        2
+                                  _vm._v(_vm._s(d.coordinates[0].day_of_week))
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "a",
+                                  { attrs: { href: "/user/" + d.user_id } },
+                                  [
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "d-flex w-100 pt-2 justify-content-center"
+                                      },
+                                      [_vm._v("View Profile")]
+                                    )
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ])
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              : _vm._e()
+          ])
+        }),
+        0
       )
     ],
     1
@@ -48391,26 +49603,28 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: " mb-5" }, [
-          _c(
-            "a",
-            { staticClass: "text-secondary", attrs: { href: "/admin" } },
-            [
-              _c("img", {
-                staticClass: "icon pr-3",
-                attrs: { src: "/img/Admin.png", alt: "" }
-              }),
-              _vm._v(" "),
-              _vm.shownav
-                ? _c("span", [
-                    _vm._v(
-                      "\n                                    Admin\n                                "
-                    )
-                  ])
-                : _vm._e()
-            ]
-          )
-        ]),
+        _vm.authrole == "SuperUser"
+          ? _c("div", { staticClass: " mb-5" }, [
+              _c(
+                "a",
+                { staticClass: "text-secondary", attrs: { href: "/admin" } },
+                [
+                  _c("img", {
+                    staticClass: "icon pr-3",
+                    attrs: { src: "/img/Admin.png", alt: "" }
+                  }),
+                  _vm._v(" "),
+                  _vm.shownav
+                    ? _c("span", [
+                        _vm._v(
+                          "\n                                    Admin\n                                "
+                        )
+                      ])
+                    : _vm._e()
+                ]
+              )
+            ])
+          : _vm._e(),
         _vm._v(" "),
         _c("div", { staticClass: " mb-5" }, [
           _c("a", { staticClass: "text-secondary", attrs: { href: "/map" } }, [

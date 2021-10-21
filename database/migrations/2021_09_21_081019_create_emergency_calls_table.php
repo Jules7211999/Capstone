@@ -25,6 +25,8 @@ class CreateEmergencyCallsTable extends Migration
             $table->string('month_name');
             $table->string('day_of_week');
             $table->string('status');
+            $table->softDeletes();
+            $table->string('type');
         });
     }
 

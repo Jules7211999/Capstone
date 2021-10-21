@@ -27,9 +27,11 @@ class CreateUsersTable extends Migration
             $table->string('profile_image')->default('profile-user.svg');
             $table->bigInteger('phone_number')->nullable();
             $table->string('address')->nullable();
+            $table->string('barangay')->nullable();
             $table->string('gender')->nullable();
             $table->date('birthdate')->nullable();
             $table->string('username')->nullable()->unique();
+            $table->softDeletes();
 
         });
     }

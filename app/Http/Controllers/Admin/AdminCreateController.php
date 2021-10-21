@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Admin;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class AdminCreateController extends Controller
 {
     public function index(Request $request){
         
+    
         $request->validate([
             'name' => 'required|string|max:255',
             'address' => 'required|max:255',
@@ -17,19 +19,20 @@ class AdminCreateController extends Controller
             'gender' => 'required',
             'birthdate' => 'required',
             'password' => 'required|confirmed|min:8',
-            'username' => 'required|unique:App\Models\User,username',
+            'email' => 'required|unique:App\Models\User,email',
+            'barangay' => 'required'
         ]);
 
          User::create([
             'name' => $request->name,
             'phone' => $request->phone_number,
-            // 'password' => Hash::make($request->password),
-            'password' => $request->password,
-            'role' => "Admin",
+            'password' => Hash::make($request->password),
             'address'=> $request->address,
             'gender' => $request->gender,
             'date' => $request-> birthdate,
-            'username' => $request->username
+            'email' => $request->email,
+            'barangay' => $request->barangay,
+            'role' => "Admin"
         ]);
 
         return redirect()->back()->with('message','User Registered');

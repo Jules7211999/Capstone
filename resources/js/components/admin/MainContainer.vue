@@ -2,7 +2,7 @@
     <div class="w-100 main m-0 p-0">
         <topbar :auth="authname"/>
         <div class="row w-100 h-100 m-0 p-0">
-            <sidebar/>
+            <sidebar :role="role"/>
                  <div class="col">
                     <slot></slot>      
                 </div>   
@@ -15,7 +15,7 @@
 import topbar from './TopBar.vue';
 import sidebar from './SideBar.vue';
 export default {
-    props:['authname'],
+    props:['authname','role'],
     components:{topbar,sidebar,}
 }
 

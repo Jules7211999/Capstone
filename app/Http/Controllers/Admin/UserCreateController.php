@@ -19,6 +19,7 @@ class UserCreateController extends Controller
             'birthdate' => 'required',
             'password' => 'required|confirmed|min:8',
             'username' => 'required|unique:App\Models\User,username',
+            'barangay' => 'required'
         ]);
 
          User::create([
@@ -30,7 +31,8 @@ class UserCreateController extends Controller
             'address'=> $request->address,
             'gender' => $request->gender,
             'date' => $request-> birthdate,
-            'username' => $request->username
+            'username' => $request->username,
+            'barangay' => $request->barangay
         ]);
 
         return redirect()->back()->with('message','User Registered');

@@ -2,6 +2,7 @@
         <div class=" ml-5 pl-4 border-right " :class="{'col-xl-1 col-lg-2 col-md-2':shownav == false,'col-xl-2 col-lg-3 col-md-3':shownav == true}">              
                         <img src="/img/Close.svg" alt="" class="nav-open" v-if="shownav==true" @click="shownav = !shownav">
                         <img src="/img/Open.svg" alt="" class="nav-close" v-if="shownav==false"  @click="shownav = !shownav">
+                        
                     <div class="font-weight-bold mt-5 ml-4">
                         <div class="mb-5">
                             <a href="/dashboard" class="text-secondary">
@@ -19,7 +20,7 @@
                                     </span>
                             </a>
                         </div>
-                        <div class=" mb-5">
+                        <div v-if="authrole == 'SuperUser'" class=" mb-5">
                             <a href="/admin" class="text-secondary">
                                 <img src="/img/Admin.png" alt="" class ="icon pr-3">
                                     <span v-if="shownav">
@@ -50,9 +51,11 @@
 
 <script>
 export default {
+    props:['role'],
     data(){
         return{
-            shownav:true
+            shownav:true,
+            authrole: this.role
         }
     },
     mounted(){
