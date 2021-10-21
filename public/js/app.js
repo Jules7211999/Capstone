@@ -49813,31 +49813,35 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "w-100 h-100" },
+    { staticClass: "w-100 h-100 container" },
     _vm._l(_vm.data, function(d) {
-      return _c("div", { staticClass: "d-flex justify-content-center w-100" }, [
-        _c(
-          "a",
-          {
-            staticClass: "w-100",
-            attrs: { href: "/emergency/" + d.emergency_call[0].id }
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "p-4 row w-75 d-flex justify-content-between font-weight-bold text-secondary shadow  border ml-4"
-              },
-              [
-                _c("div", [_vm._v(_vm._s(d.name))]),
-                _vm._v(" "),
-                _c("div", [_vm._v(_vm._s(d.emergency_call[0].datetimezone))])
-              ]
-            )
-          ]
-        )
-      ])
+      return _c(
+        "div",
+        { staticClass: "d-flex justify-content-center w-100 mb-2 " },
+        [
+          _c(
+            "a",
+            {
+              staticClass: "w-100",
+              attrs: { href: "/emergency/" + d.emergency_call[0].id }
+            },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    " p-4 row w-100 d-flex justify-content-between font-weight-bold text-secondary shadow  rounded border ml-4"
+                },
+                [
+                  _c("div", [_vm._v(_vm._s(d.name))]),
+                  _vm._v(" "),
+                  _c("div", [_vm._v(_vm._s(d.emergency_call[0].datetimezone))])
+                ]
+              )
+            ]
+          )
+        ]
+      )
     }),
     0
   )
@@ -50027,13 +50031,7 @@ var render = function() {
               "aria-expanded": "false"
             }
           },
-          [
-            _c("img", {
-              staticClass: "w-25 rounded-circle",
-              attrs: { src: "/img/logo.svg", alt: "" }
-            }),
-            _c("span", { staticClass: "ml-3" }, [_vm._v(_vm._s(_vm.auth))])
-          ]
+          [_c("span", { staticClass: "ml-3" }, [_vm._v(_vm._s(_vm.auth))])]
         ),
         _vm._v(" "),
         _vm._m(1)

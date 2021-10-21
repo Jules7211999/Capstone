@@ -1,8 +1,8 @@
 <template>
-<div class="w-100 h-100">
-    <div v-for="d in data" class="d-flex justify-content-center w-100">
+<div class="w-100 h-100 container">
+    <div v-for="d in data" class="d-flex justify-content-center w-100 mb-2 ">
         <a :href="'/emergency/'+d.emergency_call[0].id" class="w-100">
-            <div class="p-4 row w-75 d-flex justify-content-between font-weight-bold text-secondary shadow  border ml-4">
+            <div class=" p-4 row w-100 d-flex justify-content-between font-weight-bold text-secondary shadow  rounded border ml-4">
                     <div >{{d.name}}</div>
                     <div>{{d.emergency_call[0].datetimezone}}</div>
             </div>
