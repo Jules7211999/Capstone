@@ -49,7 +49,7 @@
         .wrapper{
             height: 93.5vh;
             overflow: hidden;
-            background-image: linear-gradient(to right, #3AADF6 , #efefef);
+            background-image: linear-gradient(to right,#80cdff , #efefef);
         
         }
       
