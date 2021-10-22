@@ -83,7 +83,7 @@ export default {
             })
             .then(data => console.log(data))
             .catch(error => console.log(error));
-            location.href="/user";
+            location.href="/admin"
         }
     },
    mounted(){

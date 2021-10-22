@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class AdminProfile extends Controller
 {
@@ -35,7 +36,7 @@ class AdminProfile extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return view('Superuser.adminShow');
     }
 
     /**
@@ -46,7 +47,11 @@ class AdminProfile extends Controller
      */
     public function show($id)
     {
-        //
+        $model = User::find($id);
+
+        $data = $model->toJson();
+
+        return view("Superuser.adminShow") -> with('data', $data);
     }
 
     /**

@@ -17,6 +17,6 @@ class AdminTrashController extends Controller
         $user = User::onlyTrashed()->find($request->userId);
         $user->restore;
         
-        
     }
+   
 }

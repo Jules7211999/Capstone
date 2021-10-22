@@ -54,12 +54,13 @@ export default {
             .then(data => this.user = data)
             .catch(error =>console.log(error.errors))
         },
-        restore(id){
-            
-             axios.post('/userRestore',{
-             userId : id
-             })
+          restore(id){
+            axios.post('/trashRestore',{
+                userId : id
+            })
+            .then(data => console.log(data))
             .catch(error => console.log(error.message));
+            location.reload();
         }
     }
 }

@@ -52,11 +52,12 @@ export default {
             .catch(error =>console.log(error.errors.message))
         },
             restore(id){
-            axios.post('/adminRestore',{
+            axios.post('/trashRestore',{
                 userId : id
             })
             .then(data => console.log(data))
             .catch(error => console.log(error.message));
+            location.reload();
         }
     }
 }

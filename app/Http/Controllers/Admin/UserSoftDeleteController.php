@@ -12,6 +12,7 @@ class UserSoftDeleteController extends Controller
 
         $user = User::find($request->userId);
         $user->delete();
-
+        
+        return "sucess";
     }
 }

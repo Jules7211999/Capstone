@@ -17,7 +17,7 @@ class UserTrashController extends Controller
             
             $user = User::onlyTrashed()->find($request->userId);
             $user->restore;
-            
+            return "success";
             
         }
     

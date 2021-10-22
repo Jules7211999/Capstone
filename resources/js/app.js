@@ -33,6 +33,7 @@ Vue.component('profile-component',require('./components/admin/Profile/Profile.vu
 Vue.component('admin-component',require('./components/admin/admin/Admin.vue').default);
 Vue.component('user-trash-component',require('./components/admin/Trash/User.vue').default);
 Vue.component('admin-trash-component',require('./components/admin/Trash/Admin.vue').default);
+Vue.component('admin-show-component',require('./components/admin/admin/AdminShow.vue').default);
 //component only
 
 Vue.component('dropdown-barangay-component',require('./components/Dropdown(Barangay).vue').default);

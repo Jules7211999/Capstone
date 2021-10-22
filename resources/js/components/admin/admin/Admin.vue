@@ -16,7 +16,7 @@
     </div>
     <div class="d-flex flex-wrap w-100 h-100">
         <div v-for="u in user.data"  :key="u.id" class="m-2 d-flex flex-wrap">
-            <a :href="'/user/'+u.id" class="text-secondary">
+            <a :href="'/admin/'+u.id" class="text-secondary">
                 <div class="m-2 p-2 shadow-sm border-light user-container">
                     <div class ="text-center mt-3">
                             <img :src="'/img/'+ u.profile_image" alt="" class="w-50">

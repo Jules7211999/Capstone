@@ -65,9 +65,9 @@ Route::get('/getSoftDeletedUAdmin',[GetSoftDeletedAdmin::class,'index']);
 
 //Trash Controllers Admin and User
 Route::get('/userTrash',[UserTrashController::class,'index']);
-Route::post('/userRestore',[UserTrashController::class,'restore']);
+
 Route::get('/adminTrash',[AdminTrashController::class,'index']);
-Route::post('/adminRestore',[AdminTrashController::class,'restore']);
+Route::post('/trashRestore',[AdminTrashController::class,'restore']);
 
 //api routes
 
