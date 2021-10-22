@@ -48,6 +48,8 @@
                 <div class="d-flex"><span class="pr-2">Date and Time:</span>{{d.emergency_call[0].datetimezone}}</div>
                 <div class="d-flex"><span class="pr-2">Month:</span>{{d.emergency_call[0].month_name}}</div>
                 <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.emergency_call[0].day_of_week}}</div>
+                <div class="d-flex"><span class="pr-2">Status:</span>{{d.emergency_call[0].status}}</div>
+                <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.emergency_call[0].type}}</div>
                 <a :href="'/emergency/'+d.emergency_call[0].id"><div class="d-flex w-100 pt-2 justify-content-center">Details</div></a>
               </div>
             </div>

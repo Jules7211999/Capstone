@@ -2007,6 +2007,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_defineProperty({
@@ -50056,6 +50058,20 @@ var render = function() {
                                     _vm._v(
                                       _vm._s(d.emergency_call[0].day_of_week)
                                     )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Status:")
+                                    ]),
+                                    _vm._v(_vm._s(d.emergency_call[0].status))
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "d-flex" }, [
+                                    _c("span", { staticClass: "pr-2" }, [
+                                      _vm._v("Day of the Week:")
+                                    ]),
+                                    _vm._v(_vm._s(d.emergency_call[0].type))
                                   ]),
                                   _vm._v(" "),
                                   _c(
