@@ -17,7 +17,7 @@
     <div class="d-flex flex-wrap w-100 h-100">
         <div v-for="u in user.data"  :key="u.id" class="m-2 d-flex flex-wrap">
             <a :href="'/admin/'+u.id" class="text-secondary">
-                <div class="m-2 p-2 shadow-sm border-light user-container">
+                <div class="m-2 p-2 shadow-sm border user-container">
                     <div class ="text-center mt-3">
                             <img :src="'/img/'+ u.profile_image" alt="" class="w-50">
                         <div class="font-weight-bold mt-5 pt-3">
@@ -56,14 +56,14 @@ export default {
 
 <style scoped>
 .user-container{
-    width: 150px;
-    height: 200px;
+     width: 250px;
+    height: 300px;
     border-radius: 1.5rem;
     padding: 5rem;
 }
 .user-container:hover{
-     width: 200px;
-    height: 250px;
+     width: 300px;
+    height: 350px;
     border-radius: 1.5rem;
     padding: 3rem;
     transition: ease-in-out 0.2s;

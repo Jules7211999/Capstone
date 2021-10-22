@@ -96,7 +96,7 @@
                         <div class="pt-2">{{$message}}</div>
                     @enderror
                  </div>
-                    <button class="mt-3 p-2 font-weight-bold rounded py-1 text-dark px-5 btn-custom border-0" type="submit">Register</button>
+                    <button class="bg-light btn btn-outline-dark font-weight-bold rounded py-1 text-dark px-5" type="submit">Register</button>
             </div>
         </form>
 </admin-container-component>

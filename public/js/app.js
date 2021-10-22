@@ -7995,7 +7995,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.user-container[data-v-44e3d374]{\r\n    width: 150px;\r\n    height: 200px;\r\n    border-radius: 1.5rem;\r\n    padding: 5rem;\n}\n.user-container[data-v-44e3d374]:hover{\r\n     width: 200px;\r\n    height: 250px;\r\n    border-radius: 1.5rem;\r\n    padding: 3rem;\r\n    transition: ease-in-out 0.2s;\n}\nspan[data-v-44e3d374]{\r\n    font-size: 1.5rem;\r\n    word-wrap: break-word;\n}\n.modal[data-v-44e3d374]{\r\n    top: 50%;\r\n    right: 50%;\r\n    background-color: aqua;\r\n    z-index: 12;\n}\n.adduser[data-v-44e3d374]{\r\n    width: 2rem;\n}\n.adduser[data-v-44e3d374]:hover{\r\n    width: 3rem;\r\n    transition: 0.5s ease-out;\n}\ninput[data-v-44e3d374]:focus{\r\n    outline: none;  \r\n    width: 60%;\r\n    transition: ease-out 0.5s;\n}\ninput[data-v-44e3d374]{\r\n    background: transparent;\r\n    width: 50%;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.user-container[data-v-44e3d374]{\r\n     width: 250px;\r\n    height: 300px;\r\n    border-radius: 1.5rem;\r\n    padding: 5rem;\n}\n.user-container[data-v-44e3d374]:hover{\r\n     width: 300px;\r\n    height: 350px;\r\n    border-radius: 1.5rem;\r\n    padding: 3rem;\r\n    transition: ease-in-out 0.2s;\n}\nspan[data-v-44e3d374]{\r\n    font-size: 1.5rem;\r\n    word-wrap: break-word;\n}\n.modal[data-v-44e3d374]{\r\n    top: 50%;\r\n    right: 50%;\r\n    background-color: aqua;\r\n    z-index: 12;\n}\n.adduser[data-v-44e3d374]{\r\n    width: 2rem;\n}\n.adduser[data-v-44e3d374]:hover{\r\n    width: 3rem;\r\n    transition: 0.5s ease-out;\n}\ninput[data-v-44e3d374]:focus{\r\n    outline: none;  \r\n    width: 60%;\r\n    transition: ease-out 0.5s;\n}\ninput[data-v-44e3d374]{\r\n    background: transparent;\r\n    width: 50%;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -51732,9 +51732,7 @@ var render = function() {
             [
               _c(
                 "div",
-                {
-                  staticClass: "m-2 p-2 shadow-sm border-light user-container"
-                },
+                { staticClass: "m-2 p-2 shadow-sm border user-container" },
                 [
                   _c("div", { staticClass: "text-center mt-3" }, [
                     _c("img", {

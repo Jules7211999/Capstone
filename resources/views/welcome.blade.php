@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <title>Capstone</title>
     </head>
     <body>
@@ -30,8 +30,8 @@
             </div>
         </div>
     </nav>
-   <div class="w-100  wrapper border d-flex align-items-center justify-content-center">
-    <img src="{{asset('img/bfar.png')}}" class="w-25 h-50" alt="">
+   <div class="w-100  m-0 wrapper border d-flex align-items-center justify-content-start pl-5">
+    <img src="{{asset('img/bfar.png')}}" class="w-50 h-75 pl-5 " alt="">
     <div>
             <h1 class="ml-5 pb-3 font-weight-bold text-secondary">“Great fish do not swim<br> in shallow waters.”</h1>
             <div class="text-center">
@@ -47,8 +47,9 @@
             width: 2rem;
         }
         .wrapper{
-            height: 90vh;
+            height: 93.5vh;
             overflow: hidden;
+            background-image: linear-gradient(to right, #3AADF6 , #efefef);
         
         }
       
