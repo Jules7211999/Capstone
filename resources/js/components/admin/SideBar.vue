@@ -22,7 +22,7 @@
                         </div>
                         <div v-if="authrole == 'SuperUser'" class=" mb-5">
                             <a href="/admin" class="text-secondary">
-                                <img src="/img/Admin.png" alt="" class ="icon pr-3">
+                                <img src="/img/admin.png" alt="" class ="icon pr-3">
                                     <span v-if="shownav">
                                         Admin
                                     </span>
@@ -48,7 +48,7 @@
                     <div class="font-weight-bold mt-5 ml-4 border-top pt-5 ">
                         <div class="mb-4">
                             <a href="/userTrash">
-                                <img src="/img/Delete.png" alt="" class ="icon pr-3">
+                                <img src="/img/delete.png" alt="" class ="icon pr-3">
                                     <span v-if="shownav" class="trash">
                                         USER
                                     </span>
@@ -56,7 +56,7 @@
                         </div>
                         <div v-if="authrole == 'SuperUser'">
                             <a href="/adminTrash" >
-                                <img src="/img/Delete.png" alt="" class ="icon pr-3">
+                                <img src="/img/delete.png" alt="" class ="icon pr-3">
                                     <span v-if="shownav" class="trash">
                                         ADMIN
                                     </span>
