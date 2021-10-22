@@ -38,8 +38,8 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <button>
-                    {{ __('Reset Password') }}
+                <button class="class="bg-light btn btn-outline-dark font-weight-bold rounded py-1 text-dark px-5"">
+                    Reset Password
                 </button>
             </div>
         </form>
