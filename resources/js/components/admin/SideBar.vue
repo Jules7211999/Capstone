@@ -16,7 +16,7 @@
                             <a href="/user" class="text-secondary">
                                 <img src="/img/Users.svg" alt="" class ="icon pr-3">
                                     <span v-if="shownav">
-                                        Users
+                                        Fisherman
                                     </span>
                             </a>
                         </div>
@@ -24,7 +24,7 @@
                             <a href="/admin" class="text-secondary">
                                 <img src="/img/admin.png" alt="" class ="icon pr-3">
                                     <span v-if="shownav">
-                                        Admin
+                                        Brgy Admin
                                     </span>
                             </a>
                         </div>
@@ -45,7 +45,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="font-weight-bold mt-5 ml-4 border-top pt-5 ">
+                    <div v-if="showtrash" class="font-weight-bold mt-5 ml-4 border-top pt-5 ">
                         <div class="mb-4">
                             <a href="/userTrash">
                                 <img src="/img/delete.png" alt="" class ="icon pr-3">
@@ -54,7 +54,7 @@
                                     </span>
                             </a>
                         </div>
-                        <div v-if="authrole == 'SuperUser'">
+                        <div v-if="showtrash">
                             <a href="/adminTrash" >
                                 <img src="/img/delete.png" alt="" class ="icon pr-3">
                                     <span v-if="shownav" class="trash">

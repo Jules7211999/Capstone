@@ -27,7 +27,7 @@ use App\Http\Controllers\Admin\SearchUserLocationController;
 
 Route::get('/dashboard', function () {
     return view('Superuser.dashboard');
-})->middleware('auth',)->name('dashboard');
+})->middleware('auth','verified')->name('dashboard');
 
 
 Route::get('/map',function(){

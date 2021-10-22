@@ -5,16 +5,18 @@ namespace App\Http\Controllers\Admin;
 use App\Models\User;
 
 use App\Http\Controllers\Controller;
-
+use App\Models\EmergencyCall;
 
 class GetSos extends Controller
 {
     public function index(){
        
             if(auth()->user()->role == "SuperUser"){
-                return User::where('role','=','User')->with("emergencyCall")->get();
+                $user = User::where('role','=','User')->has("emergencyCall")->with("emergencyCall")->get();
+
+                return $user ->toJson();
             }else{
-                return User::where('role','=','User')->where('barangay','=',auth()->user()->barangay)->with("EmergencyCall")->get();
+                return User::where('role','=','User')->where('barangay','=',auth()->user()->barangay)->has("emergencyCall")->with("emergencyCall")->get();
             }
             
         

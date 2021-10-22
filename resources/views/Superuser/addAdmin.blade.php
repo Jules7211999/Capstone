@@ -1,7 +1,6 @@
 @extends('layouts.admin')
-
-
 @section('content')
+<admin-container-component role="{{auth()->user()->role}}" authname="{{auth()->user()->name}}" nav="Add Barangay Admin">
 <a href="/admin">Back</a>
     @if(session()->has('message'))
         <div class="alert alert-success">
@@ -100,4 +99,5 @@
                     <button class="mt-3 p-2 font-weight-bold rounded py-1 text-dark px-5 btn-custom border-0" type="submit">Register</button>
             </div>
         </form>
+</admin-container-component>
 @endsection

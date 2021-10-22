@@ -18,15 +18,13 @@
     </head>
     <style>
              #logo{
-            width: 4rem;
+            width: 13rem;
         }
         </style>
     <body>
-        <div id="app" class="container-fluid vh-100 ">
-            <div class="h-25 w-100">
-            </div>
+        <div id="app" class="container-fluid vh-100 p-5">
                     <div class="row justify-content-center mb-3">
-                        <div class="col-xl-4 col-md-4 text-center">
+                        <div class="col-xl-4 col-md-4 text-center pt-5">
                             <img id="logo" src="{{asset('img/logo.png')}}" alt="">
                         </div>
                     </div>

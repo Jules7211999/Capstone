@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 class AdminProfile extends Controller
 {
@@ -62,7 +63,12 @@ class AdminProfile extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $model= User::find($id);
+
+       
+
+        return view('SuperUser.EditAdmin')->with('data',$model);
     }
 
     /**
@@ -74,7 +80,30 @@ class AdminProfile extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'address' => 'required|max:255',
+            'phone_number' => 'required|numeric',
+            'gender' => 'required',
+            'birthdate' => 'required',
+            'password' => 'required|confirmed|min:8',
+            'email' => 'required|unique:App\Models\User,email',
+            'barangay' => 'required'
+        ]);
+
+        User::find($id)->update([
+            'name' => $request->name,
+            'birthdate' => $request->birthdate,
+            'phone' => $request->phone_number,
+            'password' => Hash::make($request->password),
+            'address'=> $request->address,
+            'gender' => $request->gender,
+            'date' => $request-> birthdate,
+            'email' => $request->email,
+            'barangay' => $request->barangay,
+            'phone_number' => $request->phone_number,
+        ]);
     }
 
     /**

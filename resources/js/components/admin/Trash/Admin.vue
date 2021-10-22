@@ -1,12 +1,6 @@
 <template>
 <div>
-    <div class="w-100 p-5 d-flex justify-content-between">
-            <a href="/admin/create">
-                <div>
-                    <img src="/img/add-user.png" alt="" class="adduser">
-                    <label class="font-weight-bold text-secondary"></label>
-                </div>
-            </a>
+    <div class="w-100 p-5 d-flex justify-content-end">
             <div class="w-50 text-right pr-5">
                 <form @submit.prevent="search()">
                     <input type="text" v-model="query" placeholder="Search" class="border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary pr-5">

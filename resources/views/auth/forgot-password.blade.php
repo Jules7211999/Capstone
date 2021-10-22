@@ -15,7 +15,7 @@
         @if ($errors->any())
             <div>
                  @foreach ($errors->all() as $error)
-                     <p class="error-text">{{$error}}</p>
+                     <p class="text-danger font-weight-bold">{{$error}}</p>
                 @endforeach
             </div>
          @endif
@@ -32,7 +32,7 @@
             </div>
 
             <div>
-                <button class="btn-custom border-0 rounded mt-3 font-weight-bold px-5 py-1">
+                <button class="bg-light btn btn-outline-dark font-weight-bold rounded py-1 text-dark px-5 mt-3">
                     Email Password Reset Link
                 </button>
             </div>

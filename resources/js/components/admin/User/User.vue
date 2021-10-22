@@ -56,21 +56,22 @@ export default {
 
 <style scoped>
 .user-container{
-    width: 150px;
-    height: 200px;
+    width: 250px;
+    height: 300px;
     border-radius: 1.5rem;
     padding: 5rem;
+    word-wrap: break-word;
+   
 }
 .user-container:hover{
-     width: 200px;
-    height: 250px;
+     width: 300px;
+    height: 350px;
     border-radius: 1.5rem;
     padding: 3rem;
     transition: ease-in-out 0.2s;
 }
 span{
     font-size: 1.5rem;
-    word-wrap: break-word;
 }
 .modal{
     top: 50%;

@@ -31,6 +31,7 @@ class UserCreateController extends Controller
             'address'=> $request->address,
             'gender' => $request->gender,
             'date' => $request-> birthdate,
+            // 'phone_number' => $request->phone_number,
             'username' => $request->username,
             'barangay' => $request->barangay
         ]);

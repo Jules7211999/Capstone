@@ -10,8 +10,8 @@
         </div>
         <div class="col-4">
                 <div class="d-flex align-items-center justify-content-center w-25">
-                    <img src="/img/delete.png"  class="w-25" @click="remove(profile.id)">
-                    <img src="/img/edit.png" class="w-25">
+                    <!-- <img src="/img/delete.png"  class="w-25" @click="remove(profile.id)"> -->
+                    <a :href="'/admin/'+profile.id+'/edit'"><img src="/img/edit.png" class="w-50"></a>
             </div>
         </div>
     </div>

@@ -15,7 +15,7 @@ class AdminCreateController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'address' => 'required|max:255',
-            'phone_number' => 'required',
+            'phone_number' => 'required|numeric',
             'gender' => 'required',
             'birthdate' => 'required',
             'password' => 'required|confirmed|min:8',
@@ -25,6 +25,7 @@ class AdminCreateController extends Controller
 
          User::create([
             'name' => $request->name,
+            'birthdate' => $request->birthdate,
             'phone' => $request->phone_number,
             'password' => Hash::make($request->password),
             'address'=> $request->address,
@@ -32,6 +33,7 @@ class AdminCreateController extends Controller
             'date' => $request-> birthdate,
             'email' => $request->email,
             'barangay' => $request->barangay,
+            'phone_number' => $request->phone_number,
             'role' => "Admin"
         ]);
 

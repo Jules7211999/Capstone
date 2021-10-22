@@ -6,7 +6,7 @@
         @if ($errors->any())
             <div>
                  @foreach ($errors->all() as $error)
-                     <p class="error-text">{{$error}}</p>
+                     <p class="text-danger font-weight-bold">{{$error}}</p>
                 @endforeach
             </div>
          @endif    
@@ -58,8 +58,11 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <button class="font-weight-bold rounded py-1 text-dark px-5 btn-custom border-0" type="submit">Register</button>
+                <button class="bg-light btn btn-outline-dark font-weight-bold rounded py-1 text-dark px-5" type="submit">
+                        Register
+                    </button>
             </div>
         </form>
 
+        
     @endsection

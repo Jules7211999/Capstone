@@ -1,7 +1,8 @@
 <template>
     <div class="w-100 main m-0 p-0">
         <topbar :auth="authname"/>
-        <div class="row w-100 h-100 m-0 p-0">
+        <navdir :nav="nav"/>
+        <div class="row w-100 h-75 m-0 p-0">
             <sidebar :role="role"/>
                  <div class="col">
                     <slot></slot>      
@@ -14,9 +15,10 @@
 <script>
 import topbar from './TopBar.vue';
 import sidebar from './SideBar.vue';
+import navdir from './NavDirectory.vue';
 export default {
-    props:['authname','role'],
-    components:{topbar,sidebar,}
+    props:['authname','role','nav'],
+    components:{topbar,sidebar,navdir}
 }
 
 </script>
