@@ -50482,7 +50482,7 @@ var render = function() {
                 [
                   _c("img", {
                     staticClass: "icon pr-3",
-                    attrs: { src: "/img/Admin.png", alt: "" }
+                    attrs: { src: "/img/admin.png", alt: "" }
                   }),
                   _vm._v(" "),
                   _vm.shownav
@@ -50544,7 +50544,7 @@ var render = function() {
             _c("a", { attrs: { href: "/userTrash" } }, [
               _c("img", {
                 staticClass: "icon pr-3",
-                attrs: { src: "/img/Delete.png", alt: "" }
+                attrs: { src: "/img/delete.png", alt: "" }
               }),
               _vm._v(" "),
               _vm.shownav
@@ -50562,7 +50562,7 @@ var render = function() {
                 _c("a", { attrs: { href: "/adminTrash" } }, [
                   _c("img", {
                     staticClass: "icon pr-3",
-                    attrs: { src: "/img/Delete.png", alt: "" }
+                    attrs: { src: "/img/delete.png", alt: "" }
                   }),
                   _vm._v(" "),
                   _vm.shownav
