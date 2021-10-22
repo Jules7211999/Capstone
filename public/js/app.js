@@ -2718,12 +2718,29 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['data'],
   data: function data() {
     return {
       profile: this.data
     };
+  },
+  methods: {
+    remove: function remove(id) {
+      axios.post('/softDelete', {
+        userId: id
+      }).then(function (data) {
+        return console.log(data);
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    }
   },
   mounted: function mounted() {}
 });
@@ -48862,7 +48879,8 @@ var render = function() {
                   expression: "mapshow"
                 }
               ],
-              staticClass: " w-100 form-control form-control-lg",
+              staticClass:
+                " w-100 form-control form-control-lg  bg-light font-weight-bold text-secondary",
               on: {
                 change: function($event) {
                   var $$selectedVal = Array.prototype.filter
@@ -49122,7 +49140,8 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "col-5" }, [
       _c("input", {
-        staticClass: "form-control form-control-lg w-100",
+        staticClass:
+          "form-control form-control-lg w-100  bg-light text-secondary font-weight-bold",
         attrs: { type: "text", placeholder: "Search User" }
       })
     ])
@@ -50161,16 +50180,14 @@ var render = function() {
       "div",
       { staticClass: "d-flex flex-wrap w-100 h-100" },
       _vm._l(_vm.user.data, function(u) {
-        return _c("div", { key: u.id, staticClass: "m-2 d-flex flex-wrap" }, [
+        return _c("div", { key: u.id, staticClass: "p-2 d-flex flex-wrap" }, [
           _c(
             "a",
             { staticClass: "text-secondary", attrs: { href: "/user/" + u.id } },
             [
               _c(
                 "div",
-                {
-                  staticClass: "m-2 p-2 shadow-sm border-light user-container"
-                },
+                { staticClass: "m-2 p-2 shadow-sm border user-container" },
                 [
                   _c("div", { staticClass: "text-center mt-3" }, [
                     _c("img", {
@@ -50178,7 +50195,7 @@ var render = function() {
                       attrs: { src: "/img/" + u.profile_image, alt: "" }
                     }),
                     _vm._v(" "),
-                    _c("div", { staticClass: "font-weight-bold mt-5 pt-3" }, [
+                    _c("div", { staticClass: "font-weight-bold pt-5" }, [
                       _c("label", [_vm._v(_vm._s(u.name))])
                     ])
                   ])
@@ -50240,7 +50257,7 @@ var render = function() {
         })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-9 align-self-center" }, [
+      _c("div", { staticClass: "col-5 align-self-center" }, [
         _c("div", [_c("span", [_c("h1", [_vm._v(_vm._s(_vm.profile.name))])])]),
         _vm._v(" "),
         _c("div", [
@@ -50248,6 +50265,28 @@ var render = function() {
             _vm._v(_vm._s(_vm.profile.phone_number))
           ])
         ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-4" }, [
+        _c(
+          "div",
+          {
+            staticClass: "d-flex align-items-center justify-content-center w-25"
+          },
+          [
+            _c("img", {
+              staticClass: "w-25",
+              attrs: { src: "/img/delete.png" },
+              on: {
+                click: function($event) {
+                  return _vm.remove(_vm.profile.id)
+                }
+              }
+            }),
+            _vm._v(" "),
+            _c("img", { staticClass: "w-25", attrs: { src: "/img/edit.png" } })
+          ]
+        )
       ])
     ]),
     _vm._v(" "),

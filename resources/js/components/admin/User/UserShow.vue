@@ -4,9 +4,15 @@
         <div class="col-3">
             <img :src="'/img/'+profile.profile_image" class="w-75 rounded-center">
         </div>
-        <div class="col-9 align-self-center">
+        <div class="col-5 align-self-center">
             <div><span><h1>{{profile.name}}</h1></span></div>
             <div><span class="text-muted">{{profile.phone_number}}</span></div>
+        </div>
+        <div class="col-4">
+                <div class="d-flex align-items-center justify-content-center w-25">
+                    <img src="/img/delete.png"  class="w-25" @click="remove(profile.id)">
+                    <img src="/img/edit.png" class="w-25">
+            </div>
         </div>
     </div>
     <div class="row mt-5 border-top pt-3">
@@ -68,6 +74,15 @@ export default {
     data(){
         return{
          profile:this.data
+        }
+    },
+    methods:{
+         remove(id){
+            axios.post('/softDelete',{
+               userId:id
+            })
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
         }
     },
    mounted(){

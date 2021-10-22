@@ -2,13 +2,13 @@
 <div class="w-100 h-100" >
  <div class="w-100 d-flex row mb-2">
       <div class="col-5">
-        <select class=" w-100 form-control form-control-lg" v-model="mapshow">
+        <select class=" w-100 form-control form-control-lg  bg-light font-weight-bold text-secondary" v-model="mapshow">
           <option selected>Location</option>
           <option>SOS</option>
         </select>
       </div>
       <div class="col-5">
-        <input class="form-control form-control-lg w-100" type="text" placeholder="Search User">
+        <input class="form-control form-control-lg w-100  bg-light text-secondary font-weight-bold" type="text" placeholder="Search User">
       </div>
  </div>
   <MglMap 

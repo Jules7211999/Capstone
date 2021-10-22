@@ -17,7 +17,7 @@ use App\Http\Controllers\Admin\UserSearchController;
 use App\Http\Controllers\Admin\AdminCreateController;
 use App\Http\Controllers\Admin\AdminSearchController;
 use App\Http\Controllers\Admin\SearchUserLocationController;
-
+use App\Http\Controllers\Admin\UserSoftDeleteController;
 
 Route::get('/dashboard', function () {
     return view('Superuser.dashboard');
@@ -29,9 +29,10 @@ Route::get('/map',function(){
 });
 
 Route::resource('user',UserProfile::class);
+
 Route::resource('emergency',EmergencySignal::class);
 Route::resource('admin',AdminProfile::class);
-
+Route::post('/softDelete',[UserSoftDeleteController::class,'index']);
 Route::post('/userCreate',[UserCreateController::class,'index']);
 
 Route::post('/userSearch',[UserSearchController::class,'index']);
