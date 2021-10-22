@@ -50069,7 +50069,7 @@ var render = function() {
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
-                                      _vm._v("Medical:")
+                                      _vm._v("Type:")
                                     ]),
                                     _vm._v(_vm._s(d.emergency_call[0].type))
                                   ]),
