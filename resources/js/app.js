@@ -31,7 +31,8 @@ Vue.component('admin-sos-component',require('./components/admin/Sos/Sos.vue').de
 Vue.component('sos-show-component',require('./components/admin/Sos/SosShow.vue').default);
 Vue.component('profile-component',require('./components/admin/Profile/Profile.vue').default);
 Vue.component('admin-component',require('./components/admin/admin/Admin.vue').default);
-
+Vue.component('user-trash-component',require('./components/admin/Trash/User.vue').default);
+Vue.component('admin-trash-component',require('./components/admin/Trash/Admin.vue').default);
 //component only
 
 Vue.component('dropdown-barangay-component',require('./components/Dropdown(Barangay).vue').default);
