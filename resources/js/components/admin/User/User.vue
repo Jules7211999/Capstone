@@ -64,20 +64,13 @@ export default {
    
 }
 .user-container:hover{
-     width: 300px;
-    height: 350px;
+    background: #86cbf7;
     border-radius: 1.5rem;
     padding: 3rem;
     transition: ease-in-out 0.2s;
 }
 span{
     font-size: 1.5rem;
-}
-.modal{
-    top: 50%;
-    right: 50%;
-    background-color: aqua;
-    z-index: 12;
 }
 .adduser{
     width: 2rem;

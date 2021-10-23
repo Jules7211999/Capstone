@@ -62,8 +62,7 @@ export default {
     padding: 5rem;
 }
 .user-container:hover{
-     width: 300px;
-    height: 350px;
+  background: #86cbf7;
     border-radius: 1.5rem;
     padding: 3rem;
     transition: ease-in-out 0.2s;
