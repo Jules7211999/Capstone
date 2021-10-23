@@ -88,7 +88,7 @@ class AdminProfile extends Controller
             'gender' => 'required',
             'birthdate' => 'required',
             'password' => 'required|confirmed|min:8',
-            'email' => 'required|unique:App\Models\User,email',
+            'email' => 'required',
             'barangay' => 'required'
         ]);
 
@@ -104,7 +104,11 @@ class AdminProfile extends Controller
             'barangay' => $request->barangay,
             'phone_number' => $request->phone_number,
         ]);
+
+        return redirect()->back()->with('message','User Updated');
     }
+
+
 
     /**
      * Remove the specified resource from storage.

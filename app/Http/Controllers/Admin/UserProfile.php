@@ -88,7 +88,7 @@ class UserProfile extends Controller
             'gender' => 'required',
             'birthdate' => 'required',
             'password' => 'required|confirmed|min:8',
-            'username' => 'required|unique:App\Models\User,username',
+            'username' => 'required|',
             'barangay' => 'required'
         ]);
 
