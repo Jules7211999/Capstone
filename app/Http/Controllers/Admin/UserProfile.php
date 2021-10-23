@@ -69,7 +69,7 @@ class UserProfile extends Controller
     public function edit($id)
     {
         $model= User::find($id);
-        return view('SuperUser.editUser')->with('data',$model);
+        return view('Superuser.editUser')->with('data',$model);
     }
 
     /**
