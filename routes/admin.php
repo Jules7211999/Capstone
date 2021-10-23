@@ -23,11 +23,10 @@ use App\Http\Controllers\Admin\AdminSearchController;
 use App\Http\Controllers\Admin\UserSoftDeleteController;
 use App\Http\Controllers\Admin\UserSearchTrashController;
 use App\Http\Controllers\Admin\AdminSearchTrashController;
+use App\Http\Controllers\Admin\Dashboard;
 use App\Http\Controllers\Admin\SearchUserLocationController;
 
-Route::get('/dashboard', function () {
-    return view('Superuser.dashboard');
-})->middleware('auth','verified')->name('dashboard');
+Route::get('/dashboard',[Dashboard::class,'index'])->middleware('auth','verified')->name('dashboard');
 
 
 Route::get('/map',function(){

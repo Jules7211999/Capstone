@@ -1880,6 +1880,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: ['user', 'email', 'coord', 'sos'],
   mounted: function mounted() {
     console.log("dashboard mounted");
   }
@@ -49679,88 +49680,89 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w-100 h-100 rounded ml-3 mt-4" }, [
-      _c("div", { staticClass: "w-100 h-25 d-flex row" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              " col-3 font-weight-bold text-secondary d-flex align-items-center justify-content-center"
-          },
-          [
-            _c("div", { staticClass: "text-center " }, [
-              _c("h4", { staticClass: "font-weight-bold" }, [
-                _vm._v("Registered User")
-              ]),
-              _vm._v(" "),
-              _c("h2", { staticClass: "font-weight-bold" }, [_vm._v("3")])
+  return _c("div", { staticClass: "w-100 h-100 rounded ml-3 mt-4" }, [
+    _c("div", { staticClass: "w-100 h-25 d-flex row" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            " col-3 font-weight-bold text-secondary d-flex align-items-center justify-content-center"
+        },
+        [
+          _c("div", { staticClass: "text-center " }, [
+            _c("h4", { staticClass: "font-weight-bold" }, [
+              _vm._v("Registered User")
+            ]),
+            _vm._v(" "),
+            _c("h2", { staticClass: "font-weight-bold" }, [
+              _vm._v(_vm._s(_vm.user))
             ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              " col-3 font-weight-bold text-secondary  d-flex align-items-center justify-content-center"
-          },
-          [
-            _c("div", { staticClass: "text-center " }, [
-              _c("h4", { staticClass: "font-weight-bold" }, [
-                _vm._v("Location Received")
-              ]),
-              _vm._v(" "),
-              _c("h2", { staticClass: "font-weight-bold" }, [_vm._v("4")])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              " col-3 ont-weight-bold text-secondary  d-flex align-items-center justify-content-center"
-          },
-          [
-            _c("div", { staticClass: "text-center " }, [
-              _c("h4", { staticClass: "font-weight-bold" }, [
-                _vm._v("Email Verified")
-              ]),
-              _vm._v(" "),
-              _c("h2", { staticClass: "font-weight-bold" }, [_vm._v("4")])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              " col-3 ont-weight-bold text-secondary  d-flex align-items-center justify-content-center"
-          },
-          [
-            _c("div", { staticClass: "text-center " }, [
-              _c("h4", { staticClass: "font-weight-bold" }, [
-                _vm._v("SOS Received")
-              ]),
-              _vm._v(" "),
-              _c("h2", { staticClass: "font-weight-bold" }, [_vm._v("4")])
-            ])
-          ]
-        )
-      ]),
+          ])
+        ]
+      ),
       _vm._v(" "),
-      _c("div", { staticClass: "row w-100 h-50" })
-    ])
-  }
-]
+      _c(
+        "div",
+        {
+          staticClass:
+            " col-3 font-weight-bold text-secondary  d-flex align-items-center justify-content-center"
+        },
+        [
+          _c("div", { staticClass: "text-center " }, [
+            _c("h4", { staticClass: "font-weight-bold" }, [
+              _vm._v("Location Received")
+            ]),
+            _vm._v(" "),
+            _c("h2", { staticClass: "font-weight-bold" }, [
+              _vm._v(_vm._s(_vm.coord))
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            " col-3 ont-weight-bold text-secondary  d-flex align-items-center justify-content-center"
+        },
+        [
+          _c("div", { staticClass: "text-center " }, [
+            _c("h4", { staticClass: "font-weight-bold" }, [
+              _vm._v("Email Verified")
+            ]),
+            _vm._v(" "),
+            _c("h2", { staticClass: "font-weight-bold" }, [
+              _vm._v(_vm._s(_vm.email))
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass:
+            " col-3 ont-weight-bold text-secondary  d-flex align-items-center justify-content-center"
+        },
+        [
+          _c("div", { staticClass: "text-center " }, [
+            _c("h4", { staticClass: "font-weight-bold" }, [
+              _vm._v("SOS Received")
+            ]),
+            _vm._v(" "),
+            _c("h2", { staticClass: "font-weight-bold" }, [
+              _vm._v(_vm._s(_vm.sos))
+            ])
+          ])
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row w-100 h-50" })
+  ])
+}
+var staticRenderFns = []
 render._withStripped = true
 
 
