@@ -68,7 +68,7 @@ class AdminProfile extends Controller
 
        
 
-        return view('Superuser.editAdmin')->with('data',$model);
+        return view('Superuser.EditAdmin')->with('data',$model);
     }
 
     /**
