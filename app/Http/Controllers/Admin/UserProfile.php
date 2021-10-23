@@ -94,7 +94,7 @@ class UserProfile extends Controller
 
          User::find($id)->update([
             'name' => $request->name,
-            'phone' => $request->phone_number,
+            'phone_number' => $request->phone_number,
             // 'password' => Hash::make($request->password),
             'password' => $request->password,
             'address'=> $request->address,

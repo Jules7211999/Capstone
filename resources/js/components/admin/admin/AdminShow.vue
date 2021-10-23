@@ -6,7 +6,6 @@
         </div>
         <div class="col-5 align-self-center">
             <div><span><h1>{{profile.name}}</h1></span></div>
-            <div><span class="text-muted">{{profile.phone_number}}</span></div>
         </div>
         <div class="col-4">
                 <div class="d-flex align-items-center justify-content-center w-25">
@@ -15,53 +14,20 @@
             </div>
         </div>
     </div>
-    <div class="row mt-5 border-top pt-3">
-        <div class="col ">
-            <div>
-                <div>
-                    <img src="/img/Address.svg" alt="" class="logo">
-                    <label class="text-muted">Address</label>
-                </div>
-                
-                <div>
-                    <span  class="text-muted">{{profile.address}}</span>
-                </div>
-                
-            </div>
-           <div>
-               <div>
-                   <img src="/img/Birthday.svg" alt="" class="logo">
-                <label class="text-muted" >Birthdate</label>
-               </div>
-                <div>
-                    <span  class="text-muted">{{profile.birthdate}}</span>
-                </div>
-           </div>
-           <div>
-               <div>
-                   <img src="/img/Gender.svg" alt="" class="logo">
-                   <label class="text-muted">Gender</label>
-               </div>
-                <div>  
-                    <span  class="text-muted">{{profile.gender}}</span>
-                </div>
-                
-           </div>
-           
-        </div>
-        <div class="col">
-            <div>
-                <div>
-                    <img src="/img/DateCreated.svg" alt="" class="logo">
-                    <label class="text-muted">Date Profile Created</label>
-                </div>
-                <div>
-                     <span  class="text-muted">{{profile.created_at}}</span>
-                </div>
-            </div>
-        </div>
-        
-       
+     <div class="row mt-5 border-top pt-3">
+        <div class="col font-weight-bold"> ID : FANB{{profile.id}}3662</div>
+    </div>
+    <div class="row pt-3">
+        <div class="col font-weight-bold"> USERNAME: {{profile.username}}</div>
+    </div>
+    <div class="row pt-3">
+        <div class="col font-weight-bold">PHONE NUMBER: {{profile.phone_number}}</div>
+    </div>
+    <div class="row pt-3">
+        <div class="col font-weight-bold">ADDRESS: {{profile.address}}</div>
+    </div>
+    <div class="row pt-3">
+        <div class="col font-weight-bold">BARANGAY: {{profile.barangay}}</div>
     </div>
    
 </div>

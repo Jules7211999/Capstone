@@ -2913,40 +2913,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['data'],
   data: function data() {
@@ -3057,40 +3023,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -51525,13 +51457,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-5 align-self-center" }, [
-        _c("div", [_c("span", [_c("h1", [_vm._v(_vm._s(_vm.profile.name))])])]),
-        _vm._v(" "),
-        _c("div", [
-          _c("span", { staticClass: "text-muted" }, [
-            _vm._v(_vm._s(_vm.profile.phone_number))
-          ])
-        ])
+        _c("div", [_c("span", [_c("h1", [_vm._v(_vm._s(_vm.profile.name))])])])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-4" }, [
@@ -51553,108 +51479,37 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row mt-5 border-top pt-3" }, [
-      _c("div", { staticClass: "col " }, [
-        _c("div", [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", [
-            _c("span", { staticClass: "text-muted" }, [
-              _vm._v(_vm._s(_vm.profile.address))
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("div", [
-            _c("span", { staticClass: "text-muted" }, [
-              _vm._v(_vm._s(_vm.profile.birthdate))
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _vm._m(2),
-          _vm._v(" "),
-          _c("div", [
-            _c("span", { staticClass: "text-muted" }, [
-              _vm._v(_vm._s(_vm.profile.gender))
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col" }, [
-        _c("div", [
-          _vm._m(3),
-          _vm._v(" "),
-          _c("div", [
-            _c("span", { staticClass: "text-muted" }, [
-              _vm._v(_vm._s(_vm.profile.created_at))
-            ])
-          ])
-        ])
+      _c("div", { staticClass: "col font-weight-bold" }, [
+        _vm._v(" ID : FONO" + _vm._s(_vm.profile.id) + "3432")
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row pt-3" }, [
+      _c("div", { staticClass: "col font-weight-bold" }, [
+        _vm._v(" USERNAME: " + _vm._s(_vm.profile.username))
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row pt-3" }, [
+      _c("div", { staticClass: "col font-weight-bold" }, [
+        _vm._v("PHONE NUMBER: " + _vm._s(_vm.profile.phone_number))
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row pt-3" }, [
+      _c("div", { staticClass: "col font-weight-bold" }, [
+        _vm._v("ADDRESS: " + _vm._s(_vm.profile.address))
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row pt-3" }, [
+      _c("div", { staticClass: "col font-weight-bold" }, [
+        _vm._v("BARANGAY: " + _vm._s(_vm.profile.barangay))
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("img", {
-        staticClass: "logo",
-        attrs: { src: "/img/Address.svg", alt: "" }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "text-muted" }, [_vm._v("Address")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("img", {
-        staticClass: "logo",
-        attrs: { src: "/img/Birthday.svg", alt: "" }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "text-muted" }, [_vm._v("Birthdate")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("img", {
-        staticClass: "logo",
-        attrs: { src: "/img/Gender.svg", alt: "" }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "text-muted" }, [_vm._v("Gender")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("img", {
-        staticClass: "logo",
-        attrs: { src: "/img/DateCreated.svg", alt: "" }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "text-muted" }, [
-        _vm._v("Date Profile Created")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -51805,13 +51660,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-5 align-self-center" }, [
-        _c("div", [_c("span", [_c("h1", [_vm._v(_vm._s(_vm.profile.name))])])]),
-        _vm._v(" "),
-        _c("div", [
-          _c("span", { staticClass: "text-muted" }, [
-            _vm._v(_vm._s(_vm.profile.phone_number))
-          ])
-        ])
+        _c("div", [_c("span", [_c("h1", [_vm._v(_vm._s(_vm.profile.name))])])])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-4" }, [
@@ -51833,108 +51682,37 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row mt-5 border-top pt-3" }, [
-      _c("div", { staticClass: "col " }, [
-        _c("div", [
-          _vm._m(0),
-          _vm._v(" "),
-          _c("div", [
-            _c("span", { staticClass: "text-muted" }, [
-              _vm._v(_vm._s(_vm.profile.address))
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _vm._m(1),
-          _vm._v(" "),
-          _c("div", [
-            _c("span", { staticClass: "text-muted" }, [
-              _vm._v(_vm._s(_vm.profile.birthdate))
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", [
-          _vm._m(2),
-          _vm._v(" "),
-          _c("div", [
-            _c("span", { staticClass: "text-muted" }, [
-              _vm._v(_vm._s(_vm.profile.gender))
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col" }, [
-        _c("div", [
-          _vm._m(3),
-          _vm._v(" "),
-          _c("div", [
-            _c("span", { staticClass: "text-muted" }, [
-              _vm._v(_vm._s(_vm.profile.created_at))
-            ])
-          ])
-        ])
+      _c("div", { staticClass: "col font-weight-bold" }, [
+        _vm._v(" ID : FANB" + _vm._s(_vm.profile.id) + "3662")
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row pt-3" }, [
+      _c("div", { staticClass: "col font-weight-bold" }, [
+        _vm._v(" USERNAME: " + _vm._s(_vm.profile.username))
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row pt-3" }, [
+      _c("div", { staticClass: "col font-weight-bold" }, [
+        _vm._v("PHONE NUMBER: " + _vm._s(_vm.profile.phone_number))
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row pt-3" }, [
+      _c("div", { staticClass: "col font-weight-bold" }, [
+        _vm._v("ADDRESS: " + _vm._s(_vm.profile.address))
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row pt-3" }, [
+      _c("div", { staticClass: "col font-weight-bold" }, [
+        _vm._v("BARANGAY: " + _vm._s(_vm.profile.barangay))
       ])
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("img", {
-        staticClass: "logo",
-        attrs: { src: "/img/Address.svg", alt: "" }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "text-muted" }, [_vm._v("Address")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("img", {
-        staticClass: "logo",
-        attrs: { src: "/img/Birthday.svg", alt: "" }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "text-muted" }, [_vm._v("Birthdate")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("img", {
-        staticClass: "logo",
-        attrs: { src: "/img/Gender.svg", alt: "" }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "text-muted" }, [_vm._v("Gender")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("img", {
-        staticClass: "logo",
-        attrs: { src: "/img/DateCreated.svg", alt: "" }
-      }),
-      _vm._v(" "),
-      _c("label", { staticClass: "text-muted" }, [
-        _vm._v("Date Profile Created")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
