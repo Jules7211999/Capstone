@@ -2010,6 +2010,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_defineProperty({
@@ -2475,7 +2477,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
 //
 //
 //
@@ -49830,14 +49831,7 @@ var render = function() {
                     [
                       _c(
                         "MglMarker",
-                        {
-                          attrs: {
-                            coordinates: [
-                              d.coordinates[0].longitude,
-                              d.coordinates[0].latitude
-                            ]
-                          }
-                        },
+                        { attrs: { coordinates: [d.longitude, d.latitude] } },
                         [
                           _c("MglPopup", [
                             _c(
@@ -49852,44 +49846,42 @@ var render = function() {
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Name:")
                                     ]),
-                                    _vm._v(_vm._s(d.name))
+                                    _vm._v(_vm._s(d.user.name))
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Latitude:")
                                     ]),
-                                    _vm._v(_vm._s(d.coordinates[0].latitude))
+                                    _vm._v(_vm._s(d.latitude))
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Longitude:")
                                     ]),
-                                    _vm._v(_vm._s(d.coordinates[0].longitude))
+                                    _vm._v(_vm._s(d.longitude))
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Date and Time:")
                                     ]),
-                                    _vm._v(
-                                      _vm._s(d.coordinates[0].datetimezone)
-                                    )
+                                    _vm._v(_vm._s(d.datetimezone))
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Month:")
                                     ]),
-                                    _vm._v(_vm._s(d.coordinates[0].month_name))
+                                    _vm._v(_vm._s(d.month_name))
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Day of the Week:")
                                     ]),
-                                    _vm._v(_vm._s(d.coordinates[0].day_of_week))
+                                    _vm._v(_vm._s(d.day_of_week))
                                   ]),
                                   _vm._v(" "),
                                   _c(
@@ -49930,10 +49922,7 @@ var render = function() {
                         "MglMarker",
                         {
                           attrs: {
-                            coordinates: [
-                              d.emergency_call[0].longitude,
-                              d.emergency_call[0].latitude
-                            ],
+                            coordinates: [d.longitude, d.latitude],
                             color: _vm.markerColor
                           }
                         },
@@ -49951,74 +49940,61 @@ var render = function() {
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Name:")
                                     ]),
-                                    _vm._v(_vm._s(d.name))
+                                    _vm._v(_vm._s(d.user.name))
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Latitude:")
                                     ]),
-                                    _vm._v(_vm._s(d.emergency_call[0].latitude))
+                                    _vm._v(_vm._s(d.latitude))
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Longitude:")
                                     ]),
-                                    _vm._v(
-                                      _vm._s(d.emergency_call[0].longitude)
-                                    )
+                                    _vm._v(_vm._s(d.longitude))
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Date and Time:")
                                     ]),
-                                    _vm._v(
-                                      _vm._s(d.emergency_call[0].datetimezone)
-                                    )
+                                    _vm._v(_vm._s(d.datetimezone))
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Month:")
                                     ]),
-                                    _vm._v(
-                                      _vm._s(d.emergency_call[0].month_name)
-                                    )
+                                    _vm._v(_vm._s(d.month_name))
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Day of the Week:")
                                     ]),
-                                    _vm._v(
-                                      _vm._s(d.emergency_call[0].day_of_week)
-                                    )
+                                    _vm._v(_vm._s(d.day_of_week))
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Status:")
                                     ]),
-                                    _vm._v(_vm._s(d.emergency_call[0].status))
+                                    _vm._v(_vm._s(d.status))
                                   ]),
                                   _vm._v(" "),
                                   _c("div", { staticClass: "d-flex" }, [
                                     _c("span", { staticClass: "pr-2" }, [
                                       _vm._v("Type:")
                                     ]),
-                                    _vm._v(_vm._s(d.emergency_call[0].type))
+                                    _vm._v(_vm._s(d.type))
                                   ]),
                                   _vm._v(" "),
                                   _c(
                                     "a",
-                                    {
-                                      attrs: {
-                                        href:
-                                          "/emergency/" + d.emergency_call[0].id
-                                      }
-                                    },
+                                    { attrs: { href: "/emergency/" + d.id } },
                                     [
                                       _c(
                                         "div",
@@ -50829,7 +50805,26 @@ var render = function() {
       return _c(
         "div",
         { staticClass: "d-flex justify-content-center w-100 mb-2 " },
-        [_vm._v("\r\n        " + _vm._s(d.emergency_call[0]) + "\r\n        ")]
+        [
+          _c(
+            "a",
+            { staticClass: "w-100", attrs: { href: "/emergency/" + d.id } },
+            [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    " p-4 row w-100 d-flex justify-content-between font-weight-bold text-secondary shadow  rounded border ml-4"
+                },
+                [
+                  _c("div", [_vm._v(_vm._s(d.user.name))]),
+                  _vm._v(" "),
+                  _c("div", [_vm._v(_vm._s(d.datetimezone))])
+                ]
+              )
+            ]
+          )
+        ]
       )
     }),
     0

@@ -12,7 +12,7 @@ class GetSos extends Controller
     public function index(){
        
             if(auth()->user()->role == "SuperUser"){
-                $user = User::where('role','=','User')->has("emergencyCall")->with("emergencyCall")->get();
+                $user = EmergencyCall::with('user')->get();
 
                 return $user ->toJson();
             }else{
