@@ -2621,8 +2621,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['auth']
+  props: ['auth', 'role']
 });
 
 /***/ }),
@@ -49721,7 +49723,7 @@ var render = function() {
     "div",
     { staticClass: "w-100 main m-0 p-0" },
     [
-      _c("topbar", { attrs: { auth: _vm.authname } }),
+      _c("topbar", { attrs: { auth: _vm.authname, role: _vm.role } }),
       _vm._v(" "),
       _c("navdir", { attrs: { nav: _vm.nav } }),
       _vm._v(" "),
@@ -51039,7 +51041,15 @@ var render = function() {
               "aria-expanded": "false"
             }
           },
-          [_c("span", { staticClass: "mr-3" }, [_vm._v(_vm._s(_vm.auth))])]
+          [
+            _c("span", { staticClass: "mr-4" }, [
+              _vm._v("Logged in as:  " + _vm._s(_vm.role))
+            ]),
+            _vm._v(" "),
+            _c("span"),
+            _vm._v(" "),
+            _c("span", { staticClass: "mr-3" }, [_vm._v(_vm._s(_vm.auth))])
+          ]
         ),
         _vm._v(" "),
         _vm._m(1)

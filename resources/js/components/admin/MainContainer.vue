@@ -1,6 +1,6 @@
 <template>
     <div class="w-100 main m-0 p-0">
-        <topbar :auth="authname"/>
+        <topbar :auth="authname" :role="role"/>
         <navdir :nav="nav"/>
         <div class="row w-100 h-75 m-0 p-0">
             <sidebar :role="role"/>

@@ -6,6 +6,8 @@
         </div>
     <div class="dropdown show mr-5">
         <a class="btn border-0 dropdown-toggle font-weight-bold" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <span class="mr-4">Logged in as:  {{role}}</span>
+          <span> </span>
           <span class="mr-3">{{auth}}</span>
         </a>
       <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuLink">
@@ -20,7 +22,7 @@
 
 <script>
 export default {
- props:['auth']
+ props:['auth','role']
 }
 </script>
 
