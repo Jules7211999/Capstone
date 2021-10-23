@@ -48448,7 +48448,7 @@ var staticRenderFns = [
       "select",
       {
         staticClass:
-          "form-control-lg w-50 border border-secondary bg-transparent",
+          "form-control-lg w-100 border border-secondary bg-transparent",
         attrs: { name: "barangay" }
       },
       [

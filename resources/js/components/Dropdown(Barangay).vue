@@ -1,5 +1,5 @@
 <template>
-  <select class="form-control-lg w-50 border border-secondary bg-transparent" name="barangay">
+  <select class="form-control-lg w-100 border border-secondary bg-transparent" name="barangay">
 <option>Alianza, Bago</option>
 <option>Abuanan, Bago</option>
 <option>Atipuluan, Bago</option>

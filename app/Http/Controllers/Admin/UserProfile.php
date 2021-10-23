@@ -81,7 +81,30 @@ class UserProfile extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'address' => 'required|max:255',
+            'phone_number' => 'required|numeric',
+            'gender' => 'required',
+            'birthdate' => 'required',
+            'password' => 'required|confirmed|min:8',
+            'username' => 'required|unique:App\Models\User,username',
+            'barangay' => 'required'
+        ]);
+
+         User::find($id)->update([
+            'name' => $request->name,
+            'phone' => $request->phone_number,
+            // 'password' => Hash::make($request->password),
+            'password' => $request->password,
+            'address'=> $request->address,
+            'gender' => $request->gender,
+            'date' => $request-> birthdate,
+            'username' => $request->username,
+            'barangay' => $request->barangay
+        ]);
+
+        return redirect()->back()->with('message','User Updated');
     }
 
     /**
