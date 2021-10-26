@@ -16,7 +16,7 @@ class UserProfile extends Controller
      */
     public function index()
     {
-        return view('Superuser.user');
+        return view('Superuser.User.user');
     }
 
     /**
@@ -26,7 +26,7 @@ class UserProfile extends Controller
      */
     public function create()
     {
-        return view('Superuser.addUser');
+        return view('Superuser.User.addUser');
     }
 
     /**
@@ -38,7 +38,34 @@ class UserProfile extends Controller
     public function store(Request $request)
     {
        
-        
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'address' => 'required|max:255',
+            'phone_number' => 'required|numeric',
+            'gender' => 'required',
+            'birthdate' => 'required',
+            'password' => 'required|confirmed|min:8',
+            'username' => 'required|unique:App\Models\User,username',
+            'barangay' => 'required',
+            'marital_status' => 'required'
+        ]);
+
+         User::create([
+            'name' => $request->name,
+            'birthdate' => $request->birthdate,
+            'phone' => $request->phone_number,
+            'password' => Hash::make($request->password),
+            'address'=> $request->address,
+            'gender' => $request->gender,
+            'date' => $request-> birthdate,
+            'username' => $request->username,
+            'barangay' => $request->barangay,
+            'phone_number' => $request->phone_number,
+            'role' => "User",
+            'marital_status' => $request->marital_status
+        ]);
+
+        return redirect()->back()->with('message','User Registered');
 
        
     }
@@ -56,7 +83,7 @@ class UserProfile extends Controller
 
         $data = $model->toJson();
 
-        return view("Superuser.userShow") -> with('data', $data);
+        return view("Superuser.User.userShow") -> with('data', $data);
     
     }
 
@@ -69,7 +96,7 @@ class UserProfile extends Controller
     public function edit($id)
     {
         $model= User::find($id);
-        return view('Superuser.editUser')->with('data',$model);
+        return view('Superuser.User.editUser')->with('data',$model);
     }
 
     /**
@@ -89,7 +116,8 @@ class UserProfile extends Controller
             'birthdate' => 'required',
             'password' => 'required|confirmed|min:8',
             'username' => 'required|',
-            'barangay' => 'required'
+            'barangay' => 'required',
+            'marital_status' => 'required'
         ]);
 
          User::find($id)->update([
@@ -101,7 +129,8 @@ class UserProfile extends Controller
             'gender' => $request->gender,
             'date' => $request-> birthdate,
             'username' => $request->username,
-            'barangay' => $request->barangay
+            'barangay' => $request->barangay,
+            'marital_status' => $request->marital_status
         ]);
 
         return redirect()->back()->with('message','User Updated');

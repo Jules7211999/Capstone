@@ -16,7 +16,7 @@ class AdminProfile extends Controller
      */
     public function index()
     {
-        return view('Superuser.admin');
+        return view('Superuser.Admin.admin');
     }
 
     /**
@@ -26,7 +26,7 @@ class AdminProfile extends Controller
      */
     public function create()
     {
-        return view('Superuser.addAdmin');
+        return view('Superuser.Admin.addAdmin');
     }
 
     /**
@@ -37,7 +37,34 @@ class AdminProfile extends Controller
      */
     public function store(Request $request)
     {
-        return view('Superuser.adminShow');
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'address' => 'required|max:255',
+            'phone_number' => 'required|numeric',
+            'gender' => 'required',
+            'birthdate' => 'required',
+            'password' => 'required|confirmed|min:8',
+            'email' => 'required|unique:App\Models\User,email',
+            'barangay' => 'required',
+            'marital_status' => 'required'
+        ]);
+
+         User::create([
+            'name' => $request->name,
+            'birthdate' => $request->birthdate,
+            'phone' => $request->phone_number,
+            'password' => Hash::make($request->password),
+            'address'=> $request->address,
+            'gender' => $request->gender,
+            'date' => $request-> birthdate,
+            'email' => $request->email,
+            'barangay' => $request->barangay,
+            'phone_number' => $request->phone_number,
+            'role' => "Admin",
+            'marital_status' => $request->marital_status
+        ]);
+
+        return redirect()->back()->with('message','User Registered');
     }
 
     /**
@@ -52,7 +79,7 @@ class AdminProfile extends Controller
 
         $data = $model->toJson();
 
-        return view("Superuser.adminShow") -> with('data', $data);
+        return view("Superuser.Admin.adminShow") -> with('data', $data);
     }
 
     /**
@@ -65,10 +92,7 @@ class AdminProfile extends Controller
     {
 
         $model= User::find($id);
-
-       
-
-        return view('Superuser.EditAdmin')->with('data',$model);
+        return view('Superuser.Admin.editAdmin')->with('data',$model);
     }
 
     /**
@@ -89,7 +113,8 @@ class AdminProfile extends Controller
             'birthdate' => 'required',
             'password' => 'required|confirmed|min:8',
             'email' => 'required',
-            'barangay' => 'required'
+            'barangay' => 'required',
+            'marital_status' => 'required'
         ]);
 
         User::find($id)->update([
@@ -103,6 +128,7 @@ class AdminProfile extends Controller
             'email' => $request->email,
             'barangay' => $request->barangay,
             'phone_number' => $request->phone_number,
+            'marital_status' => $request->marital_status
         ]);
 
         return redirect()->back()->with('message','User Updated');

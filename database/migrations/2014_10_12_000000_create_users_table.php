@@ -32,6 +32,7 @@ class CreateUsersTable extends Migration
             $table->date('birthdate')->nullable();
             $table->string('username')->nullable()->unique();
             $table->softDeletes();
+            $table->string('marital_status')->nullable();
 
         });
     }

@@ -28,17 +28,7 @@ Route::get('/', function () {
 
 require __DIR__.'/auth.php';
 
-require __DIR__.'/admin.php';
-
-
-// api routes
-Route::get('/authname',function(){
-    $user = Auth::user()->name;
-    $User = ucfirst($user);
-    return $User;
-});
-
-Route::get('/getUserProfile',[GetUserProfile::class,'index']);
+require __DIR__.'/superuser.php';
 
 //test route
 

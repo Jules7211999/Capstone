@@ -25,9 +25,6 @@ Route::post('/authenticate',[AuthenticateMobileApp::class,'index']);
 Route::post('/track',[TrackLocationController::class,'store']);
 Route::post('/sos',[Sos::class,'sos']);
 
-
-
-
 // test route
 Route::post('/test',function(Request $request){
   

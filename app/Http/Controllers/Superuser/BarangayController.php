@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Superuser;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\EmergencyCall;
+use Illuminate\Http\Request;
 
-class EmergencySignal extends Controller
+class BarangayController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class EmergencySignal extends Controller
      */
     public function index()
     {
-        return view('Superuser.Sos.sos');
+        return view('Superuser.Barangay.barangay');
     }
 
     /**
@@ -25,7 +24,7 @@ class EmergencySignal extends Controller
      */
     public function create()
     {
-        //
+        return view('Superuser.Barangay.addBarangay');
     }
 
     /**
@@ -47,12 +46,9 @@ class EmergencySignal extends Controller
      */
     public function show($id)
     {
-        $emergency = EmergencyCall::with('user')->find($id);
-        
-        
-        return view('Superuser.Sos.sosShow',['data' => $emergency]);
+        //
     }
- 
+
     /**
      * Show the form for editing the specified resource.
      *

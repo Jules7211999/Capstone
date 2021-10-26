@@ -20,20 +20,20 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 
-Vue.component('admin-container-component',require('./components/admin/MainContainer.vue').default);
-Vue.component('messages-component',require('./components/admin/Message/Messages.vue').default);
-Vue.component('mapbox-component',require('./components/admin/Mapbox.vue').default);
-Vue.component('user-component',require('./components/admin/User/User.vue').default);
-Vue.component('dashboard-component',require('./components/admin/Dashboard.vue').default);
-Vue.component('user-show-component',require('./components/admin/User/UserShow.vue').default);
-Vue.component('post-component',require('./components/admin/Post/Post.vue').default);
-Vue.component('admin-sos-component',require('./components/admin/Sos/Sos.vue').default);
-Vue.component('sos-show-component',require('./components/admin/Sos/SosShow.vue').default);
-Vue.component('profile-component',require('./components/admin/Profile/Profile.vue').default);
-Vue.component('admin-component',require('./components/admin/admin/Admin.vue').default);
-Vue.component('user-trash-component',require('./components/admin/Trash/User.vue').default);
-Vue.component('admin-trash-component',require('./components/admin/Trash/Admin.vue').default);
-Vue.component('admin-show-component',require('./components/admin/admin/AdminShow.vue').default);
+Vue.component('admin-container-component',require('./components/Superuser/MainContainer.vue').default);
+Vue.component('mapbox-component',require('./components/Superuser/Mapbox.vue').default);
+Vue.component('user-component',require('./components/Superuser/User/User.vue').default);
+Vue.component('dashboard-component',require('./components/Superuser/Dashboard.vue').default);
+Vue.component('user-show-component',require('./components/Superuser/User/UserShow.vue').default);
+Vue.component('admin-sos-component',require('./components/Superuser/Sos/Sos.vue').default);
+Vue.component('sos-show-component',require('./components/Superuser/Sos/SosShow.vue').default);
+Vue.component('profile-component',require('./components/Superuser/Profile/Profile.vue').default);
+Vue.component('admin-component',require('./components/Superuser/admin/Admin.vue').default);
+Vue.component('user-trash-component',require('./components/Superuser/Trash/User.vue').default);
+Vue.component('admin-trash-component',require('./components/Superuser/Trash/Admin.vue').default);
+Vue.component('admin-show-component',require('./components/Superuser/admin/AdminShow.vue').default);
+Vue.component('fish-component',require('./components/Superuser/Fish/Fish.vue').default);
+Vue.component('barangay-component',require('./components/Superuser/Location/Location.vue').default);
 //component only
 
 Vue.component('dropdown-barangay-component',require('./components/Dropdown(Barangay).vue').default);
