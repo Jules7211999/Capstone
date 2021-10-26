@@ -25,6 +25,7 @@ use App\Http\Controllers\Admin\AdminSearchTrashController;
 use App\Http\Controllers\Admin\SearchUserLocationController;
 use App\Http\Controllers\Superuser\BarangayController;
 use App\Http\Controllers\Superuser\FishSpeciesController;
+use App\Http\Controllers\Superuser\MobileGetProfile;
 
 Route::get('/dashboard',[Dashboard::class,'index'])->middleware('auth','verified')->name('dashboard');
 
@@ -67,7 +68,7 @@ Route::post('/trashRestore',[AdminTrashController::class,'restore']);
 
 
 //api routes
-
+Route::get('/getMobileProfile/{id}',[MobileGetProfile::class,'index']);
 Route::post('/sos',[Sos::class,'sos']);
 Route::get('/getSos',[GetSos::class,'index']);
 Route::get('/getAdmin',[GetAdmin::class,'index']);

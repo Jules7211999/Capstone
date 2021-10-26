@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+
  <form action="api/track" method="post">
   <input type="text" name="lat" placeholder="lat">
   <input type="text" name="long" id="" placeholder="long">
