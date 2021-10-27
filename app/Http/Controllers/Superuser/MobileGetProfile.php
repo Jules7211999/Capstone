@@ -11,12 +11,12 @@ class MobileGetProfile extends Controller
     public function index($id){
         $user = User::find($id);
         return response()->json([
-            $user->name,
-            $user->username,
-            $user->marital_status,
-            $user->profile_image,
-            $user->gender,
-            $user->birthdate,
+            'name' => $user->name,
+            'username' => $user->username,
+            'marital_status' => $user->marital_status,
+            'profile_image' => $user->profile_image,
+            'gender' => $user->gender,
+             'gender' => $user->birthdate,
 
         ]);
     }
