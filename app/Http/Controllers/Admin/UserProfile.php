@@ -54,7 +54,7 @@ class UserProfile extends Controller
             'name' => $request->name,
             'birthdate' => $request->birthdate,
             'phone' => $request->phone_number,
-            'password' => Hash::make($request->password),
+            'password' => $request->password,
             'address'=> $request->address,
             'gender' => $request->gender,
             'date' => $request-> birthdate,
@@ -123,7 +123,6 @@ class UserProfile extends Controller
          User::find($id)->update([
             'name' => $request->name,
             'phone_number' => $request->phone_number,
-            // 'password' => Hash::make($request->password),
             'password' => $request->password,
             'address'=> $request->address,
             'gender' => $request->gender,
