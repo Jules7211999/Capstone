@@ -28,9 +28,10 @@ class CreateUsersTable extends Migration
             $table->bigInteger('phone_number')->nullable();
             $table->string('address')->nullable();
             $table->string('barangay')->nullable();
+            $table->string('city')->nullable();
             $table->string('gender')->nullable();
             $table->date('birthdate')->nullable();
-            $table->string('username')->nullable()->unique();
+            $table->string('username')->nullable();
             $table->softDeletes();
             $table->string('marital_status')->nullable();
 

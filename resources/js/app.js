@@ -28,15 +28,16 @@ Vue.component('user-show-component',require('./components/Superuser/User/UserSho
 Vue.component('admin-sos-component',require('./components/Superuser/Sos/Sos.vue').default);
 Vue.component('sos-show-component',require('./components/Superuser/Sos/SosShow.vue').default);
 Vue.component('profile-component',require('./components/Superuser/Profile/Profile.vue').default);
-Vue.component('admin-component',require('./components/Superuser/admin/Admin.vue').default);
+Vue.component('admin-component',require('./components/Superuser/Admin/Admin.vue').default);
 Vue.component('user-trash-component',require('./components/Superuser/Trash/User.vue').default);
 Vue.component('admin-trash-component',require('./components/Superuser/Trash/Admin.vue').default);
-Vue.component('admin-show-component',require('./components/Superuser/admin/AdminShow.vue').default);
+Vue.component('admin-show-component',require('./components/Superuser/Admin/AdminShow.vue').default);
 Vue.component('fish-component',require('./components/Superuser/Fish/Fish.vue').default);
-Vue.component('barangay-component',require('./components/Superuser/Location/Location.vue').default);
+
 //component only
 
 Vue.component('dropdown-barangay-component',require('./components/Dropdown(Barangay).vue').default);
+Vue.component('profile-image-component',require('./components/Superuser/Components/ProfileImage.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

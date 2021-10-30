@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class UserProfile extends Controller
 {
@@ -37,7 +38,7 @@ class UserProfile extends Controller
      */
     public function store(Request $request)
     {
-       
+      
         $request->validate([
             'name' => 'required|string|max:255',
             'address' => 'required|max:255',
@@ -47,8 +48,12 @@ class UserProfile extends Controller
             'password' => 'required|confirmed|min:8',
             'username' => 'required|unique:App\Models\User,username',
             'barangay' => 'required',
-            'marital_status' => 'required'
+            'marital_status' => 'required',
+            'image' => 'required'
         ]);
+
+        $file = $request->file('image');
+        $name = time().$file->getClientOriginalName();
 
          User::create([
             'name' => $request->name,
@@ -60,10 +65,15 @@ class UserProfile extends Controller
             'date' => $request-> birthdate,
             'username' => $request->username,
             'barangay' => $request->barangay,
+            'city' => $request->city,
             'phone_number' => $request->phone_number,
+            'profile_image' => $name,
             'role' => "User",
             'marital_status' => $request->marital_status
         ]);
+        
+            $filepath = $name;
+            Storage::disk('s3')->put($filepath,file_get_contents($file));
 
         return redirect()->back()->with('message','User Registered');
 
@@ -108,6 +118,7 @@ class UserProfile extends Controller
      */
     public function update(Request $request, $id)
     {
+
         $request->validate([
             'name' => 'required|string|max:255',
             'address' => 'required|max:255',
@@ -115,7 +126,8 @@ class UserProfile extends Controller
             'gender' => 'required',
             'birthdate' => 'required',
             'password' => 'required|confirmed|min:8',
-            'username' => 'required|',
+            'username' => 'required',
+            'city' => 'required',
             'barangay' => 'required',
             'marital_status' => 'required'
         ]);
@@ -129,7 +141,8 @@ class UserProfile extends Controller
             'date' => $request-> birthdate,
             'username' => $request->username,
             'barangay' => $request->barangay,
-            'marital_status' => $request->marital_status
+            'marital_status' => $request->marital_status,
+            'city' => $request->city,
         ]);
 
         return redirect()->back()->with('message','User Updated');

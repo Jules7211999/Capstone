@@ -16,7 +16,7 @@ class MobileGetProfile extends Controller
             'marital_status' => $user->marital_status,
             'profile_image' => $user->profile_image,
             'gender' => $user->gender,
-             'gender' => $user->birthdate,
+             'birthdate     ' => $user->birthdate,
 
         ]);
     }

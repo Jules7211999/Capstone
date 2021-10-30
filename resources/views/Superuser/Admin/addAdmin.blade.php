@@ -7,10 +7,16 @@
             {{ session()->get('message') }}
         </div>
     @endif
-<form method="POST" action="/admin" class="justify-content-center d-flex">
+<form method="POST" action="/admin" enctype="multipart/form-data" class="justify-content-center d-flex">
         @csrf
             <div class="container w-100">
-                    <div class="row mb-2">
+            <div class="row w-100 justify-content-center">
+                    <profile-image-component/>
+                        @error('image')
+                            <div class="pt-2 text-danger font-weight-bold mb-2 mt-2">{{$message}}</div>
+                        @enderror
+                    </div>
+                    <div class="row">
                         <div class="col">
                             <div >
                                 <label class="font-weight-bold mb-3 mt-2" for="name">Name</label>

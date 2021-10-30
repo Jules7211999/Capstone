@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Hash;
 
 class AdminProfile extends Controller
@@ -46,23 +48,31 @@ class AdminProfile extends Controller
             'password' => 'required|confirmed|min:8',
             'email' => 'required|unique:App\Models\User,email',
             'barangay' => 'required',
-            'marital_status' => 'required'
+            'marital_status' => 'required',
+            'image' => 'required'
         ]);
 
-         User::create([
+         $file = $request->file('image');
+        $name = time().$file->getClientOriginalName();
+        
+        $user = User::updateOrCreate([
             'name' => $request->name,
             'birthdate' => $request->birthdate,
-            'phone' => $request->phone_number,
             'password' => Hash::make($request->password),
             'address'=> $request->address,
             'gender' => $request->gender,
-            'date' => $request-> birthdate,
+            'birthdate' => $request-> birthdate,
             'email' => $request->email,
             'barangay' => $request->barangay,
             'phone_number' => $request->phone_number,
             'role' => "Admin",
-            'marital_status' => $request->marital_status
+            'marital_status' => $request->marital_status,
+            'profile_image' => $name,
+            'email_verified_at' => Carbon::now()
         ]);
+    
+            // $filepath = $name;
+            // Storage::disk('s3')->put($filepath,file_get_contents($file));
 
         return redirect()->back()->with('message','User Registered');
     }
