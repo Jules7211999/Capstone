@@ -49843,16 +49843,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "w-100 h-100 pl-5" }, [
     _c("div", { staticClass: "row align-items-start" }, [
-      _c("div", { staticClass: "col-3" }, [
-        _c("img", {
-          staticClass: "w-75 rounded-center",
-          attrs: {
-            src:
-              "https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/" +
-              _vm.profile.profile.image
-          }
-        })
-      ]),
+      _vm._m(0),
       _vm._v(" "),
       _c("div", { staticClass: "col-5 align-self-center" }, [
         _c("div", [_c("span", [_c("h1", [_vm._v(_vm._s(_vm.profile.name))])])])
@@ -49913,7 +49904,23 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-3" }, [
+      _c("img", {
+        staticClass: "w-75 rounded-center",
+        attrs: {
+          src:
+            "https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/1635595904goldfish.png",
+          alt: ""
+        }
+      })
+    ])
+  }
+]
 render._withStripped = true
 
 
