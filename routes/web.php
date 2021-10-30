@@ -33,5 +33,5 @@ require __DIR__.'/superuser.php';
 //test route
 
 Route::get('/test',function(){
-    event(new SOSevent());
+    return view('test');
 });

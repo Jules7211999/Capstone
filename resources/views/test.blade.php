@@ -8,11 +8,7 @@
 </head>
 <body>
 
- <form action="api/track" method="post">
-  <input type="text" name="lat" placeholder="lat">
-  <input type="text" name="long" id="" placeholder="long">
-  <input type="text" name="user" placeholder="id">
-  <input type="submit" name="" id="" value="submit">
+ <img src="https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/1635595904goldfish.png" alt="">
 </form>
 </body>
 </html>
