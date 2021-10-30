@@ -49912,7 +49912,11 @@ var staticRenderFns = [
     return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "w-75 rounded-center",
-        attrs: { src: "s3://capstone-salvador-bucket/", alt: "" }
+        attrs: {
+          src:
+            "https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/1635595904goldfish.png",
+          alt: ""
+        }
       })
     ])
   }

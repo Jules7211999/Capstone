@@ -2,7 +2,7 @@
 <div class="w-100 h-100 pl-5">
     <div class="row align-items-start">
         <div class="col-3">
-            <img src="s3://capstone-salvador-bucket/" alt="" class="w-75 rounded-center">
+            <img src="https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/1635595904goldfish.png" alt="" class="w-75 rounded-center">
         </div>
         <div class="col-5 align-self-center">
             <div><span><h1>{{profile.name}}</h1></span></div>
