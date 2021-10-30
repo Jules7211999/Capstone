@@ -43,6 +43,7 @@ class UserProfile extends Controller
             'name' => 'required|string|max:255',
             'address' => 'required|max:255',
             'phone_number' => 'required|numeric',
+            'city' => 'required',
             'gender' => 'required',
             'birthdate' => 'required',
             'password' => 'required|confirmed|min:8',
@@ -71,7 +72,7 @@ class UserProfile extends Controller
             'role' => "User",
             'marital_status' => $request->marital_status
         ]);
-        
+
             $filepath = $name;
             Storage::disk('s3')->put($filepath,file_get_contents($file));
 
