@@ -49785,7 +49785,12 @@ var render = function() {
                   _c("div", { staticClass: "text-center mt-3" }, [
                     _c("img", {
                       staticClass: "w-50",
-                      attrs: { src: "/img/" + u.profile_image, alt: "" }
+                      attrs: {
+                        src:
+                          "https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/" +
+                          u.profile_image,
+                        alt: ""
+                      }
                     }),
                     _vm._v(" "),
                     _c("div", { staticClass: "font-weight-bold pt-5" }, [
