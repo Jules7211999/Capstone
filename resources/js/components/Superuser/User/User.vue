@@ -19,7 +19,7 @@
             <a :href="'/user/'+u.id" class="text-secondary">
                 <div class="m-2 p-2 shadow-sm border user-container">
                     <div class ="text-center mt-3">
-                            <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ u.profile_image" alt="" class="w-50">
+                            <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ u.profile_image" alt="" class=" rounded-center w-50">
                         <div class="font-weight-bold pt-5">
                             <label>{{u.name}}</label>
                         </div>
