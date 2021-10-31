@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Superuser;
 
-use App\Models\Fish;
+use App\Models\fish;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -36,7 +36,7 @@ class FishSpeciesController extends Controller
      */
     public function store(Request $request)
     {
-        Fish::create([
+        fish::create([
             'phylum' => $request->phylum,
             'subphylum' => $request->subphylum,
             'superclass' => $request->superclass,
