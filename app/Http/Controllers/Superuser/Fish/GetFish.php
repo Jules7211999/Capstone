@@ -9,6 +9,6 @@ use Illuminate\Http\Request;
 class GetFish extends Controller
 {
     public function index(){
-        return Fish::all();
+        return fish::all();
     }
 }
