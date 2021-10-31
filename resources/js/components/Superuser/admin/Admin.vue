@@ -19,7 +19,7 @@
             <a :href="'/admin/'+u.id" class="text-secondary">
                 <div class="m-2 p-2 shadow-sm border user-container">
                     <div class ="text-center mt-3">
-                            <img :src="'/img/'+ u.profile_image" alt="" class="w-50">
+                           <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ u.profile_image" alt="" class="image">
                         <div class="font-weight-bold mt-5 pt-3">
                             <label>{{u.name}}</label>
                         </div>
@@ -55,6 +55,10 @@ export default {
 </script>
 
 <style scoped>
+.image{
+    border-radius: 50%;
+    width: 75%;
+}
 .user-container{
      width: 250px;
     height: 300px;

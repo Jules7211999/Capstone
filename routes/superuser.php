@@ -17,13 +17,12 @@ use App\Http\Controllers\Admin\GetSoftDeletedAdmin;
 use App\Http\Controllers\Admin\UpdateSosController;
 use App\Http\Controllers\Admin\UserTrashController;
 use App\Http\Controllers\Admin\AdminTrashController;
-use App\Http\Controllers\Superuser\CreateController;
 use App\Http\Controllers\Superuser\SearchController;
 use App\Http\Controllers\Admin\UserSoftDeleteController;
 use App\Http\Controllers\Admin\UserSearchTrashController;
 use App\Http\Controllers\Admin\AdminSearchTrashController;
 use App\Http\Controllers\Admin\SearchUserLocationController;
-use App\Http\Controllers\Superuser\BarangayController;
+use App\Http\Controllers\Superuser\Fish\GetFish;
 use App\Http\Controllers\Superuser\FishSpeciesController;
 use App\Http\Controllers\Superuser\MobileGetProfile;
 
@@ -40,7 +39,7 @@ Route::resource('emergency',EmergencySignal::class);
 Route::resource('admin',AdminProfile::class);
 Route::resource('user',UserProfile::class);
 Route::resource('fish',FishSpeciesController::class);
-Route::resource('barangay',BarangayController::class);
+
 
 //User/Admin Search
 Route::post('/userSearch',[SearchController::class,'user']);
@@ -68,6 +67,7 @@ Route::post('/trashRestore',[AdminTrashController::class,'restore']);
 
 
 //api routes
+Route::get('/getFish',[GetFish::class,'index']);
 Route::get('/getMobileProfile/{id}',[MobileGetProfile::class,'index']);
 Route::post('/sos',[Sos::class,'sos']);
 Route::get('/getSos',[GetSos::class,'index']);

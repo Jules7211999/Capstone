@@ -133,18 +133,41 @@ class UserProfile extends Controller
             'marital_status' => 'required'
         ]);
 
-         User::find($id)->update([
-            'name' => $request->name,
-            'phone_number' => $request->phone_number,
-            'password' => $request->password,
-            'address'=> $request->address,
-            'gender' => $request->gender,
-            'date' => $request-> birthdate,
-            'username' => $request->username,
-            'barangay' => $request->barangay,
-            'marital_status' => $request->marital_status,
-            'city' => $request->city,
-        ]);
+        
+        if($request->file('image') == null){
+            User::find($id)->update([
+                'name' => $request->name,
+                'phone_number' => $request->phone_number,
+                'password' => $request->password,
+                'address'=> $request->address,
+                'gender' => $request->gender,
+                'date' => $request-> birthdate,
+                'username' => $request->username,
+                'barangay' => $request->barangay,
+                'marital_status' => $request->marital_status,
+                'city' => $request->city,
+            ]);
+        }else{
+            $file = $request->file('image');
+            $name = time().$file->getClientOriginalName();
+       
+             User::find($id)->update([
+                'name' => $request->name,
+                'phone_number' => $request->phone_number,
+                'password' => $request->password,
+                'address'=> $request->address,
+                'gender' => $request->gender,
+                'date' => $request-> birthdate,
+                'username' => $request->username,
+                'barangay' => $request->barangay,
+                'marital_status' => $request->marital_status,
+                'city' => $request->city,
+                    'profile_image' => $name
+           ]);
+
+            $filepath = $name;
+            Storage::disk('s3')->put($filepath,file_get_contents($file));
+        }
 
         return redirect()->back()->with('message','User Updated');
     }

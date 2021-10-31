@@ -11,7 +11,13 @@
         @csrf
         @method('PUT')
         <div class="container w-100">
-                    <div class="row mb-2">
+        <div class="row w-100 justify-content-center">
+                    <profile-image-component/>
+                    @error('image')
+                        <div class="pt-2 text-danger font-weight-bold mb-2 mt-2">{{$message}}</div>
+                    @enderror
+                    </div>
+                    <div class="row">
                         <div class="col">
                             <div >
                                 <label class="font-weight-bold mb-3 mt-2" for="name">Name</label>
@@ -41,7 +47,7 @@
                                 <label class="font-weight-bold mb-3 mt-2" for="password">Password</label>
                             </div>
                             <div>
-                                <input type="password" id="password" class="form-control-lg w-100 border  bg-transparent" name="password" />
+                                <input type="password" id="password"  class="form-control-lg w-100 border  bg-transparent" name="password" />
                             </div>
                             @error('password')
                                 <div class="pt-2 text-danger font-weight-bold mt-2 mb-2">{{$message}}</div>
@@ -52,7 +58,7 @@
                                 <label class="font-weight-bold mb-3 mt-2" for="password">Confirm Password</label>
                             </div>
                             <div>
-                                <input  type="password" id="password" class="form-control-lg w-100 border  bg-transparent" name="password_confirmation"/>
+                                <input  type="password"  id="password" class="form-control-lg w-100 border  bg-transparent" name="password_confirmation"/>
                             </div>
                             @error('password_confirmation')
                                <div class="pt-2 text-danger font-weight-bold mt-2 mb-2">{{$message}}</div>

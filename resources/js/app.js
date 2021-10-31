@@ -39,6 +39,7 @@ Vue.component('fish-component',require('./components/Superuser/Fish/Fish.vue').d
 Vue.component('dropdown-barangay-component',require('./components/Dropdown(Barangay).vue').default);
 Vue.component('profile-image-component',require('./components/Superuser/Components/ProfileImage.vue').default);
 
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

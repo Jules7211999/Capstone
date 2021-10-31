@@ -2,7 +2,7 @@
 <div class="w-100 h-100 pl-5">
     <div class="row align-items-start">
         <div class="col-3">
-            <img :src="'/img/'+profile.profile_image" class="w-75 rounded-center">
+            <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ profile.profile_image" alt="" class="image">
         </div>
         <div class="col-5 align-self-center">
             <div><span><h1>{{profile.name}}</h1></span></div>
@@ -62,6 +62,10 @@ export default {
 </script>
 
 <style scoped>
+.image{
+    border-radius: 50%;
+    width: 75%;
+}
 .logo{
     width: 2rem;
     margin-right: rem;

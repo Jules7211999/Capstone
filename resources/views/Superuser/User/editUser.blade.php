@@ -8,13 +8,12 @@
         <div class="row w-100 font-weight-bold d-flex justify-content-center p-5 text-success">
             {{ session()->get('message') }}
         </div>
-    @endif
+@endif
 <form action="/user/{{$data->id}}" method="POST" enctype="multipart/form-data" class="justify-content-center d-flex">
         @csrf
         @method('PUT')
             <div class="container w-100">
                     <div class="row w-100 justify-content-center">
-                        
                     <profile-image-component/>
                     @error('image')
                         <div class="pt-2 text-danger font-weight-bold mb-2 mt-2">{{$message}}</div>
@@ -50,7 +49,7 @@
                                 <label class="font-weight-bold mt-2 mb-2 " for="password">Password</label>
                             </div>
                             <div>
-                                <input type="password"  class="form-control-lg w-100 border  bg-transparent" name="password" />
+                                <input type="password"  value="{{$data->password}}" class="form-control-lg w-100 border bg-transparent" name="password" />
                             </div>
                             @error('password')
                                 <div class="pt-2 text-danger font-weight-bold mb-2 mt-2">{{$message}}</div>
@@ -61,7 +60,7 @@
                                 <label class="font-weight-bold mt-2 mb-2 " for="password">Confirm Password</label>
                             </div>
                             <div>
-                                <input  type="password"  class="form-control-lg w-100 border  bg-transparent" name="password_confirmation"/>
+                                <input  type="password" value="{{$data->password}}" class="form-control-lg w-100 border  bg-transparent" name="password_confirmation"/>
                             </div>
                             @error('password_confirmation')
                             <div class="pt-2 text-danger font-weight-bold mb-2 mt-2">{{$message}}</div>

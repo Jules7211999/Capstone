@@ -1,13 +1,13 @@
 <template>
-     <div>
-         <div class="mb-3 d-flex justify-content-center ">
-             <img :src="url" alt="" srcset="" class="w-50 rounded-circle">
-         </div>
-         <div class="row">
-            <div class="col d-flex justify-content-center ">
-                <input type="file" name="image"  class="font-weight-bold" @change="onFileChange">
+     <div class="mb-3">
+         <div class="row w-100 row align-items-center">
+            <div class="col-3">
+                 <img :src="url" alt="" srcset="" class="w-100 rounded-circle image">
             </div>
-             </div>
+            <div class="col-9">
+                     <input type="file" name="image"  class="font-weight-bold" @change="onFileChange">
+            </div>
+         </div>
      </div>
 </template>
 <script>
@@ -25,3 +25,8 @@ export default {
     }
 }
 </script>
+<style scoped>
+image{
+    overflow: hidden;
+}
+</style>

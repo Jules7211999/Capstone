@@ -66,7 +66,7 @@
                    </div>
                    <div class="row">
                        <div class="col">
-                           <div class>
+                           <div>
                                <label class="font-weight-bold mb-3 mt-2" for="address">Address</label>
                             </div>
                             <div>

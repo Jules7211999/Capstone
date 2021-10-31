@@ -18,12 +18,14 @@
         <div v-for="u in user.data"  :key="u.id" class="p-2 d-flex flex-wrap">
             <a :href="'/user/'+u.id" class="text-secondary">
                 <div class="m-2 p-2 shadow-sm border user-container">
-                    <div class ="text-center mt-3">
-                            <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ u.profile_image" alt="" class=" rounded-center w-50">
-                        <div class="font-weight-bold pt-5">
-                            <label>{{u.name}}</label>
-                        </div>
-                    </div>    
+                    <div class="h-50 text-center d-flex align-items-center">
+                        <div class="col"><img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ u.profile_image" alt="" class="image"></div>
+                    </div>
+                    <div class="h-50 d-flex align-items-center text-center">
+                        <div class="col font-weight-bold"><label>{{u.name}}</label></div>
+                    </div>
+                        
+                      
                 </div>
             </a>
         </div>
@@ -55,6 +57,11 @@ export default {
 </script>
 
 <style scoped>
+.image{
+    border-radius: 50%;
+    width: 85%;
+    padding:1rem;
+}
 .user-container{
     width: 250px;
     height: 300px;

@@ -18,10 +18,10 @@
                             </a>
                         </div>
                         <div class=" mb-5">
-                            <a href="/barangay" class="text-secondary">
-                                <img src="/img/houses.png" alt="" class ="icon pr-3">
+                            <a href="/lgu" class="text-secondary">
+                                <img src="/img/building.png" alt="" class ="icon pr-3">
                                     <span v-if="shownav">
-                                        Barangay
+                                        LGU
                                     </span>
                             </a>
                         </div>

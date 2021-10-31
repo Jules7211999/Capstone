@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use Carbon\Carbon;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Carbon\Carbon;
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Support\Facades\Storage;
 
 class AdminProfile extends Controller
 {
@@ -55,7 +56,7 @@ class AdminProfile extends Controller
          $file = $request->file('image');
         $name = time().$file->getClientOriginalName();
         
-        $user = User::updateOrCreate([
+         User::updateOrCreate([
             'name' => $request->name,
             'birthdate' => $request->birthdate,
             'password' => Hash::make($request->password),
@@ -71,8 +72,8 @@ class AdminProfile extends Controller
             'email_verified_at' => Carbon::now()
         ]);
     
-            // $filepath = $name;
-            // Storage::disk('s3')->put($filepath,file_get_contents($file));
+            $filepath = $name;
+            Storage::disk('s3')->put($filepath,file_get_contents($file));
 
         return redirect()->back()->with('message','User Registered');
     }
@@ -126,21 +127,45 @@ class AdminProfile extends Controller
             'barangay' => 'required',
             'marital_status' => 'required'
         ]);
+        if($request->file('image') == null){
+            User::find($id)->update([
+                'name' => $request->name,
+                'birthdate' => $request->birthdate,
+                'phone' => $request->phone_number,
+                'password' => Hash::make($request->password),
+                'address'=> $request->address,
+                'gender' => $request->gender,
+                'date' => $request-> birthdate,
+                'email' => $request->email,
+                'barangay' => $request->barangay,
+                'phone_number' => $request->phone_number,
+                'marital_status' => $request->marital_status,
+                
+            ]);
+    
+        }else{
+            $file = $request->file('image');
+            $name = time().$file->getClientOriginalName();
 
-        User::find($id)->update([
-            'name' => $request->name,
-            'birthdate' => $request->birthdate,
-            'phone' => $request->phone_number,
-            'password' => Hash::make($request->password),
-            'address'=> $request->address,
-            'gender' => $request->gender,
-            'date' => $request-> birthdate,
-            'email' => $request->email,
-            'barangay' => $request->barangay,
-            'phone_number' => $request->phone_number,
-            'marital_status' => $request->marital_status
-        ]);
-
+            User::find($id)->update([
+                'name' => $request->name,
+                'birthdate' => $request->birthdate,
+                'phone' => $request->phone_number,
+                'password' => Hash::make($request->password),
+                'address'=> $request->address,
+                'gender' => $request->gender,
+                'date' => $request-> birthdate,
+                'email' => $request->email,
+                'barangay' => $request->barangay,
+                'phone_number' => $request->phone_number,
+                'marital_status' => $request->marital_status,
+                'profile_image' => $name,
+            ]);
+            
+            $filepath = $name;
+            Storage::disk('s3')->put($filepath,file_get_contents($file));
+        }
+       
         return redirect()->back()->with('message','User Updated');
     }
 
