@@ -24,12 +24,15 @@
         <MglPopup>
             <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
               <div>
+                <!-- <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ d.profile_image" alt="" class="image"> -->
+                <div class="d-flex"><span class="pr-2">{{d.user.profile_image}}</span></div>
                 <div class="d-flex"><span class="pr-2">Name:</span>{{d.name}}</div>
                 <div class="d-flex"><span class="pr-2">Latitude:</span>{{d.latitude}}</div>
                 <div class="d-flex"><span class="pr-2">Longitude:</span>{{d.longitude}}</div>
                 <div class="d-flex"><span class="pr-2">Date and Time:</span>{{d.datetimezone}}</div>
                 <div class="d-flex"><span class="pr-2">Month:</span>{{d.month_name}}</div>
                 <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.day_of_week}}</div>
+                <div class="d-flex"><span class="pr-2">Type:</span>{{d.type}}</div>
                 <a :href="'/user/'+d.user_id"><div class="d-flex w-100 pt-2 justify-content-center">View Profile</div></a>
               </div>
             </div>

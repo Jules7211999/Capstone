@@ -7,9 +7,15 @@
                 {{ session()->get('message') }}
             </div>
     @endif
-    <form action="/fish" method="POST">
+    <form action="/fish" method="POST" enctype="multipart/form-data">
        @csrf
         <div class="container">
+        <div class="row w-100 justify-content-center">
+                    <fish-image-component/>
+                        @error('image')
+                            <div class="pt-2 text-danger font-weight-bold mb-2 mt-2">{{$message}}</div>
+                        @enderror
+        </div>
             <div class="row">
                 <div class="col">
                     <div>

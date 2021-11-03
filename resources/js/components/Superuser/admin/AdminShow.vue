@@ -14,23 +14,41 @@
             </div>
         </div>
     </div>
-     <div class="row mt-5 border-top pt-3">
-        <div class="col font-weight-bold"> ID : FANB{{profile.id}}3662</div>
+    <div class="row mt-5 border-top pt-3">
+        <div class="col font-weight-bold">
+             <div class="label">ID</div>
+             <div class="text-secondary">FONO{{profile.id}}3432</div>
+        </div>
+        <div class="col font-weight-bold"> 
+            <div class="label">Email</div>
+            <div class="text-secondary">{{profile.email}}</div>
+        </div>
     </div>
     <div class="row pt-3">
-        <div class="col font-weight-bold"> USERNAME: {{profile.username}}</div>
+        <div class="col font-weight-bold">
+            <div class="label">Phone Number</div>
+            <div class="text-secondary">{{profile.phone_number}}</div>
+        </div>
+            <div class="col font-weight-bold">
+                <div class="label">Address</div>
+                <div class="text-secondary">{{profile.address}}</div>
+            </div>
     </div>
     <div class="row pt-3">
-        <div class="col font-weight-bold">PHONE NUMBER: {{profile.phone_number}}</div>
+        <div class="col font-weight-bold">
+            <div class="label">Barangay</div>
+            <div class="text-secondary">{{profile.barangay}}</div>
+        </div>
+         <div class="col font-weight-bold">
+             <div class="label">City</div>
+             <div class="text-secondary">{{profile.city}}</div>
+         </div>
     </div>
-    <div class="row pt-3">
-        <div class="col font-weight-bold">ADDRESS: {{profile.address}}</div>
-    </div>
-    <div class="row pt-3">
-        <div class="col font-weight-bold">BARANGAY: {{profile.barangay}}</div>
-    </div>
-     <div class="row pt-3">
-        <div class="col font-weight-bold">MARITAL STATUS: {{profile.marital_status}}</div>
+      <div class="row pt-3">
+        <div class="col font-weight-bold">
+            <div class="label">Marital Status</div>
+            {{profile.marital_status}}
+        </div>
     </div>
    
 </div>

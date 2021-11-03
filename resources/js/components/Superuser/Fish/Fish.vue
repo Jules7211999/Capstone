@@ -14,10 +14,10 @@
             </div>    
         </div>
         <div class="d-flex flex-wrap w-100 h-100 ">
-            <div v-for="d in data" class="fish-container d-flex flex-wrap border mr-2 rounded pl-5 pr-5 pt-2 d-flex justify-content-center text-secondary font-weight-bold w-25 pb-2 shadow">
-                    <div>
-                        {{d.common_name}}
-                    </div>
+            <div v-for="d in data" class="fish-container  border mr-2 rounded pl-5 pr-5 pt-2 text-center text-secondary font-weight-bold  pb-2 shadow">
+                <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ d.image" alt="" class="image">
+                <div class="w-100 pt-5 d-flex align-items-center justify-content-center">{{d.common_name}}</div>
+                <div class="w-100 pt-2 d-flex align-items-center justify-content-center">{{d.local_name}}</div>
             </div>
         </div>
     </div>
@@ -56,10 +56,14 @@ input{
     transition: 0.5s ease-out;
 }
 
-.fish-container:hover{
-    background: #86cbf7;
+.fish-container{
     border-radius: 1.5rem;
-    padding: 3rem;
-    transition: ease-in-out 0.2s;
+    width: 20rem;
+    height: 20rem;
+}
+.image{
+    width: 100%;
+    height: 50%;
+    padding-top: 1rem;
 }
 </style>

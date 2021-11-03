@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Superuser;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\EmergencyCall;
 
 class SearchController extends Controller
 {
@@ -21,4 +22,6 @@ class SearchController extends Controller
 
        return $search;
     }
+
+ 
 }

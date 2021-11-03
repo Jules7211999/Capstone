@@ -17,7 +17,7 @@
                                     </span>
                             </a>
                         </div>
-                        <div class=" mb-5">
+                        <div v-if="authrole == 'SuperUser'" class=" mb-5">
                             <a href="/lgu" class="text-secondary">
                                 <img src="/img/building.png" alt="" class ="icon pr-3">
                                     <span v-if="shownav">
@@ -29,7 +29,7 @@
                             <a href="/admin" class="text-secondary">
                                 <img src="/img/admin.png" alt="" class ="icon pr-3">
                                     <span v-if="shownav">
-                                        Brgy Admin
+                                        Admin
                                     </span>
                             </a>
                         </div>
@@ -49,7 +49,7 @@
                                     </span>
                             </a>
                         </div>
-                        <div class=" mb-5"> 
+                        <div v-if="authrole == 'SuperUser'" class="mb-5"> 
                             <a href="/fish" class="text-secondary">
                                 <img src="/img/fish.png" alt="" class ="icon pr-3"> 
                                     <span v-if="shownav">
@@ -57,36 +57,15 @@
                                     </span>
                             </a>
                         </div>
-
-
-
-
-
-
-                </div>
-
-
-                    <!-- <div class="font-weight-bold mt-5 ml-4 border-top pt-5 ">
-                        <div class="mb-4">
-                            <a href="/userTrash">
-                                <img src="/img/delete.png" alt="" class ="icon pr-3">
-                                    <span v-if="shownav" class="trash">
-                                        USER
+                        <div v-if="authrole != 'SuperUser'" class="mb-5"> 
+                            <a href="/fish" class="text-secondary">
+                                <img src="/img/fish.png" alt="" class ="icon pr-3"> 
+                                    <span v-if="shownav">
+                                        Catch Monitoring
                                     </span>
                             </a>
                         </div>
-                        <div >
-                            <a href="/adminTrash" >
-                                <img src="/img/delete.png" alt="" class ="icon pr-3">
-                                    <span v-if="shownav" class="trash">
-                                        ADMIN
-                                    </span>
-                            </a>
-                        </div>
-                    </div> -->
-
-                  
-                            
+                </div>                  
     </div>
 
 </template>

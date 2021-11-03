@@ -86,7 +86,7 @@
                             </div>
                             <div>
                                 <select class="form-control-lg w-100 border font-weight-bold bg-transparent" name="city">
-                                    <option value="Testvalue">Test</option>
+                                    <option value="{{auth()->user()->city}}">{{auth()->user()->city}}</option>
                                 </select>
                             </div>
                         </div>
@@ -96,7 +96,7 @@
                             </div>
                             <div>
                                 <select class="form-control-lg w-100 border font-weight-bold bg-transparent" name="barangay">
-                                    <option value="testvalue">Test</option>
+                                    <option value="{{auth()->user()->barangay}}">{{auth()->user()->barangay}}</option>
                                 </select>
                             </div>
                         </div>

@@ -1,13 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Superuser;
+namespace App\Http\Controllers\Superuser\Resource;
 
-use App\Models\fish;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
-class FishSpeciesController extends Controller
+class Lgu extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +14,7 @@ class FishSpeciesController extends Controller
      */
     public function index()
     {
-        return view('Superuser.Fish.fish');
+        return view('Superuser.Lgu.lgu');
     }
 
     /**
@@ -26,7 +24,7 @@ class FishSpeciesController extends Controller
      */
     public function create()
     {
-        return view('Superuser.Fish.addFish');
+        //
     }
 
     /**
@@ -37,24 +35,7 @@ class FishSpeciesController extends Controller
      */
     public function store(Request $request)
     {
-        $file = $request->file('image');
-        $name = time().$file->getClientOriginalName();
-
-        fish::create([
-            'phylum' => $request->phylum,
-            'subphylum' => $request->subphylum,
-            'superclass' => $request->superclass,
-            'class' => $request->class,
-            'common_name' => $request->common_name,
-            'local_name'=>$request->local_name,
-            'image' => $name
-        ]);
-
-    
-        $filepath = $name;
-        Storage::disk('s3')->put($filepath,file_get_contents($file));
-
-        return back()->with('message','Fish added');
+        //
     }
 
     /**

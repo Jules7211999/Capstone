@@ -73,7 +73,9 @@ class EmergencySignal extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        EmergencyCall::find($id)->update([
+            'status' => $request->status
+        ]);
     }
 
     /**

@@ -1,5 +1,5 @@
 <template>
-    <div class="w-100 h-50">
+    <div class="w-100 h-100">
         <MglMap 
             :accessToken="accessToken" 
             :mapStyle="mapStyle" 
@@ -10,25 +10,20 @@
                 <MglPopup>
                     <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
                     <div>
+                        <div class="d-flex "><img src="" alt="" srcset=""></div>
                         <div class="d-flex"><span class="pr-2">Name:</span>{{eData.user.name}}</div>
                         <div class="d-flex"><span class="pr-2">Latitude:</span>{{eData.latitude}}</div>
                         <div class="d-flex"><span class="pr-2">Longitude:</span>{{eData.longitude}}</div>
                         <div class="d-flex"><span class="pr-2">Date and Time:</span>{{eData.datetimezone}}</div>
                         <div class="d-flex"><span class="pr-2">Month:</span>{{eData.month_name}}</div>
                         <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{eData.day_of_week}}</div>
+                        <div class="d-flex"><span class="pr-2">Type:</span>{{eData.type}}</div>
                         <a :href="'/user/'+eData.user.id"><div class="d-flex w-100 pt-2 justify-content-center">View Profile</div></a>
                     </div>
                     </div>
                 </MglPopup>
             </MglMarker>
         </MglMap>
-        <div class="container">
-            <div class="d-flex w-100 text-secondary font-weight-bold">
-                <div class="ml-3">{{eData.user.name}}</div>
-                <div class="ml-3">{{eData.user.gender}}</div>
-                <div class="ml-3">{{eData.user.barangay}}</div>
-            </div>
-        </div>
     </div>
 </template>
 <script>

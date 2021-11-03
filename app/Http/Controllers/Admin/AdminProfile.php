@@ -6,8 +6,9 @@ use Carbon\Carbon;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\barang;
+use App\Models\municipal;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Storage;
 
 class AdminProfile extends Controller
@@ -29,7 +30,10 @@ class AdminProfile extends Controller
      */
     public function create()
     {
-        return view('Superuser.Admin.addAdmin');
+        $barangay = barang::where('status','=','Active')->get();
+        $municipality = municipal::where('status','=','Active')->get();
+
+        return view('Superuser.Admin.addAdmin',['municipality'=> $municipality, 'barangay' => $barangay]);
     }
 
     /**
@@ -38,8 +42,9 @@ class AdminProfile extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request){
+   
+    
         $request->validate([
             'name' => 'required|string|max:255',
             'address' => 'required|max:255',
@@ -50,7 +55,8 @@ class AdminProfile extends Controller
             'email' => 'required|unique:App\Models\User,email',
             'barangay' => 'required',
             'marital_status' => 'required',
-            'image' => 'required'
+            'image' => 'required',
+            'city' => 'required'
         ]);
 
          $file = $request->file('image');
@@ -69,7 +75,8 @@ class AdminProfile extends Controller
             'role' => "Admin",
             'marital_status' => $request->marital_status,
             'profile_image' => $name,
-            'email_verified_at' => Carbon::now()
+            'email_verified_at' => Carbon::now(),
+            'city' => $request->city
         ]);
     
             $filepath = $name;
@@ -116,17 +123,7 @@ class AdminProfile extends Controller
     public function update(Request $request, $id)
     {
 
-        $request->validate([
-            'name' => 'required|string|max:255',
-            'address' => 'required|max:255',
-            'phone_number' => 'required|numeric',
-            'gender' => 'required',
-            'birthdate' => 'required',
-            'password' => 'required|confirmed|min:8',
-            'email' => 'required',
-            'barangay' => 'required',
-            'marital_status' => 'required'
-        ]);
+     
         if($request->file('image') == null){
             User::find($id)->update([
                 'name' => $request->name,
@@ -140,6 +137,7 @@ class AdminProfile extends Controller
                 'barangay' => $request->barangay,
                 'phone_number' => $request->phone_number,
                 'marital_status' => $request->marital_status,
+                'city' => $request->city
                 
             ]);
     
@@ -160,6 +158,7 @@ class AdminProfile extends Controller
                 'phone_number' => $request->phone_number,
                 'marital_status' => $request->marital_status,
                 'profile_image' => $name,
+                'city' => $request->city
             ]);
             
             $filepath = $name;

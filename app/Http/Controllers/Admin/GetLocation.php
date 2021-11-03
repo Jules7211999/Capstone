@@ -16,8 +16,7 @@ class GetLocation extends Controller
         if(auth()->user()->role == "SuperUser"){
             return Coordinates::with('user')->get();
         }else{
-            return User::where('role','=','User')->where('barangay','=',auth()->user()->barangay)->has("coordinates")->with("coordinates")->get();
+            return Coordinates::with('user')->get();
         }
-        
     }
 }

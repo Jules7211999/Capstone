@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFishTable extends Migration
+class CreateMunicipalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,12 @@ class CreateFishTable extends Migration
      */
     public function up()
     {
-        Schema::create('fish', function (Blueprint $table) {
+        Schema::create('municipals', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('phylum');
-            $table->string('subphylum');
-            $table->string('superclass');
-            $table->string('class');
-            $table->string('common_name');
-            $table->string('local_name');
-            $table->string('image');
+            $table->string('postal_code');
+            $table->string('name');
+            $table->string('status');
         });
     }
 
@@ -33,6 +29,6 @@ class CreateFishTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fish');
+        Schema::dropIfExists('municipals');
     }
 }

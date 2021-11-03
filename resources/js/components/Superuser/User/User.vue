@@ -2,7 +2,7 @@
 <div>
     <div class="w-100 p-5 d-flex justify-content-between">
             <a href="/user/create">
-                <div>
+                <div v-if="role != 'SuperUser'">
                     <img src="/img/add-user.png" alt="" class="adduser">
                     <label class="font-weight-bold text-secondary"></label>
                 </div>
@@ -14,18 +14,16 @@
                 
             </div>
     </div>
-    <div class="d-flex flex-wrap w-100 h-100">
-        <div v-for="u in user.data"  :key="u.id" class="p-2 d-flex flex-wrap">
+      <div class="d-flex flex-wrap w-100 h-100">
+        <div v-for="u in user.data"  :key="u.id" class="m-2 d-flex flex-wrap">
             <a :href="'/user/'+u.id" class="text-secondary">
                 <div class="m-2 p-2 shadow-sm border user-container">
-                    <div class="h-50 text-center d-flex align-items-center">
-                        <div class="col"><img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ u.profile_image" alt="" class="image"></div>
-                    </div>
-                    <div class="h-50 d-flex align-items-center text-center">
-                        <div class="col font-weight-bold"><label>{{u.name}}</label></div>
-                    </div>
-                        
-                      
+                    <div class ="text-center mt-3">
+                           <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ u.profile_image" alt="" class="image">
+                        <div class="font-weight-bold mt-3 pt-3">
+                            <label>{{u.name}}</label>
+                        </div>
+                    </div>    
                 </div>
             </a>
         </div>
@@ -35,6 +33,7 @@
 
 <script>
 export default {
+    props:['role'],
     data(){
         return{
             user:{},
@@ -59,16 +58,13 @@ export default {
 <style scoped>
 .image{
     border-radius: 50%;
-    width: 85%;
-    padding:1rem;
+    width: 75%;
 }
 .user-container{
     width: 250px;
     height: 300px;
     border-radius: 1.5rem;
     padding: 5rem;
-    word-wrap: break-word;
-   
 }
 .user-container:hover{
     background: #86cbf7;

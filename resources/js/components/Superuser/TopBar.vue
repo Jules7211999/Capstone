@@ -4,15 +4,14 @@
           <a  class="navbar-brand"><img src="/img/logo.png" alt="" srcset="" class="w-50 ml-4 "></a>
           <span class="font-weight-bold">EPASC</span>
         </div>
-    <div class="dropdown show mr-5">
+    <div>
+       <span class="mr-4">Logged in as:  {{role}}</span>
+      </div>    
+    <div class="dropdown show">
         <a class="btn border-0 dropdown-toggle font-weight-bold" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <span class="mr-4">Logged in as:  {{role}}</span>
-          <span> </span>
           <span class="mr-3">{{auth}}</span>
         </a>
       <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuLink">
-        <a class="dropdown-item font-weight-bold" href="/profile">Profile</a>
-        <a class="dropdown-item font-weight-bold" href="#">Settings</a>
         <a class="dropdown-item font-weight-bold" href="/logout">Logout</a>
       </div>
   </div>
