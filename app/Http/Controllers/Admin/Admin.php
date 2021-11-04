@@ -11,7 +11,7 @@ use App\Models\municipal;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
-class AdminProfile extends Controller
+class Admin extends Controller
 {
     /**
      * Display a listing of the resource.

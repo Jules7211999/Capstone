@@ -1,30 +1,34 @@
 <template>
 <div class="w-100 h-100">
-     <div class=" p-4 row w-100 d-flex justify-content-center font-weight-bold text-secondary  ml-1 ">
-                    <div  class="col">Name</div>
+     <div class=" p-4 row w-100 d-flex justify-content-center font-weight-bold text-secondary ml-1 ">
+                    <div class="col">Name</div>
+                    <div class="col">Type</div>
                     <div class="col">Status</div>
                     <div class="col">Date Time</div>
                     <div class="col">Action</div>
             </div>
     <div v-for="d in waiting" class="d-flex justify-content-center align-items-center w-100 mb-2 ">
-            <div class=" p-4 row w-100  font-weight-bold text-danger shadow-sm border ml-1 ">
+            <div class=" p-4 row w-100 rounded font-weight-bold text-danger shadow-sm border ml-1">
                     <div  class="col"><a :href="'/emergency/'+d.id" class="text-danger">{{d.user.name}}</a></div>
+                    <div class="col">{{d.type}}</div>
                     <div class="col">{{d.status}}</div>
                     <div class="col">{{d.datetimezone}}</div>
                     <div class="col"><button @click="accept(d.id,'Processing')" class="btn btn-outline-danger font-weight-bold">Accept</button></div>
             </div> 
     </div>
     <div v-for="d in processing" class="d-flex justify-content-center align-items-center  w-100 mb-2 ">
-            <div class=" p-4 row w-100  font-weight-bold text-primary shadow-sm border ml-1 ">
+            <div class=" p-4 row w-100 rounded font-weight-bold text-primary shadow-sm border ml-1 ">
                     <div  class="col"><a :href="'/emergency/'+d.id">{{d.user.name}}</a></div>
+                    <div class="col">{{d.type}}</div>
                     <div class="col">{{d.status}}</div>
                     <div class="col">{{d.datetimezone}}</div>
                     <div class="col"><button @click="accept(d.id,'Done')" class="btn btn-outline-primary font-weight-bold">Done</button></div>
             </div> 
     </div>
      <div v-for="d in done" class="d-flex justify-content-center w-100 mb-2 ">
-            <div class=" p-4 row w-100  font-weight-bold text-success shadow-sm border ml-1 ">
+            <div class=" p-4 row w-100 rounded font-weight-bold text-success shadow-sm border ml-1 ">
                     <div  class="col"><a :href="'/emergency/'+d.id" class="text-success">{{d.user.name}}</a></div>
+                    <div class="col">{{d.type}}</div>
                     <div class="col">{{d.status}}</div>
                     <div class="col">{{d.datetimezone}}</div>
                     <div class="col"></div>
@@ -50,6 +54,7 @@ methods:{
             status:status
         })
         .then(data => console.log(data))
+        location.reload();
     },
     getSos(){
         axios.get('/getSos')

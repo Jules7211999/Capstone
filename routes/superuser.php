@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\Dashboard;
 use App\Http\Controllers\Admin\GetBarangay;
 use App\Http\Controllers\Admin\GetLocation;
 use App\Http\Controllers\Admin\UserProfile;
-use App\Http\Controllers\Admin\AdminProfile;
+use App\Http\Controllers\Admin\Admin;
 use App\Http\Controllers\Admin\EmergencySignal;
 use App\Http\Controllers\Admin\GetMunicipality;
 use App\Http\Controllers\Superuser\Fish\GetFish;
@@ -31,7 +31,7 @@ Route::get('/map',function(){
 
 //Resource Controllers Emergency,User and Admin
 Route::resource('emergency',EmergencySignal::class);
-Route::resource('admin',AdminProfile::class);
+Route::resource('admin',Admin::class);
 Route::resource('user',UserProfile::class);
 Route::resource('fish',FishSpeciesController::class);
 Route::resource('lgu',Lgu::class);

@@ -32,7 +32,7 @@
             </div>
 
             <div>
-                <button class="bg-light btn btn-outline-dark font-weight-bold rounded py-1 text-dark px-5 mt-3">
+                <button class="bg-light btn btn-outline-primary font-weight-bold rounded py-1 text-dark px-5 mt-3">
                     Email Password Reset Link
                 </button>
             </div>

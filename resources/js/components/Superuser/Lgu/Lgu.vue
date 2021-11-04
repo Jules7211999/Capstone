@@ -1,40 +1,53 @@
 <template>
     <div class="w-100 h-100">
-        <div class="w-100 row pl-5 pt-5">
-               <img @click="municipalityshow = !municipalityshow" src="/img/add.png" class="add mr-2" alt=""><span class="font-weight-bold text-secondary">Add City / Municipality</span>
-        </div>
-        <form @submit.prevent="submitM()">
-            <div v-if="municipalityshow" class="row w-100 pl-4 pt-2 d-flex align-items-center">
-                <div class="col">
-                    <input  type="text"  v-model="nameM" class="form-control-lg w-100 border bg-transparent"  name="name" placeholder="Name" autofocus />
-                </div>
-                <div class="col">
-                    <input  type="text"  v-model="postal" class="form-control-lg w-100 border bg-transparent"  name="postal" placeholder="Postal Code"/>
-                </div>
-                <div class="col">
-                    <input type="submit" value="Add" class="btn btn-primary pl-5 pr-5">
-                </div>
+        <div class="row w-100 d-flex justify-content-around">
+            <div class="col-5">
+                   <div class="row pl-3">
+                       <img @click="municipalityshow = !municipalityshow" src="/img/add-city_municipality.png" class="add mr-2" alt="">
+                       <span class="font-weight-bold text-secondary">Add City / Municipality</span>
+                   </div>
+            
+            <div class="row">
+                <form @submit.prevent="submitM()">
+                    <div v-if="municipalityshow" class="row w-100 mt-3 ml-1 d-flex align-items-center">
+                        <div class="col-7">
+                            <input  type="text"  v-model="nameM" class="form-control-lg w-100 border bg-transparent"  name="name" placeholder="Name" autofocus />
+                        </div>
+                        <div class="col-3">
+                            <input  type="text"  v-model="postal" class="form-control-lg w-100 border bg-transparent"  name="postal" placeholder="Postal Code"/>
+                        </div>
+                        <div class="col-2">
+                            <input type="submit" value="Add" class="btn font-weight-bold btn-outline-primary pl-5 pr-5">
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
-         <div class="w-100 row pl-5 pt-2">
-                <img @click="barangayshow = !barangayshow" src="/img/add.png" class="add mr-2" alt=""><span class="font-weight-bold text-secondary">Add Barangay</span>
-        </div>
-        <form @submit.prevent="submitB">
-            <div  v-if="barangayshow" class="row w-100 pl-4 pt-2 d-flex align-items-center">
-                <div class="col">
-                    <input  type="text"  class="form-control-lg w-100 border bg-transparent"  v-model="nameB" name="name" placeholder="Name" autofocus />
-                </div>
-                <div class="col">
-                    <input type="submit" value="Add" class="btn btn-primary pl-5 pr-5">
-                </div>
             </div>
-        </form>
-        <div class="w-100 justify-content-around d-flex mt-3 mb-3">
+             <div class="col-5 ">
+                <div class="row pl-3">
+                    <img @click="barangayshow = !barangayshow" src="/img/add-city_municipality.png" class="add mr-2" alt="">
+                    <span class="font-weight-bold text-secondary">Add Barangay</span>
+                </div>
+                <div class="row">
+                <form @submit.prevent="submitB">
+                    <div  v-if="barangayshow" class="row w-100 mt-3 ml-1 d-flex align-items-center">
+                        <div class="col-10">
+                            <input  type="text"  class="form-control-lg w-100 border bg-transparent"  v-model="nameB" name="name" placeholder="Name" autofocus />
+                        </div>
+                        <div class="col-2">
+                            <input type="submit" value="Add" class="btn btn-outline-primary font-weight-bold pl-5 pr-5">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        <div class="w-100 justify-content-around d-flex mt-5 mb-3">
             <div class="col-5 ml-2 text-dark font-weight-bold">
-                Municipality / City
+                <h4 class="font-weight-bold text-dark">Municipality / City</h4>
             </div>
             <div class="col-5 mr-2 text-dark font-weight-bold">
-                Barangay
+                <h4 class="font-weight-bold text-dark">Barangay</h4>
             </div>
         </div>
         <div class="w-100 h-100 justify-content-around d-flex">

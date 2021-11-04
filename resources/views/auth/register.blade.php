@@ -58,7 +58,7 @@
                     {{ __('Already registered?') }}
                 </a>
 
-                <button class="bg-light btn btn-outline-dark font-weight-bold rounded py-1 text-dark px-5" type="submit">
+                <button class=" btn btn-outline-primary font-weight-bold rounded py-1 text-dark px-5" type="submit">
                         Register
                     </button>
             </div>

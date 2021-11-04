@@ -2270,6 +2270,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2788,6 +2801,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2804,6 +2821,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (data) {
         return console.log(data);
       });
+      location.reload();
     },
     getSos: function getSos() {
       var _this = this;
@@ -49300,167 +49318,188 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "w-100 h-100" }, [
-    _c("div", { staticClass: "w-100 row pl-5 pt-5" }, [
-      _c("img", {
-        staticClass: "add mr-2",
-        attrs: { src: "/img/add.png", alt: "" },
-        on: {
-          click: function($event) {
-            _vm.municipalityshow = !_vm.municipalityshow
-          }
-        }
-      }),
-      _c("span", { staticClass: "font-weight-bold text-secondary" }, [
-        _vm._v("Add City / Municipality")
+    _c("div", { staticClass: "row w-100 d-flex justify-content-around" }, [
+      _c("div", { staticClass: "col-5" }, [
+        _c("div", { staticClass: "row pl-3" }, [
+          _c("img", {
+            staticClass: "add mr-2",
+            attrs: { src: "/img/add-city_municipality.png", alt: "" },
+            on: {
+              click: function($event) {
+                _vm.municipalityshow = !_vm.municipalityshow
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("span", { staticClass: "font-weight-bold text-secondary" }, [
+            _vm._v("Add City / Municipality")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.submitM()
+                }
+              }
+            },
+            [
+              _vm.municipalityshow
+                ? _c(
+                    "div",
+                    {
+                      staticClass:
+                        "row w-100 mt-3 ml-1 d-flex align-items-center"
+                    },
+                    [
+                      _c("div", { staticClass: "col-7" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.nameM,
+                              expression: "nameM"
+                            }
+                          ],
+                          staticClass:
+                            "form-control-lg w-100 border bg-transparent",
+                          attrs: {
+                            type: "text",
+                            name: "name",
+                            placeholder: "Name",
+                            autofocus: ""
+                          },
+                          domProps: { value: _vm.nameM },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.nameM = $event.target.value
+                            }
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-3" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.postal,
+                              expression: "postal"
+                            }
+                          ],
+                          staticClass:
+                            "form-control-lg w-100 border bg-transparent",
+                          attrs: {
+                            type: "text",
+                            name: "postal",
+                            placeholder: "Postal Code"
+                          },
+                          domProps: { value: _vm.postal },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.postal = $event.target.value
+                            }
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(0)
+                    ]
+                  )
+                : _vm._e()
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-5 " }, [
+        _c("div", { staticClass: "row pl-3" }, [
+          _c("img", {
+            staticClass: "add mr-2",
+            attrs: { src: "/img/add-city_municipality.png", alt: "" },
+            on: {
+              click: function($event) {
+                _vm.barangayshow = !_vm.barangayshow
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c("span", { staticClass: "font-weight-bold text-secondary" }, [
+            _vm._v("Add Barangay")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.submitB.apply(null, arguments)
+                }
+              }
+            },
+            [
+              _vm.barangayshow
+                ? _c(
+                    "div",
+                    {
+                      staticClass:
+                        "row w-100 mt-3 ml-1 d-flex align-items-center"
+                    },
+                    [
+                      _c("div", { staticClass: "col-10" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.nameB,
+                              expression: "nameB"
+                            }
+                          ],
+                          staticClass:
+                            "form-control-lg w-100 border bg-transparent",
+                          attrs: {
+                            type: "text",
+                            name: "name",
+                            placeholder: "Name",
+                            autofocus: ""
+                          },
+                          domProps: { value: _vm.nameB },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.nameB = $event.target.value
+                            }
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(1)
+                    ]
+                  )
+                : _vm._e()
+            ]
+          )
+        ])
       ])
     ]),
-    _vm._v(" "),
-    _c(
-      "form",
-      {
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            return _vm.submitM()
-          }
-        }
-      },
-      [
-        _vm.municipalityshow
-          ? _c(
-              "div",
-              { staticClass: "row w-100 pl-4 pt-2 d-flex align-items-center" },
-              [
-                _c("div", { staticClass: "col" }, [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.nameM,
-                        expression: "nameM"
-                      }
-                    ],
-                    staticClass: "form-control-lg w-100 border bg-transparent",
-                    attrs: {
-                      type: "text",
-                      name: "name",
-                      placeholder: "Name",
-                      autofocus: ""
-                    },
-                    domProps: { value: _vm.nameM },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.nameM = $event.target.value
-                      }
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col" }, [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.postal,
-                        expression: "postal"
-                      }
-                    ],
-                    staticClass: "form-control-lg w-100 border bg-transparent",
-                    attrs: {
-                      type: "text",
-                      name: "postal",
-                      placeholder: "Postal Code"
-                    },
-                    domProps: { value: _vm.postal },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.postal = $event.target.value
-                      }
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _vm._m(0)
-              ]
-            )
-          : _vm._e()
-      ]
-    ),
-    _vm._v(" "),
-    _c("div", { staticClass: "w-100 row pl-5 pt-2" }, [
-      _c("img", {
-        staticClass: "add mr-2",
-        attrs: { src: "/img/add.png", alt: "" },
-        on: {
-          click: function($event) {
-            _vm.barangayshow = !_vm.barangayshow
-          }
-        }
-      }),
-      _c("span", { staticClass: "font-weight-bold text-secondary" }, [
-        _vm._v("Add Barangay")
-      ])
-    ]),
-    _vm._v(" "),
-    _c(
-      "form",
-      {
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            return _vm.submitB.apply(null, arguments)
-          }
-        }
-      },
-      [
-        _vm.barangayshow
-          ? _c(
-              "div",
-              { staticClass: "row w-100 pl-4 pt-2 d-flex align-items-center" },
-              [
-                _c("div", { staticClass: "col" }, [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.nameB,
-                        expression: "nameB"
-                      }
-                    ],
-                    staticClass: "form-control-lg w-100 border bg-transparent",
-                    attrs: {
-                      type: "text",
-                      name: "name",
-                      placeholder: "Name",
-                      autofocus: ""
-                    },
-                    domProps: { value: _vm.nameB },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.nameB = $event.target.value
-                      }
-                    }
-                  })
-                ]),
-                _vm._v(" "),
-                _vm._m(1)
-              ]
-            )
-          : _vm._e()
-      ]
-    ),
     _vm._v(" "),
     _vm._m(2),
     _vm._v(" "),
@@ -49618,9 +49657,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col" }, [
+    return _c("div", { staticClass: "col-2" }, [
       _c("input", {
-        staticClass: "btn btn-primary pl-5 pr-5",
+        staticClass: "btn font-weight-bold btn-outline-primary pl-5 pr-5",
         attrs: { type: "submit", value: "Add" }
       })
     ])
@@ -49629,9 +49668,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col" }, [
+    return _c("div", { staticClass: "col-2" }, [
       _c("input", {
-        staticClass: "btn btn-primary pl-5 pr-5",
+        staticClass: "btn btn-outline-primary font-weight-bold pl-5 pr-5",
         attrs: { type: "submit", value: "Add" }
       })
     ])
@@ -49642,14 +49681,18 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "w-100 justify-content-around d-flex mt-3 mb-3" },
+      { staticClass: "w-100 justify-content-around d-flex mt-5 mb-3" },
       [
         _c("div", { staticClass: "col-5 ml-2 text-dark font-weight-bold" }, [
-          _vm._v("\n            Municipality / City\n        ")
+          _c("h4", { staticClass: "font-weight-bold text-dark" }, [
+            _vm._v("Municipality / City")
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "col-5 mr-2 text-dark font-weight-bold" }, [
-          _vm._v("\n            Barangay\n        ")
+          _c("h4", { staticClass: "font-weight-bold text-dark" }, [
+            _vm._v("Barangay")
+          ])
         ])
       ]
     )
@@ -50371,7 +50414,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  " p-4 row w-100  font-weight-bold text-danger shadow-sm border ml-1 "
+                  " p-4 row w-100 rounded font-weight-bold text-danger shadow-sm border ml-1"
               },
               [
                 _c("div", { staticClass: "col" }, [
@@ -50384,6 +50427,8 @@ var render = function() {
                     [_vm._v(_vm._s(d.user.name))]
                   )
                 ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [_vm._v(_vm._s(d.type))]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col" }, [_vm._v(_vm._s(d.status))]),
                 _vm._v(" "),
@@ -50423,7 +50468,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  " p-4 row w-100  font-weight-bold text-primary shadow-sm border ml-1 "
+                  " p-4 row w-100 rounded font-weight-bold text-primary shadow-sm border ml-1 "
               },
               [
                 _c("div", { staticClass: "col" }, [
@@ -50431,6 +50476,8 @@ var render = function() {
                     _vm._v(_vm._s(d.user.name))
                   ])
                 ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [_vm._v(_vm._s(d.type))]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col" }, [_vm._v(_vm._s(d.status))]),
                 _vm._v(" "),
@@ -50467,7 +50514,7 @@ var render = function() {
               "div",
               {
                 staticClass:
-                  " p-4 row w-100  font-weight-bold text-success shadow-sm border ml-1 "
+                  " p-4 row w-100 rounded font-weight-bold text-success shadow-sm border ml-1 "
               },
               [
                 _c("div", { staticClass: "col" }, [
@@ -50480,6 +50527,8 @@ var render = function() {
                     [_vm._v(_vm._s(d.user.name))]
                   )
                 ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col" }, [_vm._v(_vm._s(d.type))]),
                 _vm._v(" "),
                 _c("div", { staticClass: "col" }, [_vm._v(_vm._s(d.status))]),
                 _vm._v(" "),
@@ -50506,10 +50555,12 @@ var staticRenderFns = [
       "div",
       {
         staticClass:
-          " p-4 row w-100 d-flex justify-content-center font-weight-bold text-secondary  ml-1 "
+          " p-4 row w-100 d-flex justify-content-center font-weight-bold text-secondary ml-1 "
       },
       [
         _c("div", { staticClass: "col" }, [_vm._v("Name")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col" }, [_vm._v("Type")]),
         _vm._v(" "),
         _c("div", { staticClass: "col" }, [_vm._v("Status")]),
         _vm._v(" "),

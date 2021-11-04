@@ -38,7 +38,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <button class="bg-light btn btn-outline-dark font-weight-bold rounded py-1 text-dark px-5">
+                <button class=" btn btn-outline-primary font-weight-bold rounded py-1 text-dark px-5">
                     Reset Password
                 </button>
             </div>
