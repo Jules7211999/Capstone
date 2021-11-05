@@ -33,7 +33,7 @@ Vue.component('user-trash-component',require('./components/Superuser/Trash/User.
 Vue.component('admin-trash-component',require('./components/Superuser/Trash/Admin.vue').default);
 Vue.component('admin-show-component',require('./components/Superuser/Admin/AdminShow.vue').default);
 Vue.component('fish-component',require('./components/Superuser/Fish/Fish.vue').default);
-Vue.component('lgus-component',require('./components/Superuser/Lgu/lgu.vue').default);
+Vue.component('lgu-component',require('./components/Superuser/Lgu/Lgu.vue').default);
 
 //component only
 Vue.component('profile-image-component',require('./components/Superuser/Components/ProfileImage.vue').default);
