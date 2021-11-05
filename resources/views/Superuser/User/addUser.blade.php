@@ -159,7 +159,7 @@
                     </div>
                 </div>
              <div class="row justify-content-center">
-                <button class=" m-5 py-2  btn btn-primary font-weight-bold rounded py-1 text-dark px-5 w-50" type="submit">Register</button>
+                <button class=" m-5 py-2  btn btn-outline-primary font-weight-bold rounded py-1 text-dark px-5 w-50" type="submit">Register</button>
             </div>
         </div>    
 </form>

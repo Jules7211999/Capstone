@@ -23,7 +23,7 @@
                                 <label class="font-weight-bold mb-3 mt-2" for="name">Name</label>
                             </div>
                             <div>
-                                <input  type="text" id="name" class="form-control-lg w-100 border bg-transparent"  value="{{$data->name}}" name="name" required autofocus />
+                                <input  type="text" id="name" class="form-control-lg w-100 border font-weight-bold bg-transparent"  value="{{$data->name}}" name="name" required autofocus />
                             </div>
                                 @error('name')
                                     <div class="pt-2 text-danger font-weight-bold mt-2 mb-2">{{$message}}</div>
@@ -34,7 +34,7 @@
                                 <label class="font-weight-bold mb-3 mt-2" for="email">Email</label>
                             </div>
                             <div>
-                                <input  type="text" id="email" class="form-control-lg w-100 border bg-transparent"  value="{{$data->email}}" name="email" required autofocus />
+                                <input  type="text" id="email" class="form-control-lg w-100 border font-weight-bold bg-transparent"  value="{{$data->email}}" name="email" required autofocus />
                             </div>
                                 @error('email')
                                     <div class="pt-2 text-danger font-weight-bold mt-2 mb-2">{{$message}}</div>
@@ -71,7 +71,7 @@
                                <label class="font-weight-bold mb-3 mt-2" for="address">Address</label>
                             </div>
                             <div>
-                                <input id="address" type="text" class="form-control-lg w-100 border bg-transparent"  value="{{$data->address}}" name="address" >
+                                <input id="address" type="text" class="form-control-lg w-100 border font-weight-bold bg-transparent"  value="{{$data->address}}" name="address" >
                             </div>
                             @error('address')
                                 <div class="pt-2 text-danger font-weight-bold mt-2 mb-2">{{$message}}</div>
@@ -85,7 +85,10 @@
                             </div>
                             <div>
                                 <select class="form-control-lg w-100 border font-weight-bold bg-transparent" name="city">
-                                    <option value="Testvalue">Test</option>
+                                    <option class="font-weight-bold" value="{{$data->city}}">{{$data->city}}</option>
+                                    @foreach($municipality as $m)
+                                        <option class="font-weight-bold" value="{{$m->name}}">{{$m->name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -95,7 +98,10 @@
                             </div>
                             <div>
                                 <select class="form-control-lg w-100 border font-weight-bold bg-transparent" name="barangay">
-                                    <option value="testvalue">Test</option>
+                                    <option class="font-weight-bold" value="{{$data->barangay}}">{{$data->barangay}}</option>
+                                    @foreach($barangay as $b)
+                                        <option class="font-weight-bold" value="{{$b->name}}">{{$b->name}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -106,7 +112,7 @@
                                 <label class="font-weight-bold mb-3 mt-2" for="birthdate">Birthdate</label>
                             </div>
                             <div>
-                                <input id="birthdate" type="date" name="birthdate" class="form-control-lg w-100 border bg-transparent" value="{{$data->birthdate}}">
+                                <input id="birthdate" type="date" name="birthdate" class="form-control-lg w-100 border font-weight-bold bg-transparent" value="{{$data->birthdate}}">
                             </div>
                             @error('birthdate')
                                 <div class="pt-2 text-danger font-weight-bold mt-2 mb-2">{{$message}}</div>
@@ -133,7 +139,7 @@
                                 <label class="font-weight-bold mb-3 mt-2" for="phone_number">Phone Number</label>
                             </div>
                             <div>
-                                <input id="phone_number" type="text" name="phone_number" class="form-control-lg w-100 border bg-transparent" value="{{$data->phone_number}}">
+                                <input id="phone_number" type="text" name="phone_number" class="form-control-lg w-100 border font-weight-bold bg-transparent" value="{{$data->phone_number}}">
                             </div>
                             @error('phone_number')
                                 <div class="pt-2 text-danger font-weight-bold mt-2 mb-2">{{$message}}</div>
@@ -158,7 +164,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <button class=" m-5 py-2  btn btn-primary font-weight-bold rounded py-1 text-dark px-5 w-50" type="submit">Register</button>
+                        <button class=" m-5 py-2  btn btn-outline-primary font-weight-bold rounded py-1 text-dark px-5 w-50" type="submit">Update</button>
                     </div>
             </div>
         </form>

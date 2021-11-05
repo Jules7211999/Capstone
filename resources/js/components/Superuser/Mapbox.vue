@@ -1,6 +1,6 @@
 <template>
 <div class="w-100 h-100" >
- <div class="w-100 d-flex row mb-2">
+  <div class="w-100 d-flex row mb-2">
       <div class="col-5">
         <select class=" w-100 form-control form-control-lg  bg-light font-weight-bold text-secondary" v-model="mapshow">
           <option selected>Location</option>
@@ -20,49 +20,50 @@
 
  <div v-for="d in datum.data" >
    <div v-if="mapshow == 'Location'">
-    <MglMarker :coordinates="[d.longitude,d.latitude]" >
-        <MglPopup>
-            <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
-              <div>
-                <!-- <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ d.profile_image" alt="" class="image"> -->
-                <div class="d-flex"><span class="pr-2">{{d.user.profile_image}}</span></div>
-                <div class="d-flex"><span class="pr-2">Name:</span>{{d.name}}</div>
-                <div class="d-flex"><span class="pr-2">Latitude:</span>{{d.latitude}}</div>
-                <div class="d-flex"><span class="pr-2">Longitude:</span>{{d.longitude}}</div>
-                <div class="d-flex"><span class="pr-2">Date and Time:</span>{{d.datetimezone}}</div>
-                <div class="d-flex"><span class="pr-2">Month:</span>{{d.month_name}}</div>
-                <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.day_of_week}}</div>
-                <div class="d-flex"><span class="pr-2">Type:</span>{{d.type}}</div>
-                <a :href="'/user/'+d.user_id"><div class="d-flex w-100 pt-2 justify-content-center">View Profile</div></a>
+    <div v-for="x in d.coordinates">
+      <MglMarker :coordinates="[x.longitude,x.latitude]" >
+          <MglPopup>
+              <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
+                <div>
+                  <div class="d-flex"><span class="pr-2">Name:</span>{{d.name}}</div>
+                  <div class="d-flex"><span class="pr-2">Latitude:</span>{{x.latitude}}</div>
+                  <div class="d-flex"><span class="pr-2">Longitude:</span>{{x.longitude}}</div>
+                  <div class="d-flex"><span class="pr-2">Date and Time:</span>{{x.datetimezone}}</div>
+                  <div class="d-flex"><span class="pr-2">Month:</span>{{x.month_name}}</div>
+                  <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{x.day_of_week}}</div>
+                  <a :href="'/user/'+d.id"><div class="d-flex w-100 pt-2 justify-content-center">View Profile</div></a>
+                </div>
               </div>
-            </div>
-        </MglPopup>
-      </MglMarker>
+          </MglPopup>
+        </MglMarker>
+    </div>
    </div> 
 </div>  
 
  <div v-for="d in sosData.data">
        <div v-if="mapshow == 'SOS'">
-        <MglMarker :coordinates="[d.longitude,d.latitude]" :color="markerColor">
-        <MglPopup>
-            <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
-              <div>
-                <div class="d-flex"><span class="pr-2">Name:</span>{{d.user.name}}</div>
-                <div class="d-flex"><span class="pr-2">Latitude:</span>{{d.latitude}}</div>
-                <div class="d-flex"><span class="pr-2">Longitude:</span>{{d.longitude}}</div>
-                <div class="d-flex"><span class="pr-2">Date and Time:</span>{{d.datetimezone}}</div>
-                <div class="d-flex"><span class="pr-2">Month:</span>{{d.month_name}}</div>
-                <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{d.day_of_week}}</div>
-                <div class="d-flex"><span class="pr-2">Status:</span>{{d.status}}</div>
-                <div class="d-flex"><span class="pr-2">Type:</span>{{d.type}}</div>
-                <a :href="'/emergency/'+d.id"><div class="d-flex w-100 pt-2 justify-content-center">Details</div></a>
+        <div v-for="x in d.emergency_call">
+          <MglMarker :coordinates="[x.longitude,x.latitude]" :color="markerColor">
+          <MglPopup>
+              <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
+                <div>
+                  <div class="d-flex"><span class="pr-2">Name:</span>{{d.name}}</div>
+                  <div class="d-flex"><span class="pr-2">Latitude:</span>{{x.latitude}}</div>
+                  <div class="d-flex"><span class="pr-2">Longitude:</span>{{x.longitude}}</div>
+                  <div class="d-flex"><span class="pr-2">Date and Time:</span>{{x.datetimezone}}</div>
+                  <div class="d-flex"><span class="pr-2">Month:</span>{{x.month_name}}</div>
+                  <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{x.day_of_week}}</div>
+                  <div class="d-flex"><span class="pr-2">Status:</span>{{x.status}}</div>
+                  <div class="d-flex"><span class="pr-2">Type:</span>{{x.type}}</div>
+                  <a :href="'/emergency/'+x.id"><div class="d-flex w-100 pt-2 justify-content-center">Details</div></a>
+                </div>
               </div>
-            </div>
-        </MglPopup>
-            </MglMarker> 
+          </MglPopup>
+              </MglMarker>
+        </div>
       </div> 
  </div> 
-   </MglMap>  
+   </MglMap> 
 </div> 
   
 </template>
@@ -82,7 +83,7 @@ export default {
       console.log(id);
     },
     getSos(){
-        axios.get('/getSos')
+        axios.get('/getMapSos')
         .then(data => this.sosData= data)
         .catch(error => console.log(error.response.data.message));
     },

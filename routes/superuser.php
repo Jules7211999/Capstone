@@ -50,6 +50,7 @@ Route::get('/getMunicipality',[GetMunicipality::class,'index']);
 Route::get('/getInactiveBarangay',[GetBarangay::class,'inactive']);
 Route::get('/getInactiveMunicipality',[GetMunicipality::class,'inactive']);
 Route::post('/sos',[Sos::class,'sos']);
+Route::get('/getMapSos',[GetSos::class,'get']);
 Route::get('/getSos',[GetSos::class,'waiting']);
 Route::get('/getSosUpdated',[GetSos::class,'processing']);
 Route::get('/getSosDone',[GetSos::class,'done']);

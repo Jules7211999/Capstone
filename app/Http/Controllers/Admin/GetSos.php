@@ -3,40 +3,31 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
-
-use App\Http\Controllers\Controller;
 use App\Models\EmergencyCall;
+use App\Http\Controllers\Controller;
 
 class GetSos extends Controller
 {
+
+    public function get(){
+        return User::has('emergencyCall')->with('emergencyCall')->get();
+    }
     public function waiting(){
        
-            if(auth()->user()->role == "SuperUser"){
-                $user = EmergencyCall::where('status','=','Waiting')->with('user')->get();
-                return $user;
-            }else{
-                return User::where('role','=','User')->where('barangay','=',auth()->user()->barangay)->has("emergencyCall")->with("emergencyCall")->get();
-            }
-            
-        
+        $user = EmergencyCall::where('status','=','Waiting')->with('user')->get();
+        return $user;
     }
+
     public function processing(){
        
-        if(auth()->user()->role == "SuperUser"){
-            $user = EmergencyCall::where('status','=','Processing')->with('user')->get();
-            return $user;
-        }else{
-            return User::where('role','=','User')->where('barangay','=',auth()->user()->barangay)->has("emergencyCall")->with("emergencyCall")->get();
-        }   
+        $user = EmergencyCall::where('status','=','Processing')->with('user')->get();
+        return $user;
     }
     public function done(){
+
+        $user = EmergencyCall::where('status','=','Done')->with('user')->get();
+        return $user;
        
-        if(auth()->user()->role == "SuperUser"){
-            $user = EmergencyCall::where('status','=','Done')->with('user')->get();
-            return $user;
-        }else{
-            return User::where('role','=','User')->where('barangay','=',auth()->user()->barangay)->has("emergencyCall")->with("emergencyCall")->get();
-        }   
     }
 
 }

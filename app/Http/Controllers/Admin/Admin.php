@@ -110,7 +110,9 @@ class Admin extends Controller
     {
 
         $model= User::find($id);
-        return view('Superuser.Admin.editAdmin')->with('data',$model);
+        $barangay = barang::all();
+        $municipality = municipal::all();
+        return view('Superuser.Admin.editAdmin',['data'=> $model,'barangay' => $barangay,'municipality' => $municipality]);
     }
 
     /**

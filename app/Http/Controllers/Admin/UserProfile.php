@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\User;
+use App\Models\barang;
+use App\Models\municipal;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -107,7 +109,9 @@ class UserProfile extends Controller
     public function edit($id)
     {
         $model= User::find($id);
-        return view('Superuser.User.editUser')->with('data',$model);
+        $barangay = barang::all();
+        $municipality = municipal::all();
+        return view('Superuser.Admin.editAdmin',['data'=> $model,'barangay' => $barangay,'municipality' => $municipality]);
     }
 
     /**
