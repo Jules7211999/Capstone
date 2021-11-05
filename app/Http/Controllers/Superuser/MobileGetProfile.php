@@ -18,7 +18,9 @@ class MobileGetProfile extends Controller
             'profile_image' => $user->profile_image,
             'gender' => $user->gender,
             'birthdate' => $user->birthdate,
-            'address' => $user->address.",".$user->barangay.",".$user->city  
+            'address' => $user->address,
+            'city' => $user->city,
+            'barangay' => $user->barangay 
 
         ]);
     }
