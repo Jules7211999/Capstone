@@ -4,7 +4,7 @@
             <div class="col-5">
                    <div class="row pl-3">
                        <img @click="municipalityshow = !municipalityshow" src="/img/add-city_municipality.png" class="add mr-2" alt="">
-                       <span class="font-weight-bold text-secondary">Add City / Municipality</span>
+                       <span class="font-weight-bold text-secondary">Add Cities / Municipality</span>
                    </div>
             
             <div class="row">
@@ -13,10 +13,10 @@
                         <div class="col-7">
                             <input  type="text"  v-model="nameM" class="form-control-lg w-100 border bg-transparent"  name="name" placeholder="Name" autofocus />
                         </div>
-                        <div class="col-3">
+                        <div class="col-4">
                             <input  type="text"  v-model="postal" class="form-control-lg w-100 border bg-transparent"  name="postal" placeholder="Postal Code"/>
                         </div>
-                        <div class="col-2">
+                        <div class="col-1">
                             <input type="submit" value="Add" class="btn font-weight-bold btn-outline-primary pl-5 pr-5">
                         </div>
                     </div>

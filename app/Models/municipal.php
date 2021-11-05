@@ -10,8 +10,8 @@ class municipal extends Model
     use HasFactory;
 
     protected $fillable = [
-    'postal_code'
-    ,'name'
-    ,'status'
+    'postal_code',
+    'name',
+    ,'status',
     ];
 }
