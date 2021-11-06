@@ -2288,7 +2288,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submitM: function submitM() {
-      axios.post('/municipality', {
+      axios.post('/city', {
         name: this.nameM,
         postal: this.postal
       }).then(function (data) {
@@ -2342,7 +2342,7 @@ __webpack_require__.r(__webpack_exports__);
       location.reload();
     },
     updateMunicipality: function updateMunicipality(id, status) {
-      axios.put('municipality/' + id, {
+      axios.put('city/' + id, {
         status: status
       });
       location.reload();

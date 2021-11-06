@@ -87,7 +87,7 @@ export default {
     },
     methods:{
         submitM(){
-            axios.post('/municipality',{
+            axios.post('/city',{
                 name: this.nameM,
                 postal: this.postal
             })
@@ -130,7 +130,7 @@ export default {
            location.reload();
         },
         updateMunicipality(id,status){
-            axios.put('municipality/'+id,{
+            axios.put('city/'+id,{
                 status:status
             })
             location.reload();

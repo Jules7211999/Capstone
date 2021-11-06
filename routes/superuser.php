@@ -19,8 +19,8 @@ use App\Http\Controllers\Superuser\MobileGetProfile;
 use App\Http\Controllers\Superuser\SearchController;
 use App\Http\Controllers\Superuser\Resource\Barangay;
 use App\Http\Controllers\Superuser\FishSpeciesController;
-use App\Http\Controllers\Superuser\resource\Municipality;
 use App\Http\Controllers\Admin\SearchUserLocationController;
+use App\Http\Controllers\Superuser\resource\CityController;
 
 Route::get('/dashboard',[Dashboard::class,'index'])->middleware('auth','verified')->name('dashboard');
 
@@ -35,7 +35,7 @@ Route::resource('admin',Admin::class);
 Route::resource('user',UserProfile::class);
 Route::resource('fish',FishSpeciesController::class);
 Route::resource('lgu',Lgu::class);
-Route::resource('municipality',Municipality::class);
+Route::resource('city',CityController::class);
 Route::resource('barangay',Barangay::class);
 
 //User/Admin Search
