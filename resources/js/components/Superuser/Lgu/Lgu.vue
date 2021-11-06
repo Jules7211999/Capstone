@@ -97,7 +97,7 @@ export default {
     },
     methods:{
         submitM(){
-            axios.post('/municipalilty',{
+            axios.post('/municipality',{
                 name: "jeasdf",
                 postal: 234
             })
