@@ -8,7 +8,7 @@
                    </div>
             <div class="row">
                  <div v-if="municipalityshow" class="row w-100 mt-3 ml-1 d-flex align-items-center">
-                    <form action="/city" method="POST">
+                    <form @submit.prevent="submitM()">
                         <div class="col-7">
                             <input  type="text"  v-model="nameM" class="form-control-lg w-100 border bg-transparent"  name="name" placeholder="Name" autofocus />
                         </div>

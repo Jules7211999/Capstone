@@ -49336,68 +49336,79 @@ var render = function() {
                   staticClass: "row w-100 mt-3 ml-1 d-flex align-items-center"
                 },
                 [
-                  _c("form", { attrs: { action: "/city", method: "POST" } }, [
-                    _c("div", { staticClass: "col-7" }, [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.nameM,
-                            expression: "nameM"
-                          }
-                        ],
-                        staticClass:
-                          "form-control-lg w-100 border bg-transparent",
-                        attrs: {
-                          type: "text",
-                          name: "name",
-                          placeholder: "Name",
-                          autofocus: ""
-                        },
-                        domProps: { value: _vm.nameM },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
-                            }
-                            _vm.nameM = $event.target.value
-                          }
+                  _c(
+                    "form",
+                    {
+                      on: {
+                        submit: function($event) {
+                          $event.preventDefault()
+                          return _vm.submitM()
                         }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col-4" }, [
-                      _c("input", {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.postal,
-                            expression: "postal"
-                          }
-                        ],
-                        staticClass:
-                          "form-control-lg w-100 border bg-transparent",
-                        attrs: {
-                          type: "text",
-                          name: "postal",
-                          placeholder: "Postal Code"
-                        },
-                        domProps: { value: _vm.postal },
-                        on: {
-                          input: function($event) {
-                            if ($event.target.composing) {
-                              return
+                      }
+                    },
+                    [
+                      _c("div", { staticClass: "col-7" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.nameM,
+                              expression: "nameM"
                             }
-                            _vm.postal = $event.target.value
+                          ],
+                          staticClass:
+                            "form-control-lg w-100 border bg-transparent",
+                          attrs: {
+                            type: "text",
+                            name: "name",
+                            placeholder: "Name",
+                            autofocus: ""
+                          },
+                          domProps: { value: _vm.nameM },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.nameM = $event.target.value
+                            }
                           }
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _vm._m(0)
-                  ])
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "col-4" }, [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.postal,
+                              expression: "postal"
+                            }
+                          ],
+                          staticClass:
+                            "form-control-lg w-100 border bg-transparent",
+                          attrs: {
+                            type: "text",
+                            name: "postal",
+                            placeholder: "Postal Code"
+                          },
+                          domProps: { value: _vm.postal },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.postal = $event.target.value
+                            }
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _vm._m(0)
+                    ]
+                  )
                 ]
               )
             : _vm._e()
