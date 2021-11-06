@@ -2304,7 +2304,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (data) {
         return console.log(data);
       })["catch"](function (error) {
-        return console.log(error.errors.message);
+        return console.log(error.errors);
       });
     },
     submitB: function submitB() {

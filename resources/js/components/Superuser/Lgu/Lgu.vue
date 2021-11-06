@@ -102,7 +102,7 @@ export default {
                 postal: "234"
             })
             .then(data => console.log(data))
-            .catch(error => console.log(error.errors.message))
+            .catch(error => console.log(error.errors))
             
         },
         submitB(){
