@@ -49090,7 +49090,7 @@ var render = function() {
         [
           _c("div", { staticClass: "text-center " }, [
             _c("h4", { staticClass: "font-weight-bold" }, [
-              _vm._v("Registered User")
+              _vm._v("Registered Userdf")
             ]),
             _vm._v(" "),
             _c("h2", { staticClass: "font-weight-bold" }, [

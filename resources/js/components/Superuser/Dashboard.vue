@@ -3,7 +3,7 @@
        <div class="w-100 h-25 d-flex row">
         <div class=" col-3 font-weight-bold text-secondary d-flex align-items-center justify-content-center">
             <div class="text-center ">
-                <h4 class="font-weight-bold">Registered User</h4>
+                <h4 class="font-weight-bold">Registered Userdf</h4>
                 <h2 class="font-weight-bold">{{user}}</h2>
             </div>
         </div>
