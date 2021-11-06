@@ -36,6 +36,7 @@ Route::resource('user',UserProfile::class);
 Route::resource('fish',FishSpeciesController::class);
 Route::resource('lgu',Lgu::class);
 Route::resource('barangay',Barangay::class);
+
 Route::post('/city',[CreateCityController::class,'index']);
 Route::post('/cityUpdate',[CreateCityController::class,'update']);
 

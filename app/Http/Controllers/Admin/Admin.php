@@ -7,7 +7,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\barang;
-use App\Models\municipal;
+use App\Models\city;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
@@ -31,7 +31,7 @@ class Admin extends Controller
     public function create()
     {
         $barangay = barang::where('status','=','Active')->get();
-        $municipality = municipal::where('status','=','Active')->get();
+        $municipality = city::where('status','=','Active')->get();
 
         return view('Superuser.Admin.addAdmin',['municipality'=> $municipality, 'barangay' => $barangay]);
     }
@@ -111,7 +111,7 @@ class Admin extends Controller
 
         $model= User::find($id);
         $barangay = barang::all();
-        $municipality = municipal::all();
+        $municipality = city::all();
         return view('Superuser.Admin.editAdmin',['data'=> $model,'barangay' => $barangay,'municipality' => $municipality]);
     }
 
