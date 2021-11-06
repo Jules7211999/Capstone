@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class municipal extends Model
+class city extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-    'postal_code',
-    'name',
-    'status'
+    protected $fillable =[
+        'name',
+        'status',
+        'zipcode'
     ];
 }
