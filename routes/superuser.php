@@ -20,7 +20,7 @@ use App\Http\Controllers\Superuser\SearchController;
 use App\Http\Controllers\Superuser\Resource\Barangay;
 use App\Http\Controllers\Superuser\FishSpeciesController;
 use App\Http\Controllers\Admin\SearchUserLocationController;
-use App\Http\Controllers\Superuser\resource\CityController;
+use App\Http\Controllers\CreateCityController;
 
 Route::get('/dashboard',[Dashboard::class,'index'])->middleware('auth','verified')->name('dashboard');
 
@@ -35,8 +35,8 @@ Route::resource('admin',Admin::class);
 Route::resource('user',UserProfile::class);
 Route::resource('fish',FishSpeciesController::class);
 Route::resource('lgu',Lgu::class);
-Route::resource('city',CityController::class);
 Route::resource('barangay',Barangay::class);
+Route::post('/city',[CreateCityController::class,'index']);
 
 //User/Admin Search
 Route::post('/userSearch',[SearchController::class,'user']);
