@@ -2361,9 +2361,9 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    this.getBarangay();
-    this.getMunicipality();
-    this.getInactiveMunicipality();
+    this.getBarangay(); // this.getMunicipality();
+    // this.getInactiveMunicipality();
+
     this.getIncativeBarangay();
   }
 });
@@ -49090,7 +49090,7 @@ var render = function() {
         [
           _c("div", { staticClass: "text-center " }, [
             _c("h4", { staticClass: "font-weight-bold" }, [
-              _vm._v("Registered Userdf")
+              _vm._v("Registered User")
             ]),
             _vm._v(" "),
             _c("h2", { staticClass: "font-weight-bold" }, [
@@ -49329,7 +49329,13 @@ var render = function() {
             _vm._v("Add Cities / Municipality")
           ])
         ]),
-        _vm._v(" "),
+        _vm._v(
+          "\n            " +
+            _vm._s(_vm.nameM) +
+            " " +
+            _vm._s(_vm.postal) +
+            "}\n        "
+        ),
         _c("div", { staticClass: "row" }, [
           _c(
             "form",
