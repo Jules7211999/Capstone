@@ -119,21 +119,21 @@ export default {
             .then(data => this.barangay = data.data)
             .catch(error => console.log(error))
         },
-        // getMunicipality(){
-        //     axios.get('/getMunicipality')
-        //     .then(data => this.municipality = data.data)
-        //     .catch(error => console.log(error))
-        // },
+        getMunicipality(){
+            axios.get('/getMunicipality')
+            .then(data => this.municipality = data.data)
+            .catch(error => console.log(error))
+        },
           getIncativeBarangay(){
             axios.get('/getInactiveBarangay')
             .then(data => this.Inactivebarangay = data.data)
             .catch(error => console.log(error))
         },
-        // getInactiveMunicipality(){
-        //     axios.get('/getInactiveMunicipality')
-        //     .then(data => this.Inactivemunicipality = data.data)
-        //     .catch(error => console.log(error))
-        // },
+        getInactiveMunicipality(){
+            axios.get('/getInactiveMunicipality')
+            .then(data => this.Inactivemunicipality = data.data)
+            .catch(error => console.log(error))
+        },
         updateBarangay(id,status){
            axios.put('/barangay/'+id,{
                status:status
@@ -150,8 +150,8 @@ export default {
     },
     mounted(){
         this.getBarangay();
-        // this.getMunicipality();
-        // this.getInactiveMunicipality();
+        this.getMunicipality();
+        this.getInactiveMunicipality();
         this.getIncativeBarangay();
     }
 }

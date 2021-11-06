@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\city;
 use App\Http\Controllers\Controller;
-use App\Models\municipal;
 
 
 class GetMunicipality extends Controller
 {
     public function index(){
-        return municipal::where('status','=','Active')->get();
+        return city::where('status','=','Active')->get();
     }
 
     public function inactive(){
-        return municipal::where('status','=','Inactive')->get();
+        return city::where('status','=','Inactive')->get();
     }
 }

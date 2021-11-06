@@ -2327,25 +2327,33 @@ __webpack_require__.r(__webpack_exports__);
         return console.log(error);
       });
     },
-    // getMunicipality(){
-    //     axios.get('/getMunicipality')
-    //     .then(data => this.municipality = data.data)
-    //     .catch(error => console.log(error))
-    // },
-    getIncativeBarangay: function getIncativeBarangay() {
+    getMunicipality: function getMunicipality() {
       var _this2 = this;
 
-      axios.get('/getInactiveBarangay').then(function (data) {
-        return _this2.Inactivebarangay = data.data;
+      axios.get('/getMunicipality').then(function (data) {
+        return _this2.municipality = data.data;
       })["catch"](function (error) {
         return console.log(error);
       });
     },
-    // getInactiveMunicipality(){
-    //     axios.get('/getInactiveMunicipality')
-    //     .then(data => this.Inactivemunicipality = data.data)
-    //     .catch(error => console.log(error))
-    // },
+    getIncativeBarangay: function getIncativeBarangay() {
+      var _this3 = this;
+
+      axios.get('/getInactiveBarangay').then(function (data) {
+        return _this3.Inactivebarangay = data.data;
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    },
+    getInactiveMunicipality: function getInactiveMunicipality() {
+      var _this4 = this;
+
+      axios.get('/getInactiveMunicipality').then(function (data) {
+        return _this4.Inactivemunicipality = data.data;
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    },
     updateBarangay: function updateBarangay(id, status) {
       axios.put('/barangay/' + id, {
         status: status
@@ -2360,9 +2368,9 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    this.getBarangay(); // this.getMunicipality();
-    // this.getInactiveMunicipality();
-
+    this.getBarangay();
+    this.getMunicipality();
+    this.getInactiveMunicipality();
     this.getIncativeBarangay();
   }
 });
