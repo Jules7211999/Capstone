@@ -44,9 +44,6 @@ class Municipality extends Controller
     //        'status' => "Active"
     //  ]);
         return "success";
-
-        
-    
      }
 
     /**
