@@ -6,7 +6,6 @@
                        <img @click="municipalityshow = !municipalityshow" src="/img/add-city_municipality.png" class="add mr-2" alt="">
                        <span class="font-weight-bold text-secondary">Add Cities / Municipality</span>
                    </div>
-                {{nameM}} {{postal}}}
             <div class="row">
                 <form @submit.prevent="submitM()">
                     <div v-if="municipalityshow" class="row w-100 mt-3 ml-1 d-flex align-items-center">
