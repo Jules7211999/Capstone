@@ -141,7 +141,7 @@ export default {
            location.reload();
         },
         updateMunicipality(id,status){
-            axios.put('cityUpdate',{
+            axios.post('cityUpdate',{
                 id: id,
                 status:status
             })
