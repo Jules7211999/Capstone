@@ -23,7 +23,7 @@ window.Vue = require('vue').default;
 Vue.component('admin-container-component',require('./components/Superuser/MainContainer.vue').default);
 Vue.component('mapbox-component',require('./components/Superuser/Mapbox.vue').default);
 Vue.component('user-component',require('./components/Superuser/User/User.vue').default);
-// Vue.component('dashboard-component',require('./components/Superuser/Dashboard.vue').default);
+Vue.component('dashboard-component',require('./components/Superuser/Dashboard.vue').default);
 Vue.component('user-show-component',require('./components/Superuser/User/UserShow.vue').default);
 Vue.component('admin-sos-component',require('./components/Superuser/Sos/Sos.vue').default);
 Vue.component('sos-show-component',require('./components/Superuser/Sos/SosShow.vue').default);
@@ -33,7 +33,7 @@ Vue.component('user-trash-component',require('./components/Superuser/Trash/User.
 Vue.component('admin-trash-component',require('./components/Superuser/Trash/Admin.vue').default);
 Vue.component('admin-show-component',require('./components/Superuser/Admin/AdminShow.vue').default);
 Vue.component('fish-component',require('./components/Superuser/Fish/Fish.vue').default);
-Vue.component('lgu-component',require('./components/Superuser/Lgu/Lgu.vue').default);
+
 
 //component only
 Vue.component('profile-image-component',require('./components/Superuser/Components/ProfileImage.vue').default);
