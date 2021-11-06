@@ -1,7 +1,5 @@
 <?php
 
-use App\Models\municipal;
-use Illuminate\Http\Request;
 use App\Http\Controllers\User\Sos;
 use App\Http\Controllers\Admin\Admin;
 use Illuminate\Support\Facades\Route;
@@ -39,13 +37,7 @@ Route::resource('fish',FishSpeciesController::class);
 Route::resource('lgu',Lgu::class);
 Route::resource('municipality',Municipality::class);
 Route::resource('barangay',Barangay::class);
-Route::post('/addmunicipality',function(Request $request){
-    municipal::create([
-        'name' => $request->name,
-       'postal_code' => $request->postal,
-       'status' => "Active"
- ]);
-});
+
 //User/Admin Search
 Route::post('/userSearch',[SearchController::class,'user']);
 Route::post('/adminSearch',[SearchController::class,'admin']);

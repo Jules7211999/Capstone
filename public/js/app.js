@@ -2298,9 +2298,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submitM: function submitM() {
-      axios.post('/addmunicipality', {
-        name: this.nameM,
-        postal: this.postal
+      axios.post('/municipal', {
+        name: "jeasdf",
+        postal: 234
       }).then(function (data) {
         return console.log(data);
       })["catch"](function (error) {
