@@ -25,11 +25,7 @@ class CityController extends Controller
      */
     public function create()
     {
-        city::create([
-            'name' => $request->name,
-            'zipcode' => $request->postal,
-            'status' => "Active"
-         ]);
+      
     }
 
     /**
@@ -40,7 +36,11 @@ class CityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        city::create([
+            'name' => $request->name,
+            'zipcode' => $request->postal,
+            'status' => "Active"
+         ]);
     }
 
     /**
