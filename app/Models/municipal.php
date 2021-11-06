@@ -12,6 +12,6 @@ class municipal extends Model
     protected $fillable = [
     'postal_code',
     'name',
-    ,'status',
+    'status'
     ];
 }
