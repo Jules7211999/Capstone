@@ -9,7 +9,7 @@
         </div>
         <div class=" col-3 font-weight-bold text-secondary  d-flex align-items-center justify-content-center">
             <div class="text-center ">
-                <h4 class="font-weight-bold">Location Receivedsdf</h4>
+                <h4 class="font-weight-bold">Location Received</h4>
                 <h2 class="font-weight-bold">{{coord}}</h2>
             </div>
         </div>

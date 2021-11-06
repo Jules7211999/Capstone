@@ -49109,7 +49109,7 @@ var render = function() {
         [
           _c("div", { staticClass: "text-center " }, [
             _c("h4", { staticClass: "font-weight-bold" }, [
-              _vm._v("Location Receivedsdf")
+              _vm._v("Location Received")
             ]),
             _vm._v(" "),
             _c("h2", { staticClass: "font-weight-bold" }, [
