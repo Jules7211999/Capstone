@@ -97,7 +97,7 @@ export default {
     },
     methods:{
         submitM(){
-            axios.post('/lgu',{
+            axios.post('/addmunicipality',{
                 name: this.nameM,
                 postal: this.postal
             })

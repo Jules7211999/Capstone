@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\municipal;
+use Illuminate\Http\Request;
 use App\Http\Controllers\User\Sos;
+use App\Http\Controllers\Admin\Admin;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\GetSos;
 use App\Http\Controllers\Admin\GetPost;
@@ -10,7 +13,6 @@ use App\Http\Controllers\Admin\Dashboard;
 use App\Http\Controllers\Admin\GetBarangay;
 use App\Http\Controllers\Admin\GetLocation;
 use App\Http\Controllers\Admin\UserProfile;
-use App\Http\Controllers\Admin\Admin;
 use App\Http\Controllers\Admin\EmergencySignal;
 use App\Http\Controllers\Admin\GetMunicipality;
 use App\Http\Controllers\Superuser\Fish\GetFish;
@@ -37,7 +39,13 @@ Route::resource('fish',FishSpeciesController::class);
 Route::resource('lgu',Lgu::class);
 Route::resource('municipality',Municipality::class);
 Route::resource('barangay',Barangay::class);
-
+Route::post('/addmunicipality',function(Request $request){
+    municipal::create([
+        'name' => $request->name,
+       'postal_code' => $request->postal,
+       'status' => "Active"
+ ]);
+});
 //User/Admin Search
 Route::post('/userSearch',[SearchController::class,'user']);
 Route::post('/adminSearch',[SearchController::class,'admin']);
