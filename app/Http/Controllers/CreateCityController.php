@@ -18,7 +18,7 @@ class CreateCityController extends Controller
 
     public function update(Request $request){
         city::find($request->id)->update([
-            'status' => "Inactive"
-        ])
+            'status' => $request->status
+        ]);
     }
 }
