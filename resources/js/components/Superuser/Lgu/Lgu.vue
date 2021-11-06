@@ -104,7 +104,7 @@ export default {
             })
             .then(data => console.log(data))
             .catch(error => console.log(error))
-            location.reload();
+            
         },
         submitB(){
             axios.post('/barangay',{

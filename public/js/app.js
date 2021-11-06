@@ -2307,7 +2307,6 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         return console.log(error);
       });
-      location.reload();
     },
     submitB: function submitB() {
       axios.post('/barangay', {
