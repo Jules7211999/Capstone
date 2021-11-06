@@ -98,11 +98,11 @@ export default {
     methods:{
         submitM(){
             axios.post('/municipality',{
-                name: "jeasdf",
-                postal_code: "234"
+                name: this.nameM,
+                postal_code: this.postal
             })
             .then(data => console.log(data))
-            .catch(error => console.log(error.errors))
+            .catch(error => console.log(error))
             
         },
         submitB(){

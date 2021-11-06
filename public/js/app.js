@@ -2299,12 +2299,12 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     submitM: function submitM() {
       axios.post('/municipality', {
-        name: "jeasdf",
-        postal_code: "234"
+        name: this.nameM,
+        postal_code: this.postal
       }).then(function (data) {
         return console.log(data);
       })["catch"](function (error) {
-        return console.log(error.errors);
+        return console.log(error);
       });
     },
     submitB: function submitB() {
