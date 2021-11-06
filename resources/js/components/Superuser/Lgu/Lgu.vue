@@ -19,7 +19,6 @@
                             <input type="submit" value="Add" class="btn font-weight-bold btn-outline-primary pl-5 pr-5">
                         </div>
                           </form>
-     </lgu-component>
                     </div>
             </div>
             </div>
