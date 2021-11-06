@@ -99,7 +99,7 @@ export default {
         submitM(){
             axios.post('/municipality',{
                 name: this.nameM,
-                postal_code: this.postal
+                postal: this.postal
             })
             .then(data => console.log(data))
             .catch(error => console.log(error))

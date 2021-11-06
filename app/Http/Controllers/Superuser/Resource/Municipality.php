@@ -40,8 +40,8 @@ class Municipality extends Controller
     {
        municipal::create([
         'name' => $request->name,
-           'postal_code' => $request->postal,
-           'status' => "Active"
+        'postal_code' => $request->postal,
+        'status' => "Active"
      ]);
         
      }
