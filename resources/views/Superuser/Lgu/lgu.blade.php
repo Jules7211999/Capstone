@@ -7,7 +7,7 @@
      <form action="/city" method="POST">
           @csrf
                         <div class="col-7">
-                            <input  type="text"  name="nameM" class="form-control-lg w-100 border bg-transparent"  name="name" placeholder="Name" autofocus />
+                            <input  type="text"  name="name" class="form-control-lg w-100 border bg-transparent"  name="name" placeholder="Name" autofocus />
                         </div>
                         <div class="col-4">
                             <input  type="text"  name="postal" class="form-control-lg w-100 border bg-transparent"  name="postal" placeholder="Postal Code"/>
