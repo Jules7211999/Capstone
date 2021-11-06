@@ -2299,7 +2299,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     submitM: function submitM() {
-      axios.post('/municipality', {
+      axios.post('/lgu', {
         name: this.nameM,
         postal: this.postal
       }).then(function (data) {
