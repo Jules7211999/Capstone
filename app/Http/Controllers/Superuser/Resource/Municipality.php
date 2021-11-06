@@ -38,12 +38,12 @@ class Municipality extends Controller
      */
     public function store(Request $request)
     {
-    //    municipal::create([
-    //     'name' => $request->name,
-    //        'postal_code' => $request->postal,
-    //        'status' => "Active"
-    //  ]);
-    return "success";
+       municipal::create([
+        'name' => $request->name,
+           'postal_code' => $request->postal,
+           'status' => "Active"
+     ]);
+        
      }
 
     /**

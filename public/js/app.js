@@ -2300,7 +2300,7 @@ __webpack_require__.r(__webpack_exports__);
     submitM: function submitM() {
       axios.post('/municipality', {
         name: "jeasdf",
-        postal: "234"
+        postal_code: "234"
       }).then(function (data) {
         return console.log(data);
       })["catch"](function (error) {
