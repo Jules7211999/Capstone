@@ -5,6 +5,7 @@
 <admin-container-component role="{{auth()->user()->role}}" authname="{{auth()->user()->name}}" nav="LGU">
      <lgu-component>
      <form action="/city" method="POST">
+          @csrf
                         <div class="col-7">
                             <input  type="text"  name="nameM" class="form-control-lg w-100 border bg-transparent"  name="name" placeholder="Name" autofocus />
                         </div>
