@@ -7,8 +7,8 @@
                        <span class="font-weight-bold text-secondary">Add Cities / Municipality</span>
                    </div>
             <div class="row">
+                <form @submit.prevent="submitM()">
                  <div v-if="municipalityshow" class="row w-100 mt-3 ml-1 d-flex align-items-center">
-                    <form @submit.prevent="submitM()">
                         <div class="col-7">
                             <input  type="text"  v-model="nameM" class="form-control-lg w-100 border bg-transparent"  name="name" placeholder="Name" autofocus />
                         </div>
@@ -18,8 +18,9 @@
                         <div class="col-1">
                             <input type="submit" value="Add" class="btn font-weight-bold btn-outline-primary pl-5 pr-5">
                         </div>
-                          </form>
+                          
                     </div>
+                    </form>
             </div>
             </div>
              <div class="col-5 ">
