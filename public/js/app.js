@@ -2272,6 +2272,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -49325,8 +49336,70 @@ var render = function() {
                 {
                   staticClass: "row w-100 mt-3 ml-1 d-flex align-items-center"
                 },
-                [_vm._t("default")],
-                2
+                [
+                  _c("form", { attrs: { action: "/city", method: "POST" } }, [
+                    _c("div", { staticClass: "col-7" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.nameM,
+                            expression: "nameM"
+                          }
+                        ],
+                        staticClass:
+                          "form-control-lg w-100 border bg-transparent",
+                        attrs: {
+                          type: "text",
+                          name: "name",
+                          placeholder: "Name",
+                          autofocus: ""
+                        },
+                        domProps: { value: _vm.nameM },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.nameM = $event.target.value
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col-4" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.postal,
+                            expression: "postal"
+                          }
+                        ],
+                        staticClass:
+                          "form-control-lg w-100 border bg-transparent",
+                        attrs: {
+                          type: "text",
+                          name: "postal",
+                          placeholder: "Postal Code"
+                        },
+                        domProps: { value: _vm.postal },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.postal = $event.target.value
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(0)
+                  ])
+                ]
               )
             : _vm._e()
         ])
@@ -49399,7 +49472,7 @@ var render = function() {
                         })
                       ]),
                       _vm._v(" "),
-                      _vm._m(0)
+                      _vm._m(1)
                     ]
                   )
                 : _vm._e()
@@ -49409,7 +49482,7 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(1),
+    _vm._m(2),
     _vm._v(" "),
     _c("div", { staticClass: "w-100 h-100 justify-content-around d-flex" }, [
       _c(
@@ -49561,6 +49634,17 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-1" }, [
+      _c("input", {
+        staticClass: "btn font-weight-bold btn-outline-primary pl-5 pr-5",
+        attrs: { type: "submit", value: "Add" }
+      })
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
