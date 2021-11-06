@@ -2361,7 +2361,8 @@ __webpack_require__.r(__webpack_exports__);
       location.reload();
     },
     updateMunicipality: function updateMunicipality(id, status) {
-      axios.put('city/' + id, {
+      axios.put('cityUpdate', {
+        id: id,
         status: status
       });
       location.reload();
