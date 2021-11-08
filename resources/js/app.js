@@ -34,6 +34,7 @@ Vue.component('admin-trash-component',require('./components/Superuser/Trash/Admi
 Vue.component('admin-show-component',require('./components/Superuser/Admin/AdminShow.vue').default);
 Vue.component('fish-component',require('./components/Superuser/Fish/Fish.vue').default);
 Vue.component('lgu-component',require('./components/Superuser/Lgu/Lgu.vue').default);
+Vue.component('fish-show-component',require('./components/Superuser/Fish/FishShow.vue').default);
 
 //component only
 Vue.component('profile-image-component',require('./components/Superuser/Components/ProfileImage.vue').default);

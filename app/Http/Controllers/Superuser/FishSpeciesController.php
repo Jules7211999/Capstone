@@ -65,7 +65,11 @@ class FishSpeciesController extends Controller
      */
     public function show($id)
     {
-        //
+        $model = fish::find($id);
+
+        $data = $model->toJson();
+
+        return view("Superuser.Fish.fishShow") -> with('data', $data);
     }
 
     /**

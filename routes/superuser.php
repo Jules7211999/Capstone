@@ -43,6 +43,7 @@ Route::post('/cityUpdate',[CreateCityController::class,'update']);
 //User/Admin Search
 Route::post('/userSearch',[SearchController::class,'user']);
 Route::post('/adminSearch',[SearchController::class,'admin']);
+Route::post('/fishSearch',[SearchController::class,'fish']);
 
 //api routes
 Route::get('/getFish',[GetFish::class,'index']);

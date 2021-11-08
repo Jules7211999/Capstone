@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="w-100 p-5 d-flex justify-content-between">
+         <div class="w-100 p-5 d-flex justify-content-between">
             <a href="/fish/create">
                 <div>
                     <img src="/img/add-fish.png" alt="" class="adduser">
@@ -14,10 +14,12 @@
             </div>    
         </div>
         <div class="d-flex flex-wrap w-100 h-100 ">
-            <div v-for="d in data" class="fish-container  border mr-2 rounded pl-5 pr-5 pt-2 text-center text-secondary font-weight-bold  pb-2 shadow">
-                <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ d.image" alt="" class="image">
-                <div class="w-100 pt-5 d-flex align-items-center justify-content-center">{{d.common_name}}</div>
-                <div class="w-100 pt-2 d-flex align-items-center justify-content-center">{{d.local_name}}</div>
+            <div v-for="d in data" class="fish-container  border mr-2 rounded pl-5 pr-5 pt-2 text-center   pb-2 shadow">
+                <a :href="'/fish/'+d.id" class="text-secondary font-weight-bold">
+                    <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ d.image" alt="" class="image">
+                    <div class="w-100 pt-5 d-flex align-items-center justify-content-center">{{d.common_name}}</div>
+                    <div class="w-100 pt-2 d-flex align-items-center justify-content-center">{{d.local_name}}</div>
+                </a>
             </div>
         </div>
     </div>
@@ -35,6 +37,15 @@ export default {
         axios.get('/getFish')
         .then(data => this.data = data.data)
         .catch(error => console.log(error));
+    },
+    methods:{
+        search(){
+            axios.post('/fishSearch',{
+                search : this.query,
+            })
+            .then(data => this.data = data.data)
+            .catch(error =>console.log(error.errors.message))
+        }
     }
 }
 </script>
@@ -65,5 +76,8 @@ input{
     width: 100%;
     height: 50%;
     padding-top: 1rem;
+}
+a:hover{
+    text-decoration: none;
 }
 </style>
