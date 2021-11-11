@@ -55,7 +55,7 @@ class Admin extends Controller
             'email' => 'required|unique:App\Models\User,email',
             'barangay' => 'required',
             'marital_status' => 'required',
-            'image' => 'required',
+            'image' => 'required|mimes:jpg,png',
             'city' => 'required'
         ]);
 
@@ -125,6 +125,21 @@ class Admin extends Controller
     public function update(Request $request, $id)
     {
 
+      
+            $request->validate([
+                'name' => 'required|string|max:255',
+                'address' => 'required|max:255',
+                'phone_number' => 'required|numeric',
+                'gender' => 'required',
+                'birthdate' => 'required',
+                'password' => 'required|confirmed|min:8',
+                'email' => 'required',
+                'barangay' => 'required',
+                'marital_status' => 'required',
+                'image' => 'mimes:jpg,png',
+                'city' => 'required'
+            ]);
+        
      
         if($request->file('image') == null){
             User::find($id)->update([
@@ -139,7 +154,8 @@ class Admin extends Controller
                 'barangay' => $request->barangay,
                 'phone_number' => $request->phone_number,
                 'marital_status' => $request->marital_status,
-                'city' => $request->city
+                'city' => $request->city,
+                'image' => 'mimes:jpg,png',
                 
             ]);
     
@@ -160,7 +176,8 @@ class Admin extends Controller
                 'phone_number' => $request->phone_number,
                 'marital_status' => $request->marital_status,
                 'profile_image' => $name,
-                'city' => $request->city
+                'city' => $request->city,
+                
             ]);
             
             $filepath = $name;

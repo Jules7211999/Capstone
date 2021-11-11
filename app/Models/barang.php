@@ -8,9 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class barang extends Model
 {
     use HasFactory;
-    
+
+
     protected $fillable =[
         'name',
-        'status'
+        'status',
+        'city_id'
     ];
+
+    public function city(){
+        return $this->belongsTo(city::class);
+    }
 }

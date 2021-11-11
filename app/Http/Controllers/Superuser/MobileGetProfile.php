@@ -15,6 +15,7 @@ class MobileGetProfile extends Controller
             'name' => $user->name,
             'username' => $user->username,
             'marital_status' => $user->marital_status,
+            'phone_number' => $user->phone_number,
             'profile_image' => $user->profile_image,
             'gender' => $user->gender,
             'birthdate' => $user->birthdate,

@@ -30,5 +30,6 @@ class SearchController extends Controller
        return $search;
     }
 
+   
  
 }

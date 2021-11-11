@@ -29,12 +29,12 @@ Vue.component('admin-sos-component',require('./components/Superuser/Sos/Sos.vue'
 Vue.component('sos-show-component',require('./components/Superuser/Sos/SosShow.vue').default);
 Vue.component('profile-component',require('./components/Superuser/Profile/Profile.vue').default);
 Vue.component('admin-component',require('./components/Superuser/Admin/Admin.vue').default);
-Vue.component('user-trash-component',require('./components/Superuser/Trash/User.vue').default);
-Vue.component('admin-trash-component',require('./components/Superuser/Trash/Admin.vue').default);
 Vue.component('admin-show-component',require('./components/Superuser/Admin/AdminShow.vue').default);
 Vue.component('fish-component',require('./components/Superuser/Fish/Fish.vue').default);
+Vue.component('catch-component',require('./components/Superuser/Catch/Catch.vue').default);
 Vue.component('lgu-component',require('./components/Superuser/Lgu/Lgu.vue').default);
 Vue.component('fish-show-component',require('./components/Superuser/Fish/FishShow.vue').default);
+Vue.component('catch-show-component',require('./components/Superuser/Catch/CatchShow.vue').default);
 
 //component only
 Vue.component('profile-image-component',require('./components/Superuser/Components/ProfileImage.vue').default);

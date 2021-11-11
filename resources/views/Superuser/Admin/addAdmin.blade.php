@@ -10,9 +10,12 @@
 <form method="POST" action="/admin" enctype="multipart/form-data" class="justify-content-center d-flex">
         @csrf
             <div class="container">
-            <div class="row w-100 justify-content-center">
-                    <profile-image-component/>       
-            </div>
+                    <div class="w-100 mb-5 ">
+                        <profile-image-component/>
+                    </div>
+                    @error('image')
+                        <div class="pt-2 text-danger font-weight-bold mt-2 mb-2 row w-100 d-flex justify-content-center">{{$message}}</div>
+                    @enderror 
                     <div class="row">
                         <div class="col">
                             <div >

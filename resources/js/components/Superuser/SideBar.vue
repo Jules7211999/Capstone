@@ -57,16 +57,17 @@
                                     </span>
                             </a>
                         </div>
-                        <div v-if="authrole != 'SuperUser'" class="mb-5"> 
-                            <a href="/fish" class="text-secondary">
-                                <img src="/img/fish.png" alt="" class ="icon pr-3"> 
+                          <div v-if="authrole != 'SuperUser'" class="mb-5"> 
+                            <a href="/catch" class="text-secondary">
+                                <img src="/img/monitor.png" alt="" class ="icon pr-3"> 
                                     <span v-if="shownav">
-                                        Catch Monitoring
+                                        Monitor
                                     </span>
                             </a>
                         </div>
                 </div>                  
     </div>
+
 
 </template>
 

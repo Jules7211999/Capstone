@@ -13,7 +13,7 @@
                     <div class="col">{{d.type}}</div>
                     <div class="col">{{d.status}}</div>
                     <div class="col">{{d.datetimezone}}</div>
-                    <div class="col"><button @click="accept(d.id,'Processing')" class="btn btn-outline-danger font-weight-bold">Accept</button></div>
+                    <div class="col"><button @click="accept(d.id,'Processing')" class="btn btn-outline-primary font-weight-bold">Accept</button></div>
             </div> 
     </div> 
    <div v-for="d in processing" class="d-flex justify-content-center align-items-center  w-100 mb-2 ">
@@ -22,7 +22,7 @@
                     <div class="col">{{d.type}}</div>
                     <div class="col">{{d.status}}</div>
                     <div class="col">{{d.datetimezone}}</div>
-                    <div class="col"><button @click="accept(d.id,'Done')" class="btn btn-outline-primary font-weight-bold">Done</button></div>
+                    <div class="col"><button @click="accept(d.id,'Done')" class="btn btn-outline-success font-weight-bold">Done</button></div>
             </div> 
     </div>
      <div v-for="d in done" class="d-flex justify-content-center w-100 mb-2 ">

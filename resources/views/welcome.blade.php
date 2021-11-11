@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
-        <!-- <link rel="stylesheet" href="{{asset('css/app.css')}}"> -->
+        <!-- <link rel="stylesheet" href="{{secure_asset('css/app.css')}}"> -->
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
         <title>Capstone</title>
     </head>
     <body>
@@ -50,7 +50,7 @@
         .wrapper{
             height: 93.5vh;
             overflow: hidden;
-            background-image: linear-gradient(to right,#80cdff , #efefef);
+            /* background-image: linear-gradient(to right,#80cdff , #efefef); */
         
         }
       

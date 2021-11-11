@@ -14,4 +14,8 @@ class city extends Model
         'status',
         'zipcode'
     ];
+
+    public function barang(){
+        return $this->hasMany(barang::class);
+    }
 }

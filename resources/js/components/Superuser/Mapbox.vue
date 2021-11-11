@@ -1,15 +1,13 @@
 <template>
 <div class="w-100 h-100" >
   <div class="w-100 d-flex row mb-2">
-      <div class="col-5">
+      <div class="col">
         <select class=" w-100 form-control form-control-lg  bg-light font-weight-bold text-secondary" v-model="mapshow">
           <option selected>Location</option>
           <option>SOS</option>
         </select>
       </div>
-      <div class="col-5">
-        <input class="form-control form-control-lg w-100  bg-light text-secondary font-weight-bold" type="text" placeholder="Search User">
-      </div>
+     
  </div>
   <MglMap 
   :accessToken="accessToken" 
@@ -87,13 +85,6 @@ export default {
         .then(data => this.sosData= data)
         .catch(error => console.log(error.response.data.message));
     },
-    search(){
-            axios.post('/searchUserLocation',{
-                search : this.query,
-            })
-            .then(data => this.datum = data)
-            .catch(error =>console.log(error.errors.message))
-        }
   },
   mounted(){
     this.getLocation();

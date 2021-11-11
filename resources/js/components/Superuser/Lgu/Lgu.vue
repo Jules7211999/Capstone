@@ -25,14 +25,19 @@
             </div>
              <div class="col-5 ">
                 <div class="row pl-3">
-                    <img @click="barangayshow = !barangayshow" src="/img/add-city_municipality.png" class="add mr-2" alt="">
+                    <img @click="barangayshow = !barangayshow" src="/img/barangay.png" class="add mr-2" alt="">
                     <span class="font-weight-bold text-secondary">Add Barangay</span>
                 </div>
                 <div class="row">
                 <form @submit.prevent="submitB">
                     <div  v-if="barangayshow" class="row w-100 mt-3 ml-1 d-flex align-items-center">
-                        <div class="col-10">
+                        <div class="col-5">
                             <input  type="text"  class="form-control-lg w-100 border bg-transparent"  v-model="nameB" name="name" placeholder="Name" autofocus />
+                        </div>
+                        <div class="col-5">
+                            <select v-model="city" class="form-control-lg w-100 border bg-transparent">
+                                <option  v-for="d in municipality" :value="d.id">{{d.name}}</option>
+                            </select>
                         </div>
                         <div class="col-2">
                             <input type="submit" value="Add" class="btn btn-outline-primary font-weight-bold pl-5 pr-5">
@@ -54,13 +59,13 @@
             <div class="col-5 ml-2">
                 <div v-for="d in municipality" class="row text-primary font-weight-bold p-3 border shadow-sm rounded mb-2">
                    <div class="col">{{d.name}}</div>
-                   <div class="col">{{d.postal_code}}</div>
+                   <div class="col">{{d.zipcode}}</div>
                    <div class="col">{{d.status}}</div>
                    <div class="col"><button @click="updateMunicipality(d.id,'Inactive')" class="btn font-weight-bold btn-outline-danger">disable</button></div>
                 </div>
                  <div v-for="x in Inactivemunicipality" class="row text-danger font-weight-bold p-3 border shadow-sm rounded mb-2">
                    <div class="col">{{x.name}}</div>
-                   <div class="col">{{x.postal_code}}</div>
+                   <div class="col">{{x.zipcode}}</div>
                    <div class="col">{{x.status}}</div>
                    <div class="col"><button @click="updateMunicipality(x.id,'Active')" class="btn font-weight-bold btn-outline-primary">enable</button></div>
                 </div>
@@ -69,11 +74,13 @@
                 <div v-for="d in barangay" class="row text-primary font-weight-bold p-3 border mb-2 rounded shadow-sm ">
                     <div class="col">{{d.name}} </div>
                     <div class="col">{{d.status}}</div>
+                    <div class="col">{{d.city.name}}</div>
                     <div class="col"><button @click="updateBarangay(d.id,'Inactive')" class="btn btn-outline-danger font-weight-bold">disable</button></div>
                 </div>
                  <div v-for="x in Inactivebarangay" class="row text-danger font-weight-bold p-3 border mb-2 rounded shadow-sm ">
                     <div class="col">{{x.name}} </div>
                     <div class="col">{{x.status}}</div>
+                    <div class="col">{{x.city.name}}</div>
                     <div class="col"><button @click="updateBarangay(x.id,'Active')" class="btn btn-outline-primary font-weight-bold">enable</button></div>
                 </div>
             </div>
@@ -93,7 +100,8 @@ export default {
             postal:"",
             nameB: "",
             barangay:{},
-            municipality:{}
+            municipality:{},
+            city:""
         }   
     },
     methods:{
@@ -104,11 +112,13 @@ export default {
             })
             .then(data => console.log(data))
             .catch(error => console.log(error))
+            location.reload();
             
         },
         submitB(){
             axios.post('/barangay',{
-                name : this.nameB
+                name : this.nameB,
+                city :this.city
             })
             .then(data => console.log(data))
             .catch(error => console.log(error))

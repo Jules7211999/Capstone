@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers\Superuser;
+namespace App\Http\Controllers\Superuser\resource;
 
-use App\Models\fish;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Storage;
+use App\Models\fish;
+use App\Models\FishCatch;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 
-class FishSpeciesController extends Controller
+class CatchController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +17,7 @@ class FishSpeciesController extends Controller
      */
     public function index()
     {
-        return view('Superuser.Fish.fish');
+        return view('Superuser.Catch.catch');
     }
 
     /**
@@ -26,7 +27,7 @@ class FishSpeciesController extends Controller
      */
     public function create()
     {
-        return view('Superuser.Fish.addFish');
+        
     }
 
     /**
@@ -37,35 +38,19 @@ class FishSpeciesController extends Controller
      */
     public function store(Request $request)
     {
+        $date = Carbon::now();
+        $year = $date-> format('Y');
 
-        $request->validate([
-            'image' => 'required',
-            'phylum' => 'required',
-            'subphylum' => 'required',
-            'class' => 'required',
-            'common_name' => 'required',
-            'local_name' => 'required',
-            'superclass' => 'required',
-        ]);
-
-        $file = $request->file('image');
-        $name = time().$file->getClientOriginalName();
-
-        fish::create([
-            'phylum' => $request->phylum,
-            'subphylum' => $request->subphylum,
-            'superclass' => $request->superclass,
-            'class' => $request->class,
+        FishCatch::create([
+            'year' => $year,
+            'month' => $date->month,
             'common_name' => $request->common_name,
-            'local_name'=>$request->local_name,
-            'image' => $name
+            'local_name' => $request->local_name,
+            'barangay' => auth()->user()->barangay,
+            'kilo' => $request->weight,
+
         ]);
-
-    
-        $filepath = $name;
-        Storage::disk('s3')->put($filepath,file_get_contents($file));
-
-        return back()->with('message','Fish added');
+        
     }
 
     /**
@@ -80,7 +65,7 @@ class FishSpeciesController extends Controller
 
         $data = $model->toJson();
 
-        return view("Superuser.Fish.fishShow") -> with('data', $data);
+        return view("Superuser.Catch.ShowCatch") -> with('data', $data);
     }
 
     /**

@@ -39,7 +39,8 @@ class Barangay extends Controller
     {
         barang::create([
             'name' => $request->name,
-            'status' => "Active"
+            'status' => "Active",
+            'city_id' => $request->city
         ]);
 
     }

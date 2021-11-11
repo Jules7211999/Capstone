@@ -7,6 +7,7 @@ use App\Models\barang;
 use App\Models\municipal;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\city;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
 
@@ -110,7 +111,7 @@ class UserProfile extends Controller
     {
         $model= User::find($id);
         $barangay = barang::all();
-        $municipality = municipal::all();
+        $municipality = city::all();
         return view('Superuser.Admin.editAdmin',['data'=> $model,'barangay' => $barangay,'municipality' => $municipality]);
     }
 

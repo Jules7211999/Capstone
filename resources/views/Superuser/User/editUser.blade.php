@@ -13,12 +13,12 @@
         @csrf
         @method('PUT')
             <div class="container w-100">
-                    <div class="row w-100 justify-content-center">
-                    <profile-image-component/>
-                    @error('image')
-                        <div class="pt-2 text-danger font-weight-bold mb-2 mt-2">{{$message}}</div>
-                    @enderror
+            <div class="w-100 mb-5 ">
+                        <profile-image-component/>
                     </div>
+                    @error('image')
+                        <div class="pt-2 text-danger font-weight-bold mt-2 mb-2 row w-100 d-flex justify-content-center">{{$message}}</div>
+                    @enderror
                     <div class="row">
                         <div class="col">
                             <div>
