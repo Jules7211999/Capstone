@@ -112,7 +112,7 @@ class UserProfile extends Controller
         $model= User::find($id);
         $barangay = barang::all();
         $municipality = city::all();
-        return view('Superuser.Admin.editAdmin',['data'=> $model,'barangay' => $barangay,'municipality' => $municipality]);
+        return view('Superuser.User.editUser',['data'=> $model,'barangay' => $barangay,'municipality' => $municipality]);
     }
 
     /**
