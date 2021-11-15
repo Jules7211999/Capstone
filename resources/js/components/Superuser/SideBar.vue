@@ -65,6 +65,14 @@
                                     </span>
                             </a>
                         </div>
+                         <div v-if="authrole == 'SuperUser'" class="mb-5"> 
+                            <a href="/monitor" class="text-secondary">
+                                <img src="/img/monitor.png" alt="" class ="icon pr-3"> 
+                                    <span v-if="shownav">
+                                        Monitor
+                                    </span>
+                            </a>
+                        </div>
                 </div>                  
     </div>
 

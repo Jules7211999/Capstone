@@ -1,11 +1,11 @@
 <template>
 <div class="w-100 h-100 pl-5">
-    {{data}}
     <div class="row align-items-start">
         <div class="col-6">
             <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ fish.image" alt="" class="image">
         </div>
         <div class="col-6 align-self-center ">
+            <div class="w-100 text-success font-weight-bold mb-2">{{message}} {{error.weight}}</div>
             <form @submit.prevent="submit()">
                  <input class="form-control-lg w-50 border font-weight-bold bg-transparent" v-model="weight" required placeholder="Enter Weight per Kilo">
             </form>
@@ -53,7 +53,9 @@ export default {
     data(){
         return{
          fish:this.data,
-         weight:"" 
+         weight:"",
+         message:"",
+         error:"",
         }
     },
    methods:{
@@ -63,8 +65,8 @@ export default {
                common_name: this.fish.common_name,
                local_name :this.fish.local_name,
            })
-           .then(data => console.log(data))
-           .catch(error => console.log(error))
+           .then(data => this.message = data.data)
+           .catch(error => this.error = error.response.data.errors)
        }
    }
 }

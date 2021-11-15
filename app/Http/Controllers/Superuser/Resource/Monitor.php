@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Superuser\resource;
+namespace App\Http\Controllers\Superuser\Resource;
 
 use App\Http\Controllers\Controller;
-use App\Models\fish;
-use App\Models\FishCatch;
-use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class CatchController extends Controller
+class Monitor extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +14,7 @@ class CatchController extends Controller
      */
     public function index()
     {
-        return view('Superuser.Catch.catch');
+        //
     }
 
     /**
@@ -27,7 +24,7 @@ class CatchController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -38,25 +35,7 @@ class CatchController extends Controller
      */
     public function store(Request $request)
     {
-        $date = Carbon::now();
-        $year = $date-> format('Y');
-
-        $request->validate([
-            'weight' => 'required|numeric'
-        ]);
-
-        FishCatch::create([
-            'year' => $year,
-            'month' => $date->month,
-            'common_name' => $request->common_name,
-            'local_name' => $request->local_name,
-            'barangay' => auth()->user()->barangay,
-            'kilo' => $request->weight,
-
-        ]);
-
-        return "Success";
-        
+        //
     }
 
     /**
@@ -67,11 +46,7 @@ class CatchController extends Controller
      */
     public function show($id)
     {
-        $model = fish::find($id);
-
-        $data = $model->toJson();
-
-        return view("Superuser.Catch.ShowCatch") -> with('data', $data);
+        //
     }
 
     /**

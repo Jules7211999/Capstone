@@ -77,7 +77,10 @@
                             @enderror
                        </div>
                    </div>
-                   <div class="row">
+                   <div>
+                       <dropdown-component/>
+                    </div>
+                   <!-- <div class="row">
                         <div class="col">
                             <div>
                                 <label class="font-weight-bold mb-3 mt-2" for="city">City / Municipality</label>
@@ -102,7 +105,7 @@
                                 </select>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="row">
                         <div class="col">
                             <div>

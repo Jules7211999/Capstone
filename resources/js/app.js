@@ -39,7 +39,7 @@ Vue.component('catch-show-component',require('./components/Superuser/Catch/Catch
 //component only
 Vue.component('profile-image-component',require('./components/Superuser/Components/ProfileImage.vue').default);
 Vue.component('fish-image-component',require('./components/Superuser/Components/FishImage.vue').default);
-
+Vue.component('dropdown-component',require('./components/Superuser/Components/Dropdown.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

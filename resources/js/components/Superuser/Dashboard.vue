@@ -1,6 +1,9 @@
 <template>
     <div class="w-100 h-100 rounded ml-3 mt-4">
-       <div class="w-100  d-flex row justify-content-center align-items-center border-bottom">
+        <div class="w-100 ">
+            <button>change view</button>
+        </div>
+       <div class="w-100  d-flex row justify-content-center align-items-center ">
         <div class=" col-3 font-weight-bold text-secondary d-flex align-items-center justify-content-center">
             <div class="text-center ">
                 <h4 class="font-weight-bold">Total Users</h4>
@@ -26,7 +29,7 @@
             </div>
         </div>
        </div>
-       <div class="w-100  d-flex row p-5 justify-content-center align-items-center border-bottom ">
+       <div class="w-100  d-flex row p-5 justify-content-center align-items-center  ">
         <div class=" col-3 font-weight-bold text-secondary d-flex align-items-center justify-content-center">
             <div class="text-center ">
                 <h4 class="font-weight-bold">Registered Admin</h4>
@@ -46,7 +49,7 @@
             </div>
         </div>
        </div>
-         <div class="w-100  d-flex row justify-content-center align-items-center border-bottom">
+         <div class="w-100  d-flex row justify-content-center align-items-center ">
         <div class=" col-3 font-weight-bold text-secondary d-flex align-items-center justify-content-center">
             <div class="text-center ">
                 <h4 class="font-weight-bold">Registered Cities</h4>
