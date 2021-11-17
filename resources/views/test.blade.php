@@ -8,7 +8,11 @@
 </head>
 <body>
 
- <img src="https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/1635595904goldfish.png" alt="">
+<form action="/catch" method="post">
+    @csrf
+    <input type="text" name="weight">
+    <input type="submit" value="submit">
+</form>
 </form>
 </body>
 </html>

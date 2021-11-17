@@ -4,6 +4,8 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+
+
 require('./bootstrap');
 
 window.Vue = require('vue').default;
@@ -20,26 +22,27 @@ window.Vue = require('vue').default;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 
-Vue.component('admin-container-component',require('./components/Superuser/MainContainer.vue').default);
-Vue.component('mapbox-component',require('./components/Superuser/Mapbox.vue').default);
-Vue.component('user-component',require('./components/Superuser/User/User.vue').default);
-Vue.component('dashboard-component',require('./components/Superuser/Dashboard.vue').default);
-Vue.component('user-show-component',require('./components/Superuser/User/UserShow.vue').default);
-Vue.component('admin-sos-component',require('./components/Superuser/Sos/Sos.vue').default);
-Vue.component('sos-show-component',require('./components/Superuser/Sos/SosShow.vue').default);
-Vue.component('profile-component',require('./components/Superuser/Profile/Profile.vue').default);
-Vue.component('admin-component',require('./components/Superuser/Admin/Admin.vue').default);
-Vue.component('admin-show-component',require('./components/Superuser/Admin/AdminShow.vue').default);
-Vue.component('fish-component',require('./components/Superuser/Fish/Fish.vue').default);
-Vue.component('catch-component',require('./components/Superuser/Catch/Catch.vue').default);
-Vue.component('lgu-component',require('./components/Superuser/Lgu/Lgu.vue').default);
-Vue.component('fish-show-component',require('./components/Superuser/Fish/FishShow.vue').default);
-Vue.component('catch-show-component',require('./components/Superuser/Catch/CatchShow.vue').default);
-
+Vue.component('admin-container-component',require('./components/MainContainer.vue').default);
+Vue.component('mapbox-component',require('./components/Mapbox.vue').default);
+Vue.component('user-component',require('./components/User/User.vue').default);
+Vue.component('dashboard-component',require('./components/Dashboard.vue').default);
+Vue.component('user-show-component',require('./components/User/UserShow.vue').default);
+Vue.component('admin-sos-component',require('./components/Sos/Sos.vue').default);
+Vue.component('sos-show-component',require('./components/Sos/SosShow.vue').default);
+Vue.component('admin-component',require('./components/Admin/Admin.vue').default);
+Vue.component('admin-show-component',require('./components/Admin/AdminShow.vue').default);
+Vue.component('fish-component',require('./components/Fish/Fish.vue').default);
+Vue.component('catch-component',require('./components/Catch/Catch.vue').default);
+Vue.component('lgu-component',require('./components/Lgu/Lgu.vue').default);
+Vue.component('fish-show-component',require('./components/Fish/FishShow.vue').default);
+Vue.component('catch-show-component',require('./components/Catch/CatchShow.vue').default);
+Vue.component('monitor-component',require('./components/Monitor/Monitor.vue').default);
+Vue.component('sub-monitor-component',require('./components/Monitor/SubMonitor.vue').default);
+Vue.component('show-monitor-component',require('./components/Monitor/ShowMonitor.vue').default);
 //component only
-Vue.component('profile-image-component',require('./components/Superuser/Components/ProfileImage.vue').default);
-Vue.component('fish-image-component',require('./components/Superuser/Components/FishImage.vue').default);
-Vue.component('dropdown-component',require('./components/Superuser/Components/Dropdown.vue').default);
+Vue.component('profile-image-component',require('./components/Components/ProfileImage.vue').default);
+Vue.component('fish-image-component',require('./components/Components/FishImage.vue').default);
+Vue.component('dropdown-component',require('./components/Components/Dropdown.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

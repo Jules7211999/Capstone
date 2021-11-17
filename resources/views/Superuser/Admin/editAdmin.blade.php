@@ -7,7 +7,7 @@
             {{ session()->get('message') }}
         </div>
     @endif
-<form method="POST" action="/admin/{{$data->id}}" class="justify-content-center d-flex">
+<form method="POST" action="/admin/{{$data->id}}" class="justify-content-center d-flex" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="container w-100">
@@ -85,7 +85,7 @@
                             </div>
                             <div>
                                 <select class="form-control-lg w-100 border font-weight-bold bg-transparent" name="city">
-                                    <option class="font-weight-bold" value="{{$data->city}}">{{$data->city}}</option>
+                                    <option class="font-weight-bold" value="{{$data->city->id}}">{{$data->city->name}}</option>
                                     @foreach($municipality as $m)
                                         <option class="font-weight-bold" value="{{$m->name}}">{{$m->name}}</option>
                                     @endforeach
@@ -98,7 +98,7 @@
                             </div>
                             <div>
                                 <select class="form-control-lg w-100 border font-weight-bold bg-transparent" name="barangay">
-                                    <option class="font-weight-bold" value="{{$data->barangay}}">{{$data->barangay}}</option>
+                                    <option class="font-weight-bold" value="{{$data->barangay->id}}">{{$data->barangay->name}}</option>
                                     @foreach($barangay as $b)
                                         <option class="font-weight-bold" value="{{$b->name}}">{{$b->name}}</option>
                                     @endforeach

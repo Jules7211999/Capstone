@@ -19,4 +19,13 @@ class barang extends Model
     public function city(){
         return $this->belongsTo(city::class);
     }
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function catch(){
+       return $this->hasMany(FishCatch::class,'barangay_id','id');
+    }
+  
 }

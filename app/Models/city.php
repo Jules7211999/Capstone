@@ -15,7 +15,7 @@ class city extends Model
         'zipcode'
     ];
 
-    public function barang(){
-        return $this->hasMany(barang::class);
-    }
+   public function barang(){
+       return $this->hasMany(barang::class);
+   }
 }

@@ -10,11 +10,22 @@ class FishCatch extends Model
     use HasFactory;
 
     protected $fillable= [
-        'common_name',
-        'local_name',
+        'fish_id',
         'kilo',
-        'barangay',
+        'barangay_id',
         'month',
         'year',
     ];
+
+    public function barangay(){
+        return $this->belongsTo(barang::class);
+    }
+    public function fish(){
+        return $this->hasOne(fish::class,'id','fish_id');
+    }
+
+
+  
+
+    
 }

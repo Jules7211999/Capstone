@@ -21,7 +21,9 @@ class EmergencyCall extends Model
         'month_name',
         'day_of_week',
         'type',
-        'status'
+        'status',
+        'dtz_accepted',
+        'dtz_finished'
     ];
 
     public function user(){

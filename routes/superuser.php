@@ -1,28 +1,20 @@
 <?php
 
+
 use App\Http\Controllers\User\Sos;
-use App\Http\Controllers\Admin\Admin;
+use App\Http\Controllers\Dashboard;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\GetSos;
-use App\Http\Controllers\Admin\GetPost;
-use App\Http\Controllers\Admin\GetUser;
-use App\Http\Controllers\Admin\GetAdmin;
-use App\Http\Controllers\Admin\Dashboard;
-use App\Http\Controllers\Admin\GetBarangay;
-use App\Http\Controllers\Admin\GetLocation;
-use App\Http\Controllers\Admin\UserProfile;
-use App\Http\Controllers\Admin\EmergencySignal;
-use App\Http\Controllers\Admin\GetMunicipality;
-use App\Http\Controllers\Superuser\Fish\GetFish;
-use App\Http\Controllers\Superuser\Resource\Lgu;
-use App\Http\Controllers\Superuser\MobileGetProfile;
-use App\Http\Controllers\Superuser\SearchController;
-use App\Http\Controllers\Superuser\Resource\Barangay;
-use App\Http\Controllers\Superuser\FishSpeciesController;
-use App\Http\Controllers\Admin\SearchUserLocationController;
+use App\Http\Controllers\Resource\Lgu;
+use App\Http\Controllers\Resource\Admin;
+use App\Http\Controllers\MonitorController;
+use App\Http\Controllers\Resource\Barangay;
 use App\Http\Controllers\CreateCityController;
-use App\Http\Controllers\Superuser\GetCityController;
-use App\Http\Controllers\Superuser\resource\CatchController;
+use App\Http\Controllers\Resource\UserProfile;
+use App\Http\Controllers\Resource\CatchController;
+use App\Http\Controllers\Resource\EmergencySignal;
+use App\Http\Controllers\Superuser\SearchController;
+use App\Http\Controllers\Resource\FishSpeciesController;
+
 
 Route::get('/dashboard',[Dashboard::class,'index'])->middleware('auth','verified')->name('dashboard');
 
@@ -49,5 +41,12 @@ Route::post('/adminSearch',[SearchController::class,'admin']);
 Route::post('/fishSearch',[SearchController::class,'fish']);
 
 Route::post('/sos',[Sos::class,'sos']);
+
+Route::get('/monitor',[MonitorController::class,'index']);
+Route::get('/monitor/{id}',[MonitorController::class,'subindex']);
+Route::get('monitor/show/{id}',[MonitorController::class,'main']);
+Route::get('/getCatch',[MonitorController::class,'getCatch']);
+
+
 
 ?>

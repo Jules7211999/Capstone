@@ -20,7 +20,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'barangay',
+        'barangay_id',
         'name',
         'username',
         'email',
@@ -32,7 +32,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'phone_number',
         'address',
         'marital_status',
-        'city',
+        'city_id',
         'email_verified_at'
     ];
 
@@ -76,7 +76,12 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(EmergencyCall::class);
     }
 
-    public function Messages(){
-        return $this->hasMany(Message::class);
+    public function city(){
+        return $this->hasOne(city::class,'id','city_id');
     }
+
+    public function barangay(){
+        return $this->hasOne(barang::class,'id','barangay_id');
+    }
+   
 }

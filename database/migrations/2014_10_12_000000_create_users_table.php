@@ -27,8 +27,8 @@ class CreateUsersTable extends Migration
             $table->string('profile_image')->nullable();
             $table->bigInteger('phone_number')->nullable();
             $table->string('address')->nullable();
-            $table->string('barangay')->nullable();
-            $table->string('city')->nullable();
+            $table->foreignId('barangay_id')->nullable()->constrained('barangs');
+            $table->foreignId('city_id')->nullable()->constrained('cities');
             $table->string('gender')->nullable();
             $table->date('birthdate')->nullable();
             $table->string('username')->nullable();
