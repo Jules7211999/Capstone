@@ -34,6 +34,7 @@
     "dependencies": {
         "apexcharts": "^3.30.0",
         "mapbox-gl": "^0.53.1",
+        "vue-apexcharts": "^1.6.2",
         "vue-mapbox": "^0.4.1"
     }
 }

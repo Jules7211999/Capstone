@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Superuser;
+namespace App\Http\Controllers\Search;
 
 use App\Models\User;
 use Illuminate\Http\Request;

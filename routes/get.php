@@ -3,13 +3,13 @@
 use App\Http\Controllers\Get\GetSos;
 use App\Http\Controllers\Get\GetUser;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Fish\GetFish;
 use App\Http\Controllers\Get\GetAdmin;
 use App\Http\Controllers\Get\GetBarangay;
 use App\Http\Controllers\Get\GetLocation;
 use App\Http\Controllers\Get\GetMunicipality;
 use App\Http\Controllers\Get\GetCityController;
-use App\Http\Controllers\Superuser\Fish\GetFish;
-use App\Http\Controllers\Superuser\MobileGetProfile;
+use App\Http\Controllers\MobileGetProfile;
 
 
 

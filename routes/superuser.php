@@ -1,6 +1,6 @@
 <?php
 
-
+use App\Charts\Test;
 use App\Http\Controllers\User\Sos;
 use App\Http\Controllers\Dashboard;
 use Illuminate\Support\Facades\Route;
@@ -10,9 +10,10 @@ use App\Http\Controllers\MonitorController;
 use App\Http\Controllers\Resource\Barangay;
 use App\Http\Controllers\CreateCityController;
 use App\Http\Controllers\Resource\UserProfile;
+use App\Http\Controllers\Chart\ChartController;
+use App\Http\Controllers\Search\SearchController;
 use App\Http\Controllers\Resource\CatchController;
 use App\Http\Controllers\Resource\EmergencySignal;
-use App\Http\Controllers\Superuser\SearchController;
 use App\Http\Controllers\Resource\FishSpeciesController;
 
 
@@ -45,8 +46,9 @@ Route::post('/sos',[Sos::class,'sos']);
 Route::get('/monitor',[MonitorController::class,'index']);
 Route::get('/monitor/{id}',[MonitorController::class,'subindex']);
 Route::get('monitor/show/{id}',[MonitorController::class,'main']);
-Route::get('/getCatch',[MonitorController::class,'getCatch']);
+Route::get('/get/{id}',[MonitorController::class,'get']);
 
-
+Route::get('/chart',[ChartController::class,'all']);
+Route::get('/chart/{fid}/{bid}',[ChartController::class,'individual']);
 
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Superuser\Fish;
+namespace App\Http\Controllers\Fish;
 
 use App\Http\Controllers\Controller;
 use App\Models\fish;

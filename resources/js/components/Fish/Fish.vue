@@ -44,7 +44,7 @@ export default {
                 search : this.query,
             })
             .then(data => this.data = data.data)
-            .catch(error =>console.log(error.errors.message))
+            .catch(error =>console.log(error.errors))
         }
     }
 }

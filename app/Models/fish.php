@@ -18,4 +18,8 @@ class fish extends Model
         'local_name',
         'image'
     ];
+
+    public function catch(){
+        return $this->hasMany(FishCatch::class,'fish_id','id');
+    }
 }
