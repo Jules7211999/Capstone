@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\Chart;
 
-
+use App\Charts\Individual;
 use App\Http\Controllers\Controller;
-
-
+use App\Models\fish;
 use App\Models\Months;
 
 class ChartController extends Controller
@@ -14,11 +13,11 @@ class ChartController extends Controller
     public $fid;
 
 
-    public function individual( $fid,$bid){
+    public function individual( $fid,$bid, Individual $chart){
         $this->bid = $bid;
         $this->fid = $fid;
          
-        $months = array();
+        $months =array();
         $sum = array();
        
 
@@ -28,17 +27,20 @@ class ChartController extends Controller
             $query -> where('fish_id','=',$this->fid);
         }],'kilo')->get();
 
+        $fish = fish::find($fid);
+
+        $fishname = $fish->common_name;
+      
 
        foreach($data as $d){
-          array_push($months,$d->name);
+         array_push($months,$d->name);
        }
-
        foreach($data as $h){
-           array_push($sum, $h->catch_sum_kilo);
+           array_push($sum ,$h->catch_sum_kilo);
        }
         
       
-        return view('Superuser.Charts.individual_fish_catch');
+        return view('Superuser.Monitor.main_monitor',['months' => $months,'sum' => $sum, 'fish' => $fish ,'chart' => $chart->build($months,$sum,$fishname)]);
 
        
         

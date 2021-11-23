@@ -1,7 +1,7 @@
 <template>
         <div class=" ml-5 pl-4 border-right col-xl-2 col-lg-3 col-md-3">                   
                     <div class="font-weight-bold mt-5 ml-4 " >
-                        <div class="mb-5">
+                        <div class="mb-5" v-if="authrole == 'SuperUser'">
                             <a href="/dashboard" class="text-secondary">
                                 <img src="/img/Dash.svg" alt="" class ="icon pr-3">
                                     <span v-if="shownav">

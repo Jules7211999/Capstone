@@ -9,21 +9,7 @@
 </head>
 <body class="h-screen bg-gray-100">
 
-<div class="container px-4 mx-auto">
+    yield('content')
 
-    <div class="p-6 m-20 bg-white rounded shadow">
-        {!! $chart->container() !!}
-    </div>
-    <div class="p-6 m-20 bg-white rounded shadow">
-        {!! $chartie->container() !!}
-    </div>
-
-</div>
-
-<script src="{{ $chart->cdn() }}"></script>
-<script src="{{ $chartie->cdn() }}"></script>
-
-{{ $chart->script() }}
-{{ $chartie->script() }}
 </body>
 </html>

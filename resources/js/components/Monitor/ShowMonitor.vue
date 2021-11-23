@@ -10,7 +10,7 @@
         </div>
         <div class="d-flex flex-wrap w-100 h-100 ">
             <div v-for="d in data" class="fish-container  border mr-2 rounded pl-5 pr-5 pt-2 text-center   pb-2 shadow">
-                <a :href="'/chart/'+ d.id+ '/'+id" class="text-secondary font-weight-bold">
+                <a :href="'/chart/'+ d.id+ '/'+id" class="text-secondary font-weight-bold" target="_blank">
                     <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ d.image" alt="" class="image">
                     <div class="w-100 pt-5 d-flex align-items-center justify-content-center">{{d.common_name}}</div>
                     <div class="w-100 pt-2 d-flex align-items-center justify-content-center">{{d.local_name}}</div>

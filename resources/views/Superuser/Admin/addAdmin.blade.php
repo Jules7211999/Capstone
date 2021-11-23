@@ -80,32 +80,6 @@
                    <div>
                        <dropdown-component/>
                     </div>
-                   <!-- <div class="row">
-                        <div class="col">
-                            <div>
-                                <label class="font-weight-bold mb-3 mt-2" for="city">City / Municipality</label>
-                            </div>
-                            <div>
-                                <select class="form-control-lg w-100 border font-weight-bold bg-transparent" name="city">
-                                @foreach($municipality as $m)
-                                        <option value="{{$m->name}}">{{$m->name}}</option>
-                                   @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div>
-                                <label class="font-weight-bold mb-3 mt-2" for="barangay">Barangay</label>
-                            </div>
-                            <div>
-                                <select class="form-control-lg w-100 border font-weight-bold bg-transparent" name="barangay">
-                                @foreach($barangay as $b)
-                                        <option value="{{$b->name}}">{{$b->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="row">
                         <div class="col">
                             <div>

@@ -43,6 +43,7 @@ Vue.component('catch-show-component',require('./components/Catch/CatchShow.vue')
 Vue.component('monitor-component',require('./components/Monitor/Monitor.vue').default);
 Vue.component('sub-monitor-component',require('./components/Monitor/SubMonitor.vue').default);
 Vue.component('show-monitor-component',require('./components/Monitor/ShowMonitor.vue').default);
+
 //component only
 Vue.component('profile-image-component',require('./components/Components/ProfileImage.vue').default);
 Vue.component('fish-image-component',require('./components/Components/FishImage.vue').default);

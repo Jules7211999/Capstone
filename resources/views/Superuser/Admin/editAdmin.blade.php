@@ -78,33 +78,8 @@
                             @enderror
                        </div>
                    </div>
-                   <div class="row">
-                        <div class="col">
-                            <div>
-                                <label class="font-weight-bold mb-3 mt-2" for="city">City</label>
-                            </div>
-                            <div>
-                                <select class="form-control-lg w-100 border font-weight-bold bg-transparent" name="city">
-                                    <option class="font-weight-bold" value="{{$data->city->id}}">{{$data->city->name}}</option>
-                                    @foreach($municipality as $m)
-                                        <option class="font-weight-bold" value="{{$m->name}}">{{$m->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div>
-                                <label class="font-weight-bold mb-3 mt-2" for="barangay">Barangay</label>
-                            </div>
-                            <div>
-                                <select class="form-control-lg w-100 border font-weight-bold bg-transparent" name="barangay">
-                                    <option class="font-weight-bold" value="{{$data->barangay->id}}">{{$data->barangay->name}}</option>
-                                    @foreach($barangay as $b)
-                                        <option class="font-weight-bold" value="{{$b->name}}">{{$b->name}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
+                   <div>
+                       <dropdown-component/>
                     </div>
                     <div class="row">
                         <div class="col">

@@ -31,5 +31,6 @@ require __DIR__.'/get.php';
 //test route
 
 Route::get('/test',function(){
-    return view('test');
+    $data = [34,34,34];
+    return $data;
 });

@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\barang;
 use App\Models\city;
 use App\Models\Coordinates;
 use App\Models\EmergencyCall;
 use App\Models\fish;
+use App\Models\Months;
 use Illuminate\Foundation\Auth\User;
 
 class Dashboard extends Controller
@@ -29,4 +29,6 @@ class Dashboard extends Controller
 
         return view('Superuser.dashboard',['user' => $user, 'fisherman' => $fisherman, 'admin' => $admin,'sos' => $sos,'sosd' => $sosd, 'sosp' => $sosp, 'coord' => $coord,'barangay' => $barangay,'city'=>$city]);
     }
+
+    
 }

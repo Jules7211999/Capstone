@@ -16,10 +16,17 @@ class Coordinates extends Model
         'user_id',
         'datetimezone',
         'month_name',
-        'day_of_week'
+        'day_of_week',
+        'month_id'
     ];
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public function months(){
+        return $this->belongsTo(Months::class);
+    }
+
+
     
 }

@@ -22,6 +22,7 @@ class CreateCoordinatesTable extends Migration
             $table->string('longitude');
             $table->dateTimeTz('datetimezone');
             $table->string('month_name');
+            $table->string('month_id');
             $table->string('day_of_week');
         });
     }

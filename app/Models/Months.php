@@ -13,4 +13,7 @@ class Months extends Model
     public function catch(){
         return $this->hasMany(FishCatch::class,'month','id');
     }
+    public function coordinates(){
+        return $this->hasMany(Coordinates::class,'month_id','id');
+    }
 }
