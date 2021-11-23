@@ -41,6 +41,7 @@ class CatchController extends Controller
         
         $date = Carbon::now();
         $year = $date-> format('Y');
+        $month = $date->fomat('m');
 
         $request->validate([
             'weight' => 'required|numeric'
@@ -48,7 +49,7 @@ class CatchController extends Controller
 
         FishCatch::create([
             'year' => $year,
-            'month' => $date->month,
+            'month' => $month,
             'fish_id' => $request->fish_id,
             'barangay_id' => auth()->user()->barangay_id,
             'kilo' => $request->weight,

@@ -23,7 +23,9 @@ class ChartController extends Controller
 
         $data = Months::has('catch')->with(['catch'=> function ($query){
             $query->where('barangay_id','=',$this->bid)->where('fish_id','=',$this->fid);
-        }])->withSum('catch','kilo')->get();
+        }])->withSum(['catch' => function ($query){
+            $query -> where('fish_id','=',$this->fid);
+        }],'kilos')->get();
 
         $fish = fish::find($fid);
 

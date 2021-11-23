@@ -19,7 +19,7 @@ class CreateFishCatchesTable extends Migration
             $table->foreignId('barangay_id')->constrained('barangs')->onDelete('cascade');
             $table->unsignedBigInteger('kilos');
             $table->foreignId('fish_id')->constrained('fish')->onDelete('cascade');
-            $table->string('month');
+            $table->foreignId('month_id')->constrained('months')->onDelete('cascade');
             $table->string('year');
         });
     }
