@@ -17,7 +17,7 @@ class CreateFishCatchesTable extends Migration
             $table->id();
             $table->timestamps();
             $table->foreignId('barangay_id')->constrained('barangs')->onDelete('cascade');
-            $table->bigInteger('kilo');
+            $table->unsignedBigInteger('kilos');
             $table->foreignId('fish_id')->constrained('fish')->onDelete('cascade');
             $table->string('month');
             $table->string('year');
