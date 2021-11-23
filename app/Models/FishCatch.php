@@ -24,6 +24,8 @@ class FishCatch extends Model
         return $this->hasOne(fish::class,'id','fish_id');
     }
 
+    
+
 
   
 

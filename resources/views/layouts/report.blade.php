@@ -9,7 +9,7 @@
 </head>
 <body class="h-screen bg-gray-100">
 
-    yield('content')
+    @yield('content')
 
 </body>
 </html>
