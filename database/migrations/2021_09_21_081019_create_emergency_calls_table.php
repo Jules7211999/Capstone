@@ -25,8 +25,9 @@ class CreateEmergencyCallsTable extends Migration
             $table->string('status');
             $table->softDeletes();
             $table->string('type');
-            $table->dateTimeTz('dtz_accepted');
-            $table->dateTimeTz('dtz_finished');
+            $table->dateTimeTz('dtz_accepted')->nullable();
+            $table->dateTimeTz('dtz_finished')->nullable();
+            $table->string('hello');
         });
     }
 
