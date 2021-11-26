@@ -7,15 +7,13 @@ use App\Http\Controllers\Fish\GetFish;
 use App\Http\Controllers\Get\GetAdmin;
 use App\Http\Controllers\Get\GetBarangay;
 use App\Http\Controllers\Get\GetLocation;
+
 use App\Http\Controllers\Get\GetMunicipality;
 use App\Http\Controllers\Get\GetCityController;
-use App\Http\Controllers\MobileGetProfile;
-
-
-
+use App\Http\Controllers\MobileProfile;
 
 Route::get('/getFish',[GetFish::class,'index']);
-Route::get('/getMobileProfile/{id}',[MobileGetProfile::class,'index']);
+Route::get('MobileProfile/{id}',[MobileProfile::class,'index']);
 Route::get('/getBarangay',[GetBarangay::class,'index']);
 Route::get('/getMonitorBarangay/{id}',[GetBarangay::class,'monitor']);
 Route::get('/getMunicipality',[GetMunicipality::class,'index']);

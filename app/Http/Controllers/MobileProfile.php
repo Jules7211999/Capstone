@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-class MobileGetProfile extends Controller
+class MobileProfile extends Controller
 {
     public function index($id){
         $user = User::find($id);
