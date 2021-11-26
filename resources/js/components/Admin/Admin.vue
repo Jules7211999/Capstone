@@ -8,7 +8,7 @@
                 </div>
             </a>
             <div class="w-50 text-right pr-5">
-                <form @submit.prevent="search()">
+                <form @keypress="search()">
                     <input type="text" v-model="query" placeholder="Search" class="border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary pr-5">
                 </form>  
                 

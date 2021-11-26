@@ -18,6 +18,8 @@ class UserProfile extends Controller
      */
     public function index()
     {
+        history("Visited Fisherman Page");
+
         return view('Superuser.User.user');
     }
 
@@ -28,6 +30,8 @@ class UserProfile extends Controller
      */
     public function create()
     {
+        history("Visited Add Fisherman Page");
+
         return view('Superuser.User.add_user');
     }
 
@@ -77,6 +81,7 @@ class UserProfile extends Controller
             $filepath = $name;
             Storage::disk('s3')->put($filepath,file_get_contents($file));
 
+            history("Added Fisherman"." ".$request->name);
         return redirect()->back()->with('message','User Registered');
 
        
@@ -89,11 +94,15 @@ class UserProfile extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
+
     {
-        
-        $model = User::find($id);
+       
+
+        $model = User::where('id','=',$id)->with(['city','barangay'])->get();
 
         $data = $model->toJson();
+
+        history("Added Fisherman"." ".$model[0]->name);
 
         return view("Superuser.User.user_show") -> with('data', $data);
     
@@ -107,9 +116,13 @@ class UserProfile extends Controller
      */
     public function edit($id)
     {
+        
         $model= User::find($id);
         $barangay = barang::all();
         $municipality = city::all();
+      
+        history("Trying to Edit the Profile of ". " ". $model->name);
+
         return view('Superuser.User.edit_user',['data'=> $model,'barangay' => $barangay,'municipality' => $municipality]);
     }
 
@@ -172,6 +185,8 @@ class UserProfile extends Controller
             Storage::disk('s3')->put($filepath,file_get_contents($file));
         }
 
+        history("Updated the Profile of ". " ". $request->name);
+        
         return redirect()->back()->with('message','User Updated');
     }
 

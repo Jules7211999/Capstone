@@ -16,13 +16,21 @@
 
 
         <!-- Scripts -->
-        <!-- <script src="{{ secure_asset('js/app.js') }}" defer></script> -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ secure_asset('js/app.js') }}" defer></script>
+        <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
     </head>
     <style>
              #logo{
             width: 13rem;
         }
+        input{
+            border: 1px solid #3AADF6 ;
+        }
+        input:focus{
+            border: 0;
+            outline: 2px solid #0337aa;
+        }
+    
         </style>
     <body>
         <div id="app" class="container-fluid vh-100 p-5">

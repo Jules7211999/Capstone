@@ -10,11 +10,11 @@ use App\Models\city;
 class GetBarangay extends Controller
 {
     public function index(){
-       return barang::where('status','=','Active')->with('city')->get(); 
+       return barang::where('status','=','Active')->groupBy('name')->with('city')->get(); 
     }
     
     public function inactive(){
-        return barang::where('status','=','Inactive')->with('city')->get();
+        return barang::where('status','=','Inactive')->groupBy('name')->with('city')->get();
     }
 
     public function dropdown($id){

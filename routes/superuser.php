@@ -48,7 +48,7 @@ Route::get('/monitor/{id}',[MonitorController::class,'subindex']);
 Route::get('monitor/show/{id}',[MonitorController::class,'main']);
 Route::get('/get/{id}',[MonitorController::class,'get']);
 
-Route::get('/chart',[ChartController::class,'all']);
+Route::get('/report',[ChartController::class,'all']);
 Route::get('/chart/{fid}/{bid}',[ChartController::class,'individual']);
 
 

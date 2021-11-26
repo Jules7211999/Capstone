@@ -16,34 +16,28 @@
 
             <!-- Name -->
             <div class="text-left text-dark">
-                <label class="font-weight-bold" for="name">Name</label>
-
-                <input id="name" class="form-control-lg w-100 border border-secondary bg-light" type="text" name="name" value="{{old('name')}}" required autofocus />
+                <input id="name" class="form-control-lg w-100   bg-light" type="text" placeholder="Name" name="name" value="{{old('name')}}" required autofocus />
             </div>
 
             <!-- Email Address -->
             <div class="text-left text-dark mt-1">
-               <label class="font-weight-bold" for="emai">Email</label>
-
-                <input id="email" class="form-control-lg w-100 border border-secondary bg-light" type="email" name="email" value="{{old('email')}}" required />
+                <input id="email" class="form-control-lg w-100  bg-light" placeholder = "Email" type="email" name="email" value="{{old('email')}}" required />
             </div>
 
             <!-- Password -->
             <div class="text-left text-dark mt-1">
-               <label class="font-weight-bold" for="password">Password</label>
-
-                <input id="password" class="form-control-lg w-100 border border-secondary bg-light"
+                <input id="password" class="form-control-lg w-100  bg-light"
                                 type="password"
                                 name="password"
+                                placeholder="Password"
                                 required autocomplete="new-password" />
             </div>
 
             <!-- Confirm Password -->
             <div class="text-left text-dark mt-1">
-                <label class="font-weight-bold" for="password_confirmation">Confirm Password</label>
-
-                <input id="password_confirmation" class="form-control-lg w-100 border border-secondary bg-light"
+                <input id="password_confirmation" class="form-control-lg w-100  bg-light"
                                 type="password"
+                                placeholder="Confirm Password"
                                 name="password_confirmation" required />
             </div>
 

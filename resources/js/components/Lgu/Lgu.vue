@@ -35,7 +35,7 @@
                             <input  type="text"  class="form-control-lg w-100 border bg-transparent font-weight-bold"  v-model="nameB" name="name" placeholder="Name" autofocus />
                         </div>
                         <div class="col-5">
-                            <select v-model="city" class="form-control-lg w-100 border bg-transparent font-weight-bold">
+                            <select v-model="city"  class="form-control-lg w-100 border bg-transparent font-weight-bold" >
                                 <option  class="font-weight-bold" v-for="d in municipality" :value="d.id">{{d.name}}</option>
                             </select>
                         </div>
@@ -124,7 +124,9 @@ export default {
             })
             .then(data => console.log(data))
             .catch(error => console.log(error))
-            location.reload();
+            this.nameM = ""
+            this.postal = ""
+            this.getMunicipality();
             
         },
         submitB(){
@@ -134,7 +136,9 @@ export default {
             })
             .then(data => console.log(data))
             .catch(error => console.log(error))
-            location.reload();
+            this.nameB = ""
+            this.city = ""
+            this.getBarangay();
         },
         getBarangay(){
             axios.get('/getBarangay')
