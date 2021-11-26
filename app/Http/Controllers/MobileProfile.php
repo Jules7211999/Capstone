@@ -19,8 +19,8 @@ class MobileProfile extends Controller
             'gender' => $user->gender,
             'birthdate' => $user->birthdate,
             'address' => $user->address,
-            'city' => $user->city,
-            'barangay' => $user->barangay 
+            'city' => $user->city->name
+            'barangay' => $user->barangay->name 
 
         ]);
     }
