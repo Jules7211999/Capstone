@@ -27,7 +27,7 @@ class CreateEmergencyCallsTable extends Migration
             $table->string('type');
             $table->dateTimeTz('dtz_accepted')->nullable();
             $table->dateTimeTz('dtz_finished')->nullable();
-            $table->string('hello');
+            
         });
     }
 
