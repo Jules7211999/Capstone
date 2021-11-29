@@ -1,7 +1,6 @@
 <template>
 <div class="w-100 h-100 row d-flex" >
-
-  <!-- <div class="col">
+  <div class="col">
     <h4 class="font-weight-bold text-secondary">SOS</h4>
     <MglMap
     :accessToken="accessToken"
@@ -11,7 +10,7 @@
     >
      <div v-for="d in sosData.data">
           <div v-for="x in d.emergency_call">
-            <div v-if="barangay_id == d.barangay_id">
+           
               <MglMarker :coordinates="[x.longitude,x.latitude]" :color="markerColor">
               <MglPopup>
                   <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
@@ -30,26 +29,25 @@
                   </div>
               </MglPopup>
                   </MglMarker>
-            </div>
+            
           </div>
      </div>
      </MglMap>
   </div>
--->
+
     <div class="col">
       <h4 class="font-weight-bold text-secondary">Location</h4>
-    <!-- <MglMap
+    <MglMap
     :accessToken="accessToken"
     :mapStyle="mapStyle"
     :zoom ="zoom"
     :center="center"
-    > -->
+    >
     
      <div v-for="d in datum.data" >
       <div v-for="x in d.coordinates">
-         
-           {{x.longitude}}{{x.latitude}}
-        <!-- <MglMarker :coordinates="[x.longitude,x.latitude]" >
+        
+        <MglMarker :coordinates="[x.longitude,x.latitude]" >
             <MglPopup>
                 <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
                   <div class="text-center">
@@ -64,14 +62,14 @@
                   </div>
                 </div>
             </MglPopup>
-          </MglMarker> -->
-          
+          </MglMarker>
+         
       </div>
      
     </div>  
-<!--     
-     </MglMap> -->
-  </div>  
+    
+     </MglMap>
+  </div> 
   
 </div> 
   
