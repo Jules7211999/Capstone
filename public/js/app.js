@@ -3536,6 +3536,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['barangay', 'role'],
   data: function data() {
@@ -53405,6 +53409,18 @@ var render = function() {
                   },
                   [
                     _c("div", { staticClass: "col" }, [
+                      _vm._v("\\"),
+                      _c(
+                        "a",
+                        {
+                          staticClass: "text-danger",
+                          attrs: { href: "/emergency/" + d.id }
+                        },
+                        [_vm._v(_vm._s(d.id))]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col" }, [
                       _c(
                         "a",
                         {
@@ -53465,6 +53481,12 @@ var render = function() {
                   [
                     _c("div", { staticClass: "col" }, [
                       _c("a", { attrs: { href: "/emergency/" + d.id } }, [
+                        _vm._v(_vm._s(d.id))
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col" }, [
+                      _c("a", { attrs: { href: "/emergency/" + d.id } }, [
                         _vm._v(_vm._s(d.user.name))
                       ])
                     ]),
@@ -53521,6 +53543,17 @@ var render = function() {
                           staticClass: "text-success",
                           attrs: { href: "/emergency/" + d.id }
                         },
+                        [_vm._v(_vm._s(d.id))]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "text-success",
+                          attrs: { href: "/emergency/" + d.id }
+                        },
                         [_vm._v(_vm._s(d.user.name))]
                       )
                     ]),
@@ -53558,6 +53591,8 @@ var staticRenderFns = [
           " p-4 row w-100 d-flex justify-content-center font-weight-bold text-secondary ml-1 "
       },
       [
+        _c("div", { staticClass: "col" }, [_vm._v("SOS ID")]),
+        _vm._v(" "),
         _c("div", { staticClass: "col" }, [_vm._v("Name")]),
         _vm._v(" "),
         _c("div", { staticClass: "col" }, [_vm._v("Type")]),
