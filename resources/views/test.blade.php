@@ -16,6 +16,10 @@
     
     <input type="submit" value="submit">
 </form>
-</form>
+    <form action="/addMonths" method="post">
+        @csrf
+        <input type="submit">
+    </form>
+
 </body>
 </html>

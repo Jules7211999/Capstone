@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Months extends Model
 {
     use HasFactory;
-
+    protected $fillable =[
+        'name'
+    ];
 
     public function catch(){
         return $this->hasMany(FishCatch::class,'month_id','id');

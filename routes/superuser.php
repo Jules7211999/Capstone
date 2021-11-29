@@ -16,7 +16,7 @@ use App\Http\Controllers\Search\SearchController;
 use App\Http\Controllers\Resource\CatchController;
 use App\Http\Controllers\Resource\EmergencySignal;
 use App\Http\Controllers\Resource\FishSpeciesController;
-
+use App\Models\Months;
 
 Route::get('/dashboard',[Dashboard::class,'index'])->middleware('auth','verified')->name('dashboard');
 
@@ -53,6 +53,16 @@ Route::get('/get/{id}',[MonitorController::class,'get']);
 Route::get('/report',[ChartController::class,'all']);
 Route::get('/chart/{fid}/{bid}',[ChartController::class,'individual']);
 Route::get('/history',[HistoryLogController::class,'index']);
+
+Route::post('/addMonths',function(){
+    $month = ["January","Febuary","March","April", "May", "June", "July", "August", "September","November","December"];
+    foreach($month as $m){
+        Months::create([
+            'name' => $m
+        ]);
+    }
+    
+})
 
 
 ?>
