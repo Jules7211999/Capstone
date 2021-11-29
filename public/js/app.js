@@ -53412,18 +53412,6 @@ var render = function() {
                   },
                   [
                     _c("div", { staticClass: "col" }, [
-                      _vm._v("\\"),
-                      _c(
-                        "a",
-                        {
-                          staticClass: "text-danger",
-                          attrs: { href: "/emergency/" + d.id }
-                        },
-                        [_vm._v(_vm._s(d.id))]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col" }, [
                       _c(
                         "a",
                         {
@@ -53484,12 +53472,6 @@ var render = function() {
                   [
                     _c("div", { staticClass: "col" }, [
                       _c("a", { attrs: { href: "/emergency/" + d.id } }, [
-                        _vm._v(_vm._s(d.id))
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col" }, [
-                      _c("a", { attrs: { href: "/emergency/" + d.id } }, [
                         _vm._v(_vm._s(d.user.name))
                       ])
                     ]),
@@ -53539,17 +53521,6 @@ var render = function() {
                       " p-4 row w-100 rounded font-weight-bold text-success shadow-sm border ml-1 "
                   },
                   [
-                    _c("div", { staticClass: "col" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "text-success",
-                          attrs: { href: "/emergency/" + d.id }
-                        },
-                        [_vm._v(_vm._s(d.id))]
-                      )
-                    ]),
-                    _vm._v(" "),
                     _c("div", { staticClass: "col" }, [
                       _c(
                         "a",
