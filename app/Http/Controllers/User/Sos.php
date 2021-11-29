@@ -34,4 +34,8 @@ class Sos extends Controller
         return $id;
     
  }
+
+ public function sosRequest($id){
+    return $id;
+ }
 }

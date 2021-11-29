@@ -24,6 +24,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/authenticate',[AuthenticateMobileApp::class,'index']);
 Route::post('/track',[TrackLocationController::class,'store']);
 Route::post('/sos',[Sos::class,'sos']);
+Route::get('/sosRequest',[Sos::class,'sosRequest']);
+
 
 // test route
 Route::post('/test',function(Request $request){
