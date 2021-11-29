@@ -13,11 +13,9 @@ class Individual
         $this->chart = $chart;
     }
 
-    public function build($months, $sum, $fishname): \ArielMejiaDev\LarapexCharts\BarChart
+    public function build($months, $sum, ): \ArielMejiaDev\LarapexCharts\BarChart
     {
         return $this->chart->barChart()
-            ->setTitle($fishname)
-            ->setSubtitle("Kilograms by Month")
             ->addData('Kilograms Per Month',$sum)
             ->setXAxis($months)
             ->setGrid()

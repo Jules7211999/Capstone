@@ -1,14 +1,16 @@
 @extends('layouts.report')
 
 @section('content')
-<div class="container px-4 mx-auto">
-     <div class="p-6 m-20 bg-white">
-    {{$fish->common_name}}
+<div class="container w-100 h-100">
+     <div class="row w-100 h-50">
+        <div class="col-12">
+        <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'.{{$fish->image}}" alt="" class="w-100">
+        </div>
      </div>
 
-    <div class="p-6 m-20 bg-white ">
+    
         {!! $chart->container() !!}
-    </div>
+    
 
 </div>
 

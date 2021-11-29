@@ -15,6 +15,7 @@ class Lgu extends Controller
      */
     public function index()
     {
+        history("Visited the LGU page");
         return view('Superuser.Lgu.lgu');
     }
 

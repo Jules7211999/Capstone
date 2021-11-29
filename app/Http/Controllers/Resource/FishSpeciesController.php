@@ -16,6 +16,7 @@ class FishSpeciesController extends Controller
      */
     public function index()
     {
+        history("Visited Fish Page");
         return view('Superuser.Fish.fish');
     }
 
@@ -25,7 +26,8 @@ class FishSpeciesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {   
+        history("Visited Create Fish page");
         return view('Superuser.Fish.add_fish');
     }
 
@@ -52,6 +54,7 @@ class FishSpeciesController extends Controller
         $name = time().$file->getClientOriginalName();
 
         fish::create([
+            'id', rand(),
             'phylum' => $request->phylum,
             'subphylum' => $request->subphylum,
             'superclass' => $request->superclass,
@@ -65,6 +68,7 @@ class FishSpeciesController extends Controller
         $filepath = $name;
         Storage::disk('s3')->put($filepath,file_get_contents($file));
 
+        history("Added the Fish ". $request->common_name);
         return back()->with('message','Fish added');
     }
 
@@ -80,6 +84,7 @@ class FishSpeciesController extends Controller
 
         $data = $model->toJson();
 
+        history("Viewed the Fish ". $model->common_name);
         return view("Superuser.Fish.fish_show") -> with('data', $data);
     }
 

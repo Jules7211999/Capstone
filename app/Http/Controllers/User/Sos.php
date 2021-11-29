@@ -17,6 +17,7 @@ class Sos extends Controller
     public function sos(Request $request){
         $dtm = Carbon::now(); 
         EmergencyCall::create([
+            'id' => rand(),
             "latitude" => $request->latitude,
             "longitude" => $request->longitude,
             "user_id" =>  $request->user,
@@ -28,6 +29,8 @@ class Sos extends Controller
         ]);
         
         event(new SOSevent());
+
+        return 'id';
     
  }
 }

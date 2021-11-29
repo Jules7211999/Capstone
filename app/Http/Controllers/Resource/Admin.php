@@ -20,6 +20,7 @@ class Admin extends Controller
      */
     public function index()
     {
+        history("Visited the Admin Page");
         return view('Superuser.Admin.admin');
     }
 
@@ -32,7 +33,7 @@ class Admin extends Controller
     {
         $barangay = barang::where('status','=','Active')->get();
         $municipality = city::where('status','=','Active')->get();
-
+        history("Visited the Create Admin Page");
         return view('Superuser.Admin.addAdmin',['municipality'=> $municipality, 'barangay' => $barangay]);
     }
 
@@ -81,6 +82,7 @@ class Admin extends Controller
             $filepath = $name;
             Storage::disk('s3')->put($filepath,file_get_contents($file));
 
+        history("Created Admin ". $request->name);
         return redirect()->back()->with('message','User Registered');
     }
 
@@ -93,9 +95,8 @@ class Admin extends Controller
     public function show($id)
     {
         $model = User::where('id','=',$id)->with(['city','barangay'])->get();
-
-         $data = $model->toJson();
-
+        $data = $model->toJson();
+        history("Visited the Profile of ". $model[0]->name);
         return view("Superuser.Admin.adminShow") -> with('data', $data);
     }
 
@@ -111,6 +112,7 @@ class Admin extends Controller
         $model= User::find($id);
         $barangay = barang::all();
         $municipality = city::all();
+        history("Visited Edit Admin Page");
         return view('Superuser.Admin.editAdmin',['data'=> $model,'barangay' => $barangay,'municipality' => $municipality]);
     }
 
@@ -163,6 +165,7 @@ class Admin extends Controller
             $name = time().$file->getClientOriginalName();
 
             User::find($id)->update([
+                'id' =>rand(),
                 'name' => $request->name,
                 'birthdate' => $request->birthdate,
                 'phone' => $request->phone_number,
@@ -182,7 +185,7 @@ class Admin extends Controller
             $filepath = $name;
             Storage::disk('s3')->put($filepath,file_get_contents($file));
         }
-       
+       history("Updated the Admin Profile of ". $request->name);
         return redirect()->back()->with('message','User Updated');
     }
 

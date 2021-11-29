@@ -43,6 +43,7 @@ class Barangay extends Controller
             'city_id' => $request->city
         ]);
 
+        history("Added the ". $request->name. " ". "Barangay");
     }
 
     /**
@@ -79,6 +80,10 @@ class Barangay extends Controller
         barang::find($id)->update([
             'status' => $request->status
         ]);
+
+        $barangay = barang::find($id);
+
+        history("Change Status of ". $barangay->name);
     }
 
     /**

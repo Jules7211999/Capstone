@@ -16,17 +16,17 @@
 
             <!-- Name -->
             <div class="text-left text-dark">
-                <input id="name" class="form-control-lg w-100   bg-light" type="text" placeholder="Name" name="name" value="{{old('name')}}" required autofocus />
+                <input id="name" class="form-control-lg w-100  mb-2 bg-light" type="text" placeholder="Name" name="name" value="{{old('name')}}" required autofocus />
             </div>
 
             <!-- Email Address -->
             <div class="text-left text-dark mt-1">
-                <input id="email" class="form-control-lg w-100  bg-light" placeholder = "Email" type="email" name="email" value="{{old('email')}}" required />
+                <input id="email" class="form-control-lg w-100 mb-2 bg-light" placeholder = "Email" type="email" name="email" value="{{old('email')}}" required />
             </div>
 
             <!-- Password -->
             <div class="text-left text-dark mt-1">
-                <input id="password" class="form-control-lg w-100  bg-light"
+                <input id="password" class="form-control-lg w-100 mb-2 bg-light"
                                 type="password"
                                 name="password"
                                 placeholder="Password"
@@ -35,7 +35,7 @@
 
             <!-- Confirm Password -->
             <div class="text-left text-dark mt-1">
-                <input id="password_confirmation" class="form-control-lg w-100  bg-light"
+                <input id="password_confirmation" class="form-control-lg w-100 mb-2 bg-light"
                                 type="password"
                                 placeholder="Confirm Password"
                                 name="password_confirmation" required />

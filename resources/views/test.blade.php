@@ -11,6 +11,7 @@
 <form action="/catch" method="post">
     @csrf
     <input type="text" name="weight">
+    
     <input type="submit" value="submit">
 </form>
 </form>

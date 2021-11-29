@@ -16,4 +16,8 @@ class Months extends Model
     public function coordinates(){
         return $this->hasMany(Coordinates::class,'month_id','id');
     }
+
+    public function history(){
+        return  $this->hasMany(HistoryLog::class,'month_name','name');
+    }
 }

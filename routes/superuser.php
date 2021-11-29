@@ -11,6 +11,7 @@ use App\Http\Controllers\Resource\Barangay;
 use App\Http\Controllers\CreateCityController;
 use App\Http\Controllers\Resource\UserProfile;
 use App\Http\Controllers\Chart\ChartController;
+use App\Http\Controllers\HistoryLogController;
 use App\Http\Controllers\Search\SearchController;
 use App\Http\Controllers\Resource\CatchController;
 use App\Http\Controllers\Resource\EmergencySignal;
@@ -21,6 +22,7 @@ Route::get('/dashboard',[Dashboard::class,'index'])->middleware('auth','verified
 
 
 Route::get('/map',function(){
+    history("Visited Maps");
     return view('Superuser.Map.map');
 });
 
@@ -50,6 +52,7 @@ Route::get('/get/{id}',[MonitorController::class,'get']);
 
 Route::get('/report',[ChartController::class,'all']);
 Route::get('/chart/{fid}/{bid}',[ChartController::class,'individual']);
+Route::get('/history',[HistoryLogController::class,'index']);
 
 
 ?>

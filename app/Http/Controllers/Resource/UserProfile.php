@@ -62,6 +62,7 @@ class UserProfile extends Controller
         $name = time().$file->getClientOriginalName();
 
          User::create([
+             'id'=> rand(),
             'name' => $request->name,
             'birthdate' => $request->birthdate,
             'phone' => $request->phone_number,

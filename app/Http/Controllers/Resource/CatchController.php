@@ -17,6 +17,7 @@ class CatchController extends Controller
      */
     public function index()
     {
+        history("Visited Monitor Page");
         return view('Superuser.Catch.catch');
     }
 
@@ -41,20 +42,23 @@ class CatchController extends Controller
         
         $date = Carbon::now();
         $year = $date-> format('Y');
-        $month = $date->fomat('m');
+        $month = $date->format('m');
 
+       
         $request->validate([
             'weight' => 'required|numeric'
         ]);
 
         FishCatch::create([
             'year' => $year,
-            'month' => $month,
-            'fish_id' => $request->fish_id,
+            'month_id' => $month,
+            'fish_id' => 1,
             'barangay_id' => auth()->user()->barangay_id,
-            'kilo' => $request->weight,
+            'kilos' => $request->weight,
 
         ]);
+
+        return "Success";
         
     }
 

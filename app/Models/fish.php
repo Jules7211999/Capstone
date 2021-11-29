@@ -10,6 +10,7 @@ class fish extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'phylum',
         'subphylum',
         'superclass',
@@ -18,6 +19,8 @@ class fish extends Model
         'local_name',
         'image'
     ];
+
+    public $incrementing = false;
 
     public function catch(){
         return $this->hasMany(FishCatch::class,'fish_id','id');

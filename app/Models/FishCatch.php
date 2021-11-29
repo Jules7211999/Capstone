@@ -11,9 +11,9 @@ class FishCatch extends Model
 
     protected $fillable= [
         'fish_id',
-        'kilo',
+        'kilos',
         'barangay_id',
-        'month',
+        'month_id',
         'year',
     ];
 

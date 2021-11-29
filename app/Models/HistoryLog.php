@@ -16,4 +16,8 @@ class HistoryLog extends Model
         'user_id',
         'activity'
     ];
+
+    public function user(){
+        return $this->hasOne(User::class,'id','user_id');
+    }
 }

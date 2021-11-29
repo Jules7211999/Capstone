@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{secure_asset('css/app.css')}}">
     
 </head>
-<body class="container">
+<body class="container vh-100 w-100">
 
     @yield('content')
 

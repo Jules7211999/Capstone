@@ -18,8 +18,8 @@
                         <div class="d-flex pb-5"><span class="pr-2">Latitude:</span>{{eData.latitude}}</div>
                         <div class="d-flex pb-5"><span class="pr-2">Longitude:</span>{{eData.longitude}}</div>
                         <div class="d-flex pb-5"><span class="pr-2">Date and Time:</span>{{eData.datetimezone}}</div>
-                        <div class="d-flex pb-5"><span class="pr-2">Accepted:</span>{{eData.datetimezone}}</div>
-                        <div class="d-flex pb-5"><span class="pr-2">Finished:</span>{{eData.datetimezone}}</div>
+                        <div class="d-flex pb-5"><span class="pr-2">Accepted:</span>{{eData.dtz_accepted}}</div>
+                        <div class="d-flex pb-5"><span class="pr-2">Finished:</span>{{eData.dtz_finished}}</div>
                         <div class="d-flex pb-5"><span class="pr-2">Month:</span>{{eData.month_name}}</div>
                         <div class="d-flex pb-5"><span class="pr-2">Day of the Week:</span>{{eData.day_of_week}}</div>
                         <div class="d-flex pb-5"><span class="pr-2">Type:</span>{{eData.type}}</div>

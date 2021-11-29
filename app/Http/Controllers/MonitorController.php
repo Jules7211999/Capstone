@@ -15,9 +15,11 @@ class MonitorController extends Controller
   public $id;
 
     public function index(){
+      history("Visited Monitor Page");
       return view('Superuser.Monitor.index');
     }
     public function subindex($id){
+
       return view('Superuser.Monitor.subindex',['id'=>$id]);
       
     }

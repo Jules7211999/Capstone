@@ -37,6 +37,7 @@
                     <div class="row justify-content-center mb-3">
                         <div class="col-xl-4 col-md-4 text-center pt-5">
                             <img id="logo" src="{{asset('img/logo.png')}}" alt="">
+                            <p class="mt-2 font-weight-bold text-secondary">EPASC</p>
                         </div>
                     </div>
                     <div class="row justify-content-center">

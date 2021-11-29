@@ -12,6 +12,7 @@ class EmergencyCall extends Model
     use SoftDeletes;
 
     protected $fillable =[
+        'id',
         'user_id',
         'latitude',
         'longitude',
@@ -25,6 +26,8 @@ class EmergencyCall extends Model
         'dtz_accepted',
         'dtz_finished'
     ];
+
+    public $incrementing = false;
 
     public function user(){
         return $this->belongsTo(User::class);

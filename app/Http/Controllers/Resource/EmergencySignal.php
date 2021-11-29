@@ -16,6 +16,7 @@ class EmergencySignal extends Controller
      */
     public function index()
     {
+        history("Visited SOS Page");
         return view('Superuser.Sos.sos');
     }
 
@@ -49,8 +50,9 @@ class EmergencySignal extends Controller
     public function show($id)
     {
         $emergency = EmergencyCall::with('user')->find($id);
-        
-        
+      
+
+        history("Visited the SOS of ". " ". $emergency->user->name);
         return view('Superuser.Sos.sosShow',['data' => $emergency]);
     }
  
@@ -82,11 +84,13 @@ class EmergencySignal extends Controller
                 'status' => $request->status,
                 'dtz_accepted' => $datetime
             ]);
+            history("SOS id of ". " " .$id." "."Change to Processing ");
         }else if($request->status == "Done"){
             EmergencyCall::find($id)->update([
                 'status' => $request->status,
                 'dtz_finished' => $datetime
             ]);
+            history("SOS id of ". " " .$id." "."Changed to Done ");
         }
         
     }

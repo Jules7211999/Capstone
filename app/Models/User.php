@@ -20,6 +20,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
+        'id',
         'barangay_id',
         'name',
         'username',
@@ -35,6 +36,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'city_id',
         'email_verified_at'
     ];
+
+    public $incrementing = false;
 
     /**
      * The attributes that should be hidden for arrays.
@@ -82,6 +85,10 @@ class User extends Authenticatable implements MustVerifyEmail
 
     public function barangay(){
         return $this->hasOne(barang::class,'id','barangay_id');
+    }
+
+    public function history(){
+        return $this->hasMany(HistoryLog::class,'user_id','id');
     }
    
 }
