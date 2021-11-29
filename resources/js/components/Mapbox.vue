@@ -38,12 +38,12 @@
 -->
     <div class="col">
       <h4 class="font-weight-bold text-secondary">Location</h4>
-    <MglMap
+    <!-- <MglMap
     :accessToken="accessToken"
     :mapStyle="mapStyle"
     :zoom ="zoom"
     :center="center"
-    >
+    > -->
     
      <div v-for="d in datum.data" >
       <div v-for="x in d.coordinates">
@@ -69,8 +69,8 @@
       </div>
      
     </div>  
-    
-     </MglMap>
+<!--     
+     </MglMap> -->
   </div>  
   
 </div> 

@@ -52580,40 +52580,28 @@ var render = function() {
           _vm._v("Location")
         ]),
         _vm._v(" "),
-        _c(
-          "MglMap",
-          {
-            attrs: {
-              accessToken: _vm.accessToken,
-              mapStyle: _vm.mapStyle,
-              zoom: _vm.zoom,
-              center: _vm.center
-            }
-          },
-          _vm._l(_vm.datum.data, function(d) {
-            return _c(
-              "div",
-              _vm._l(d.coordinates, function(x) {
-                return _c("div", [
-                  _vm.barangay_id == d.barangay_id
-                    ? _c("div", [
-                        _vm._v(
-                          "\r\n           " +
-                            _vm._s(x.longitude) +
-                            _vm._s(x.latitude) +
-                            "\r\n        "
-                        )
-                      ])
-                    : _vm._e()
-                ])
-              }),
-              0
-            )
-          }),
-          0
-        )
+        _vm._l(_vm.datum.data, function(d) {
+          return _c(
+            "div",
+            _vm._l(d.coordinates, function(x) {
+              return _c("div", [
+                _vm.barangay_id == d.barangay_id
+                  ? _c("div", [
+                      _vm._v(
+                        "\r\n           " +
+                          _vm._s(x.longitude) +
+                          _vm._s(x.latitude) +
+                          "\r\n        "
+                      )
+                    ])
+                  : _vm._e()
+              ])
+            }),
+            0
+          )
+        })
       ],
-      1
+      2
     )
   ])
 }
