@@ -39,6 +39,8 @@
             </div> 
     </div>  -->
     {{done}}
+    {{waiting}}
+    {{processing}}
 </div>
     
 </template>

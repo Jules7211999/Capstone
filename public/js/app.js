@@ -3541,6 +3541,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['barangay', 'role'],
   data: function data() {
@@ -53388,7 +53390,15 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "w-100 h-100" }, [
-    _vm._v("\r\n    " + _vm._s(_vm.done) + "\r\n")
+    _vm._v(
+      "\r\n    " +
+        _vm._s(_vm.done) +
+        "\r\n    " +
+        _vm._s(_vm.waiting) +
+        "\r\n    " +
+        _vm._s(_vm.processing) +
+        "\r\n"
+    )
   ])
 }
 var staticRenderFns = []
