@@ -35,7 +35,7 @@
      </div>
      </MglMap>
   </div>
-
+-->
     <div class="col">
       <h4 class="font-weight-bold text-secondary">Location</h4>
     <MglMap
@@ -70,7 +70,7 @@
     </div>  
     
      </MglMap>
-  </div>  -->
+  </div>  
   
 </div> 
   
