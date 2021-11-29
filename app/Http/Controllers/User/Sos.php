@@ -36,6 +36,7 @@ class Sos extends Controller
  }
 
  public function sosRequest($id){
-    return $id;
+    $emergency = EmergencyCall::find($id);
+    return $emergency->status;
  }
 }
