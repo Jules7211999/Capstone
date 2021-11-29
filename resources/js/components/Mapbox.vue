@@ -70,6 +70,7 @@
     
      </MglMap>
   </div>
+  {{datum}}
 </div> 
   
 </template>
