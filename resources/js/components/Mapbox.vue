@@ -1,6 +1,6 @@
 <template>
 <div class="w-100 h-100 row d-flex" >
-  <!-- <div class="col">
+  <div class="col">
     <h4 class="font-weight-bold text-secondary">SOS</h4>
     <MglMap
     :accessToken="accessToken"
@@ -69,8 +69,8 @@
     </div>  
     
      </MglMap>
-  </div> -->
-  {{datum.data[0].coordinates[0]}}
+  </div> 
+  
 </div> 
   
 </template>
