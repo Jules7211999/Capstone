@@ -8,9 +8,11 @@
 </head>
 <body>
 
-<form action="/catch" method="post">
+<form action="api/track" method="post">
     @csrf
-    <input type="text" name="weight">
+    <input type="text" name="user">
+    <input type="text" name="long" id="">
+    <input type="text" name="lat">
     
     <input type="submit" value="submit">
 </form>
