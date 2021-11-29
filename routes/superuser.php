@@ -24,7 +24,7 @@ Route::get('/dashboard',[Dashboard::class,'index'])->middleware('auth','verified
 Route::get('/map',function(){
     history("Visited Maps");
     return view('Superuser.Map.map');
-});
+})->middleware(('auth'));
 
 //Resource Controllers Emergency,User and Admin
 Route::resource('emergency',EmergencySignal::class);
