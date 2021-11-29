@@ -52570,7 +52570,137 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-100 h-100 row d-flex" })
+  return _c("div", { staticClass: "w-100 h-100 row d-flex" }, [
+    _c(
+      "div",
+      { staticClass: "col" },
+      [
+        _c("h4", { staticClass: "font-weight-bold text-secondary" }, [
+          _vm._v("Location")
+        ]),
+        _vm._v(" "),
+        _c(
+          "MglMap",
+          {
+            attrs: {
+              accessToken: _vm.accessToken,
+              mapStyle: _vm.mapStyle,
+              zoom: _vm.zoom,
+              center: _vm.center
+            }
+          },
+          _vm._l(_vm.datum.data, function(d) {
+            return _c(
+              "div",
+              _vm._l(d.coordinates, function(x) {
+                return _c("div", [
+                  _vm.barangay_id == d.barangay_id
+                    ? _c(
+                        "div",
+                        [
+                          _c(
+                            "MglMarker",
+                            {
+                              attrs: { coordinates: [x.longitude, x.latitude] }
+                            },
+                            [
+                              _c("MglPopup", [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "font-weight-bold p-3 d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "text-center" }, [
+                                      _c("img", {
+                                        staticClass: "image",
+                                        attrs: {
+                                          src:
+                                            "https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/" +
+                                            d.profile_image,
+                                          alt: ""
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Name:")
+                                        ]),
+                                        _vm._v(_vm._s(d.name))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Latitude:")
+                                        ]),
+                                        _vm._v(_vm._s(x.latitude))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Longitude:")
+                                        ]),
+                                        _vm._v(_vm._s(x.longitude))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Date and Time:")
+                                        ]),
+                                        _vm._v(_vm._s(x.datetimezone))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Month:")
+                                        ]),
+                                        _vm._v(_vm._s(x.month_name))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Day of the Week:")
+                                        ]),
+                                        _vm._v(_vm._s(x.day_of_week))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "a",
+                                        { attrs: { href: "/user/" + d.id } },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "d-flex w-100 pt-2 justify-content-center"
+                                            },
+                                            [_vm._v("View Profile")]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                )
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    : _vm._e()
+                ])
+              }),
+              0
+            )
+          }),
+          0
+        )
+      ],
+      1
+    )
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
