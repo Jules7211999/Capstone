@@ -15,7 +15,7 @@ class Dashboard extends Controller
 {
     public function index(){
         $totalkilos = FishCatch::sum('kilos');
-        $user = User::where('role','=','Superuser')->count();
+        $user = User::where('role','=','SuperUser')->count();
         $admin = User::where('role','=','Admin')->count();
         $fisherman = User::where('role','=','User')->count();
         $coord = Coordinates::all()->count();

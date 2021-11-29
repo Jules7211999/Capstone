@@ -1,6 +1,6 @@
 <template>
 <div class="w-100 h-100">
-     <!-- <div class=" p-4 row w-100 d-flex justify-content-center font-weight-bold text-secondary ml-1 ">
+     <div class=" p-4 row w-100 d-flex justify-content-center font-weight-bold text-secondary ml-1 ">
                     <div class="col">SOS ID</div>
                     <div class="col">Name</div>
                     <div class="col">Type</div>
@@ -37,10 +37,7 @@
                     <div class="col">{{d.datetimezone}}</div>
                     <div class="col"></div>
             </div> 
-    </div>  -->
-    {{done}}
-    {{waiting}}
-    {{processing}}
+    </div> 
 </div>
     
 </template>
