@@ -48,7 +48,8 @@
      <div v-for="d in datum.data" >
       <div v-for="x in d.coordinates">
          <div v-if="barangay_id == d.barangay_id">
-        <MglMarker :coordinates="[x.longitude,x.latitude]" >
+           {{x.longitude}}{{x.latitude}}
+        <!-- <MglMarker :coordinates="[x.longitude,x.latitude]" >
             <MglPopup>
                 <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
                   <div class="text-center">
@@ -63,7 +64,7 @@
                   </div>
                 </div>
             </MglPopup>
-          </MglMarker>
+          </MglMarker> -->
           </div>
       </div>
      
