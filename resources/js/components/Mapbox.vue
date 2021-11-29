@@ -1,6 +1,6 @@
 <template>
 <div class="w-100 h-100 row d-flex" >
-  {{datum}}
+
   <!-- <div class="col">
     <h4 class="font-weight-bold text-secondary">SOS</h4>
     <MglMap
