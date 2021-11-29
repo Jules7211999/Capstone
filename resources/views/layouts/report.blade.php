@@ -10,7 +10,6 @@
     
 </head>
 <body class="container vh-100 w-100">
-
     @yield('content')
 
 </body>
