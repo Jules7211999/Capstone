@@ -53391,7 +53391,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "w-100 h-100" }, [
-    _vm._v("\r\n    " + _vm._s(_vm.done) + "\r\n")
+    _vm._v("\r\n    " + _vm._s(_vm.waiting) + "\r\n")
   ])
 }
 var staticRenderFns = []

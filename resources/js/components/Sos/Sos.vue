@@ -38,7 +38,7 @@
                     <div class="col"></div>
             </div> 
     </div>  -->
-    {{done}}
+    {{waiting}}
 </div>
     
 </template>
