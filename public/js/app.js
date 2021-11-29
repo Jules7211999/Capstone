@@ -52567,46 +52567,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-100 h-100 row d-flex" }, [
-    _c(
-      "div",
-      { staticClass: "col" },
-      [
-        _c("h4", { staticClass: "font-weight-bold text-secondary" }, [
-          _vm._v("Location")
-        ]),
-        _vm._v(" "),
-        _vm._l(_vm.datum.data, function(d) {
-          return _c(
-            "div",
-            _vm._l(d.coordinates, function(x) {
-              return _c("div", [
-                _vm.barangay_id == d.barangay_id
-                  ? _c("div", [
-                      _vm._v(
-                        "\r\n           " +
-                          _vm._s(x.longitude) +
-                          _vm._s(x.latitude) +
-                          "\r\n        "
-                      )
-                    ])
-                  : _vm._e()
-              ])
-            }),
-            0
-          )
-        })
-      ],
-      2
-    )
-  ])
-}
+var render = function () {}
 var staticRenderFns = []
-render._withStripped = true
 
 
 
