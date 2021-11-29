@@ -70,7 +70,7 @@
     
      </MglMap>
   </div> -->
-  {{datum[0].coordinates[0]}}
+  {{datum[0].coordinates}}
 </div> 
   
 </template>
