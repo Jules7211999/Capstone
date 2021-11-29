@@ -36,7 +36,7 @@
      </MglMap>
   </div>
 -->
-    <div class="col">
+    <!-- <div class="col">
       <h4 class="font-weight-bold text-secondary">Location</h4>
     <MglMap
     :accessToken="accessToken"
@@ -70,7 +70,7 @@
     </div>  
     
      </MglMap>
-  </div>  
+  </div>   -->
   
 </div> 
   
