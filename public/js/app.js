@@ -53409,7 +53409,6 @@ var render = function() {
                   },
                   [
                     _c("div", { staticClass: "col" }, [
-                      _vm._v("\\"),
                       _c(
                         "a",
                         {
