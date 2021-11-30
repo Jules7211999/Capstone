@@ -46,7 +46,7 @@ class Sos extends Controller
     $cancel = EmergencyCall::find($request->cancel);
     $cancel->status = "Canceled";
     $cancel->save();
-
+    event(new SOSevent());
     
  }
 }

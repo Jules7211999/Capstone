@@ -53600,14 +53600,14 @@ var render = function() {
                   "div",
                   {
                     staticClass:
-                      " p-4 row w-100 rounded font-weight-bold text-success shadow-sm border ml-1 "
+                      " p-4 row w-100 rounded font-weight-bold text-warning shadow-sm border ml-1 "
                   },
                   [
                     _c("div", { staticClass: "col" }, [
                       _c(
                         "a",
                         {
-                          staticClass: "text-success",
+                          staticClass: "text-warning",
                           attrs: { href: "/emergency/" + d.id }
                         },
                         [_vm._v(_vm._s(d.id))]
@@ -53618,7 +53618,7 @@ var render = function() {
                       _c(
                         "a",
                         {
-                          staticClass: "text-success",
+                          staticClass: "text-warning",
                           attrs: { href: "/emergency/" + d.id }
                         },
                         [_vm._v(_vm._s(d.user.name))]
