@@ -10,7 +10,7 @@ class GetSos extends Controller
 {
 
     public function get(){
-        return User::has('emergencyCall')->with('emergencyCall')->get();
+        return User::where('status','=','Waiting')->has('emergencyCall')->with('emergencyCall')->get();
     }
     public function waiting(){
        
@@ -28,6 +28,11 @@ class GetSos extends Controller
         $user = EmergencyCall::where('status','=','Done')->with('user')->get();
         return $user;
        
+    }
+
+    public function canceled(){
+        $user = EmergencyCall::where('status','=','Canceled')->with('user')->get();
+        return $user;
     }
 
 }

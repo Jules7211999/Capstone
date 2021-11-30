@@ -22,6 +22,7 @@ Route::get('/getInactiveMunicipality',[GetMunicipality::class,'inactive']);
 Route::get('/getMapSos',[GetSos::class,'get']);
 Route::get('/getSos',[GetSos::class,'waiting']);
 Route::get('/getSosUpdated',[GetSos::class,'processing']);
+Route::get('/getSosCanceled',[GetSos::class,'Canceled']);
 Route::get('/getSosDone',[GetSos::class,'done']);
 Route::get('/getAdmin',[GetAdmin::class,'index']);
 Route::get('/getUser',[GetUser::class,'index']);

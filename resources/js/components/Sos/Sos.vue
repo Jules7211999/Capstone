@@ -38,6 +38,16 @@
                     <div class="col"></div>
             </div> 
     </div> 
+     <div v-for="d in cancel" class="d-flex justify-content-center w-100 mb-2 ">
+            <div  v-if="d.user.barangay == barangay || role == 'SuperUser'" class=" p-4 row w-100 rounded font-weight-bold text-success shadow-sm border ml-1 ">
+                <div  class="col"><a :href="'/emergency/'+d.id" class="text-success">{{d.id}}</a></div>
+                    <div  class="col"><a :href="'/emergency/'+d.id" class="text-success">{{d.user.name}}</a></div>
+                    <div class="col">{{d.type}}</div>
+                    <div class="col">{{d.status}}</div>
+                    <div class="col">{{d.datetimezone}}</div>
+                    <div class="col"></div>
+            </div> 
+    </div> 
 </div>
     
 </template>
@@ -47,6 +57,7 @@ export default {
     props:['barangay','role'],
     data(){
         return{
+            cancel:{},
             waiting: {},
             processing:{},
             done:{},
@@ -79,6 +90,12 @@ methods:{
     getSosDone(){
         axios.get('/getSosDone')
         .then(data => this.done = data.data)
+        .catch(error => console.log(error.response.data.message));
+
+    },
+     getSosDone(){
+        axios.get('/getSosCanceled')
+        .then(data => this.cancel = data.data)
         .catch(error => console.log(error.response.data.message));
 
     },

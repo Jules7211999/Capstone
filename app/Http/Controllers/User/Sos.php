@@ -39,4 +39,11 @@ class Sos extends Controller
     $emergency = EmergencyCall::find($id);
     return $emergency->status;
  }
+
+ public function cancel(Request $request){
+     $cancel = EmergencyCall::find($request->cancel);
+     $cancel->status = "Canceled";
+
+    
+ }
 }
