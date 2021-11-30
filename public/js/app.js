@@ -3498,10 +3498,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-var _methods;
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 //
 //
 //
@@ -3567,7 +3563,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       query: ""
     };
   },
-  methods: (_methods = {
+  methods: {
     accept: function accept(id, status) {
       axios.put('/emergency/' + id, {
         status: status
@@ -3604,30 +3600,33 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       })["catch"](function (error) {
         return console.log(error.response.data.message);
       });
+    },
+    getSosCanceled: function getSosCanceled() {
+      var _this4 = this;
+
+      axios.get('/getSosCanceled').then(function (data) {
+        return _this4.cancel = data.data;
+      })["catch"](function (error) {
+        return console.log(error.response.data.message);
+      });
+    },
+    search: function search() {
+      var _this5 = this;
+
+      axios.post('/userSearch', {
+        search: this.query
+      }).then(function (data) {
+        return _this5.data = data.data;
+      })["catch"](function (error) {
+        return console.log(error.errors.message);
+      });
     }
-  }, _defineProperty(_methods, "getSosDone", function getSosDone() {
-    var _this4 = this;
-
-    axios.get('/getSosCanceled').then(function (data) {
-      return _this4.cancel = data.data;
-    })["catch"](function (error) {
-      return console.log(error.response.data.message);
-    });
-  }), _defineProperty(_methods, "search", function search() {
-    var _this5 = this;
-
-    axios.post('/userSearch', {
-      search: this.query
-    }).then(function (data) {
-      return _this5.data = data.data;
-    })["catch"](function (error) {
-      return console.log(error.errors.message);
-    });
-  }), _methods),
+  },
   mounted: function mounted() {
     this.getSos();
     this.getSosUpdated();
     this.getSosDone();
+    this.getSosCanceled();
   },
   created: function created() {
     var _this6 = this;
@@ -53539,6 +53538,59 @@ var render = function() {
       }),
       _vm._v(" "),
       _vm._l(_vm.done, function(d) {
+        return _c(
+          "div",
+          { staticClass: "d-flex justify-content-center w-100 mb-2 " },
+          [
+            d.user.barangay == _vm.barangay || _vm.role == "SuperUser"
+              ? _c(
+                  "div",
+                  {
+                    staticClass:
+                      " p-4 row w-100 rounded font-weight-bold text-success shadow-sm border ml-1 "
+                  },
+                  [
+                    _c("div", { staticClass: "col" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "text-success",
+                          attrs: { href: "/emergency/" + d.id }
+                        },
+                        [_vm._v(_vm._s(d.id))]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "text-success",
+                          attrs: { href: "/emergency/" + d.id }
+                        },
+                        [_vm._v(_vm._s(d.user.name))]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col" }, [_vm._v(_vm._s(d.type))]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col" }, [
+                      _vm._v(_vm._s(d.status))
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col" }, [
+                      _vm._v(_vm._s(d.datetimezone))
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "col" })
+                  ]
+                )
+              : _vm._e()
+          ]
+        )
+      }),
+      _vm._v(" "),
+      _vm._l(_vm.cancel, function(d) {
         return _c(
           "div",
           { staticClass: "d-flex justify-content-center w-100 mb-2 " },
