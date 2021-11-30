@@ -2596,7 +2596,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -51324,7 +51323,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "w-100 h-100" }, [
-    _vm._v("\n  " + _vm._s(_vm.city) + "\n  "),
     _c(
       "div",
       { staticClass: "row h-25 w-100 d-flex justify-content-around " },

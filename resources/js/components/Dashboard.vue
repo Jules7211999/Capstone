@@ -1,6 +1,5 @@
 <template>
     <div class="w-100 h-100">
-      {{city}}
       <div class="row h-25 w-100 d-flex justify-content-around ">
         <div class="col-3 d-flex justify-content-center align-items-center ">
           <div>
