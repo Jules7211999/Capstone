@@ -2596,6 +2596,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 
@@ -3035,6 +3036,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_mapbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-mapbox */ "./node_modules/vue-mapbox/src/main.js");
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
 //
 //
 //
@@ -3629,6 +3631,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var vue_mapbox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-mapbox */ "./node_modules/vue-mapbox/src/main.js");
+//
 //
 //
 //
@@ -51299,6 +51302,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "w-100 h-100" }, [
+    _vm._v("\n  " + _vm._s(_vm.city) + "\n  "),
     _c(
       "div",
       { staticClass: "row h-25 w-100 d-flex justify-content-around " },
@@ -52627,6 +52631,13 @@ var render = function() {
                                   _c("span", { staticClass: "pr-2" }, [
                                     _vm._v("Name:")
                                   ]),
+                                  _vm._v(_vm._s(d.id))
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "d-flex" }, [
+                                  _c("span", { staticClass: "pr-2" }, [
+                                    _vm._v("Name:")
+                                  ]),
                                   _vm._v(_vm._s(d.name))
                                 ]),
                                 _vm._v(" "),
@@ -53650,6 +53661,11 @@ var render = function() {
       [
         _c("div", [
           _vm._m(0),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex pb-5" }, [
+            _c("span", { staticClass: "pr-2" }, [_vm._v("Name:")]),
+            _vm._v(_vm._s(_vm.eData.id))
+          ]),
           _vm._v(" "),
           _c("div", { staticClass: "d-flex pb-5" }, [
             _c("span", { staticClass: "pr-2" }, [_vm._v("Name:")]),
