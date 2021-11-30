@@ -1,5 +1,5 @@
 <template>
-    <div class="w-100 h-100 d-flex">
+    <div class="w-100 h-75 d-flex">
         <div class="col">
             <MglMap
                 :accessToken="accessToken"

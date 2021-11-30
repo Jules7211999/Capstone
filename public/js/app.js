@@ -53696,7 +53696,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "w-100 h-100 d-flex" }, [
+  return _c("div", { staticClass: "w-100 h-75 d-flex" }, [
     _c(
       "div",
       { staticClass: "col" },
