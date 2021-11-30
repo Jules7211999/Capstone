@@ -52629,9 +52629,9 @@ var render = function() {
                                 _vm._v(" "),
                                 _c("div", { staticClass: "d-flex" }, [
                                   _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Name:")
+                                    _vm._v("SOS ID:")
                                   ]),
-                                  _vm._v(_vm._s(d.id))
+                                  _vm._v(_vm._s(x.id))
                                 ]),
                                 _vm._v(" "),
                                 _c("div", { staticClass: "d-flex" }, [
@@ -53663,7 +53663,7 @@ var render = function() {
           _vm._m(0),
           _vm._v(" "),
           _c("div", { staticClass: "d-flex pb-5" }, [
-            _c("span", { staticClass: "pr-2" }, [_vm._v("Name:")]),
+            _c("span", { staticClass: "pr-2" }, [_vm._v("SOS ID")]),
             _vm._v(_vm._s(_vm.eData.id))
           ]),
           _vm._v(" "),
