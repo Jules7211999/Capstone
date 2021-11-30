@@ -38,7 +38,7 @@
                     <div class="col"></div>
             </div> 
     </div> 
-     <div v-for="d in cancel" class="d-flex justify-content-center w-100 mb-2 ">
+     <!-- <div v-for="d in cancel" class="d-flex justify-content-center w-100 mb-2 ">
             <div  v-if="d.user.barangay == barangay || role == 'SuperUser'" class=" p-4 row w-100 rounded font-weight-bold text-success shadow-sm border ml-1 ">
                 <div  class="col"><a :href="'/emergency/'+d.id" class="text-success">{{d.id}}</a></div>
                     <div  class="col"><a :href="'/emergency/'+d.id" class="text-success">{{d.user.name}}</a></div>
@@ -47,7 +47,7 @@
                     <div class="col">{{d.datetimezone}}</div>
                     <div class="col"></div>
             </div> 
-    </div> 
+    </div>  -->
 </div>
     
 </template>

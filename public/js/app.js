@@ -53589,59 +53589,6 @@ var render = function() {
               : _vm._e()
           ]
         )
-      }),
-      _vm._v(" "),
-      _vm._l(_vm.cancel, function(d) {
-        return _c(
-          "div",
-          { staticClass: "d-flex justify-content-center w-100 mb-2 " },
-          [
-            d.user.barangay == _vm.barangay || _vm.role == "SuperUser"
-              ? _c(
-                  "div",
-                  {
-                    staticClass:
-                      " p-4 row w-100 rounded font-weight-bold text-success shadow-sm border ml-1 "
-                  },
-                  [
-                    _c("div", { staticClass: "col" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "text-success",
-                          attrs: { href: "/emergency/" + d.id }
-                        },
-                        [_vm._v(_vm._s(d.id))]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col" }, [
-                      _c(
-                        "a",
-                        {
-                          staticClass: "text-success",
-                          attrs: { href: "/emergency/" + d.id }
-                        },
-                        [_vm._v(_vm._s(d.user.name))]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col" }, [_vm._v(_vm._s(d.type))]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col" }, [
-                      _vm._v(_vm._s(d.status))
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col" }, [
-                      _vm._v(_vm._s(d.datetimezone))
-                    ]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "col" })
-                  ]
-                )
-              : _vm._e()
-          ]
-        )
       })
     ],
     2
