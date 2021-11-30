@@ -16,6 +16,7 @@
                   <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
                     <div class="text-center">
                        <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ d.profile_image" alt="" class="image">
+                       <div class="d-flex"><span class="pr-2">Name:</span>{{d.id}}</div>
                       <div class="d-flex"><span class="pr-2">Name:</span>{{d.name}}</div>
                       <div class="d-flex"><span class="pr-2">Latitude:</span>{{x.latitude}}</div>
                       <div class="d-flex"><span class="pr-2">Longitude:</span>{{x.longitude}}</div>

@@ -14,6 +14,7 @@
         <div class=" col font-weight-bold p-3 d-flex justify-content-center align-items-center">
                     <div>
                         <div class="d-flex  pb-5"><img src="" alt="" srcset=""></div>
+                         <div class="d-flex pb-5"><span class="pr-2">Name:</span>{{eData.id}}</div>
                         <div class="d-flex pb-5"><span class="pr-2">Name:</span>{{eData.user.name}}</div>
                         <div class="d-flex pb-5"><span class="pr-2">Latitude:</span>{{eData.latitude}}</div>
                         <div class="d-flex pb-5"><span class="pr-2">Longitude:</span>{{eData.longitude}}</div>
