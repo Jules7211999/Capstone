@@ -24,6 +24,7 @@
                         <div class="d-flex pb-5"><span class="pr-2">Month:</span>{{eData.month_name}}</div>
                         <div class="d-flex pb-5"><span class="pr-2">Day of the Week:</span>{{eData.day_of_week}}</div>
                         <div class="d-flex pb-5"><span class="pr-2">Type:</span>{{eData.type}}</div>
+                        <div class="d-flex pb-5"><span class="pr-2">Status:</span>{{eData.status}}</div>
                         <a :href="'/user/'+eData.user.id"><div class="d-flex w-100 pt-2 justify-content-center">View Profile</div></a>
                     </div>
                     </div>

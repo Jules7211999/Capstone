@@ -27,7 +27,7 @@ Route::get('/map',function(){
 })->middleware(('auth'));
 
 //Resource Controllers Emergency,User and Admin
-Route::resource('emergency',EmergencySignal::class);
+Route::resource('emergency',EmergencySignal::class) ;
 Route::resource('admin',Admin::class);
 Route::resource('user',UserProfile::class);
 Route::resource('fish',FishSpeciesController::class);

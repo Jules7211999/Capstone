@@ -3682,6 +3682,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   components: {
@@ -53782,6 +53783,11 @@ var render = function() {
           _c("div", { staticClass: "d-flex pb-5" }, [
             _c("span", { staticClass: "pr-2" }, [_vm._v("Type:")]),
             _vm._v(_vm._s(_vm.eData.type))
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "d-flex pb-5" }, [
+            _c("span", { staticClass: "pr-2" }, [_vm._v("Status:")]),
+            _vm._v(_vm._s(_vm.eData.status))
           ]),
           _vm._v(" "),
           _c("a", { attrs: { href: "/user/" + _vm.eData.user.id } }, [
