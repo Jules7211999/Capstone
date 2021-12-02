@@ -19,6 +19,12 @@
             <div class="text-center w-100 font-weight-bold text-secondary pt-3">{{sosd}}</div>
           </div>
         </div>
+         <div class="col-3 d-flex justify-content-center align-items-center  ">
+          <div>
+            <div class="font-weight-bold text-secondary"><img src="/img/cancel.png"  class="mr-2" alt="" srcset="">Canceled SOS</div>
+            <div class="text-center w-100 font-weight-bold text-secondary pt-3">{{sosc}}</div>
+          </div>
+        </div>
       </div>
        <div class="row h-25 w-100 d-flex justify-content-around ">
         <div class="col-3 d-flex justify-content-center align-items-center  ">
@@ -104,7 +110,7 @@ import polarchart3 from './Charts/PolarChartUser.vue';
 
 
 export default {
-    props:['species','catchk','user','fisherman','admin','sos','sosd','sosp','coord','barangay','city'],
+    props:['species','catchk','user','fisherman','admin','sos','sosd','sosp','coord','barangay','city','sosc'],
     components:{ polarchart1,polarchart2,polarchart3},
     mounted(){
         this.add();

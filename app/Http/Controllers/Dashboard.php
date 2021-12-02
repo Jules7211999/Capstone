@@ -22,6 +22,7 @@ class Dashboard extends Controller
         $sos = EmergencyCall::all()->count();
         $sosd = EmergencyCall::where('status','=','Done')->count();
         $sosp = EmergencyCall::where('status','=','Processing')->count();
+        $sosc =  EmergencyCall::where('status','=','Canceled')->count();
         $barangay = barang::all()->count();
         $city = city::all()->count();
         $fish = fish::all()->count();
@@ -30,7 +31,7 @@ class Dashboard extends Controller
         history("Visited Dashboard Page");
      
 
-        return view('Superuser.dashboard',['user' => $user, 'fisherman' => $fisherman, 'admin' => $admin,'sos' => $sos,'sosd' => $sosd, 'sosp' => $sosp, 'coord' => $coord,'barangay' => $barangay,'city'=>$city 
+        return view('Superuser.dashboard',['sosc' => $sosc, 'user' => $user, 'fisherman' => $fisherman, 'admin' => $admin,'sos' => $sos,'sosd' => $sosd, 'sosp' => $sosp, 'coord' => $coord,'barangay' => $barangay,'city'=>$city 
         ,'tkilos' => $totalkilos, 'fish' => $fish, 
         ]);
     }

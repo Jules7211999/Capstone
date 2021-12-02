@@ -2596,11 +2596,17 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['species', 'catchk', 'user', 'fisherman', 'admin', 'sos', 'sosd', 'sosp', 'coord', 'barangay', 'city'],
+  props: ['species', 'catchk', 'user', 'fisherman', 'admin', 'sos', 'sosd', 'sosp', 'coord', 'barangay', 'city', 'sosc'],
   components: {
     polarchart1: _Charts_PolarChartSos_vue__WEBPACK_IMPORTED_MODULE_0__.default,
     polarchart2: _Charts_PolarChartLgu_vue__WEBPACK_IMPORTED_MODULE_1__.default,
@@ -51393,6 +51399,28 @@ var render = function() {
               )
             ])
           ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass:
+              "col-3 d-flex justify-content-center align-items-center  "
+          },
+          [
+            _c("div", [
+              _vm._m(3),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "text-center w-100 font-weight-bold text-secondary pt-3"
+                },
+                [_vm._v(_vm._s(_vm.sosc))]
+              )
+            ])
+          ]
         )
       ]
     ),
@@ -51409,7 +51437,7 @@ var render = function() {
           },
           [
             _c("div", [
-              _vm._m(3),
+              _vm._m(4),
               _vm._v(" "),
               _c(
                 "div",
@@ -51431,7 +51459,7 @@ var render = function() {
           },
           [
             _c("div", [
-              _vm._m(4),
+              _vm._m(5),
               _vm._v(" "),
               _c(
                 "div",
@@ -51453,7 +51481,7 @@ var render = function() {
           },
           [
             _c("div", [
-              _vm._m(5),
+              _vm._m(6),
               _vm._v(" "),
               _c(
                 "div",
@@ -51481,7 +51509,7 @@ var render = function() {
           },
           [
             _c("div", [
-              _vm._m(6),
+              _vm._m(7),
               _vm._v(" "),
               _c(
                 "div",
@@ -51503,7 +51531,7 @@ var render = function() {
           },
           [
             _c("div", [
-              _vm._m(7),
+              _vm._m(8),
               _vm._v(" "),
               _c(
                 "div",
@@ -51525,7 +51553,7 @@ var render = function() {
           },
           [
             _c("div", [
-              _vm._m(8),
+              _vm._m(9),
               _vm._v(" "),
               _c(
                 "div",
@@ -51550,7 +51578,7 @@ var render = function() {
         },
         [
           _c("div", [
-            _vm._m(9),
+            _vm._m(10),
             _vm._v(" "),
             _c(
               "div",
@@ -51572,7 +51600,7 @@ var render = function() {
         },
         [
           _c("div", [
-            _vm._m(10),
+            _vm._m(11),
             _vm._v(" "),
             _c(
               "div",
@@ -51594,7 +51622,7 @@ var render = function() {
         },
         [
           _c("div", [
-            _vm._m(11),
+            _vm._m(12),
             _vm._v(" "),
             _c(
               "div",
@@ -51609,7 +51637,7 @@ var render = function() {
       )
     ]),
     _vm._v(" "),
-    _vm._m(12)
+    _vm._m(13)
   ])
 }
 var staticRenderFns = [
@@ -51647,6 +51675,18 @@ var staticRenderFns = [
         attrs: { src: "/img/sos_success.png", alt: "", srcset: "" }
       }),
       _vm._v("Completed SOS")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+      _c("img", {
+        staticClass: "mr-2",
+        attrs: { src: "/img/cancel.png", alt: "", srcset: "" }
+      }),
+      _vm._v("Canceled SOS")
     ])
   },
   function() {
