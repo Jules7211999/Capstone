@@ -10,26 +10,27 @@
     >
      <div v-for="d in sosData.data">
           <div v-for="x in d.emergency_call">
-           
-              <MglMarker :coordinates="[x.longitude,x.latitude]" :color="markerColor">
-              <MglPopup>
-                  <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
-                    <div class="text-center">
-                       <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ d.profile_image" alt="" class="image">
-                       <div class="d-flex"><span class="pr-2">SOS ID:</span>{{x.id}}</div>
-                      <div class="d-flex"><span class="pr-2">Name:</span>{{d.name}}</div>
-                      <div class="d-flex"><span class="pr-2">Latitude:</span>{{x.latitude}}</div>
-                      <div class="d-flex"><span class="pr-2">Longitude:</span>{{x.longitude}}</div>
-                      <div class="d-flex"><span class="pr-2">Date and Time:</span>{{x.datetimezone}}</div>
-                      <div class="d-flex"><span class="pr-2">Month:</span>{{x.month_name}}</div>
-                      <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{x.day_of_week}}</div>
-                      <div class="d-flex"><span class="pr-2">Status:</span>{{x.status}}</div>
-                      <div class="d-flex"><span class="pr-2">Type:</span>{{x.type}}</div>
-                      <a :href="'/emergency/'+x.id"><div class="d-flex w-100 pt-2 justify-content-center">Details</div></a>
+              <div v-if="d.barangay_id == barangay_id || barangay_id == ''">
+                <MglMarker :coordinates="[x.longitude,x.latitude]" :color="markerColor">
+                <MglPopup>
+                    <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
+                      <div class="text-center">
+                         <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ d.profile_image" alt="" class="image">
+                         <div class="d-flex"><span class="pr-2">SOS ID:</span>{{x.id}}</div>
+                        <div class="d-flex"><span class="pr-2">Name:</span>{{d.name}}</div>
+                        <div class="d-flex"><span class="pr-2">Latitude:</span>{{x.latitude}}</div>
+                        <div class="d-flex"><span class="pr-2">Longitude:</span>{{x.longitude}}</div>
+                        <div class="d-flex"><span class="pr-2">Date and Time:</span>{{x.datetimezone}}</div>
+                        <div class="d-flex"><span class="pr-2">Month:</span>{{x.month_name}}</div>
+                        <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{x.day_of_week}}</div>
+                        <div class="d-flex"><span class="pr-2">Status:</span>{{x.status}}</div>
+                        <div class="d-flex"><span class="pr-2">Type:</span>{{x.type}}</div>
+                        <a :href="'/emergency/'+x.id"><div class="d-flex w-100 pt-2 justify-content-center">Details</div></a>
+                      </div>
                     </div>
-                  </div>
-              </MglPopup>
-                  </MglMarker>
+                </MglPopup>
+                    </MglMarker>
+              </div>
             
           </div>
      </div>
@@ -47,23 +48,24 @@
     
      <div v-for="d in datum.data" >
       <div v-for="x in d.coordinates">
-        
-        <MglMarker :coordinates="[x.longitude,x.latitude]" >
-            <MglPopup>
-                <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
-                  <div class="text-center">
-                    <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ d.profile_image" alt="" class="image">
-                    <div class="d-flex"><span class="pr-2">Name:</span>{{d.name}}</div>
-                    <div class="d-flex"><span class="pr-2">Latitude:</span>{{x.latitude}}</div>
-                    <div class="d-flex"><span class="pr-2">Longitude:</span>{{x.longitude}}</div>
-                    <div class="d-flex"><span class="pr-2">Date and Time:</span>{{x.datetimezone}}</div>
-                    <div class="d-flex"><span class="pr-2">Month:</span>{{x.month_name}}</div>
-                    <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{x.day_of_week}}</div>
-                    <a :href="'/user/'+d.id"><div class="d-flex w-100 pt-2 justify-content-center">View Profile</div></a>
+        <div v-if="d.barangay_id == barangay_id || barangay_id == ''">
+          <MglMarker :coordinates="[x.longitude,x.latitude]" >
+              <MglPopup>
+                  <div class="font-weight-bold p-3 d-flex justify-content-center align-items-center">
+                    <div class="text-center">
+                      <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ d.profile_image" alt="" class="image">
+                      <div class="d-flex"><span class="pr-2">Name:</span>{{d.name}}</div>
+                      <div class="d-flex"><span class="pr-2">Latitude:</span>{{x.latitude}}</div>
+                      <div class="d-flex"><span class="pr-2">Longitude:</span>{{x.longitude}}</div>
+                      <div class="d-flex"><span class="pr-2">Date and Time:</span>{{x.datetimezone}}</div>
+                      <div class="d-flex"><span class="pr-2">Month:</span>{{x.month_name}}</div>
+                      <div class="d-flex"><span class="pr-2">Day of the Week:</span>{{x.day_of_week}}</div>
+                      <a :href="'/user/'+d.id"><div class="d-flex w-100 pt-2 justify-content-center">View Profile</div></a>
+                    </div>
                   </div>
-                </div>
-            </MglPopup>
-          </MglMarker>
+              </MglPopup>
+            </MglMarker>
+        </div>
          
       </div>
      
@@ -145,6 +147,6 @@ export default {
 .image{
   border-radius: 50%;
   margin-bottom: 2rem;
-  width: 50%;
+  width: 10rem;
 }
 </style>

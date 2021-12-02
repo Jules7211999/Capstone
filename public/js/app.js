@@ -3113,6 +3113,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_defineProperty({
@@ -8757,7 +8759,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.mapboxgl-canvas[data-v-2286299a]{\r\n  width: 100%;\r\n  height: 100%;\r\n  position: relative;\n}\n.image[data-v-2286299a]{\r\n  border-radius: 50%;\r\n  margin-bottom: 2rem;\r\n  width: 50%;\n}\r\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.mapboxgl-canvas[data-v-2286299a]{\r\n  width: 100%;\r\n  height: 100%;\r\n  position: relative;\n}\n.image[data-v-2286299a]{\r\n  border-radius: 50%;\r\n  margin-bottom: 2rem;\r\n  width: 10rem;\n}\r\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -52616,124 +52618,130 @@ var render = function() {
             return _c(
               "div",
               _vm._l(d.emergency_call, function(x) {
-                return _c(
-                  "div",
-                  [
-                    _c(
-                      "MglMarker",
-                      {
-                        attrs: {
-                          coordinates: [x.longitude, x.latitude],
-                          color: _vm.markerColor
-                        }
-                      },
-                      [
-                        _c("MglPopup", [
+                return _c("div", [
+                  d.barangay_id == _vm.barangay_id || _vm.barangay_id == ""
+                    ? _c(
+                        "div",
+                        [
                           _c(
-                            "div",
+                            "MglMarker",
                             {
-                              staticClass:
-                                "font-weight-bold p-3 d-flex justify-content-center align-items-center"
+                              attrs: {
+                                coordinates: [x.longitude, x.latitude],
+                                color: _vm.markerColor
+                              }
                             },
                             [
-                              _c("div", { staticClass: "text-center" }, [
-                                _c("img", {
-                                  staticClass: "image",
-                                  attrs: {
-                                    src:
-                                      "https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/" +
-                                      d.profile_image,
-                                    alt: ""
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("SOS ID:")
-                                  ]),
-                                  _vm._v(_vm._s(x.id))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Name:")
-                                  ]),
-                                  _vm._v(_vm._s(d.name))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Latitude:")
-                                  ]),
-                                  _vm._v(_vm._s(x.latitude))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Longitude:")
-                                  ]),
-                                  _vm._v(_vm._s(x.longitude))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Date and Time:")
-                                  ]),
-                                  _vm._v(_vm._s(x.datetimezone))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Month:")
-                                  ]),
-                                  _vm._v(_vm._s(x.month_name))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Day of the Week:")
-                                  ]),
-                                  _vm._v(_vm._s(x.day_of_week))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Status:")
-                                  ]),
-                                  _vm._v(_vm._s(x.status))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Type:")
-                                  ]),
-                                  _vm._v(_vm._s(x.type))
-                                ]),
-                                _vm._v(" "),
+                              _c("MglPopup", [
                                 _c(
-                                  "a",
-                                  { attrs: { href: "/emergency/" + x.id } },
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "font-weight-bold p-3 d-flex justify-content-center align-items-center"
+                                  },
                                   [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "d-flex w-100 pt-2 justify-content-center"
-                                      },
-                                      [_vm._v("Details")]
-                                    )
+                                    _c("div", { staticClass: "text-center" }, [
+                                      _c("img", {
+                                        staticClass: "image",
+                                        attrs: {
+                                          src:
+                                            "https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/" +
+                                            d.profile_image,
+                                          alt: ""
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("SOS ID:")
+                                        ]),
+                                        _vm._v(_vm._s(x.id))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Name:")
+                                        ]),
+                                        _vm._v(_vm._s(d.name))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Latitude:")
+                                        ]),
+                                        _vm._v(_vm._s(x.latitude))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Longitude:")
+                                        ]),
+                                        _vm._v(_vm._s(x.longitude))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Date and Time:")
+                                        ]),
+                                        _vm._v(_vm._s(x.datetimezone))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Month:")
+                                        ]),
+                                        _vm._v(_vm._s(x.month_name))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Day of the Week:")
+                                        ]),
+                                        _vm._v(_vm._s(x.day_of_week))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Status:")
+                                        ]),
+                                        _vm._v(_vm._s(x.status))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Type:")
+                                        ]),
+                                        _vm._v(_vm._s(x.type))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "a",
+                                        {
+                                          attrs: { href: "/emergency/" + x.id }
+                                        },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "d-flex w-100 pt-2 justify-content-center"
+                                            },
+                                            [_vm._v("Details")]
+                                          )
+                                        ]
+                                      )
+                                    ])
                                   ]
                                 )
                               ])
-                            ]
+                            ],
+                            1
                           )
-                        ])
-                      ],
-                      1
-                    )
-                  ],
-                  1
-                )
+                        ],
+                        1
+                      )
+                    : _vm._e()
+                ])
               }),
               0
             )
@@ -52766,94 +52774,104 @@ var render = function() {
             return _c(
               "div",
               _vm._l(d.coordinates, function(x) {
-                return _c(
-                  "div",
-                  [
-                    _c(
-                      "MglMarker",
-                      { attrs: { coordinates: [x.longitude, x.latitude] } },
-                      [
-                        _c("MglPopup", [
+                return _c("div", [
+                  d.barangay_id == _vm.barangay_id || _vm.barangay_id == ""
+                    ? _c(
+                        "div",
+                        [
                           _c(
-                            "div",
+                            "MglMarker",
                             {
-                              staticClass:
-                                "font-weight-bold p-3 d-flex justify-content-center align-items-center"
+                              attrs: { coordinates: [x.longitude, x.latitude] }
                             },
                             [
-                              _c("div", { staticClass: "text-center" }, [
-                                _c("img", {
-                                  staticClass: "image",
-                                  attrs: {
-                                    src:
-                                      "https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/" +
-                                      d.profile_image,
-                                    alt: ""
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Name:")
-                                  ]),
-                                  _vm._v(_vm._s(d.name))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Latitude:")
-                                  ]),
-                                  _vm._v(_vm._s(x.latitude))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Longitude:")
-                                  ]),
-                                  _vm._v(_vm._s(x.longitude))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Date and Time:")
-                                  ]),
-                                  _vm._v(_vm._s(x.datetimezone))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Month:")
-                                  ]),
-                                  _vm._v(_vm._s(x.month_name))
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "d-flex" }, [
-                                  _c("span", { staticClass: "pr-2" }, [
-                                    _vm._v("Day of the Week:")
-                                  ]),
-                                  _vm._v(_vm._s(x.day_of_week))
-                                ]),
-                                _vm._v(" "),
-                                _c("a", { attrs: { href: "/user/" + d.id } }, [
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "d-flex w-100 pt-2 justify-content-center"
-                                    },
-                                    [_vm._v("View Profile")]
-                                  )
-                                ])
+                              _c("MglPopup", [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "font-weight-bold p-3 d-flex justify-content-center align-items-center"
+                                  },
+                                  [
+                                    _c("div", { staticClass: "text-center" }, [
+                                      _c("img", {
+                                        staticClass: "image",
+                                        attrs: {
+                                          src:
+                                            "https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/" +
+                                            d.profile_image,
+                                          alt: ""
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Name:")
+                                        ]),
+                                        _vm._v(_vm._s(d.name))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Latitude:")
+                                        ]),
+                                        _vm._v(_vm._s(x.latitude))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Longitude:")
+                                        ]),
+                                        _vm._v(_vm._s(x.longitude))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Date and Time:")
+                                        ]),
+                                        _vm._v(_vm._s(x.datetimezone))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Month:")
+                                        ]),
+                                        _vm._v(_vm._s(x.month_name))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "d-flex" }, [
+                                        _c("span", { staticClass: "pr-2" }, [
+                                          _vm._v("Day of the Week:")
+                                        ]),
+                                        _vm._v(_vm._s(x.day_of_week))
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "a",
+                                        { attrs: { href: "/user/" + d.id } },
+                                        [
+                                          _c(
+                                            "div",
+                                            {
+                                              staticClass:
+                                                "d-flex w-100 pt-2 justify-content-center"
+                                            },
+                                            [_vm._v("View Profile")]
+                                          )
+                                        ]
+                                      )
+                                    ])
+                                  ]
+                                )
                               ])
-                            ]
+                            ],
+                            1
                           )
-                        ])
-                      ],
-                      1
-                    )
-                  ],
-                  1
-                )
+                        ],
+                        1
+                      )
+                    : _vm._e()
+                ])
               }),
               0
             )
@@ -53416,7 +53434,7 @@ var render = function() {
               "d-flex justify-content-center align-items-center w-100 mb-2 "
           },
           [
-            d.user.barangay == _vm.barangay || _vm.role == "SuperUser"
+            d.user.barangay_id == _vm.barangay || _vm.barangay == ""
               ? _c(
                   "div",
                   {
@@ -53486,7 +53504,7 @@ var render = function() {
               "d-flex justify-content-center align-items-center  w-100 mb-2 "
           },
           [
-            d.user.barangay == _vm.barangay || _vm.role == "SuperUser"
+            d.user.barangay_id == _vm.barangay || _vm.barangay == ""
               ? _c(
                   "div",
                   {
@@ -53543,7 +53561,7 @@ var render = function() {
           "div",
           { staticClass: "d-flex justify-content-center w-100 mb-2 " },
           [
-            d.user.barangay == _vm.barangay || _vm.role == "SuperUser"
+            d.user.barangay_id == _vm.barangay || _vm.barangay == ""
               ? _c(
                   "div",
                   {
@@ -53596,7 +53614,7 @@ var render = function() {
           "div",
           { staticClass: "d-flex justify-content-center w-100 mb-2 " },
           [
-            d.user.barangay == _vm.barangay || _vm.role == "SuperUser"
+            d.user.barangay_id == _vm.barangay || _vm.barangay == ""
               ? _c(
                   "div",
                   {
