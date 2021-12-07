@@ -60,9 +60,9 @@ class UserProfile extends Controller
 
         $file = $request->file('image');
         $name = time().$file->getClientOriginalName();
-
+        $ran = rand();
          User::create([
-             'id'=> rand(),
+             'id'=> $ran,
             'name' => $request->name,
             'birthdate' => $request->birthdate,
             'phone' => $request->phone_number,
@@ -82,7 +82,7 @@ class UserProfile extends Controller
             $filepath = $name;
             Storage::disk('s3')->put($filepath,file_get_contents($file));
 
-            history("Added Fisherman"." ".$request->name);
+            history("Added Fisherman"." ".$request->name. " ". $ran);
         return redirect()->back()->with('message','User Registered');
 
        

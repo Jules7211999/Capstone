@@ -45,7 +45,9 @@ class Admin extends Controller
      */
     public function store(Request $request){
    
+        $ran = rand();
         $request->validate([
+            
             'name' => 'required|string|max:255',
             'address' => 'required|max:255',
             'phone_number' => 'required|numeric',
@@ -63,6 +65,7 @@ class Admin extends Controller
         $name = time().$file->getClientOriginalName();
         
          User::updateOrCreate([
+            'id' => $ran,
             'name' => $request->name,
             'birthdate' => $request->birthdate,
             'password' => Hash::make($request->password),
@@ -82,7 +85,7 @@ class Admin extends Controller
             $filepath = $name;
             Storage::disk('s3')->put($filepath,file_get_contents($file));
 
-        history("Created Admin ". $request->name);
+        history("Created Admin ". $request->name. " ". $ran);
         return redirect()->back()->with('message','User Registered');
     }
 

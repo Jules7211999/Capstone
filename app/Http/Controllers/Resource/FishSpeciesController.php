@@ -39,8 +39,9 @@ class FishSpeciesController extends Controller
      */
     public function store(Request $request)
     {
-
+        $ran = rand();
         $request->validate([
+            'id' => $ran,
             'image' => 'required',
             'phylum' => 'required',
             'subphylum' => 'required',
