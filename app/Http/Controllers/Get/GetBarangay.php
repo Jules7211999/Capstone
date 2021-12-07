@@ -10,18 +10,18 @@ use App\Models\city;
 class GetBarangay extends Controller
 {
     public function index(){
-       return barang::where('status','=','Active')->with('city')->orderBy('name')->get(); 
+       return barang::where('status','=','Active')->with('city')->get(); 
     }
     
     public function inactive(){
-        return barang::where('status','=','Inactive')->with('city')->orderBy('name')->get();
+        return barang::where('status','=','Inactive')->with('city')->get();
     }
 
     public function dropdown($id){
-        return barang::where('city_id','=',$id)->orderBy('name')->get();
+        return barang::where('city_id','=',$id)->get();
     }
 
     public function monitor($id){
-        return city::where('id','=',$id)->with('barang')->orderBy('name')->get();
+        return city::where('id','=',$id)->with('barang')->get();
     }
 }

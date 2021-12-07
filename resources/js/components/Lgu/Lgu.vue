@@ -166,16 +166,14 @@ export default {
            axios.put('/barangay/'+id,{
                status:status
            })
-           this.getIncativeBarangay();
-           this.getBarangay();
+           location.reload();
         },
         updateMunicipality(id,status){
             axios.post('cityUpdate',{
                 id: id,
                 status:status
             })
-            this.getMunicipality();
-            this.getInactiveMunicipality();
+            location.reload();
             
         }
     },
