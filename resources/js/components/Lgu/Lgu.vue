@@ -124,9 +124,10 @@ export default {
             })
             .then(data => console.log(data))
             .catch(error => console.log(error))
+            this.getMunicipality();
             this.nameM = ""
             this.postal = ""
-            this.getMunicipality();
+            
             
         },
         submitB(){
@@ -136,9 +137,10 @@ export default {
             })
             .then(data => console.log(data))
             .catch(error => console.log(error))
+            this.getBarangay();
             this.nameB = ""
             this.city = ""
-            this.getBarangay();
+            
         },
         getBarangay(){
             axios.get('/getBarangay')
@@ -164,14 +166,16 @@ export default {
            axios.put('/barangay/'+id,{
                status:status
            })
-           location.reload();
+           this.getIncativeBarangay();
+           this.getBarangay();
         },
         updateMunicipality(id,status){
             axios.post('cityUpdate',{
                 id: id,
                 status:status
             })
-            location.reload();
+            this.getMunicipality();
+            this.getInactiveMunicipality();
             
         }
     },

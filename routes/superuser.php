@@ -55,11 +55,15 @@ Route::get('/chart/{fid}/{bid}',[ChartController::class,'individual']);
 Route::get('/history',[HistoryLogController::class,'index']);
 
 Route::post('/addMonths',function(){
-    $month = ["January","Febuary","March","April", "May", "June", "July", "August", "September","November","December"];
+   
+    $month = ["January","Febuary","March","April", "May", "June", "July", "August", "September","October","November","December"];
+    $x = 1;
     foreach($month as $m){
         Months::create([
+            'id' => $x,
             'name' => $m
         ]);
+        $x +=1;
     }
     
 })

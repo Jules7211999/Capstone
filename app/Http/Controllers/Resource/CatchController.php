@@ -40,6 +40,8 @@ class CatchController extends Controller
     public function store(Request $request)
     {
         
+  
+
         $date = Carbon::now();
         $year = $date-> format('Y');
         $month = $date->format('m');

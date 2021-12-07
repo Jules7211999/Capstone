@@ -93,7 +93,7 @@
               <span class="font-weight-bold text-secondary">Report Log</span>
           </div>
         </a>
-        <a href="/history">
+        <a href="/history" target="_blank">
            <div class="d-flex align-items-center p-3 border m-2">
             <img src="/img/history.png" alt="" srcset="">
               <span class="font-weight-bold text-secondary">Activity Log</span>

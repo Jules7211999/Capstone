@@ -2158,7 +2158,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (data) {
         return _this.message = data.data;
       })["catch"](function (error) {
-        return _this.message = error.response.data.errors['weight'][0];
+        return _this.message = error.response.data.message;
       });
       this.weight = "";
     }
@@ -2906,9 +2906,9 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         return console.log(error);
       });
+      this.getMunicipality();
       this.nameM = "";
       this.postal = "";
-      this.getMunicipality();
     },
     submitB: function submitB() {
       axios.post('/barangay', {
@@ -2919,9 +2919,9 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         return console.log(error);
       });
+      this.getBarangay();
       this.nameB = "";
       this.city = "";
-      this.getBarangay();
     },
     getBarangay: function getBarangay() {
       var _this = this;
@@ -2963,14 +2963,16 @@ __webpack_require__.r(__webpack_exports__);
       axios.put('/barangay/' + id, {
         status: status
       });
-      location.reload();
+      this.getIncativeBarangay();
+      this.getBarangay();
     },
     updateMunicipality: function updateMunicipality(id, status) {
       axios.post('cityUpdate', {
         id: id,
         status: status
       });
-      location.reload();
+      this.getMunicipality();
+      this.getInactiveMunicipality();
     }
   },
   mounted: function mounted() {
@@ -50867,9 +50869,17 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-6 align-self-center " }, [
-        _c("div", { staticClass: "w-100 text-primary font-weight-bold mb-2" }, [
-          _vm._v(_vm._s(_vm.message))
-        ]),
+        _c(
+          "div",
+          {
+            staticClass: "w-100  font-weight-bold mb-2",
+            class: {
+              "text-danger": _vm.message == "The given data was invalid.",
+              "text-success": _vm.message == "Success"
+            }
+          },
+          [_vm._v(_vm._s(_vm.message))]
+        ),
         _vm._v(" "),
         _c(
           "form",
@@ -51824,7 +51834,7 @@ var staticRenderFns = [
           )
         ]),
         _vm._v(" "),
-        _c("a", { attrs: { href: "/history" } }, [
+        _c("a", { attrs: { href: "/history", target: "_blank" } }, [
           _c(
             "div",
             { staticClass: "d-flex align-items-center p-3 border m-2" },

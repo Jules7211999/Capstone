@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 <admin-container-component role="{{auth()->user()->role}}" authname="{{auth()->user()->name}}" nav="Add Fish">
-<a href="/admin">Back</a>
+<a href="/fish">Back</a>
     @if(session()->has('message'))
             <div class="row w-100 font-weight-bold d-flex justify-content-center p-5 text-success">
                 {{ session()->get('message') }}

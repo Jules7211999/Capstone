@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class GetCityController extends Controller
 {
     public function index(){
-        $municipality = city::where('status','=','Active')->get();
+        $municipality = city::where('status','=','Active')->orderBy('name')->get();
         return $municipality;
     }
 }

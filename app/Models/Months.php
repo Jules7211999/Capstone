@@ -9,9 +9,12 @@ class Months extends Model
 {
     use HasFactory;
     protected $fillable =[
+        'id',
         'name'
     ];
 
+    public $incrementing = false;
+    
     public function catch(){
         return $this->hasMany(FishCatch::class,'month_id','id');
     }

@@ -5,7 +5,7 @@
             <img :src="'https://capstone-salvador-bucket.s3.us-east-2.amazonaws.com/'+ fish.image" alt="" class="image">
         </div>
         <div class="col-6 align-self-center ">
-            <div class="w-100 text-primary font-weight-bold mb-2">{{message}}</div>
+            <div v-bind:class="{'text-danger': message == 'The given data was invalid.','text-success': message == 'Success'}" class="w-100  font-weight-bold mb-2">{{message}}</div>
             <form @submit.prevent="submit(fish.id)">
                  <input class="form-control-lg w-50 border font-weight-bold bg-transparent" v-model="weight" required placeholder="Enter Weight per Kilo">
             </form>
@@ -65,7 +65,7 @@ export default {
                fish_id: id, 
            })
            .then(data => this.message = data.data)
-        .catch(error => this.message = error.response.data.errors['weight'][0])
+        .catch(error => this.message = error.response.data.message)
         this.weight =""
        }
    }

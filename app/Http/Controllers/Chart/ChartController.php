@@ -51,9 +51,6 @@ class ChartController extends Controller
 
         $fish = fish::find($fid);
 
-        $fishname = $fish->common_name;
-      
-
        foreach($data as $d){
          array_push($months,$d->name);
        }
