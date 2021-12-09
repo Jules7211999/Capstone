@@ -50650,7 +50650,7 @@ var render = function() {
         _c("div", { staticClass: "label" }, [_vm._v("ID")]),
         _vm._v(" "),
         _c("div", { staticClass: "text-secondary" }, [
-          _vm._v("FONO" + _vm._s(_vm.profile[0].id) + "3432")
+          _vm._v(_vm._s(_vm.profile[0].id))
         ])
       ]),
       _vm._v(" "),

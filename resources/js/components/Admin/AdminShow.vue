@@ -17,7 +17,7 @@
     <div class="row mt-5 border-top pt-3">
         <div class="col font-weight-bold">
              <div class="label">ID</div>
-             <div class="text-secondary">FONO{{profile[0].id}}3432</div>
+             <div class="text-secondary">{{profile[0].id}}</div>
         </div>
         <div class="col font-weight-bold"> 
             <div class="label">Email</div>
