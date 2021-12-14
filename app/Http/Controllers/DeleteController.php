@@ -11,5 +11,6 @@ class DeleteController extends Controller
         $delete = User::find($id);
         $delete->delete();
 
+        return redirect('/users');
     }
 }
