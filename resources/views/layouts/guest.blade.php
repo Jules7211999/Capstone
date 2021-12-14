@@ -34,10 +34,13 @@
         </style>
     <body>
         <div id="app" class="container-fluid vh-100 p-5">
+                    <div class="row justify-content-center">
+                     <p class="font-weight-bold text-secondary"> Bureau of Fisheries and Aquatic Resources</p>
+                    </div>
                     <div class="row justify-content-center mb-3">
-                        <div class="col-xl-4 col-md-4 text-center pt-5">
+                        <div class="col-xl-4 col-md-4 text-center pt-3">
                             <img id="logo" src="{{asset('img/logo.png')}}" alt="">
-                            <p class="mt-2 font-weight-bold text-secondary">EPASC</p>
+                            <p class="mt-3 font-weight-bold text-secondary">EPASC</p>
                         </div>
                     </div>
                     <div class="row justify-content-center">

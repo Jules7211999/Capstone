@@ -2002,6 +2002,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   props: ['data'],
   data: function data() {
@@ -3840,6 +3842,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
 //
 //
 //
@@ -50482,45 +50486,43 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "w-100 p-5 d-flex justify-content-between" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "w-50 text-right pr-5" }, [
-        _c(
-          "form",
-          {
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: " p-5 w-50 pr-5" }, [
+      _c(
+        "form",
+        {
+          on: {
+            keypress: function($event) {
+              return _vm.search()
+            }
+          }
+        },
+        [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.query,
+                expression: "query"
+              }
+            ],
+            staticClass:
+              "border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary pr-5",
+            attrs: { type: "text", placeholder: "Search" },
+            domProps: { value: _vm.query },
             on: {
-              keypress: function($event) {
-                return _vm.search()
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.query = $event.target.value
               }
             }
-          },
-          [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.query,
-                  expression: "query"
-                }
-              ],
-              staticClass:
-                "border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary pr-5",
-              attrs: { type: "text", placeholder: "Search" },
-              domProps: { value: _vm.query },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.query = $event.target.value
-                }
-              }
-            })
-          ]
-        )
-      ])
+          })
+        ]
+      )
     ]),
     _vm._v(" "),
     _c(
@@ -50569,16 +50571,22 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("a", { attrs: { href: "/admin/create" } }, [
-      _c("div", [
-        _c("img", {
-          staticClass: "adduser",
-          attrs: { src: "/img/add-user.png", alt: "" }
-        }),
-        _vm._v(" "),
-        _c("label", { staticClass: "font-weight-bold text-secondary" })
-      ])
-    ])
+    return _c(
+      "div",
+      { staticClass: "w-100 p-5 d-flex justify-content-between" },
+      [
+        _c("a", { attrs: { href: "/admin/create" } }, [
+          _c("div", [
+            _c("img", {
+              staticClass: "adduser",
+              attrs: { src: "/img/add-user.png", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("label", { staticClass: "font-weight-bold text-secondary" })
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true
@@ -50623,7 +50631,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-4" }, [
+      _c("div", { staticClass: "col-4 d-flex" }, [
         _c(
           "div",
           {
@@ -50640,6 +50648,21 @@ var render = function() {
                 })
               ]
             )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "d-flex align-items-center justify-content-center w-25"
+          },
+          [
+            _c("a", { attrs: { href: "/delete/" + _vm.profile[0].id } }, [
+              _c("img", {
+                staticClass: "w-50",
+                attrs: { src: "/img/trash.png" }
+              })
+            ])
           ]
         )
       ])
@@ -54008,44 +54031,44 @@ var render = function() {
               _c("label", { staticClass: "font-weight-bold text-secondary" })
             ])
           : _vm._e()
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "w-50 text-right pr-5" }, [
-        _c(
-          "form",
-          {
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "p-5 w-50 text-left pr-5" }, [
+      _c(
+        "form",
+        {
+          on: {
+            keypress: function($event) {
+              return _vm.search()
+            }
+          }
+        },
+        [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.query,
+                expression: "query"
+              }
+            ],
+            staticClass:
+              "border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary pr-5",
+            attrs: { type: "text", placeholder: "Search" },
+            domProps: { value: _vm.query },
             on: {
-              keypress: function($event) {
-                return _vm.search()
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.query = $event.target.value
               }
             }
-          },
-          [
-            _c("input", {
-              directives: [
-                {
-                  name: "model",
-                  rawName: "v-model",
-                  value: _vm.query,
-                  expression: "query"
-                }
-              ],
-              staticClass:
-                "border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary pr-5",
-              attrs: { type: "text", placeholder: "Search" },
-              domProps: { value: _vm.query },
-              on: {
-                input: function($event) {
-                  if ($event.target.composing) {
-                    return
-                  }
-                  _vm.query = $event.target.value
-                }
-              }
-            })
-          ]
-        )
-      ])
+          })
+        ]
+      )
     ]),
     _vm._v(" "),
     _c(
@@ -54127,11 +54150,12 @@ var render = function() {
         _c("div", [_c("span", [_c("h1", [_vm._v(_vm._s(_vm.profile.name))])])])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-4" }, [
+      _c("div", { staticClass: "col-4 d-flex" }, [
         _c(
           "div",
           {
-            staticClass: "d-flex align-items-center justify-content-center w-25"
+            staticClass:
+              "d-flex align-items-center justify-content-center w-25 "
           },
           [
             _c(
@@ -54144,6 +54168,21 @@ var render = function() {
                 })
               ]
             )
+          ]
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          {
+            staticClass: "d-flex align-items-center justify-content-center w-25"
+          },
+          [
+            _c("a", { attrs: { href: "/delete/" + _vm.profile[0].id } }, [
+              _c("img", {
+                staticClass: "w-50",
+                attrs: { src: "/img/trash.png" }
+              })
+            ])
           ]
         )
       ])

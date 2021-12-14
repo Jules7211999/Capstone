@@ -34,7 +34,7 @@ class CreateUsersTable extends Migration
             $table->string('username')->nullable();
             $table->softDeletes();
             $table->string('marital_status')->nullable();
-
+           
         });
     }
 

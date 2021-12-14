@@ -11,6 +11,7 @@ use App\Http\Controllers\Resource\Barangay;
 use App\Http\Controllers\CreateCityController;
 use App\Http\Controllers\Resource\UserProfile;
 use App\Http\Controllers\Chart\ChartController;
+use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\HistoryLogController;
 use App\Http\Controllers\Search\SearchController;
 use App\Http\Controllers\Resource\CatchController;
@@ -34,7 +35,6 @@ Route::resource('fish',FishSpeciesController::class);
 Route::resource('lgu',Lgu::class);
 Route::resource('barangay',Barangay::class);
 Route::resource('catch',CatchController::class);
-
 Route::post('/city',[CreateCityController::class,'index']);
 Route::post('/cityUpdate',[CreateCityController::class,'update']);
 
@@ -53,7 +53,7 @@ Route::get('/get/{id}',[MonitorController::class,'get']);
 Route::get('/report',[ChartController::class,'all']);
 Route::get('/chart/{fid}/{bid}',[ChartController::class,'individual']);
 Route::get('/history',[HistoryLogController::class,'index']);
-
+Route::get('/delete/{id}',[DeleteController::class,'index']);
 Route::post('/addMonths',function(){
    
     $month = ["January","Febuary","March","April", "May", "June", "July", "August", "September","October","November","December"];

@@ -7,11 +7,13 @@
         <div class="col-5 align-self-center">
             <div><span><h1>{{profile[0].name}}</h1></span></div>
         </div>
-        <div class="col-4">
+        <div class="col-4 d-flex">
                 <div class="d-flex align-items-center justify-content-center w-25">
-
                     <a :href="'/admin/'+profile[0].id+'/edit'"><img src="/img/edit.png" class="w-50"></a>
             </div>
+             <div class="d-flex align-items-center justify-content-center w-25">
+                    <a :href="'/delete/'+profile[0].id"><img src="/img/trash.png" class="w-50"></a>
+                </div>
         </div>
     </div>
     <div class="row mt-5 border-top pt-3">

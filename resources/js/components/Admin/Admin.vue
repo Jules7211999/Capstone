@@ -7,13 +7,13 @@
                     <label class="font-weight-bold text-secondary"></label>
                 </div>
             </a>
-            <div class="w-50 text-right pr-5">
+    </div>
+     <div class=" p-5 w-50 pr-5">
                 <form @keypress="search()">
                     <input type="text" v-model="query" placeholder="Search" class="border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary pr-5">
                 </form>  
                 
             </div>
-    </div>
     <div class="d-flex flex-wrap w-100 h-100">
         <div v-for="u in user.data"  :key="u.id" class="m-2 d-flex flex-wrap">
             <a :href="'/admin/'+u.id" class="text-secondary">
