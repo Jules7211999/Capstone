@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class DeleteController extends Controller
 {
     public function index($id){
-        $delete = User::find($id)->get();
+        $delete = User::find($id);
         $delete->delete();
 
     }
