@@ -160,6 +160,7 @@ export default {
         this.getBarangay();
         this.getIncativeBarangay();
         this.getMunicipality();
+        this.getMunicipality();
     }
 }
 </script>
