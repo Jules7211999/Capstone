@@ -1,6 +1,7 @@
 <template>
     <div class="w-100 h-100">
         <div class="row w-100 d-flex ">
+            {{municipality}}
              <div class="col">
                 <div class="row ">
                     <div class="col-5">
@@ -160,7 +161,7 @@ export default {
         this.getBarangay();
         this.getIncativeBarangay();
         this.getMunicipality();
-        this.getMunicipality();
+       
     }
 }
 </script>
