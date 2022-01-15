@@ -125,7 +125,8 @@ export default {
             })
             .then(data => console.log(data))
             .catch(error => console.log(error))
-            this.getBarangay();
+
+           location.reload()
             this.nameB = ""
             this.city = ""
             

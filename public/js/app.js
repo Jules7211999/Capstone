@@ -2964,7 +2964,7 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         return console.log(error);
       });
-      this.getBarangay();
+      location.reload();
       this.nameB = "";
       this.city = "";
     },
