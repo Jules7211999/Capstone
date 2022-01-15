@@ -2923,7 +2923,8 @@ __webpack_require__.r(__webpack_exports__);
       barangay: {},
       municipality: {},
       city: "",
-      stat: "Active"
+      stat: "Active",
+      query: ""
     };
   },
   methods: {

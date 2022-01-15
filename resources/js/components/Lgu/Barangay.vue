@@ -86,7 +86,8 @@ export default {
             barangay:{},
             municipality:{},
             city:"",
-            stat:"Active"
+            stat:"Active",
+            query:""
         }   
     },
     methods:{
