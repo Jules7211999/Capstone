@@ -54,7 +54,7 @@ class CatchController extends Controller
         FishCatch::create([
             'year' => $year,
             'month_id' => $month,
-            'fish_id' => 1,
+            'fish_id' => $request->fish_id,
             'barangay_id' => auth()->user()->barangay_id,
             'kilos' => $request->weight,
 

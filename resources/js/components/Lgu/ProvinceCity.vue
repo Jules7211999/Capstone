@@ -1,32 +1,46 @@
 <template>
         <div class="row w-100 d-flex">
             <div class="col">
-                <div class="row pl-3">
-                    <img src="/img/add-city_municipality.png" class="add mr-2" alt="">
-                    <span class="font-weight-bold text-secondary">Add Cities / Municipality</span>
+                <div class="row ">
+                    <div class="col-5">
+                        <img src="/img/add-city_municipality.png" class="add mr-2" alt="">
+                        <span class="font-weight-bold text-secondary">Add Cities / Municipality</span>
+                    </div>
+                    <div class="col-2">
+                        <span class="font-weight-bold text-secondary">Status</span>
+                    </div>
                 </div>
             </div>
-            <div class="row w-100">
-                <div class="col">
+            <div class="row w-100 pt-3">
+                <div class="col-5">
                     <form @submit.prevent="submitM()">
-                        <div class="row w-100 mt-3 ml-1 d-flex align-items-center">
-                                <div class="col-7">
+                        <div class=" w-100 d-flex align-items-center">
+                                <div class="col">
                                     <input  type="text"  v-model="nameM" class="form-control-lg w-100 border bg-transparent font-weight-bold"  name="name" placeholder="Name" autofocus />
                                 </div>
-                                <div class="col-4">
-                                    <input  type="text"  v-model="postal" class="form-control-lg w-100 border bg-transparent font-weight-bold"  name="postal" placeholder="Postal Code"/>
+                                <div class="col">
+                                    <input  type="text"  v-model="postal" class="form-control-lg w-100 border bg-transparent font-weight-bold"  name="postal" placeholder="Zip Code"/>
                                 </div>
-                                <div class="col-1">
+                                <div class="col">
                                     <input type="submit" value="Add" class="btn font-weight-bold btn-outline-primary pl-5 pr-5">
                                 </div>
                         </div>
                     </form>
                 </div>
-                  <div class="col d-flex align-items-end p-1 justify-content-center">
-                            <form @keypress="search()" @submit.prevent="searchsubmit()">
-                                <input type="text" v-model="query" placeholder="Search" class="border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary w-100">
-                            </form>
+                   <div class="col-2 ">
+                          <div class="w-100 d-flex align-items-center">
+                              <select  v-model="stat" @change="status" class="form-control-lg w-100 border bg-transparent font-weight-bold">
+                                  <option value="Active"  class="font-weight-bold text-secondary">Active</option>
+                                  <option value="Inactive" class="font-weight-bold text-secondary">Inactive</option>
+                              </select>
+                          </div>
                     </div>
+                  <div class="col-5 d-flex align-items-end p-1 justify-content-center">
+                            <form @keypress="search()">
+                    <input type="text" v-model="query" placeholder="Search" class="border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary ">
+                </form>  
+                    </div>
+                    
             </div>
             
       
@@ -34,7 +48,7 @@
             <div class="col m-2">
                 <div class="row text-secondary font-weight-bold p-3  rounded mb-2">
                    <div class="col">Name</div>
-                   <div class="col">Zipcode</div>
+                   <div class="col">Zip Code</div>
                    <div class="col">Status</div>
                    <div class="col">Action</div>
                 </div>
@@ -64,9 +78,38 @@ export default {
             nameM:"",
             postal:"",
             municipality:{},
+            query:'',
+            stat:'Active'
         }   
     },
     methods:{
+        status(){
+           if(this.stat == "Active"){
+               this.Inactivemunicipality = {}
+               this.getMunicipality()
+           }else if(this.stat == "Inactive"){
+               this.municipality = {}
+               this.getInactiveMunicipality()
+           }
+        },
+         search(){
+                axios.post('/municipalitySearch',{
+                search : this.query,
+                status: this.stat
+            })
+            .then(
+                data => {
+                if(this.stat == "Active"){
+                    this.Inactivemunicipality = {}
+                    this.municipality = data.data
+                }else if(this.stat == "Inactive"){
+                    this.municipality = {}
+                    this.Inactivemunicipality = data.data
+                }
+                }
+            )
+            .catch(error =>console.log(error))
+        },
         submitM(){
             axios.post('/city',{
                 name: this.nameM,
@@ -74,7 +117,10 @@ export default {
             })
             .then(data => console.log(data))
             .catch(error => console.log(error))
-            this.getMunicipality();
+
+               this.Inactivemunicipality = {}
+               this.getMunicipality()
+
             this.nameM = ""
             this.postal = ""
         },
@@ -94,12 +140,20 @@ export default {
                 id: id,
                 status:status
             })
-            location.reload();
+
+            if(this.stat == "Active"){
+               this.Inactivemunicipality = {}
+               this.getMunicipality()
+           }else if(this.stat == "Inactive"){
+               this.municipality = {}
+               this.getInactiveMunicipality()
+           }
+            
         }
     },
     mounted(){
         this.getMunicipality();
-        this.getInactiveMunicipality();
+        
     }
 }
 </script>
@@ -108,5 +162,10 @@ export default {
     .add{
         width: 1.5rem;
     }
-   
+   input{
+       background: transparent;
+   }
+   input:focus{
+       outline: none;
+   }
 </style>

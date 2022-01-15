@@ -2,16 +2,21 @@
     <div class="w-100 h-100">
         <div class="row w-100 d-flex ">
              <div class="col">
-                <div class="row pl-3">
-                    <img  src="/img/barangay.png" class="add mr-2" alt="">
-                    <span class="font-weight-bold text-secondary">Add Barangay</span>
+                <div class="row ">
+                    <div class="col-5">
+                        <img  src="/img/barangay.png" class="add mr-2" alt="">
+                        <span class="font-weight-bold text-secondary">Add Barangay</span>
+                    </div>
+                    <div class="col-2">
+                         <span class="font-weight-bold text-secondary">Status</span>
+                    </div>
                 </div>
             </div>
         </div>
-                <div class="row w-100">
-                    <div class="col">
+                <div class="row w-100 pt-3">
+                    <div class="col-5">
                         <form @submit.prevent="submitB">
-                            <div class="row w-100 mt-3 d-flex align-items-center">
+                            <div class="row w-100  d-flex align-items-center">
                                 <div class="col">
                                     <input  type="text" class="form-control-lg w-100 border bg-transparent font-weight-bold"  v-model="nameB" name="name" placeholder="Name" autofocus />
                                 </div>
@@ -20,16 +25,25 @@
                                         <option  class="font-weight-bold" v-for="d in municipality" :value="d.id">{{d.name}}</option>
                                     </select>
                                 </div>
+                                
                                 <div class="col">
                                     <input type="submit" value="Add" class="btn btn-outline-primary font-weight-bold pl-5 pr-5">
                                 </div>
                             </div>
                         </form>
                     </div>
-                    <div class="col d-flex align-items-end p-1 justify-content-center">
-                            <form @keypress="search()" @submit.prevent="searchsubmit()">
-                                <input type="text" v-model="query" placeholder="Search" class="border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary w-100">
-                            </form>
+                     <div class="col-2 ">
+                          <div class="w-100 d-flex align-items-center">
+                              <select  v-model="stat" @change="status" class="form-control-lg w-100 border bg-transparent font-weight-bold">
+                                  <option value="Active"  class="font-weight-bold text-secondary">Active</option>
+                                  <option value="Inactive" class="font-weight-bold text-secondary">Inactive</option>
+                              </select>
+                          </div>
+                    </div>
+                   <div class="col-5 d-flex align-items-end p-1 justify-content-center">
+                            <form @keypress="search()">
+                    <input type="text" v-model="query" placeholder="Search" class="border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary ">
+                </form>  
                     </div>
                 </div>
             
@@ -70,10 +84,38 @@ export default {
             nameB: "",
             barangay:{},
             municipality:{},
-            city:""
+            city:"",
+            stat:"Active"
         }   
     },
     methods:{
+          status(){
+           if(this.stat == "Active"){
+               this.Inactivebarangay = {}
+               this.getBarangay()
+           }else if(this.stat == "Inactive"){
+               this.barangay = {}
+               this.getIncativeBarangay()
+           }
+        },
+         search(){
+                axios.post('/Search',{
+                search : this.query,
+                status: this.stat
+            })
+            .then(
+                data => {
+                if(this.stat == "Active"){
+                    this.Inactivemunicipality = {}
+                    this.municipality = data.data
+                }else if(this.stat == "Inactive"){
+                    this.barangay = {}
+                    this.Inactivemunicipality = data.data
+                }
+                }
+            )
+            .catch(error =>console.log(error))
+        },
         submitB(){
             axios.post('/barangay',{
                 name : this.nameB,
@@ -105,7 +147,13 @@ export default {
            axios.put('/barangay/'+id,{
                status:status
            })
-           location.reload();
+           if(this.stat == "Active"){
+               this.Inactivebarangay = {}
+               this.getBarangay()
+           }else if(this.stat == "Inactive"){
+               this.barangay = {}
+               this.getIncativeBarangay()
+           }
         },
     },
     mounted(){
@@ -120,4 +168,10 @@ export default {
     .add{
         width: 1.5rem;
     }
+      input{
+       background: transparent;
+   }
+   input:focus{
+       outline: none;
+   }
 </style>

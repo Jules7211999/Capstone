@@ -46,8 +46,8 @@ Route::post('/adminSearch',[SearchController::class,'admin']);
 Route::post('/adminSearchDeleted',[SearchController::class,'admindeleted']);
 Route::post('/fishSearch',[SearchController::class,'fish']);
 Route::get('/report/catch/{id}',[ReportCatchController::class,'index']);
-Route::get('/barangaySearch',[ReportCatchController::class,'barangay']);
-Route::get('/municipalitySearch',[ReportCatchController::class,'municipality']);
+Route::get('/barangaySearch',[SearchController::class,'barangay']);
+Route::post('/municipalitySearch',[SearchController::class,'municipality']);
 
 Route::post('/sos',[Sos::class,'sos']);
 Route::get('/monitor',[MonitorController::class,'index']);

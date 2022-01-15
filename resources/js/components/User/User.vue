@@ -11,7 +11,7 @@
       <div class="p-5 w-100 text-left ">
                 <div class="row align-items-center">
                     <div class="col-5">
-                        <form @keypress="search()" @submit.prevent="searchsubmit()">
+                        <form @keypress="search()">
                             <input type="text" v-model="query" placeholder="Search" class="border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary pr-5">
                         </form>
                     </div> 

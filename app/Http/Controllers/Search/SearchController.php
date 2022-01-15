@@ -46,14 +46,16 @@ class SearchController extends Controller
     }
 
     public function municipality(Request $request){
-        $search = city::where('name','LIKE','%'.$request->search.'%')->orwhere('local_name','LIKE','%'.$request->search.'%')
+      
+            $search = city::where('name','LIKE','%'.$request->search.'%')->where('status','=',$request->status)
         ->get();
 
        return $search;
     }
+    
 
     public function barangay(Request $request){
-        $search = barang::where('name','LIKE','%'.$request->search.'%')->orwhere('local_name','LIKE','%'.$request->search.'%')
+        $search = barang::where('name','LIKE','%'.$request->search.'%')->where('status','=',$request->status)
         ->get();
 
        return $search;
