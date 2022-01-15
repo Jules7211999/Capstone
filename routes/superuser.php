@@ -13,6 +13,7 @@ use App\Http\Controllers\Resource\UserProfile;
 use App\Http\Controllers\Chart\ChartController;
 use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\HistoryLogController;
+use App\Http\Controllers\ReportCatchController;
 use App\Http\Controllers\Search\SearchController;
 use App\Http\Controllers\Resource\CatchController;
 use App\Http\Controllers\Resource\EmergencySignal;
@@ -38,22 +39,27 @@ Route::resource('catch',CatchController::class);
 Route::post('/city',[CreateCityController::class,'index']);
 Route::post('/cityUpdate',[CreateCityController::class,'update']);
 
-//User/Admin Search
+//Search Controllers
 Route::post('/userSearch',[SearchController::class,'user']);
+Route::post('/userSearchDeleted',[SearchController::class,'userdeleted']);
 Route::post('/adminSearch',[SearchController::class,'admin']);
+Route::post('/adminSearchDeleted',[SearchController::class,'admindeleted']);
 Route::post('/fishSearch',[SearchController::class,'fish']);
+Route::get('/report/catch/{id}',[ReportCatchController::class,'index']);
+Route::get('/barangaySearch',[ReportCatchController::class,'barangay']);
+Route::get('/municipalitySearch',[ReportCatchController::class,'municipality']);
 
 Route::post('/sos',[Sos::class,'sos']);
-
 Route::get('/monitor',[MonitorController::class,'index']);
 Route::get('/monitor/{id}',[MonitorController::class,'subindex']);
 Route::get('monitor/show/{id}',[MonitorController::class,'main']);
 Route::get('/get/{id}',[MonitorController::class,'get']);
-
 Route::get('/report',[ChartController::class,'all']);
 Route::get('/chart/{fid}/{bid}',[ChartController::class,'individual']);
 Route::get('/history',[HistoryLogController::class,'index']);
 Route::get('/delete/{id}',[DeleteController::class,'index']);
+Route::post('/restore',[DeleteController::class,'restore']);
+
 Route::post('/addMonths',function(){
    
     $month = ["January","Febuary","March","April", "May", "June", "July", "August", "September","October","November","December"];

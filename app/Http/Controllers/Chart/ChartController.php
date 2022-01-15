@@ -58,8 +58,6 @@ class ChartController extends Controller
            array_push($sum ,$h->catch_sum_kilos);
        }
     
-     
-      
         return view('Superuser.Monitor.main_monitor',['months' => $months,'sum' => $sum, 'fish' => $fish ,'chart' => $chart->build($months,$sum)]);
 
        

@@ -39,9 +39,9 @@ class FishSpeciesController extends Controller
      */
     public function store(Request $request)
     {
+
         $ran = rand();
         $request->validate([
-            'id' => $ran,
             'image' => 'required',
             'phylum' => 'required',
             'subphylum' => 'required',
@@ -55,7 +55,7 @@ class FishSpeciesController extends Controller
         $name = time().$file->getClientOriginalName();
 
         fish::create([
-            'id', rand(),
+            'id', $ran,
             'phylum' => $request->phylum,
             'subphylum' => $request->subphylum,
             'superclass' => $request->superclass,

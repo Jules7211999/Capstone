@@ -11,6 +11,18 @@ class DeleteController extends Controller
         $delete = User::find($id);
         $delete->delete();
 
-        return redirect('/users');
+        if($delete->role == "Admin"){
+            return redirect('/admin');
+        }
+        else{
+            return redirect('/user');
+        }
+        
     }
+
+    public function restore(Request $request){
+        $restore = User::onlyTrashed()->find($request->id);
+        $restore->restore();
+    }
+    
 }

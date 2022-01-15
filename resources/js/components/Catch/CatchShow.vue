@@ -42,6 +42,11 @@
              <div class="text-secondary">{{fish.local_name}}</div>
          </div>
     </div>
+      <div class="row pt-5">
+        <div class="col justify-content-center align-items-center">
+            <img src="/img/report.png" alt="" srcset="" class="report"><span class="pl-3 text-secondary">Report</span>
+        </div>
+    </div>
    
 </div>
     
@@ -73,6 +78,9 @@ export default {
 </script>
 
 <style scoped>
+.report{
+    width: 5rem;
+}
 .image{
     width: 50%;
 }
