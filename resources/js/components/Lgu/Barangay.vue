@@ -54,7 +54,7 @@
           
             <div class="col m-2">
                 <div  class="row text-secondary font-weight-bold p-3  rounded mb-2">
-                    <div class="col">Nameasdfasdfasd</div>
+                    <div class="col">Name</div>
                     <div class="col">Status</div>
                     <div class="col">City</div>
                     <div class="col">Action</div>

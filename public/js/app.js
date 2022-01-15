@@ -53143,7 +53143,7 @@ var staticRenderFns = [
       "div",
       { staticClass: "row text-secondary font-weight-bold p-3  rounded mb-2" },
       [
-        _c("div", { staticClass: "col" }, [_vm._v("Nameasdfasdfasd")]),
+        _c("div", { staticClass: "col" }, [_vm._v("Name")]),
         _vm._v(" "),
         _c("div", { staticClass: "col" }, [_vm._v("Status")]),
         _vm._v(" "),
