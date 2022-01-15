@@ -3010,6 +3010,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
+    console.log("hello");
     this.getBarangay();
     this.getIncativeBarangay();
     this.getMunicipality();

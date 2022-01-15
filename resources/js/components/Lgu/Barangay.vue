@@ -159,6 +159,7 @@ export default {
         },
     },
     mounted(){
+        console.log("hello")
         this.getBarangay();
         this.getIncativeBarangay();
         this.getMunicipality();
