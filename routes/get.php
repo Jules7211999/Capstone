@@ -10,6 +10,7 @@ use App\Http\Controllers\Get\GetLocation;
 
 use App\Http\Controllers\Get\GetMunicipality;
 use App\Http\Controllers\Get\GetCityController;
+use App\Http\Controllers\Get\getFishCatch;
 use App\Http\Controllers\MobileProfile;
 
 Route::get('/getFish',[GetFish::class,'index']);
@@ -31,6 +32,7 @@ Route::get('/getUserDeleted',[GetUser::class,'deleted']);
 Route::get('/getLocation',[GetLocation::class,'index']);
 Route::get('/getCity',[GetCityController::class,'index']);
 Route::get('/getBarang/{id}',[GetBarangay::class,'dropdown']);
+Route::get('/getCatch/{barangayid}/{fishid}',[getFishCatch::class,'index']);
 
 
 ?>

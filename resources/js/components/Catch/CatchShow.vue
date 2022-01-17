@@ -32,7 +32,7 @@
                 <div class="text-secondary">{{fish.superclass}}</div>
             </div>
     </div>
-    <div class="row pt-3">
+    <div class="row pt-3 border-bottom pb-3">
         <div class="col font-weight-bold">
             <div class="label">Common Name</div>
             <div class="text-secondary">{{fish.common_name}}</div>
@@ -42,11 +42,21 @@
              <div class="text-secondary">{{fish.local_name}}</div>
          </div>
     </div>
-      <div class="row pt-5">
-        <div class="col justify-content-center align-items-center">
-            <img src="/img/report.png" alt="" srcset="" class="report"><span class="pl-3 text-secondary">Report</span>
+    <div class="row pt-3">
+        <div class="col">
+            <h3 class="font-weight-bold">Recently Added</h3>
         </div>
     </div>
+     <div class="w-100 pt-3">
+         <div class="row pb-2 w-50">
+             <div class="col-3 font-weight-bold text-secondary">Kilos</div>
+             <div class="col-5 font-weight-bold text-secondary">Date and Time</div>
+         </div>
+         <div v-for="x in catch_fish" class="row w-50 pt-3 pb-3 mb-1  border">
+                <div class="col-3 font-weight-bold text-secondary">{{x.kilos}}</div>
+                <div class="col-5 font-weight-bold text-secondary">{{x.created_at}}</div>
+         </div>
+     </div>
    
 </div>
     
@@ -54,13 +64,14 @@
 
 <script>
 export default {
-    props:['data'],
+    props:['data','barangay_id'],
     data(){
         return{
          fish:this.data,
          weight:"",
          message:"",
          errors:"",
+         catch_fish:{}
         }
     },
    methods:{
@@ -72,7 +83,19 @@ export default {
            .then(data => this.message = data.data)
         .catch(error => this.message = error.response.data.message)
         this.weight =""
+
+        this.getcatch();
        }
+       ,
+       getcatch(){
+           axios.get('/getCatch/'+this.data.id+'/'+this.barangay_id)
+           .then(data => this.catch_fish = data.data)
+               
+           
+       }
+   },
+   mounted(){
+       this.getcatch();
    }
 }
 </script>

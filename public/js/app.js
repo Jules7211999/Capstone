@@ -2195,14 +2195,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['data'],
+  props: ['data', 'barangay_id'],
   data: function data() {
     return {
       fish: this.data,
       weight: "",
       message: "",
-      errors: ""
+      errors: "",
+      catch_fish: {}
     };
   },
   methods: {
@@ -2218,7 +2229,18 @@ __webpack_require__.r(__webpack_exports__);
         return _this.message = error.response.data.message;
       });
       this.weight = "";
+      this.getcatch();
+    },
+    getcatch: function getcatch() {
+      var _this2 = this;
+
+      axios.get('/getCatch/' + this.data.id + '/' + this.barangay_id).then(function (data) {
+        return _this2.catch_fish = data.data;
+      });
     }
+  },
+  mounted: function mounted() {
+    this.getcatch();
   }
 });
 
@@ -51682,7 +51704,7 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "row pt-3" }, [
+    _c("div", { staticClass: "row pt-3 border-bottom pb-3" }, [
       _c("div", { staticClass: "col font-weight-bold" }, [
         _c("div", { staticClass: "label" }, [_vm._v("Common Name")]),
         _vm._v(" "),
@@ -51700,7 +51722,32 @@ var render = function() {
       ])
     ]),
     _vm._v(" "),
-    _vm._m(1)
+    _vm._m(1),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "w-100 pt-3" },
+      [
+        _vm._m(2),
+        _vm._v(" "),
+        _vm._l(_vm.catch_fish, function(x) {
+          return _c("div", { staticClass: "row w-50 pt-3 pb-3 mb-1  border" }, [
+            _c(
+              "div",
+              { staticClass: "col-3 font-weight-bold text-secondary" },
+              [_vm._v(_vm._s(x.kilos))]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "col-5 font-weight-bold text-secondary" },
+              [_vm._v(_vm._s(x.created_at))]
+            )
+          ])
+        })
+      ],
+      2
+    )
   ])
 }
 var staticRenderFns = [
@@ -51719,18 +51766,26 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row pt-5" }, [
-      _c(
-        "div",
-        { staticClass: "col justify-content-center align-items-center" },
-        [
-          _c("img", {
-            staticClass: "report",
-            attrs: { src: "/img/report.png", alt: "", srcset: "" }
-          }),
-          _c("span", { staticClass: "pl-3 text-secondary" }, [_vm._v("Report")])
-        ]
-      )
+    return _c("div", { staticClass: "row pt-3" }, [
+      _c("div", { staticClass: "col" }, [
+        _c("h3", { staticClass: "font-weight-bold" }, [
+          _vm._v("Recently Added")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row pb-2 w-50" }, [
+      _c("div", { staticClass: "col-3 font-weight-bold text-secondary" }, [
+        _vm._v("Kilos")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-5 font-weight-bold text-secondary" }, [
+        _vm._v("Date and Time")
+      ])
     ])
   }
 ]
