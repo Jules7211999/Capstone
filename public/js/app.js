@@ -2659,6 +2659,45 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -52058,17 +52097,23 @@ var render = function() {
               "col-3 d-flex justify-content-center align-items-center "
           },
           [
-            _c("div", [
+            _c("div", { staticClass: "row border rounded p-3" }, [
               _vm._m(0),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "text-center w-100 font-weight-bold text-secondary pt-3"
-                },
-                [_vm._v(_vm._s(_vm.sos))]
-              )
+              _c("div", { staticClass: "col-9 text-center" }, [
+                _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                  _vm._v("Sent SOS")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-center w-100 font-weight-bold text-secondary "
+                  },
+                  [_vm._v(_vm._s(_vm.sos))]
+                )
+              ])
             ])
           ]
         ),
@@ -52080,17 +52125,23 @@ var render = function() {
               "col-3 d-flex justify-content-center align-items-center  "
           },
           [
-            _c("div", [
+            _c("div", { staticClass: "row border rounded p-3" }, [
               _vm._m(1),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "text-center w-100 font-weight-bold text-secondary pt-3"
-                },
-                [_vm._v(_vm._s(_vm.sosp))]
-              )
+              _c("div", { staticClass: "col-9 text-center" }, [
+                _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                  _vm._v("Ongoing SOS")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-center w-100 font-weight-bold text-secondary"
+                  },
+                  [_vm._v(_vm._s(_vm.sosp))]
+                )
+              ])
             ])
           ]
         ),
@@ -52102,17 +52153,23 @@ var render = function() {
               "col-3 d-flex justify-content-center align-items-center  "
           },
           [
-            _c("div", [
+            _c("div", { staticClass: "row border rounded p-3" }, [
               _vm._m(2),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "text-center w-100 font-weight-bold text-secondary pt-3"
-                },
-                [_vm._v(_vm._s(_vm.sosd))]
-              )
+              _c("div", { staticClass: "col-9 text-center" }, [
+                _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                  _vm._v("Completed SOS")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-center w-100 font-weight-bold text-secondary"
+                  },
+                  [_vm._v(_vm._s(_vm.sosd))]
+                )
+              ])
             ])
           ]
         ),
@@ -52124,17 +52181,23 @@ var render = function() {
               "col-3 d-flex justify-content-center align-items-center  "
           },
           [
-            _c("div", [
+            _c("div", { staticClass: "row border rounded p-3" }, [
               _vm._m(3),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "text-center w-100 font-weight-bold text-secondary pt-3"
-                },
-                [_vm._v(_vm._s(_vm.sosc))]
-              )
+              _c("div", { staticClass: "col-9 text-center" }, [
+                _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                  _vm._v("Canceled SOS")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-center w-100 font-weight-bold text-secondary"
+                  },
+                  [_vm._v(_vm._s(_vm.sosc))]
+                )
+              ])
             ])
           ]
         )
@@ -52152,17 +52215,23 @@ var render = function() {
               "col-3 d-flex justify-content-center align-items-center  "
           },
           [
-            _c("div", [
+            _c("div", { staticClass: "row border rounded p-3" }, [
               _vm._m(4),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "text-center w-100 font-weight-bold text-secondary pt-3"
-                },
-                [_vm._v(_vm._s(_vm.user))]
-              )
+              _c("div", { staticClass: "col-9 text-center" }, [
+                _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                  _vm._v("Super Admin")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-center w-100 font-weight-bold text-secondary"
+                  },
+                  [_vm._v(_vm._s(_vm.user))]
+                )
+              ])
             ])
           ]
         ),
@@ -52174,17 +52243,23 @@ var render = function() {
               "col-3 d-flex justify-content-center align-items-center  "
           },
           [
-            _c("div", [
+            _c("div", { staticClass: "row border rounded p-3" }, [
               _vm._m(5),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "text-center w-100 font-weight-bold text-secondary pt-3"
-                },
-                [_vm._v(_vm._s(_vm.admin))]
-              )
+              _c("div", { staticClass: "col-9 text-center" }, [
+                _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                  _vm._v("Admin")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-center w-100 font-weight-bold text-secondary"
+                  },
+                  [_vm._v(_vm._s(_vm.admin))]
+                )
+              ])
             ])
           ]
         ),
@@ -52196,17 +52271,23 @@ var render = function() {
               "col-3 d-flex justify-content-center align-items-center  "
           },
           [
-            _c("div", [
+            _c("div", { staticClass: "row border rounded p-3" }, [
               _vm._m(6),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "text-center w-100 font-weight-bold text-secondary pt-3"
-                },
-                [_vm._v(_vm._s(_vm.fisherman))]
-              )
+              _c("div", { staticClass: "col-9 text-center" }, [
+                _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                  _vm._v("Fisherman")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-center w-100 font-weight-bold text-secondary"
+                  },
+                  [_vm._v(_vm._s(_vm.fisherman))]
+                )
+              ])
             ])
           ]
         )
@@ -52224,17 +52305,23 @@ var render = function() {
               "col-3 d-flex justify-content-center align-items-center  "
           },
           [
-            _c("div", [
+            _c("div", { staticClass: "row border rounded p-3" }, [
               _vm._m(7),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "text-center w-100 font-weight-bold text-secondary pt-3"
-                },
-                [_vm._v(_vm._s(_vm.city))]
-              )
+              _c("div", { staticClass: "col-9 text-center" }, [
+                _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                  _vm._v("City / Municipality")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-center w-100 font-weight-bold text-secondary"
+                  },
+                  [_vm._v(_vm._s(_vm.city))]
+                )
+              ])
             ])
           ]
         ),
@@ -52246,17 +52333,23 @@ var render = function() {
               "col-3 d-flex justify-content-center align-items-center  "
           },
           [
-            _c("div", [
+            _c("div", { staticClass: "row border rounded p-3" }, [
               _vm._m(8),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "text-center w-100 font-weight-bold text-secondary pt-3"
-                },
-                [_vm._v(_vm._s(_vm.barangay))]
-              )
+              _c("div", { staticClass: "col-9 text-center" }, [
+                _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                  _vm._v("Barangay")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-center w-100 font-weight-bold text-secondary"
+                  },
+                  [_vm._v(_vm._s(_vm.barangay))]
+                )
+              ])
             ])
           ]
         ),
@@ -52268,24 +52361,30 @@ var render = function() {
               "col-3 d-flex justify-content-center align-items-center  "
           },
           [
-            _c("div", [
+            _c("div", { staticClass: "row border rounded p-3" }, [
               _vm._m(9),
               _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass:
-                    "text-center w-100 font-weight-bold text-secondary pt-1"
-                },
-                [_vm._v(_vm._s(_vm.total_lgu))]
-              )
+              _c("div", { staticClass: "col-9 text-center" }, [
+                _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                  _vm._v("Total LGU")
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "text-center w-100 font-weight-bold text-secondary pt-1"
+                  },
+                  [_vm._v(_vm._s(_vm.total_lgu))]
+                )
+              ])
             ])
           ]
         )
       ]
     ),
     _vm._v(" "),
-    _c("div", { staticClass: "row w-100 d-flex h-25 justify-content-center" }, [
+    _c("div", { staticClass: "row w-100 d-flex h-25 justify-content-around" }, [
       _c(
         "div",
         {
@@ -52293,17 +52392,23 @@ var render = function() {
             "col-3 d-flex justify-content-center align-items-center  "
         },
         [
-          _c("div", [
+          _c("div", { staticClass: "row border rounded p-3" }, [
             _vm._m(10),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "text-center w-100 font-weight-bold text-secondary pt-3"
-              },
-              [_vm._v(_vm._s(_vm.coord))]
-            )
+            _c("div", { staticClass: "col-9 text-center" }, [
+              _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                _vm._v("Location Received")
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "text-center w-100 font-weight-bold text-secondary"
+                },
+                [_vm._v(_vm._s(_vm.coord))]
+              )
+            ])
           ])
         ]
       ),
@@ -52315,17 +52420,23 @@ var render = function() {
             "col-3 d-flex justify-content-center align-items-center  "
         },
         [
-          _c("div", [
+          _c("div", { staticClass: "row border rounded p-3" }, [
             _vm._m(11),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "text-center w-100 font-weight-bold text-secondary pt-3"
-              },
-              [_vm._v(_vm._s(_vm.species))]
-            )
+            _c("div", { staticClass: "col-9 text-center" }, [
+              _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                _vm._v("Fish Species")
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "text-center w-100 font-weight-bold text-secondary"
+                },
+                [_vm._v(_vm._s(_vm.species))]
+              )
+            ])
           ])
         ]
       ),
@@ -52337,17 +52448,23 @@ var render = function() {
             "col-3 d-flex justify-content-center align-items-center  "
         },
         [
-          _c("div", [
+          _c("div", { staticClass: "row border rounded p-3" }, [
             _vm._m(12),
             _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass:
-                  "text-center w-100 font-weight-bold text-secondary pt-2"
-              },
-              [_vm._v(_vm._s(_vm.catchk))]
-            )
+            _c("div", { staticClass: "col-9 text-center" }, [
+              _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+                _vm._v("Total Catch")
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "text-center w-100 font-weight-bold text-secondary pt-2"
+                },
+                [_vm._v(_vm._s(_vm.catchk))]
+              )
+            ])
           ])
         ]
       )
@@ -52361,156 +52478,140 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
-      _c("img", {
-        staticClass: "mr-2",
-        attrs: { src: "/img/sos_sent.png", alt: "", srcset: "" }
-      }),
-      _vm._v("Sent SOS")
+    return _c("div", { staticClass: "col-3" }, [
+      _c("img", { attrs: { src: "/img/sos_sent.png", alt: "", srcset: "" } })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+    return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "mr-2",
         attrs: { src: "/img/sos_ongoing.png", alt: "", srcset: "" }
-      }),
-      _vm._v("Ongoing SOS")
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+    return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "mr-2",
         attrs: { src: "/img/sos_success.png", alt: "", srcset: "" }
-      }),
-      _vm._v("Completed SOS")
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+    return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "mr-2",
         attrs: { src: "/img/cancel.png", alt: "", srcset: "" }
-      }),
-      _vm._v("Canceled SOS")
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+    return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "mr-2",
         attrs: { src: "/img/superadmin_dashboard.png", alt: "", srcset: "" }
-      }),
-      _vm._v("Super Admin")
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+    return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "mr-2",
         attrs: { src: "/img/admin.png", alt: "", srcset: "" }
-      }),
-      _vm._v("Admin")
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+    return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "mr-2",
         attrs: { src: "/img/Users.svg", alt: "", srcset: "" }
-      }),
-      _vm._v("Fisherman")
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+    return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "mr-2",
         attrs: { src: "/img/city_dashboard.png", alt: "", srcset: "" }
-      }),
-      _vm._v("City / Municipality")
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+    return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "mr-2",
         attrs: { src: "/img/barangay_dashboard.png", alt: "", srcset: "" }
-      }),
-      _vm._v("Barangay")
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+    return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "mr-2 image_total_lgu",
         attrs: { src: "/img/total_lgu.png", alt: "", srcset: "" }
-      }),
-      _vm._v("Total LGU")
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+    return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "mr-2",
         attrs: { src: "/img/location.png", alt: "", srcset: "" }
-      }),
-      _vm._v("Location Received")
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+    return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "mr-2",
         attrs: { src: "/img/catch.png", alt: "", srcset: "" }
-      }),
-      _vm._v("Fish Species")
+      })
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "font-weight-bold text-secondary" }, [
+    return _c("div", { staticClass: "col-3" }, [
       _c("img", {
         staticClass: "mr-2",
         attrs: { src: "/img/net.png", alt: "", srcset: "" }
-      }),
-      _vm._v("Total Catch")
+      })
     ])
   },
   function() {
