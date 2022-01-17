@@ -118,11 +118,13 @@ export default {
             .then(data => console.log(data))
             .catch(error => console.log(error))
 
-               this.Inactivemunicipality = {}
-               this.getMunicipality()
+              
 
             this.nameM = ""
             this.postal = ""
+
+             this.Inactivemunicipality = {}
+               this.getMunicipality()
         },
         getMunicipality(){
             axios.get('/getMunicipality')

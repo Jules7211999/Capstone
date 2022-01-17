@@ -3253,10 +3253,10 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         return console.log(error);
       });
-      this.Inactivemunicipality = {};
-      this.getMunicipality();
       this.nameM = "";
       this.postal = "";
+      this.Inactivemunicipality = {};
+      this.getMunicipality();
     },
     getMunicipality: function getMunicipality() {
       var _this2 = this;
