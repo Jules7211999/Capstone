@@ -2974,7 +2974,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -3001,16 +3000,16 @@ __webpack_require__.r(__webpack_exports__);
     search: function search() {
       var _this = this;
 
-      axios.post('/Search', {
+      axios.post('/barangaySearch', {
         search: this.query,
         status: this.stat
       }).then(function (data) {
         if (_this.stat == "Active") {
-          _this.Inactivemunicipality = {};
-          _this.municipality = data.data;
+          _this.Inactivebarangay = {};
+          _this.getBarangay = data.data;
         } else if (_this.stat == "Inactive") {
           _this.barangay = {};
-          _this.Inactivemunicipality = data.data;
+          _this.getIncativeBarangay = data.data;
         }
       })["catch"](function (error) {
         return console.log(error);
@@ -3025,9 +3024,10 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         return console.log(error);
       });
-      location.reload();
       this.nameB = "";
       this.city = "";
+      this.Inactivebarangay = {};
+      this.getBarangay();
     },
     getBarangay: function getBarangay() {
       var _this2 = this;
@@ -52972,10 +52972,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "w-100 h-100" }, [
-    _c("div", { staticClass: "row w-100 d-flex " }, [
-      _vm._v("\n        " + _vm._s(_vm.municipality) + "\n         "),
-      _vm._m(0)
-    ]),
+    _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "row w-100 pt-3" }, [
       _c("div", { staticClass: "col-5" }, [
@@ -53140,6 +53137,10 @@ var render = function() {
               on: {
                 keypress: function($event) {
                   return _vm.search()
+                },
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.status()
                 }
               }
             },
@@ -53261,22 +53262,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col" }, [
-      _c("div", { staticClass: "row " }, [
-        _c("div", { staticClass: "col-5" }, [
-          _c("img", {
-            staticClass: "add mr-2",
-            attrs: { src: "/img/barangay.png", alt: "" }
-          }),
+    return _c("div", { staticClass: "row w-100 d-flex " }, [
+      _c("div", { staticClass: "col" }, [
+        _c("div", { staticClass: "row " }, [
+          _c("div", { staticClass: "col-5" }, [
+            _c("img", {
+              staticClass: "add mr-2",
+              attrs: { src: "/img/barangay.png", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "font-weight-bold text-secondary" }, [
+              _vm._v("Add Barangay")
+            ])
+          ]),
           _vm._v(" "),
-          _c("span", { staticClass: "font-weight-bold text-secondary" }, [
-            _vm._v("Add Barangay")
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-2" }, [
-          _c("span", { staticClass: "font-weight-bold text-secondary" }, [
-            _vm._v("Status")
+          _c("div", { staticClass: "col-2" }, [
+            _c("span", { staticClass: "font-weight-bold text-secondary" }, [
+              _vm._v("Status")
+            ])
           ])
         ])
       ])

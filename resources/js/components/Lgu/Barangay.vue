@@ -1,7 +1,6 @@
 <template>
     <div class="w-100 h-100">
         <div class="row w-100 d-flex ">
-            {{municipality}}
              <div class="col">
                 <div class="row ">
                     <div class="col-5">
@@ -42,7 +41,7 @@
                           </div>
                     </div>
                    <div class="col-5 d-flex align-items-end p-1 justify-content-center">
-                            <form @keypress="search()">
+                            <form @keypress="search()" @submit.prevent="status()">
                     <input type="text" v-model="query" placeholder="Search" class="border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary ">
                 </form>  
                     </div>
@@ -101,18 +100,18 @@ export default {
            }
         },
          search(){
-                axios.post('/Search',{
+                axios.post('/barangaySearch',{
                 search : this.query,
                 status: this.stat
             })
             .then(
                 data => {
                 if(this.stat == "Active"){
-                    this.Inactivemunicipality = {}
-                    this.municipality = data.data
+                    this.Inactivebarangay = {}
+                    this.getBarangay = data.data
                 }else if(this.stat == "Inactive"){
                     this.barangay = {}
-                    this.Inactivemunicipality = data.data
+                    this.getIncativeBarangay = data.data
                 }
                 }
             )
@@ -126,10 +125,11 @@ export default {
             .then(data => console.log(data))
             .catch(error => console.log(error))
 
-           location.reload()
+           
             this.nameB = ""
             this.city = ""
-            
+           this.Inactivebarangay = {}
+           this.getBarangay()
         },
         getBarangay(){
             axios.get('/getBarangay')

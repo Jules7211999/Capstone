@@ -29,15 +29,15 @@ Route::get('/map',function(){
 })->middleware(('auth'));
 
 //Resource Controllers Emergency,User and Admin
-Route::resource('emergency',EmergencySignal::class) ;
-Route::resource('admin',Admin::class);
-Route::resource('user',UserProfile::class);
-Route::resource('fish',FishSpeciesController::class);
-Route::resource('lgu',Lgu::class);
-Route::resource('barangay',Barangay::class);
-Route::resource('catch',CatchController::class);
-Route::post('/city',[CreateCityController::class,'index']);
-Route::post('/cityUpdate',[CreateCityController::class,'update']);
+Route::resource('emergency',EmergencySignal::class) ->middleware(('auth'));
+Route::resource('admin',Admin::class)->middleware(('auth'));
+Route::resource('user',UserProfile::class)->middleware(('auth'));
+Route::resource('fish',FishSpeciesController::class)->middleware(('auth'));
+Route::resource('lgu',Lgu::class)->middleware(('auth'));
+Route::resource('barangay',Barangay::class)->middleware(('auth'));
+Route::resource('catch',CatchController::class)->middleware(('auth'));
+Route::post('/city',[CreateCityController::class,'index'])->middleware(('auth'));
+Route::post('/cityUpdate',[CreateCityController::class,'update'])->middleware(('auth'));
 
 //Search Controllers
 Route::post('/userSearch',[SearchController::class,'user']);
@@ -49,16 +49,16 @@ Route::get('/report/catch/{id}',[ReportCatchController::class,'index']);
 Route::get('/barangaySearch',[SearchController::class,'barangay']);
 Route::post('/municipalitySearch',[SearchController::class,'municipality']);
 
-Route::post('/sos',[Sos::class,'sos']);
-Route::get('/monitor',[MonitorController::class,'index']);
-Route::get('/monitor/{id}',[MonitorController::class,'subindex']);
-Route::get('monitor/show/{id}',[MonitorController::class,'main']);
-Route::get('/get/{id}',[MonitorController::class,'get']);
-Route::get('/report',[ChartController::class,'all']);
-Route::get('/chart/{fid}/{bid}',[ChartController::class,'individual']);
-Route::get('/history',[HistoryLogController::class,'index']);
-Route::get('/delete/{id}',[DeleteController::class,'index']);
-Route::post('/restore',[DeleteController::class,'restore']);
+Route::post('/sos',[Sos::class,'sos'])->middleware(('auth'));
+Route::get('/monitor',[MonitorController::class,'index'])->middleware(('auth'));
+Route::get('/monitor/{id}',[MonitorController::class,'subindex'])->middleware(('auth'));
+Route::get('monitor/show/{id}',[MonitorController::class,'main'])->middleware(('auth'));
+Route::get('/get/{id}',[MonitorController::class,'get'])->middleware(('auth'));
+Route::get('/report',[ChartController::class,'all'])->middleware(('auth'));
+Route::get('/chart/{fid}/{bid}',[ChartController::class,'individual'])->middleware(('auth'));
+Route::get('/history',[HistoryLogController::class,'index'])->middleware(('auth'));
+Route::get('/delete/{id}',[DeleteController::class,'index'])->middleware(('auth'));
+Route::post('/restore',[DeleteController::class,'restore'])->middleware(('auth'));
 
 Route::post('/addMonths',function(){
    
@@ -72,7 +72,7 @@ Route::post('/addMonths',function(){
         $x +=1;
     }
     
-})
+})->middleware(('auth'));
 
 
 ?>
