@@ -2994,7 +2994,7 @@ __webpack_require__.r(__webpack_exports__);
         this.getBarangay();
       } else if (this.stat == "Inactive") {
         this.barangay = {};
-        this.getIncativeBarangay();
+        this.getInactiveBarangay();
       }
     },
     search: function search() {
@@ -3006,10 +3006,10 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (data) {
         if (_this.stat == "Active") {
           _this.Inactivebarangay = {};
-          _this.getBarangay = data.data;
+          _this.barangay = data.data;
         } else if (_this.stat == "Inactive") {
           _this.barangay = {};
-          _this.getIncativeBarangay = data.data;
+          _this.Inactivebarangay = data.data;
         }
       })["catch"](function (error) {
         return console.log(error);
@@ -3026,6 +3026,7 @@ __webpack_require__.r(__webpack_exports__);
       });
       this.nameB = "";
       this.city = "";
+      this.stat = Active;
       this.Inactivebarangay = {};
       this.getBarangay();
     },
@@ -3047,7 +3048,7 @@ __webpack_require__.r(__webpack_exports__);
         return console.log(error);
       });
     },
-    getIncativeBarangay: function getIncativeBarangay() {
+    getInactiveBarangay: function getInactiveBarangay() {
       var _this4 = this;
 
       axios.get('/getInactiveBarangay').then(function (data) {
@@ -3066,14 +3067,13 @@ __webpack_require__.r(__webpack_exports__);
         this.getBarangay();
       } else if (this.stat == "Inactive") {
         this.barangay = {};
-        this.getIncativeBarangay();
+        this.getInactiveBarangay();
       }
     }
   },
   mounted: function mounted() {
-    console.log("hello");
     this.getBarangay();
-    this.getIncativeBarangay();
+    this.getInactiveBarangay();
     this.getMunicipality();
   }
 });

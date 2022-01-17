@@ -96,7 +96,7 @@ export default {
                this.getBarangay()
            }else if(this.stat == "Inactive"){
                this.barangay = {}
-               this.getIncativeBarangay()
+               this.getInactiveBarangay()
            }
         },
          search(){
@@ -108,10 +108,10 @@ export default {
                 data => {
                 if(this.stat == "Active"){
                     this.Inactivebarangay = {}
-                    this.getBarangay = data.data
+                    this.barangay = data.data
                 }else if(this.stat == "Inactive"){
                     this.barangay = {}
-                    this.getIncativeBarangay = data.data
+                    this.Inactivebarangay = data.data
                 }
                 }
             )
@@ -128,6 +128,7 @@ export default {
            
             this.nameB = ""
             this.city = ""
+            this.stat = Active
            this.Inactivebarangay = {}
            this.getBarangay()
         },
@@ -141,7 +142,7 @@ export default {
             .then(data => this.municipality = data.data)
             .catch(error => console.log(error))
         },
-          getIncativeBarangay(){
+          getInactiveBarangay(){
             axios.get('/getInactiveBarangay')
             .then(data => this.Inactivebarangay = data.data)
             .catch(error => console.log(error))
@@ -155,14 +156,13 @@ export default {
                this.getBarangay()
            }else if(this.stat == "Inactive"){
                this.barangay = {}
-               this.getIncativeBarangay()
+               this.getInactiveBarangay()
            }
         },
     },
     mounted(){
-        console.log("hello")
         this.getBarangay();
-        this.getIncativeBarangay();
+        this.getInactiveBarangay();
         this.getMunicipality();
        
     }

@@ -56,7 +56,7 @@ class SearchController extends Controller
 
     public function barangay(Request $request){
         $search = barang::where('name','LIKE','%'.$request->search.'%')->where('status','=',$request->status)
-        ->get();
+        ->with('city')->get();
 
        return $search;
     }
