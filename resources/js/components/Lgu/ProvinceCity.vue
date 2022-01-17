@@ -36,7 +36,7 @@
                           </div>
                     </div>
                   <div class="col-5 d-flex align-items-end p-1 justify-content-center">
-                            <form @keypress="search()">
+                            <form @keypress="search()" @submit.prevent="status()">
                     <input type="text" v-model="query" placeholder="Search" class="border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary ">
                 </form>  
                     </div>

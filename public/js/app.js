@@ -53561,6 +53561,10 @@ var render = function() {
               on: {
                 keypress: function($event) {
                   return _vm.search()
+                },
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.status()
                 }
               }
             },
