@@ -122,7 +122,7 @@ export default {
 
             this.nameM = ""
             this.postal = ""
-
+            this.stat = "Active"
              this.Inactivemunicipality = {}
                this.getMunicipality()
         },

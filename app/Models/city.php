@@ -10,10 +10,13 @@ class city extends Model
     use HasFactory;
 
     protected $fillable =[
+        
         'name',
         'status',
         'zipcode'
     ];
+
+  
 
    public function barang(){
        return $this->hasMany(barang::class);

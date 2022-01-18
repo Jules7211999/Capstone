@@ -49,7 +49,7 @@
       <div class="row pt-3">
         <div class="col font-weight-bold">
             <div class="label">MARITAL STATUS</div>
-            {{profile[0].marital_status}}
+            <div class="text-secondary">{{profile[0].marital_status}}</div>
         </div>
     </div>
    

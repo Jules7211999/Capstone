@@ -10,6 +10,9 @@
                     <div class="col-2">
                          <span class="font-weight-bold text-secondary">Status</span>
                     </div>
+                    <div class="col-2">
+                        <span class="font-weight-bold text-secondary">Sort by</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -40,7 +43,16 @@
                               </select>
                           </div>
                     </div>
-                   <div class="col-5 d-flex align-items-end p-1 justify-content-center">
+                    <div class="col-2">
+                         <div class="w-100 d-flex align-items-center">
+                              <select  v-model="sort" @change="sortby" class="form-control-lg w-100 border bg-transparent font-weight-bold">
+                                  <option value="City"  class="font-weight-bold text-secondary">City / Municipality</option>
+                                  <option value="Name" class="font-weight-bold text-secondary">Name</option>
+                                 
+                              </select>
+                          </div>
+                    </div>
+                   <div class="col-3 d-flex align-items-end p-1 justify-content-center">
                             <form @keypress="search()" @submit.prevent="status()">
                     <input type="text" v-model="query" placeholder="Search" class="border-bottom border-secondary border-top-0 border-right-0 border-left-0 font-weight-bold text-secondary ">
                 </form>  
@@ -53,7 +65,7 @@
           
             <div class="col m-2">
                 <div  class="row text-secondary font-weight-bold p-3  rounded mb-2">
-                    <div class="col">Nameasdf</div>
+                    <div class="col">Name</div>
                     <div class="col">Status</div>
                     <div class="col">City</div>
                     <div class="col">Action</div>
@@ -86,17 +98,57 @@ export default {
             municipality:{},
             city:"",
             stat:"Active",
-            query:""
+            query:"",
+            sort:"Name"
         }   
     },
     methods:{
+        sortby(){
+              if(this.stat == "Active"){
+               this.Inactivebarangay = {}
+                if(this.sort == "Name"){
+                   this.getBarangay()
+                }else if(this.sort == "City"){
+                    this.getBarangayByCityActive()
+                    
+                }
+           }else if(this.stat == "Inactive"){
+               this.barangay = {}
+                if(this.sort == "Name"){
+                    this.getInactiveBarangay()
+                    
+                }else if(this.sort == "City"){
+                    this.getBarangayByCityInactive()
+                   
+                }
+           }
+        },
+        getBarangayByCityActive(){
+            axios.get('/getBarangayActiveByCity')
+            .then(data => this.barangay = data.data)
+            .catch(error => console.log(error))
+        },
+       
+        getBarangayByCityInactive(){
+            axios.get('/getBarangayInactiveByCity')
+            .then(data => this.Inactivebarangay= data.data)
+            .catch(error => console.log(error))
+        },
           status(){
            if(this.stat == "Active"){
                this.Inactivebarangay = {}
-               this.getBarangay()
+               if(this.sort == "Name"){
+                   this.getBarangay()
+                }else if(this.sort == "City"){
+                    this.getBarangayByCityActive()
+                }
            }else if(this.stat == "Inactive"){
                this.barangay = {}
-               this.getInactiveBarangay()
+                if(this.sort == "Name"){
+                    this.getInactiveBarangay()
+                }else if(this.sort == "City"){
+                    this.getBarangayByCityInactive()
+                }
            }
         },
          search(){
@@ -125,12 +177,10 @@ export default {
             .then(data => console.log(data))
             .catch(error => console.log(error))
 
-           
+            this.status();
             this.nameB = ""
             this.city = ""
-            this.stat = Active
-           this.Inactivebarangay = {}
-           this.getBarangay()
+            
         },
         getBarangay(){
             axios.get('/getBarangay')
@@ -162,7 +212,6 @@ export default {
     },
     mounted(){
         this.getBarangay();
-        this.getInactiveBarangay();
         this.getMunicipality();
        
     }

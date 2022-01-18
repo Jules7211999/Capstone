@@ -47,7 +47,7 @@ class SearchController extends Controller
 
     public function municipality(Request $request){
       
-            $search = city::where('name','LIKE','%'.$request->search.'%')->where('status','=',$request->status)
+            $search = city::where('name','LIKE','%'.$request->search.'%')->orWhere('zipcode','LIKE','%'.$request->search.'%')->where('status','=',$request->status)
         ->get();
 
        return $search;
@@ -55,9 +55,9 @@ class SearchController extends Controller
     
 
     public function barangay(Request $request){
+
         $search = barang::where('name','LIKE','%'.$request->search.'%')->where('status','=',$request->status)
         ->with('city')->get();
-
        return $search;
     }
    

@@ -2974,6 +2974,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2984,32 +2996,80 @@ __webpack_require__.r(__webpack_exports__);
       municipality: {},
       city: "",
       stat: "Active",
-      query: ""
+      query: "",
+      sort: "Name"
     };
   },
   methods: {
+    sortby: function sortby() {
+      if (this.stat == "Active") {
+        this.Inactivebarangay = {};
+
+        if (this.sort == "Name") {
+          this.getBarangay();
+        } else if (this.sort == "City") {
+          this.getBarangayByCityActive();
+        }
+      } else if (this.stat == "Inactive") {
+        this.barangay = {};
+
+        if (this.sort == "Name") {
+          this.getInactiveBarangay();
+        } else if (this.sort == "City") {
+          this.getBarangayByCityInactive();
+        }
+      }
+    },
+    getBarangayByCityActive: function getBarangayByCityActive() {
+      var _this = this;
+
+      axios.get('/getBarangayActiveByCity').then(function (data) {
+        return _this.barangay = data.data;
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    },
+    getBarangayByCityInactive: function getBarangayByCityInactive() {
+      var _this2 = this;
+
+      axios.get('/getBarangayInactiveByCity').then(function (data) {
+        return _this2.Inactivebarangay = data.data;
+      })["catch"](function (error) {
+        return console.log(error);
+      });
+    },
     status: function status() {
       if (this.stat == "Active") {
         this.Inactivebarangay = {};
-        this.getBarangay();
+
+        if (this.sort == "Name") {
+          this.getBarangay();
+        } else if (this.sort == "City") {
+          this.getBarangayByCityActive();
+        }
       } else if (this.stat == "Inactive") {
         this.barangay = {};
-        this.getInactiveBarangay();
+
+        if (this.sort == "Name") {
+          this.getInactiveBarangay();
+        } else if (this.sort == "City") {
+          this.getBarangayByCityInactive();
+        }
       }
     },
     search: function search() {
-      var _this = this;
+      var _this3 = this;
 
       axios.post('/barangaySearch', {
         search: this.query,
         status: this.stat
       }).then(function (data) {
-        if (_this.stat == "Active") {
-          _this.Inactivebarangay = {};
-          _this.barangay = data.data;
-        } else if (_this.stat == "Inactive") {
-          _this.barangay = {};
-          _this.Inactivebarangay = data.data;
+        if (_this3.stat == "Active") {
+          _this3.Inactivebarangay = {};
+          _this3.barangay = data.data;
+        } else if (_this3.stat == "Inactive") {
+          _this3.barangay = {};
+          _this3.Inactivebarangay = data.data;
         }
       })["catch"](function (error) {
         return console.log(error);
@@ -3024,35 +3084,33 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         return console.log(error);
       });
+      this.status();
       this.nameB = "";
       this.city = "";
-      this.stat = Active;
-      this.Inactivebarangay = {};
-      this.getBarangay();
     },
     getBarangay: function getBarangay() {
-      var _this2 = this;
+      var _this4 = this;
 
       axios.get('/getBarangay').then(function (data) {
-        return _this2.barangay = data.data;
+        return _this4.barangay = data.data;
       })["catch"](function (error) {
         return console.log(error);
       });
     },
     getMunicipality: function getMunicipality() {
-      var _this3 = this;
+      var _this5 = this;
 
       axios.get('/getMunicipality').then(function (data) {
-        return _this3.municipality = data.data;
+        return _this5.municipality = data.data;
       })["catch"](function (error) {
         return console.log(error);
       });
     },
     getInactiveBarangay: function getInactiveBarangay() {
-      var _this4 = this;
+      var _this6 = this;
 
       axios.get('/getInactiveBarangay').then(function (data) {
-        return _this4.Inactivebarangay = data.data;
+        return _this6.Inactivebarangay = data.data;
       })["catch"](function (error) {
         return console.log(error);
       });
@@ -3073,7 +3131,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     this.getBarangay();
-    this.getInactiveBarangay();
     this.getMunicipality();
   }
 });
@@ -3255,6 +3312,7 @@ __webpack_require__.r(__webpack_exports__);
       });
       this.nameM = "";
       this.postal = "";
+      this.stat = "Active";
       this.Inactivemunicipality = {};
       this.getMunicipality();
     },
@@ -53125,10 +53183,67 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
+      _c("div", { staticClass: "col-2" }, [
+        _c("div", { staticClass: "w-100 d-flex align-items-center" }, [
+          _c(
+            "select",
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.sort,
+                  expression: "sort"
+                }
+              ],
+              staticClass:
+                "form-control-lg w-100 border bg-transparent font-weight-bold",
+              on: {
+                change: [
+                  function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.sort = $event.target.multiple
+                      ? $$selectedVal
+                      : $$selectedVal[0]
+                  },
+                  _vm.sortby
+                ]
+              }
+            },
+            [
+              _c(
+                "option",
+                {
+                  staticClass: "font-weight-bold text-secondary",
+                  attrs: { value: "City" }
+                },
+                [_vm._v("City / Municipality")]
+              ),
+              _vm._v(" "),
+              _c(
+                "option",
+                {
+                  staticClass: "font-weight-bold text-secondary",
+                  attrs: { value: "Name" }
+                },
+                [_vm._v("Name")]
+              )
+            ]
+          )
+        ])
+      ]),
+      _vm._v(" "),
       _c(
         "div",
         {
-          staticClass: "col-5 d-flex align-items-end p-1 justify-content-center"
+          staticClass: "col-3 d-flex align-items-end p-1 justify-content-center"
         },
         [
           _c(
@@ -53280,6 +53395,12 @@ var staticRenderFns = [
             _c("span", { staticClass: "font-weight-bold text-secondary" }, [
               _vm._v("Status")
             ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-2" }, [
+            _c("span", { staticClass: "font-weight-bold text-secondary" }, [
+              _vm._v("Sort by")
+            ])
           ])
         ])
       ])
@@ -53304,7 +53425,7 @@ var staticRenderFns = [
       "div",
       { staticClass: "row text-secondary font-weight-bold p-3  rounded mb-2" },
       [
-        _c("div", { staticClass: "col" }, [_vm._v("Nameasdf")]),
+        _c("div", { staticClass: "col" }, [_vm._v("Name")]),
         _vm._v(" "),
         _c("div", { staticClass: "col" }, [_vm._v("Status")]),
         _vm._v(" "),
@@ -55457,11 +55578,10 @@ var render = function() {
     _c("div", { staticClass: "row pt-3" }, [
       _c("div", { staticClass: "col font-weight-bold" }, [
         _c("div", { staticClass: "label" }, [_vm._v("MARITAL STATUS")]),
-        _vm._v(
-          "\r\n            " +
-            _vm._s(_vm.profile[0].marital_status) +
-            "\r\n        "
-        )
+        _vm._v(" "),
+        _c("div", { staticClass: "text-secondary" }, [
+          _vm._v(_vm._s(_vm.profile[0].marital_status))
+        ])
       ])
     ])
   ])

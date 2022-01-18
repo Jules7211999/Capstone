@@ -12,7 +12,7 @@ class CreateCityController extends Controller
         city::create([
             'name' => $request->name,
             'zipcode' => $request->postal,
-            'status' => "Active"
+            'status' => "Active",
          ]);
     }
 

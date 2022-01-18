@@ -24,4 +24,11 @@ class GetBarangay extends Controller
     public function monitor($id){
         return city::where('id','=',$id)->with('barang')->orderBy('name')->get();
     }
+
+    public function activeByCity(){
+        return barang::where('status','=','Active')->with('city')->orderBy('city_id')->get(); 
+    }
+    public function inactiveByCity(){
+        return barang::where('status','=','Inactive')->with('city')->orderBy('city_id')->get();
+    }
 }

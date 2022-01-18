@@ -16,6 +16,8 @@ use App\Http\Controllers\MobileProfile;
 Route::get('/getFish',[GetFish::class,'index']);
 Route::get('MobileProfile/{id}',[MobileProfile::class,'index']);
 Route::get('/getBarangay',[GetBarangay::class,'index']);
+Route::get('/getBarangayInactiveByCity',[GetBarangay::class,'inactiveByCity']);
+Route::get('/getBarangayActiveByCity',[GetBarangay::class,'activeByCity']);
 Route::get('/getMonitorBarangay/{id}',[GetBarangay::class,'monitor']);
 Route::get('/getMunicipality',[GetMunicipality::class,'index']);
 Route::get('/getInactiveBarangay',[GetBarangay::class,'inactive']);
